@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button, Container } from "@/components/ui";
 
 const tiers = [
@@ -14,7 +15,7 @@ const tiers = [
       "Basic tasks",
       "Email reminders",
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: false,
   },
   {
@@ -29,7 +30,7 @@ const tiers = [
       "Contact management",
       "Collect workflows",
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: true,
   },
   {
@@ -44,7 +45,7 @@ const tiers = [
       "Advanced reporting",
       "Priority support",
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: false,
   },
 ];
@@ -142,13 +143,15 @@ export function PricingSection() {
               </ul>
 
               {/* CTA */}
-              <Button
-                variant={tier.highlighted ? "primary" : "outline"}
-                size="md"
-                className="w-full justify-center"
-              >
-                {tier.cta}
-              </Button>
+              <Link href="https://app.tryvergo.com/signup">
+                <Button
+                  variant={tier.highlighted ? "primary" : "outline"}
+                  size="md"
+                  className="w-full justify-center"
+                >
+                  {tier.cta}
+                </Button>
+              </Link>
             </motion.div>
           ))}
         </div>

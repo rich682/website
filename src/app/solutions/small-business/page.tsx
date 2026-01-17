@@ -69,7 +69,7 @@ export default function SmallBusinessPage() {
         { step: "Add Starter", label: "Unlimited requests" },
         { step: "Add Approvals", label: "Route decisions" },
       ]}
-      ctaText="Book a Demo →"
+      ctaText="Get Started →"
     />
   );
 }

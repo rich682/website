@@ -169,9 +169,9 @@ export function SegmentPageLayout({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Link href="/demo">
+              <Link href="https://app.tryvergo.com/signup">
                 <Button variant="primary" size="lg">
-                  Book a Demo →
+                  Get Started →
                 </Button>
               </Link>
             </motion.div>
@@ -343,9 +343,9 @@ export function SegmentPageLayout({
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Link href="/demo">
+              <Link href="https://app.tryvergo.com/signup">
                 <Button variant="secondary" size="lg">
-                  Book a Demo →
+                  Get Started →
                 </Button>
               </Link>
             </motion.div>

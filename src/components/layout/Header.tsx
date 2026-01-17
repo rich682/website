@@ -131,14 +131,16 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="/signin"
+              href="https://app.tryvergo.com/auth/signin"
               className="text-sm font-medium text-foreground-secondary hover:text-foreground transition-colors"
             >
               Sign In
             </Link>
-            <Button variant="primary" size="sm">
-              Book Demo
-            </Button>
+            <Link href="https://app.tryvergo.com/signup">
+              <Button variant="primary" size="sm">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -210,12 +212,16 @@ export function Header() {
                   </div>
                 ))}
                 <div className="pt-4 space-y-2 border-t border-border">
-                  <Button variant="ghost" size="md" className="w-full justify-center">
-                    Sign In
-                  </Button>
-                  <Button variant="primary" size="md" className="w-full justify-center">
-                    Book Demo
-                  </Button>
+                  <Link href="https://app.tryvergo.com/auth/signin">
+                    <Button variant="ghost" size="md" className="w-full justify-center">
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link href="https://app.tryvergo.com/signup">
+                    <Button variant="primary" size="md" className="w-full justify-center">
+                      Get Started
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Container>

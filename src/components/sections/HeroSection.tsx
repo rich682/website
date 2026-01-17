@@ -205,13 +205,13 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <Link href="/demo">
+                <Link href="https://app.tryvergo.com/signup">
                   <motion.button
                     className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg hover:bg-secondary-hover transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    Book a Demo →
+                    Get Started →
                   </motion.button>
                 </Link>
               </motion.div>

@@ -22,7 +22,7 @@ const tiers = [
       { name: "Escalation workflows", included: false },
       { name: "Approvals workflows", included: false },
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: false,
   },
   {
@@ -40,7 +40,7 @@ const tiers = [
       { name: "Collect workflows", included: true },
       { name: "Priority email support", included: true },
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: true,
   },
   {
@@ -58,7 +58,7 @@ const tiers = [
       { name: "Dedicated support", included: true },
       { name: "Custom onboarding", included: true },
     ],
-    cta: "Book a Demo",
+    cta: "Get Started",
     highlighted: false,
   },
 ];
@@ -281,7 +281,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
 
-                  <Link href="/demo">
+                  <Link href="https://app.tryvergo.com/signup">
                     <Button
                       variant={tier.highlighted ? "primary" : "outline"}
                       size="md"
@@ -406,9 +406,9 @@ export default function PricingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Link href="/demo">
+              <Link href="https://app.tryvergo.com/signup">
                 <Button variant="secondary" size="lg">
-                  Book a Demo →
+                  Get Started →
                 </Button>
               </Link>
             </motion.div>

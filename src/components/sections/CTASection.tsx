@@ -53,9 +53,9 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Link href="/demo">
+          <Link href="https://app.tryvergo.com/signup">
             <Button variant="secondary" size="lg">
-              Book a Demo →
+              Get Started →
             </Button>
           </Link>
         </motion.div>
