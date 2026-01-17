@@ -1,0 +1,14 @@
+export { HeroSection } from "./HeroSection";
+export { ProblemSection } from "./ProblemSection";
+export { PositioningSection } from "./PositioningSection";
+export { WorkflowSection } from "./WorkflowSection";
+export { ModulesSection } from "./ModulesSection";
+export { PricingSection } from "./PricingSection";
+export { CTASection } from "./CTASection";
+export { FeaturePageLayout } from "./FeaturePageLayout";
+export { SegmentPageLayout } from "./SegmentPageLayout";
+export { AIAutomationSection } from "./AIAutomationSection";
+export { TasksFeatureSection } from "./TasksFeatureSection";
+export { RequestsFeatureSection } from "./RequestsFeatureSection";
+export { RemindersFeatureSection } from "./RemindersFeatureSection";
+export { FeaturesShowcase } from "./FeaturesShowcase";
