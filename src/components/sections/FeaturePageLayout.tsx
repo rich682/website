@@ -570,75 +570,190 @@ export function FeaturePageLayout({
           </Container>
         </section>
 
-        {/* How It Works */}
-        <section className="py-16 lg:py-20" ref={howItWorksRef}>
+        {/* How It Works - Visual Flow Section */}
+        <section className="py-20 lg:py-28" ref={howItWorksRef}>
           <Container size="wide">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={howItWorksInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-4">
-                How it works
-              </h2>
-            </motion.div>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left: Animated Visual */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                animate={howItWorksInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6 }}
+                className="relative"
+              >
+                {/* Flow visualization */}
+                <div className="relative bg-gradient-to-br from-background-secondary to-background rounded-3xl p-8 border border-border overflow-hidden">
+                  {/* Decorative background elements */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+                  
+                  {/* Steps with connecting line */}
+                  <div className="relative space-y-0">
+                    {howItWorks.slice(0, 4).map((step, index) => (
+                      <motion.div
+                        key={step.title}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={howItWorksInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.4, delay: 0.3 + index * 0.15 }}
+                        className="relative"
+                      >
+                        {/* Connector line */}
+                        {index < howItWorks.slice(0, 4).length - 1 && (
+                          <div className="absolute left-5 top-12 w-0.5 h-8 bg-border">
+                            <motion.div
+                              className="w-full bg-accent"
+                              initial={{ height: 0 }}
+                              animate={howItWorksInView ? { height: "100%" } : {}}
+                              transition={{ duration: 0.4, delay: 0.5 + index * 0.15 }}
+                            />
+                          </div>
+                        )}
+                        
+                        <div className="flex items-start gap-4 py-4">
+                          {/* Animated step indicator */}
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={howItWorksInView ? { scale: 1 } : {}}
+                            transition={{ 
+                              type: "spring", 
+                              stiffness: 300, 
+                              delay: 0.4 + index * 0.15 
+                            }}
+                            className="relative flex-shrink-0"
+                          >
+                            {/* Pulse ring */}
+                            <motion.div
+                              className="absolute inset-0 rounded-full bg-accent/30"
+                              animate={howItWorksInView ? {
+                                scale: [1, 1.4, 1],
+                                opacity: [0.5, 0, 0.5],
+                              } : {}}
+                              transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: index * 0.3,
+                              }}
+                            />
+                            <div className="relative w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-accent/30">
+                              {index + 1}
+                            </div>
+                          </motion.div>
+                          
+                          <div className="flex-1 pt-1">
+                            <h4 className="font-semibold text-foreground mb-1">{step.title}</h4>
+                            <p className="text-sm text-foreground-secondary leading-relaxed">{step.description}</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  {/* Completion indicator */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={howItWorksInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 1.2 }}
+                    className="mt-6 pt-6 border-t border-border"
+                  >
+                    <div className="flex items-center justify-center gap-2 text-sm">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={howItWorksInView ? { scale: 1 } : {}}
+                        transition={{ type: "spring", delay: 1.4 }}
+                        className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center"
+                      >
+                        <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </motion.div>
+                      <span className="text-foreground-secondary">Setup takes <span className="font-semibold text-foreground">under 5 minutes</span></span>
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {howItWorks.map((step, index) => (
+              {/* Right: Outcomes with visual flair */}
+              <div ref={outcomesRef}>
                 <motion.div
-                  key={step.title}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={howItWorksInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex gap-4 p-5 rounded-xl bg-background border border-border"
+                  animate={outcomesInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5 }}
+                  className="mb-8"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-light flex items-center justify-center text-accent font-semibold">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-foreground-secondary">
-                      {step.description}
-                    </p>
-                  </div>
+                  <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-3">
+                    What you&apos;ll achieve
+                  </h2>
+                  <p className="text-foreground-secondary">
+                    Results that matter, delivered automatically.
+                  </p>
                 </motion.div>
-              ))}
-            </div>
-          </Container>
-        </section>
 
-        {/* Outcomes */}
-        <section className="py-16 lg:py-20 bg-background-secondary" ref={outcomesRef}>
-          <Container size="narrow">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={outcomesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5 }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-4">
-                What you&apos;ll achieve
-              </h2>
-            </motion.div>
-
-            <div className="space-y-3">
-              {outcomes.map((outcome, index) => (
+                <div className="space-y-4">
+                  {outcomes.map((outcome, index) => (
+                    <motion.div
+                      key={outcome}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={outcomesInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                      className="group relative"
+                    >
+                      <div className="flex items-center gap-4 p-5 rounded-2xl bg-background border border-border hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all">
+                        {/* Animated check icon */}
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={outcomesInView ? { scale: 1 } : {}}
+                          transition={{ 
+                            type: "spring", 
+                            stiffness: 300, 
+                            delay: 0.4 + index * 0.1 
+                          }}
+                          className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all"
+                        >
+                          <svg className="w-5 h-5 text-accent group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </motion.div>
+                        <span className="text-foreground font-medium">{outcome}</span>
+                        
+                        {/* Hover arrow */}
+                        <motion.svg 
+                          className="w-5 h-5 text-foreground-muted ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </motion.svg>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                
+                {/* Stats highlight */}
                 <motion.div
-                  key={outcome}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={outcomesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={outcomesInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.8 }}
+                  className="mt-8 grid grid-cols-3 gap-4"
                 >
-                  <svg className="w-6 h-6 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-foreground">{outcome}</span>
+                  {[
+                    { value: "90%", label: "Less manual work" },
+                    { value: "3x", label: "Faster responses" },
+                    { value: "0", label: "Missed deadlines" },
+                  ].map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={outcomesInView ? { scale: 1, opacity: 1 } : {}}
+                      transition={{ delay: 1 + index * 0.1, type: "spring" }}
+                      className="text-center p-4 rounded-xl bg-background-secondary"
+                    >
+                      <div className="text-2xl font-bold text-accent">{stat.value}</div>
+                      <div className="text-xs text-foreground-muted">{stat.label}</div>
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
+              </div>
             </div>
           </Container>
         </section>
