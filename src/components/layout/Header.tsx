@@ -12,11 +12,10 @@ const navigation = [
     href: "#",
     children: [
       { name: "Overview", href: "/platform", description: "See how it all works" },
-      { name: "Tasks", href: "/features/tasks", description: "Track work and close" },
-      { name: "Requests", href: "/features/requests", description: "Ask for what you need" },
-      { name: "Collect", href: "/features/collect", description: "Gather documents" },
-      { name: "Approvals", href: "/features/approvals", description: "Route decisions" },
-      { name: "Reminders", href: "/features/reminders", description: "Automate follow-ups" },
+      { name: "Request", href: "/features/requests", description: "Ask for what you need" },
+      { name: "Track", href: "/features/tasks", description: "See status at a glance" },
+      { name: "Remind", href: "/features/reminders", description: "Auto follow-ups until done" },
+      { name: "Review", href: "/features/approvals", description: "Route for sign-off" },
     ],
   },
   {
