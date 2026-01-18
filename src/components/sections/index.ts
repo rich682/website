@@ -12,3 +12,4 @@ export { TasksFeatureSection } from "./TasksFeatureSection";
 export { RequestsFeatureSection } from "./RequestsFeatureSection";
 export { RemindersFeatureSection } from "./RemindersFeatureSection";
 export { FeaturesShowcase } from "./FeaturesShowcase";
+export { FrameworkSection } from "./FrameworkSection";
