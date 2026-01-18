@@ -286,7 +286,7 @@ export default function PlatformPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 lg:py-20 bg-background-orange">
+        <section className="py-16 lg:py-20 bg-background-secondary">
           <Container size="narrow" className="text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -304,7 +304,7 @@ export default function PlatformPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Link href="https://app.tryvergo.com/signup">
-                <Button variant="secondary" size="lg">
+                <Button variant="primary" size="lg">
                   Get Started →
                 </Button>
               </Link>

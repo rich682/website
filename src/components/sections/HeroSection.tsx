@@ -53,13 +53,13 @@ function AbstractHeroIllustration() {
     <div className="relative w-full max-w-xl mx-auto py-8">
       {/* Background decorative elements */}
       <motion.div 
-        className="absolute top-0 right-0 w-28 h-28 rounded-full bg-white/10"
+        className="absolute top-0 right-0 w-28 h-28 rounded-full bg-accent/5"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
       <motion.div 
-        className="absolute bottom-4 left-0 w-20 h-20 rounded-full bg-white/10"
+        className="absolute bottom-4 left-0 w-20 h-20 rounded-full bg-accent/5"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -72,7 +72,7 @@ function AbstractHeroIllustration() {
             {/* Connecting line */}
             {index < steps.length - 1 && (
               <motion.div
-                className="absolute top-6 left-[calc(50%+22px)] h-0.5 bg-white/40"
+                className="absolute top-6 left-[calc(50%+22px)] h-0.5 bg-accent/20"
                 style={{ width: "calc(100% + 8px)" }}
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -82,7 +82,7 @@ function AbstractHeroIllustration() {
 
             {/* Step number badge */}
             <motion.div
-              className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-white text-accent text-[10px] font-bold flex items-center justify-center z-10"
+              className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center z-10"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15, delay: 0.8 + index * 0.08 }}
@@ -92,7 +92,7 @@ function AbstractHeroIllustration() {
 
             {/* Circle with icon */}
             <motion.div
-              className="relative w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/30"
+              className="relative w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center border-2 border-accent/20"
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ 
@@ -101,10 +101,10 @@ function AbstractHeroIllustration() {
                 damping: 20, 
                 delay: 0.4 + index * 0.1 
               }}
-              whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.3)" }}
+              whileHover={{ scale: 1.1, backgroundColor: "rgba(253, 69, 0, 0.15)" }}
             >
               <motion.div
-                className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-accent shadow-lg"
+                className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-accent shadow-sm"
                 initial={{ rotate: -180, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
@@ -115,7 +115,7 @@ function AbstractHeroIllustration() {
 
             {/* Label */}
             <motion.span
-              className="mt-2 text-xs font-medium text-white/90"
+              className="mt-2 text-xs font-medium text-foreground-secondary"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.7 + index * 0.08 }}
@@ -128,7 +128,7 @@ function AbstractHeroIllustration() {
 
       {/* Animated pulse on the last step */}
       <motion.div
-        className="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/50"
+        className="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 w-12 h-12 rounded-full border-2 border-accent/30"
         initial={{ scale: 1, opacity: 0 }}
         animate={{ 
           scale: [1, 1.5, 1.5],
@@ -144,14 +144,14 @@ function AbstractHeroIllustration() {
 
       {/* "Automated" badge */}
       <motion.div
-        className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+        className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white rounded-full border border-border shadow-sm"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <span className="flex items-center gap-2 text-sm font-medium text-white">
+        <span className="flex items-center gap-2 text-sm font-medium text-foreground-secondary">
           <motion.svg 
-            className="w-4 h-4" 
+            className="w-4 h-4 text-accent" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
@@ -169,87 +169,87 @@ function AbstractHeroIllustration() {
 
 export function HeroSection() {
   return (
-    <section className="relative pt-20">
-      {/* Orange hero block */}
-      <div className="bg-background-orange rounded-3xl mx-4 lg:mx-8 overflow-hidden relative">
-        <Container size="wide" className="py-16 lg:py-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left content */}
-            <div>
-              {/* Social proof badge - builds credibility */}
-              {/* Headline */}
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
-              >
-                Stop chasing.
-                <br />
-                Start closing.
-              </motion.h1>
-
-              {/* Subheadline */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg lg:text-xl text-foreground/80 max-w-lg mb-8 leading-relaxed"
-              >
-                The workflow layer that gets accounting teams what they need — without the follow-up fatigue.
-              </motion.p>
-
-              {/* CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                <Link href="https://app.tryvergo.com/signup">
-                  <motion.button
-                    className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg hover:bg-secondary-hover transition-colors"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Get Started →
-                  </motion.button>
-                </Link>
-              </motion.div>
-
-              {/* Trust indicators */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="mt-6 flex items-center gap-4 text-sm text-foreground/70"
-              >
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Free for 2 users
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  No credit card
-                </span>
-              </motion.div>
-            </div>
-
-            {/* Right content - Abstract illustration */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="relative flex items-center justify-center"
+    <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24">
+      <Container size="wide">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left content - Clean background */}
+          <div>
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
             >
-              <AbstractHeroIllustration />
+              Stop chasing.
+              <br />
+              Start closing.
+            </motion.h1>
+
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg lg:text-xl text-foreground-secondary max-w-lg mb-8 leading-relaxed"
+            >
+              The workflow layer that gets accounting teams what they need — without the follow-up fatigue.
+            </motion.p>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-wrap items-center gap-4"
+            >
+              <Link href="https://app.tryvergo.com/signup">
+                <motion.button
+                  className="inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-hover transition-colors"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Get Started →
+                </motion.button>
+              </Link>
+            </motion.div>
+
+            {/* Trust indicators */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-6 flex items-center gap-4 text-sm text-foreground-muted"
+            >
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Free for 2 users
+              </span>
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                No credit card
+              </span>
             </motion.div>
           </div>
-        </Container>
-      </div>
+
+          {/* Right content - Soft pastel background */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="relative"
+          >
+            {/* Pastel background container */}
+            <div className="bg-background-pastel-orange rounded-3xl p-8 lg:p-12">
+              <AbstractHeroIllustration />
+            </div>
+          </motion.div>
+        </div>
+      </Container>
     </section>
   );
 }

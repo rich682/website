@@ -6,7 +6,9 @@
   --background: #FFFFFF;
   --background-secondary: #FBF9F6;
   --background-tertiary: #F5F3EE;
-  --background-orange: #F26522;
+  --background-orange: #FFF5F0;
+  --background-pastel-orange: #FEF3EE;
+  --background-pastel-green: #F0F9F4;
   
   /* Text colors */
   --foreground: #1A1A1A;
@@ -14,10 +16,10 @@
   --foreground-muted: #9CA3AF;
   --foreground-on-orange: #1A1A1A;
   
-  /* Accent colors - Vergo Orange */
-  --accent: #F26522;
-  --accent-hover: #E55A1B;
-  --accent-light: rgba(242, 101, 34, 0.1);
+  /* Accent colors - Vergo Orange (CTA) */
+  --accent: #FD4500;
+  --accent-hover: #E63E00;
+  --accent-light: rgba(253, 69, 0, 0.08);
   
   /* Secondary accent - Dark */
   --secondary: #1A1A1A;
@@ -47,6 +49,8 @@
   --color-background-secondary: var(--background-secondary);
   --color-background-tertiary: var(--background-tertiary);
   --color-background-orange: var(--background-orange);
+  --color-background-pastel-orange: var(--background-pastel-orange);
+  --color-background-pastel-green: var(--background-pastel-green);
   --color-foreground: var(--foreground);
   --color-foreground-secondary: var(--foreground-secondary);
   --color-foreground-muted: var(--foreground-muted);
