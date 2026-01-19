@@ -6,78 +6,79 @@ import { Button, Container } from "@/components/ui";
 
 const tiers = [
   {
-    name: "Free",
-    price: "$0",
-    description: "Get started with the basics",
+    name: "Individual",
+    price: "Free",
+    description: "For individuals managing lightweight workflows or testing the platform.",
     features: [
-      "Up to 2 accounting users",
-      "Limited requests per month",
-      "Basic tasks",
+      "1 user",
+      "Up to 50 requests per month",
+      "Core task management",
       "Email reminders",
     ],
-    cta: "Get Started",
+    cta: "Get started",
     highlighted: false,
+    href: "https://app.tryvergo.com/signup",
   },
   {
-    name: "Starter",
-    price: "$9.99",
-    period: "/user/month",
-    description: "For growing accounting teams",
+    name: "Team",
+    price: "$20",
+    period: "per user / month",
+    description: "For accounting teams running high-volume, collaborative workflows.",
     features: [
+      "Up to 100 users",
       "Unlimited requests",
-      "Automated reminders",
-      "Personalized messages",
-      "Contact management",
-      "Collect workflows",
+      "Unlimited storage",
+      "AP automation",
+      "Expense management",
     ],
-    cta: "Get Started",
+    cta: "Get started",
     highlighted: true,
+    href: "https://app.tryvergo.com/signup",
   },
   {
-    name: "Advanced",
-    price: "$19",
-    period: "/user/month",
-    description: "Full accountability and enforcement",
+    name: "Enterprise",
+    price: "Custom",
+    description: "For complex organizations with advanced workflow, security, and integration needs.",
     features: [
-      "Everything in Starter",
-      "Escalation workflows",
-      "Approvals workflows",
-      "Advanced reporting",
-      "Priority support",
+      "100+ users",
+      "Advanced security & SSO",
+      "Custom integrations",
+      "Dedicated account manager",
     ],
-    cta: "Get Started",
+    cta: "Contact sales",
     highlighted: false,
+    href: "/contact",
   },
 ];
 
 export function PricingSection() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-24 lg:py-32">
       <Container size="wide">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 lg:mb-24">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Simple, transparent pricing
+            Transparent pricing for every team
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-foreground-secondary max-w-2xl mx-auto"
           >
-            Choose the plan that fits your team&apos;s needs.
+            Choose the plan that fits your current workflow and scales as you grow.
           </motion.p>
         </div>
 
         {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -85,69 +86,64 @@ export function PricingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative p-8 rounded-xl border ${
+              className={`flex flex-col p-8 rounded-2xl border transition-all duration-300 ${
                 tier.highlighted
-                  ? "bg-background border-accent shadow-lg"
-                  : "bg-background border-border"
+                  ? "bg-white border-foreground shadow-[0_0_0_1px_rgba(26,26,26,1),0_20px_40px_-12px_rgba(0,0,0,0.1)] ring-1 ring-foreground"
+                  : "bg-background border-border hover:border-border-hover"
               }`}
             >
-              {/* Highlighted badge */}
-              {tier.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-accent text-white text-xs font-medium">
-                  Most popular
-                </div>
-              )}
-
-              {/* Tier info */}
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+              <div className="mb-8">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground-secondary mb-4">
                   {tier.name}
                 </h3>
-                <div className="flex items-baseline gap-1">
+                <div className="flex items-baseline gap-1 mb-2">
                   <span className="text-4xl font-serif text-foreground">
                     {tier.price}
                   </span>
                   {tier.period && (
-                    <span className="text-foreground-muted text-sm">
+                    <span className="text-foreground-secondary text-sm">
                       {tier.period}
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-foreground-secondary mt-2">
+                {tier.billing && (
+                  <p className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
+                    {tier.billing}
+                  </p>
+                )}
+                <p className="mt-6 text-foreground-secondary leading-relaxed">
                   {tier.description}
                 </p>
               </div>
 
-              {/* Features */}
-              <ul className="space-y-3 mb-8">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-sm text-foreground-secondary">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <div className="flex-grow">
+                <ul className="space-y-4 mb-10 border-t border-border pt-8">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm text-foreground-secondary">
+                      <svg
+                        className="w-5 h-5 text-foreground flex-shrink-0 mt-0.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              {/* CTA */}
-              <Link href="https://app.tryvergo.com/signup">
+              <Link href={tier.href} className="mt-auto">
                 <Button
                   variant={tier.highlighted ? "primary" : "outline"}
-                  size="md"
-                  className="w-full justify-center"
+                  size="lg"
+                  className="w-full justify-center py-6 text-base font-medium"
                 >
                   {tier.cta}
                 </Button>
