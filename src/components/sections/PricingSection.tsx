@@ -106,11 +106,6 @@ export function PricingSection() {
                     </span>
                   )}
                 </div>
-                {tier.billing && (
-                  <p className="text-xs font-medium text-foreground-muted uppercase tracking-wide">
-                    {tier.billing}
-                  </p>
-                )}
                 <p className="mt-6 text-foreground-secondary leading-relaxed">
                   {tier.description}
                 </p>
