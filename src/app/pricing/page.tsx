@@ -52,25 +52,6 @@ const tiers = [
   },
 ];
 
-const faqs = [
-  {
-    question: "How is 'per user' defined?",
-    answer: "A user is any member of your internal finance or accounting team who manages workflows in Vergo. External stakeholders who only respond to requests do not require a seat.",
-  },
-  {
-    question: "Can we upgrade from Team to Enterprise later?",
-    answer: "Yes, you can upgrade at any time as your organization's needs evolve. Our team will help transition your workflows and set up advanced security features.",
-  },
-  {
-    question: "What kind of support is included?",
-    answer: "Individual and Team plans include email support. Enterprise plans include a dedicated account manager and priority technical support with defined SLAs.",
-  },
-  {
-    question: "Is my data secure?",
-    answer: "Security is our top priority. We use industry-standard encryption, maintain SOC 2 compliance, and offer advanced security features for Enterprise customers.",
-  },
-];
-
 export default function PricingPage() {
   return (
     <>
@@ -167,57 +148,6 @@ export default function PricingPage() {
                       {tier.cta}
                     </Button>
                   </Link>
-                </motion.div>
-              ))}
-            </div>
-          </Container>
-        </section>
-
-        {/* Enterprise Subtle Callout */}
-        <section className="pb-24 lg:pb-32">
-          <Container size="narrow">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-center p-12 rounded-3xl bg-background-secondary border border-border"
-            >
-              <h2 className="text-2xl font-serif text-foreground mb-4">
-                Need a custom solution?
-              </h2>
-              <p className="text-foreground-secondary mb-8 max-w-md mx-auto">
-                For large organizations requiring white-glove onboarding and custom integrations.
-              </p>
-              <Link href="/contact">
-                <span className="text-foreground font-medium border-b border-foreground hover:border-accent hover:text-accent transition-colors cursor-pointer">
-                  Speak with our solutions team
-                </span>
-              </Link>
-            </motion.div>
-          </Container>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-24 lg:py-32 border-t border-border">
-          <Container size="narrow">
-            <h2 className="font-serif text-3xl text-center text-foreground mb-16">
-              Frequently asked questions
-            </h2>
-            <div className="grid gap-12 sm:grid-cols-2">
-              {faqs.map((faq, index) => (
-                <motion.div
-                  key={faq.question}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                >
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-foreground-secondary leading-relaxed">
-                    {faq.answer}
-                  </p>
                 </motion.div>
               ))}
             </div>
