@@ -4,10 +4,7 @@ import {
   VideoDemoSection,
   ProblemSection,
   PositioningSection,
-  WorkflowSection,
-  CollectSection,
-  ReconciliationSection,
-  AIAutomationSection,
+  FrameworkSection,
   ComparisonSection,
   CTASection,
 } from "@/components/sections";
@@ -17,7 +14,7 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* 1. Hero - Period-first positioning */}
+        {/* 1. Hero - Close-first positioning */}
         <HeroSection />
         
         {/* 2. Video Demo - Prominent walkthrough */}
@@ -26,25 +23,16 @@ export default function HomePage() {
         {/* 3. Problem - Managing the work bottleneck */}
         <ProblemSection />
         
-        {/* 4. What Vergo is - Execution Layer */}
+        {/* 4. Positioning - Execution Layer */}
         <PositioningSection />
         
-        {/* 5. Core Workflows - Parallel workflows (Boards, Collect, Requests, Recs) */}
-        <WorkflowSection />
+        {/* 5. The Framework - 5-part product structure */}
+        <FrameworkSection />
         
-        {/* 6. Collect - Intake layer (Docs, Invoices, Expenses) */}
-        <CollectSection />
-        
-        {/* 7. Reconciliations - Managed vs Calculated */}
-        <ReconciliationSection />
-        
-        {/* 8. AI Positioning - Judgment Assistant */}
-        <AIAutomationSection />
-        
-        {/* 9. Comparison Teaser - Built for Accounting */}
+        {/* 6. Comparison Teaser - Built for Accounting */}
         <ComparisonSection />
         
-        {/* 10. CTA - Final conversion */}
+        {/* 7. CTA - Final conversion */}
         <CTASection />
       </main>
       <Footer />
