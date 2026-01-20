@@ -44,7 +44,7 @@ export function ReconciliationSection() {
                     <span className="text-sm font-semibold text-accent">AI Insight</span>
                   </div>
                   <p className="text-xs text-foreground-secondary leading-relaxed">
-                    Balance matches previous period. 12 transactions analyzed. No anomalies detected in bank fee patterns.
+                    Balance matches previous close. 12 transactions analyzed. No anomalies detected in bank fee patterns.
                   </p>
                 </div>
 
@@ -82,7 +82,7 @@ export function ReconciliationSection() {
               className="space-y-6 text-xl text-foreground-secondary leading-relaxed"
             >
               <p>
-                Every balance sheet account, every period. Vergo ensures that reconciliations 
+                Every balance sheet account, every month-end. Vergo ensures that reconciliations 
                 aren&apos;t just done—they&apos;re documented, reviewed, and signed off.
               </p>
               <ul className="space-y-4 text-lg">
@@ -92,7 +92,7 @@ export function ReconciliationSection() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                  <span>AI highlights what changed since last period</span>
+                  <span>AI highlights what changed since last close</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />

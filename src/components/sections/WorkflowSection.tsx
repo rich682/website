@@ -5,8 +5,8 @@ import { Container } from "@/components/ui";
 
 const workflows = [
   {
-    title: "Period Boards & Checklists",
-    description: "Daily, weekly, monthly, and year-end work organized by accounting period. Boards complete and archive, preventing evergreen chaos.",
+    title: "Close Boards & Checklists",
+    description: "Daily, weekly, monthly, and year-end work organized by close cycle. Boards complete and archive, preventing evergreen chaos.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -33,7 +33,7 @@ const workflows = [
   },
   {
     title: "Managed Reconciliations",
-    description: "Every balance sheet account, every period. Evidence is attached automatically, with AI highlighting changes for human review.",
+    description: "Every balance sheet account, every month-end. Evidence is attached automatically, with AI highlighting changes for human review.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

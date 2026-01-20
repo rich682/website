@@ -22,7 +22,7 @@ export default function PlatformOverviewPage() {
             <p className="text-xl text-foreground-secondary leading-relaxed mb-12">
               Vergo has evolved into a complete accounting execution system. 
               We&apos;re currently updating our documentation to reflect how the platform 
-              is used today—from period boards to managed reconciliations.
+              is used today—from close boards to managed reconciliations.
             </p>
             <Link href="/" className="text-accent font-semibold border-b border-accent hover:border-accent-hover hover:text-accent-hover transition-all">
               Return to the homepage to see what&apos;s new →

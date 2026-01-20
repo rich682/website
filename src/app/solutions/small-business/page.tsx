@@ -49,7 +49,7 @@ export default function SmallBusinessPage() {
       ]}
       keyModules={[
         {
-          name: "Period Boards",
+          name: "Close Boards",
           description: "Organize work by daily, weekly, and monthly cadence.",
           href: "/#boards",
         },

@@ -9,8 +9,8 @@ const aiCapabilities = [
     description: "AI analyzes incoming documents and responses to confirm they match the request, saving you from manual validation.",
   },
   {
-    title: "Understands the accounting period",
-    description: "Vergo's AI knows your close calendar. It prioritizes items based on their impact on the current period's deadline.",
+    title: "Understands the close cycle",
+    description: "Vergo's AI knows your close calendar. It prioritizes items based on their impact on the current month's deadline.",
   },
   {
     title: "Flags what needs attention",
@@ -111,7 +111,7 @@ export function AIAutomationSection() {
                     <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-500 uppercase">Attention</span>
                   </div>
                   <p className="text-xs text-white/80 leading-relaxed">
-                    Acme Corp hasn&apos;t responded to 3 requests. Based on previous periods, 
+                    Acme Corp hasn&apos;t responded to 3 requests. Based on previous cycles, 
                     this may delay the Monthly Close by 2 days. 
                   </p>
                   <div className="mt-3 flex gap-2">

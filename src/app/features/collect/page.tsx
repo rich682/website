@@ -6,7 +6,7 @@ const collectWorkflows = [
   {
     title: "Documents",
     subtitle: "Core Platform",
-    description: "The baseline for every accounting task. Collect bank statements, contracts, tax documents, and audit evidence directly into your period boards.",
+    description: "The baseline for every accounting task. Collect bank statements, contracts, tax documents, and audit evidence directly into your close boards.",
     useCases: ["Audit evidence", "Contract management", "Tax documentation", "Bank statements"],
     cta: "Start with Documents",
   },

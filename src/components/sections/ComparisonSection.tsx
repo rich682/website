@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const comparison = [
   {
-    feature: "Modeled for accounting periods",
-    manual: "Spreadsheet per period",
-    generic: "No period logic (evergreen)",
-    vergo: "Native period-based boards",
+    feature: "Modeled for the month-end close",
+    manual: "Spreadsheet per close",
+    generic: "No close-based logic (evergreen)",
+    vergo: "Native close boards",
   },
   {
     feature: "Evidence capture",

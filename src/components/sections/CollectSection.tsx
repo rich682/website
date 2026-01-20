@@ -21,7 +21,7 @@ const collectTypes = [
   {
     title: "Expenses",
     badge: "Upsell",
-    description: "Employee receipts and card transactions. Seamless reimbursement workflows that tie evidence to the right accounting period.",
+    description: "Employee receipts and card transactions. Seamless reimbursement workflows that tie evidence to the right month-end cycle.",
     features: ["Card sync", "Receipt capture", "Reimbursement flow"],
     highlight: false,
   },

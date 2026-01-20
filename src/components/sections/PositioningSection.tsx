@@ -5,12 +5,12 @@ import { Container } from "@/components/ui";
 
 const corePillars = [
   {
-    title: "Period-based boards",
+    title: "Close-based boards",
     description: "Work that completes and rolls forward. Daily, weekly, and monthly boards that archive when done—no evergreen chaos.",
   },
   {
     title: "Task checklists first",
-    description: "Start every period with a structured checklist. Know exactly what needs to be done before you even open a spreadsheet.",
+    description: "Start every month-end with a structured checklist. Know exactly what needs to be done before you even open a spreadsheet.",
   },
   {
     title: "Evidence in context",
@@ -18,11 +18,11 @@ const corePillars = [
   },
   {
     title: "Managed Reconciliations",
-    description: "Review and sign off on balance sheet reconciliations every period. AI highlights what changed; humans provide the judgment.",
+    description: "Review and sign off on balance sheet reconciliations every cycle. AI highlights what changed; humans provide the judgment.",
   },
   {
     title: "Accounting-first automation",
-    description: "Automation that respects your close calendar. Vergo understands accounting periods and deadlines, not just generic due dates.",
+    description: "Automation that respects your close calendar. Vergo understands month-end cycles and deadlines, not just generic due dates.",
   },
 ];
 

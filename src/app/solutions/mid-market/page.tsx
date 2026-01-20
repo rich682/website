@@ -50,7 +50,7 @@ export default function MidMarketPage() {
       keyModules={[
         {
           name: "Execution Layer",
-          description: "Complex close workflows with period-based accountability.",
+          description: "Complex close workflows with close-based accountability.",
           href: "/#execution",
         },
         {

@@ -19,7 +19,7 @@ export function VideoDemoSection() {
               See the accounting execution system in action
             </h2>
             <p className="text-lg text-foreground-secondary max-w-2xl mx-auto">
-              A 5-minute walkthrough of how Vergo manages periods, tasks, and reconciliations.
+              A 5-minute walkthrough of how Vergo manages the close, tasks, and reconciliations.
             </p>
           </motion.div>
 
