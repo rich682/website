@@ -159,7 +159,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-5xl lg:text-7xl text-foreground leading-tight mb-6"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
             >
               Run accounting by the close — not chaos.
             </motion.h1>
