@@ -1,8 +1,5 @@
-"use client";
-
 import { Header, Footer } from "@/components/layout";
 import { Container, Button } from "@/components/ui";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 const collectWorkflows = [
