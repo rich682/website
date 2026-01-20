@@ -142,27 +142,7 @@ function AbstractHeroIllustration() {
         }}
       />
 
-      {/* "Automated" badge */}
-      <motion.div
-        className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white rounded-full border border-border shadow-sm"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <span className="flex items-center gap-2 text-sm font-medium text-foreground-secondary">
-          <motion.svg 
-            className="w-4 h-4 text-accent" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </motion.svg>
-          Fully automated
-        </span>
-      </motion.div>
+      {/* "Automated" badge removed */}
     </div>
   );
 }
@@ -179,11 +159,9 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
+              className="font-serif text-4xl sm:text-5xl lg:text-7xl text-foreground leading-tight mb-6"
             >
-              Stop chasing.
-              <br />
-              Start closing.
+              Run accounting by period — not chaos.
             </motion.h1>
 
             {/* Subheadline */}
@@ -193,7 +171,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg lg:text-xl text-foreground-secondary max-w-lg mb-8 leading-relaxed"
             >
-              The workflow layer that gets accounting teams what they need — without the follow-up fatigue.
+              Daily, monthly, and year-end accounting work in one system. Track tasks, collect evidence, review reconciliations, and close with confidence.
             </motion.p>
 
             {/* CTA */}
@@ -203,13 +181,22 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-wrap items-center gap-4"
             >
-              <Link href="https://app.tryvergo.com/signup">
+              <Link href="#demo">
                 <motion.button
-                  className="inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-hover transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-white font-medium rounded-lg hover:bg-secondary transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Get Started →
+                  Watch a 5-minute walkthrough
+                </motion.button>
+              </Link>
+              <Link href="https://app.tryvergo.com/signup">
+                <motion.button
+                  className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-background-secondary transition-colors"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Get started
                 </motion.button>
               </Link>
             </motion.div>

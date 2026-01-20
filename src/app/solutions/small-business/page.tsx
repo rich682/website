@@ -49,18 +49,18 @@ export default function SmallBusinessPage() {
       ]}
       keyModules={[
         {
-          name: "Tasks",
-          description: "Track work and close on time.",
-          href: "/features/tasks",
+          name: "Period Boards",
+          description: "Organize work by daily, weekly, and monthly cadence.",
+          href: "/#boards",
         },
         {
-          name: "Requests",
-          description: "Ask for what you need from anyone.",
-          href: "/features/requests",
+          name: "Reconciliations",
+          description: "Manage balance sheet recs with human sign-off.",
+          href: "/#reconciliations",
         },
         {
           name: "Collect",
-          description: "Gather receipts and documents without the headache.",
+          description: "Gather documents, invoices, and expenses in one layer.",
           href: "/features/collect",
         },
       ]}

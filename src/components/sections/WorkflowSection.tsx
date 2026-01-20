@@ -1,24 +1,12 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui";
-import { useRef } from "react";
 
-const steps = [
+const workflows = [
   {
-    number: "01",
-    title: "Request",
-    description: "Create a request and assign it to an employee, vendor, or client.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    number: "02",
-    title: "Track",
-    description: "See who's responded, who hasn't, and what's outstanding at a glance.",
+    title: "Period Boards & Checklists",
+    description: "Daily, weekly, monthly, and year-end work organized by accounting period. Boards complete and archive, preventing evergreen chaos.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -26,200 +14,81 @@ const steps = [
     ),
   },
   {
-    number: "03",
-    title: "Remind",
-    description: "Vergo sends follow-ups automatically until you get what you need.",
+    title: "Collect (Intake Layer)",
+    description: "Gather Documents, Invoices, and Expenses from across the organization. Automated routing ensures everything lands in the right workflow.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
       </svg>
     ),
   },
   {
-    number: "04",
-    title: "Review",
-    description: "Route submissions for sign-off and ensure accuracy before closing.",
+    title: "Requests & Follow-ups",
+    description: "When work depends on others, Vergo handles the chase. Automated reminders until documents are received and tied to the task.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
   },
   {
-    number: "05",
-    title: "Close",
-    description: "Complete your close with confidence, knowing nothing slipped through.",
+    title: "Managed Reconciliations",
+    description: "Every balance sheet account, every period. Evidence is attached automatically, with AI highlighting changes for human review.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
 ];
 
-// Animated connector line component
-function AnimatedConnector({ index, isInView }: { index: number; isInView: boolean }) {
-  return (
-    <div className="hidden lg:block absolute top-8 left-full w-full h-px -translate-x-4 overflow-hidden">
-      {/* Background line */}
-      <div className="absolute inset-0 bg-border" />
-      
-      {/* Animated fill */}
-      <motion.div
-        className="absolute inset-0 bg-accent"
-        initial={{ scaleX: 0 }}
-        animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 + index * 0.2, ease: "easeOut" }}
-        style={{ transformOrigin: "left" }}
-      />
-      
-      {/* Traveling dot */}
-      <motion.div
-        className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent"
-        initial={{ left: "-4px", opacity: 0 }}
-        animate={isInView ? { 
-          left: ["0%", "100%"],
-          opacity: [0, 1, 1, 0]
-        } : { left: "-4px", opacity: 0 }}
-        transition={{ 
-          duration: 0.8, 
-          delay: 0.3 + index * 0.2,
-          ease: "easeInOut"
-        }}
-      />
-    </div>
-  );
-}
-
-// Step node with pulse animation
-function StepNode({ step, index, isInView }: { step: typeof steps[0]; index: number; isInView: boolean }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="relative"
-    >
-      {/* Connector line */}
-      {index < steps.length - 1 && (
-        <AnimatedConnector index={index} isInView={isInView} />
-      )}
-
-      {/* Step card */}
-      <motion.div 
-        className="bg-background rounded-xl p-6 border border-border h-full hover:border-accent hover:shadow-lg transition-all group"
-        whileHover={{ y: -4 }}
-      >
-        {/* Number with animated background */}
-        <div className="relative mb-4">
-          <span className="text-xs font-mono text-foreground-muted relative z-10">
-            {step.number}
-          </span>
-          <motion.div
-            className="absolute -inset-1 rounded bg-accent/10"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 + index * 0.15 }}
-          />
-        </div>
-
-        {/* Icon with pulse effect */}
-        <div className="relative w-12 h-12 mb-4">
-          {/* Pulse ring */}
-          <motion.div
-            className="absolute inset-0 rounded-lg bg-accent/20"
-            animate={isInView ? {
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0, 0.5],
-            } : {}}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              delay: index * 0.3,
-              ease: "easeInOut",
-            }}
-          />
-          <div className="relative w-12 h-12 rounded-lg bg-accent-light flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-            {step.icon}
-          </div>
-        </div>
-
-        {/* Content */}
-        <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
-          {step.title}
-        </h3>
-        <p className="text-sm text-foreground-secondary leading-relaxed">
-          {step.description}
-        </p>
-      </motion.div>
-    </motion.div>
-  );
-}
-
 export function WorkflowSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-
   return (
-    <section className="py-20 lg:py-28 bg-background-secondary" ref={sectionRef}>
+    <section className="py-24 lg:py-32 bg-background-secondary">
       <Container size="wide">
-        {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 lg:mb-24">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
+            className="font-serif text-3xl lg:text-5xl text-foreground mb-6"
           >
-            From request to resolution.
+            Workflows that run on your cadence.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-foreground-secondary"
+            className="text-lg text-foreground-secondary max-w-2xl mx-auto"
           >
-            You focus on the books. We handle the follow-ups.
+            Vergo supports multiple accounting workflows in parallel, not as a linear funnel.
           </motion.p>
         </div>
 
-        {/* Steps with animated timeline */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((step, index) => (
-            <StepNode key={step.number} step={step} index={index} isInView={isInView} />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {workflows.map((workflow, index) => (
+            <motion.div
+              key={workflow.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-background rounded-2xl p-8 border border-border hover:shadow-xl transition-all h-full flex flex-col"
+            >
+              <div className="w-12 h-12 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-6">
+                {workflow.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                {workflow.title}
+              </h3>
+              <p className="text-foreground-secondary leading-relaxed">
+                {workflow.description}
+              </p>
+            </motion.div>
           ))}
         </div>
-
-        {/* Animated completion indicator */}
-        <motion.div
-          className="flex justify-center mt-12"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
-            <motion.svg 
-              className="w-4 h-4" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-              initial={{ pathLength: 0 }}
-              animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-            >
-              <motion.path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M5 13l4 4L19 7"
-                initial={{ pathLength: 0 }}
-                animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
-              />
-            </motion.svg>
-            Automated from start to finish
-          </div>
-        </motion.div>
       </Container>
     </section>
   );

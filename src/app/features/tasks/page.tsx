@@ -1,48 +1,36 @@
-import { FeaturePageLayout } from "@/components/sections/FeaturePageLayout";
+"use client";
 
-export const metadata = {
-  title: "Tasks | Vergo",
-  description: "Track work, assign owners, and close on time. One list. Every task. Complete visibility.",
-};
+import { Header, Footer } from "@/components/layout";
+import { Container } from "@/components/ui";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-export default function TasksPage() {
+export default function DeprecatedFeaturePage() {
   return (
-    <FeaturePageLayout
-      badge="Tasks"
-      title="Month-end close, finally under control."
-      subtitle="One list. Every task. Complete visibility."
-      problemTitle="Spreadsheets weren't built for close."
-      problemDescription="You're tracking tasks in Excel, status in email, and deadlines in your head. When something slips, you don't know until it's too late. Your close process deserves better than a patchwork of tools."
-      howItWorks={[
-        {
-          title: "Create tasks with clear owners",
-          description: "Organize your close tasks by category — reconciliations, accruals, reports, and more. Every task has a clear owner.",
-        },
-        {
-          title: "Assign to team members or external parties",
-          description: "Tasks can be assigned to your team or external stakeholders who need to provide information.",
-        },
-        {
-          title: "Track completion in real-time",
-          description: "See exactly where you stand at any moment. No more asking around or checking multiple systems.",
-        },
-        {
-          title: "See what's overdue at a glance",
-          description: "Overdue items surface automatically. Know what needs attention before it becomes a problem.",
-        },
-      ]}
-      outcomes={[
-        "Close faster with fewer surprises",
-        "Know exactly where you stand at any moment",
-        'Stop asking "did this get done?"',
-        "Build repeatable processes that scale",
-      ]}
-      ctaText="Start tracking tasks →"
-      icon={
-        <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-      }
-    />
+    <>
+      <Header />
+      <main className="pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <Container size="narrow" className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="font-serif text-4xl lg:text-6xl text-foreground mb-8">
+              We&apos;re rebuilding this section.
+            </h1>
+            <p className="text-xl text-foreground-secondary leading-relaxed mb-12">
+              Vergo has evolved from a single-feature tool into a complete accounting execution system. 
+              We&apos;re currently updating our feature pages to reflect how these workflows 
+              fit into the broader platform.
+            </p>
+            <Link href="/" className="text-accent font-semibold border-b border-accent hover:border-accent-hover hover:text-accent-hover transition-all">
+              See the new Vergo on our homepage →
+            </Link>
+          </motion.div>
+        </Container>
+      </main>
+      <Footer />
+    </>
   );
 }

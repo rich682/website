@@ -1,48 +1,36 @@
-import { FeaturePageLayout } from "@/components/sections/FeaturePageLayout";
+"use client";
 
-export const metadata = {
-  title: "Requests | Vergo",
-  description: "Send requests for documents, information, or action to anyone. Ask once. Get what you need.",
-};
+import { Header, Footer } from "@/components/layout";
+import { Container } from "@/components/ui";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-export default function RequestsPage() {
+export default function DeprecatedFeaturePage() {
   return (
-    <FeaturePageLayout
-      badge="Requests"
-      title="Ask once. Get what you need."
-      subtitle="Send requests to anyone — employees, vendors, or clients."
-      problemTitle="You shouldn't have to ask three times."
-      problemDescription="Every request starts the same way: you send an email, wait, follow up, wait again, escalate. By the time you get what you need, you've spent more time chasing than working. There has to be a better way."
-      howItWorks={[
-        {
-          title: "Create a request for anything",
-          description: "Documents, information, approvals, action items — create a request for whatever you need and assign it to anyone.",
-        },
-        {
-          title: "Send to anyone, inside or outside your company",
-          description: "Requests work for employees, vendors, clients, or anyone with an email address. No login required for recipients.",
-        },
-        {
-          title: "Set deadlines and let Vergo follow up",
-          description: "Define when you need it and Vergo handles the reminders. Escalate automatically when deadlines pass.",
-        },
-        {
-          title: "Track responses in one place",
-          description: "See who's responded, who hasn't, and what's overdue. All in one dashboard, not scattered across your inbox.",
-        },
-      ]}
-      outcomes={[
-        "Stop writing 'just following up' emails",
-        "Get responses faster with less effort",
-        "Know exactly what's outstanding",
-        "Spend time on work, not chasing",
-      ]}
-      ctaText="Start sending requests →"
-      icon={
-        <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-        </svg>
-      }
-    />
+    <>
+      <Header />
+      <main className="pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <Container size="narrow" className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="font-serif text-4xl lg:text-6xl text-foreground mb-8">
+              We&apos;re rebuilding this section.
+            </h1>
+            <p className="text-xl text-foreground-secondary leading-relaxed mb-12">
+              Vergo has evolved from a single-feature tool into a complete accounting execution system. 
+              We&apos;re currently updating our feature pages to reflect how these workflows 
+              fit into the broader platform.
+            </p>
+            <Link href="/" className="text-accent font-semibold border-b border-accent hover:border-accent-hover hover:text-accent-hover transition-all">
+              See the new Vergo on our homepage →
+            </Link>
+          </motion.div>
+        </Container>
+      </main>
+      <Footer />
+    </>
   );
 }

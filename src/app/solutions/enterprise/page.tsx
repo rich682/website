@@ -49,19 +49,19 @@ export default function EnterprisePage() {
       ]}
       keyModules={[
         {
-          name: "All Modules",
+          name: "Execution System",
           description: "Full platform access at enterprise scale.",
-          href: "/platform",
+          href: "/",
         },
         {
           name: "Advanced Escalation",
-          description: "Multi-level enforcement workflows.",
-          href: "/features/reminders",
+          description: "Multi-level enforcement for non-finance teams.",
+          href: "/#requests",
         },
         {
-          name: "Custom Integrations",
-          description: "Connect to your existing systems.",
-          href: "/platform",
+          name: "Reconciliations",
+          description: "Managed sign-offs across all business units.",
+          href: "/#reconciliations",
         },
       ]}
       expansionPath={[

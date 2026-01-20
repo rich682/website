@@ -1,48 +1,113 @@
-import { FeaturePageLayout } from "@/components/sections/FeaturePageLayout";
+"use client";
+
+import { Header, Footer } from "@/components/layout";
+import { Container, Button } from "@/components/ui";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const collectWorkflows = [
+  {
+    title: "Documents",
+    subtitle: "Core Platform",
+    description: "The baseline for every accounting task. Collect bank statements, contracts, tax documents, and audit evidence directly into your period boards.",
+    useCases: ["Audit evidence", "Contract management", "Tax documentation", "Bank statements"],
+    cta: "Start with Documents",
+  },
+  {
+    title: "Invoices",
+    subtitle: "Advanced AP Workflow",
+    description: "A high-impact workflow for vendor payments. Route invoices for approval, capture GL coding, and manage payments within the close context.",
+    useCases: ["Vendor AP", "Approval routing", "Payment execution", "GL coding"],
+    cta: "Explore Invoices",
+  },
+  {
+    title: "Expenses",
+    subtitle: "Employee Reimbursements",
+    description: "Capture receipts at the source. Vergo matches receipts to card transactions and manages the reimbursement flow for your entire team.",
+    useCases: ["Receipt capture", "Card matching", "Employee reimbursements", "Policy enforcement"],
+    cta: "Explore Expenses",
+  },
+];
 
 export const metadata = {
   title: "Collect | Vergo",
-  description: "Gather receipts, invoices, and documents from anyone. Collection without the chase.",
+  description: "The intake layer for your accounting execution system. Segment your evidence by workflow.",
 };
 
 export default function CollectPage() {
   return (
-    <FeaturePageLayout
-      badge="Collect"
-      title="Get what you need. From anyone."
-      subtitle="Receipts, invoices, documents — collected without the chase."
-      problemTitle="People forget. You pay the price."
-      problemDescription="Missing receipts. Late invoices. Documents stuck in someone's inbox. You're constantly chasing people for things they should have sent weeks ago. Data collection shouldn't be a full-time job."
-      howItWorks={[
-        {
-          title: "Request anything from anyone",
-          description: "Create a request for receipts, invoices, documents, or any information you need. Assign it to employees, vendors, or clients.",
-        },
-        {
-          title: "Set deadlines with automatic reminders",
-          description: "Define when you need it and let Vergo handle the follow-ups. Escalate automatically when deadlines pass.",
-        },
-        {
-          title: "Receive everything in one place",
-          description: "All submissions come to a single inbox. No more hunting through email threads or shared drives.",
-        },
-        {
-          title: "Close with complete documentation",
-          description: "With everything collected, close your books with confidence. Audit-ready, every time.",
-        },
-      ]}
-      outcomes={[
-        "Stop chasing people for documents",
-        "Get complete submissions on time",
-        "Reduce close delays from missing data",
-        "Maintain audit-ready records",
-      ]}
-      ctaText="Start collecting smarter →"
-      icon={
-        <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      }
-    />
+    <>
+      <Header />
+      <main className="pt-24 lg:pt-32">
+        <section className="py-20 lg:py-32">
+          <Container size="wide">
+            <div className="max-w-3xl mb-20">
+              <h1 className="font-serif text-4xl lg:text-6xl text-foreground mb-8">
+                Collect the right things — in the right workflow.
+              </h1>
+              <p className="text-xl text-foreground-secondary leading-relaxed">
+                Collect is the intake layer for Vergo. Whether it&apos;s audit evidence, 
+                vendor invoices, or employee receipts, Vergo routes everything to the 
+                correct accounting workflow automatically.
+              </p>
+            </div>
+
+            <div className="space-y-32">
+              {collectWorkflows.map((workflow, index) => (
+                <div key={workflow.title} className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                    <div className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-6">
+                      {workflow.subtitle}
+                    </div>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+                      {workflow.title}
+                    </h2>
+                    <p className="text-lg text-foreground-secondary leading-relaxed mb-8">
+                      {workflow.description}
+                    </p>
+                    <ul className="grid sm:grid-cols-2 gap-4 mb-10">
+                      {workflow.useCases.map((useCase) => (
+                        <li key={useCase} className="flex items-center gap-3 text-foreground-secondary">
+                          <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {useCase}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="https://app.tryvergo.com/signup">
+                      <Button variant="primary" size="lg">
+                        {workflow.cta}
+                      </Button>
+                    </Link>
+                  </div>
+                  <div className={`aspect-square bg-background-secondary rounded-3xl border border-border p-8 flex items-center justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                     {/* Abstract representation of the specific collection type */}
+                     <div className="text-foreground-muted italic text-sm">
+                       Visual representation for {workflow.title}
+                     </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Closing CTA */}
+        <section className="py-24 bg-foreground text-white">
+          <Container size="narrow" className="text-center">
+            <h2 className="font-serif text-4xl mb-8">
+              Ready to stop chasing?
+            </h2>
+            <Link href="https://app.tryvergo.com/signup">
+              <Button variant="primary" size="lg" className="bg-white text-foreground hover:bg-white/90 border-transparent">
+                Get started for free
+              </Button>
+            </Link>
+          </Container>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

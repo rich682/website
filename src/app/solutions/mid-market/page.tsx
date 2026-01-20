@@ -49,19 +49,19 @@ export default function MidMarketPage() {
       ]}
       keyModules={[
         {
-          name: "Tasks",
-          description: "Complex close workflows with multiple owners.",
-          href: "/features/tasks",
+          name: "Execution Layer",
+          description: "Complex close workflows with period-based accountability.",
+          href: "/#execution",
         },
         {
-          name: "Requests",
-          description: "Department-wide request management.",
-          href: "/features/requests",
+          name: "Collect",
+          description: "Organization-wide document and invoice collection.",
+          href: "/features/collect",
         },
         {
-          name: "Approvals",
-          description: "Route decisions to the right people.",
-          href: "/features/approvals",
+          name: "Reconciliations",
+          description: "Review and sign-off workflows for every account.",
+          href: "/#reconciliations",
         },
       ]}
       expansionPath={[

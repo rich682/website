@@ -8,17 +8,6 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   {
-    name: "Platform",
-    href: "#",
-    children: [
-      { name: "Overview", href: "/platform", description: "See how it all works" },
-      { name: "Request", href: "/features/requests", description: "Ask for what you need" },
-      { name: "Track", href: "/features/tasks", description: "See status at a glance" },
-      { name: "Remind", href: "/features/reminders", description: "Auto follow-ups until done" },
-      { name: "Review", href: "/features/approvals", description: "Route for sign-off" },
-    ],
-  },
-  {
     name: "Customers",
     href: "#",
     children: [
