@@ -2,6 +2,7 @@ export { HeroSection } from "./HeroSection";
 export { VideoDemoSection } from "./VideoDemoSection";
 export { ProblemSection } from "./ProblemSection";
 export { PositioningSection } from "./PositioningSection";
+export { ExecutionFramework } from "./ExecutionFramework";
 export { WorkflowSection } from "./WorkflowSection";
 export { CollectSection } from "./CollectSection";
 export { ReconciliationSection } from "./ReconciliationSection";

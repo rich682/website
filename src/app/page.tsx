@@ -27,12 +27,9 @@ export default function HomePage() {
         <PositioningSection />
         
         {/* 5. The Framework - 5-part product structure */}
-        <FrameworkSection />
+        <ExecutionFramework />
         
-        {/* 6. Comparison Teaser - Built for Accounting */}
-        <ComparisonSection />
-        
-        {/* 7. CTA - Final conversion */}
+        {/* 6. CTA - Final conversion */}
         <CTASection />
       </main>
       <Footer />
