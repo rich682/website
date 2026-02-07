@@ -12,7 +12,6 @@ const footerLinks = {
       { name: "Reminders", href: "/#features" },
       { name: "Forms", href: "/#features" },
       { name: "Reports", href: "/#features" },
-      { name: "Pricing", href: "/pricing" },
     ],
   },
   company: {

@@ -5,9 +5,9 @@ import { Button, Container } from "@/components/ui";
 import Link from "next/link";
 
 const trustBadges = [
-  { text: "Free for 2 users" },
-  { text: "No credit card required" },
   { text: "No client login needed" },
+  { text: "Setup in minutes" },
+  { text: "Built for accounting teams" },
 ];
 
 export function CTASection() {
@@ -32,7 +32,7 @@ export function CTASection() {
           className="text-lg text-foreground-secondary mb-8 max-w-xl mx-auto"
         >
           Join accounting teams who have stopped chasing and started closing.
-          Get started for free today.
+          See how Vergo can work for your team.
         </motion.p>
 
         <motion.div
@@ -40,15 +40,9 @@ export function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap items-center justify-center gap-4"
         >
-          <Link href="https://app.tryvergo.com/signup">
-            <Button variant="primary" size="lg">
-              Sign Up Free
-            </Button>
-          </Link>
           <Link href="https://app.tryvergo.com/demo">
-            <Button variant="outline" size="lg">
+            <Button variant="primary" size="lg">
               Book a Demo
             </Button>
           </Link>

@@ -5,5 +5,4 @@ export { FeaturesShowcase } from "./FeaturesShowcase";
 export { AICapabilitiesSection } from "./AIAutomationSection";
 export { IntegrationsSection } from "./IntegrationsSection";
 export { SecurityTrustSection } from "./SecurityTrustSection";
-export { PricingSection } from "./PricingSection";
 export { CTASection } from "./CTASection";

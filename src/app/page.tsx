@@ -7,7 +7,6 @@ import {
   AICapabilitiesSection,
   IntegrationsSection,
   SecurityTrustSection,
-  PricingSection,
   CTASection,
 } from "@/components/sections";
 
@@ -37,10 +36,7 @@ export default function HomePage() {
         {/* 7. Security / Trust - Differentiators */}
         <SecurityTrustSection />
 
-        {/* 8. Pricing */}
-        <PricingSection />
-
-        {/* 9. CTA - Final conversion */}
+        {/* 8. CTA - Final conversion */}
         <CTASection />
       </main>
       <Footer />

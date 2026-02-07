@@ -11,10 +11,6 @@ const navigation = [
     name: "Features",
     href: "/#features",
   },
-  {
-    name: "Pricing",
-    href: "/pricing",
-  },
 ];
 
 export function Header() {
@@ -69,9 +65,9 @@ export function Header() {
             >
               Sign In
             </Link>
-            <Link href="https://app.tryvergo.com/signup">
+            <Link href="https://app.tryvergo.com/demo">
               <Button variant="primary" size="sm">
-                Get Started
+                Book a Demo
               </Button>
             </Link>
           </div>
@@ -135,9 +131,9 @@ export function Header() {
                       Sign In
                     </Button>
                   </Link>
-                  <Link href="https://app.tryvergo.com/signup">
+                  <Link href="https://app.tryvergo.com/demo">
                     <Button variant="primary" size="md" className="w-full justify-center">
-                      Get Started
+                      Book a Demo
                     </Button>
                   </Link>
                 </div>
