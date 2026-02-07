@@ -1,8 +1,6 @@
 export { HeroSection } from "./HeroSection";
 export { ProblemSection } from "./ProblemSection";
-export { HowItWorksSection } from "./HowItWorksSection";
-export { FeaturesShowcase } from "./FeaturesShowcase";
-export { AICapabilitiesSection } from "./AIAutomationSection";
-export { IntegrationsSection } from "./IntegrationsSection";
+export { PlatformOverviewSection } from "./PlatformOverviewSection";
 export { SecurityTrustSection } from "./SecurityTrustSection";
 export { CTASection } from "./CTASection";
+export { FeatureLandingPage } from "./FeatureLandingPage";

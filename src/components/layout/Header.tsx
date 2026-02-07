@@ -6,16 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button, Container } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-const navigation = [
-  {
-    name: "Features",
-    href: "/#features",
-  },
+const platformLinks = [
+  { name: "Task Management", href: "/platform/task-management", description: "Period-based boards & tasks" },
+  { name: "Requests", href: "/platform/requests", description: "Smart requests & AI tracking" },
+  { name: "Reports", href: "/platform/reports", description: "Period reports & AI insights" },
+  { name: "Documents", href: "/platform/documents", description: "Collect & manage documents" },
+  { name: "Databases", href: "/platform/databases", description: "Structured data across the platform" },
+  { name: "Expenses", href: "/platform/expenses", description: "Tracking, approvals & coding" },
+  { name: "Invoices", href: "/platform/invoices", description: "Processing & approval workflows" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [platformOpen, setPlatformOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,18 +47,47 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
+            {/* Platform dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setPlatformOpen(true)}
+              onMouseLeave={() => setPlatformOpen(false)}
+            >
+              <button
                 className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-1",
                   "text-foreground-secondary hover:text-foreground"
                 )}
               >
-                {item.name}
-              </Link>
-            ))}
+                Platform
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <AnimatePresence>
+                {platformOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-0 mt-2 w-72 p-2 rounded-xl bg-background border border-border shadow-lg"
+                  >
+                    {platformLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="block px-4 py-3 rounded-lg hover:bg-background-secondary transition-colors"
+                      >
+                        <div className="text-sm font-medium text-foreground">{link.name}</div>
+                        <div className="text-xs text-foreground-muted mt-0.5">{link.description}</div>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Desktop CTA */}
@@ -78,26 +111,11 @@ export function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -114,15 +132,16 @@ export function Header() {
             className="lg:hidden bg-background border-t border-border"
           >
             <Container>
-              <div className="py-4 space-y-2">
-                {navigation.map((item) => (
+              <div className="py-4 space-y-1">
+                <div className="px-4 py-2 text-xs font-semibold text-foreground-muted uppercase tracking-wide">Platform</div>
+                {platformLinks.map((link) => (
                   <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-4 py-3 text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
+                    key={link.name}
+                    href={link.href}
+                    className="block px-4 py-2.5 text-sm text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    {link.name}
                   </Link>
                 ))}
                 <div className="pt-4 space-y-2 border-t border-border">

@@ -2,10 +2,7 @@ import { Header, Footer } from "@/components/layout";
 import {
   HeroSection,
   ProblemSection,
-  HowItWorksSection,
-  FeaturesShowcase,
-  AICapabilitiesSection,
-  IntegrationsSection,
+  PlatformOverviewSection,
   SecurityTrustSection,
   CTASection,
 } from "@/components/sections";
@@ -15,28 +12,19 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* 1. Hero - Stop chasing. Start closing. */}
+        {/* 1. Hero - Put your book close on autopilot */}
         <HeroSection />
 
-        {/* 2. Problem - 40% of time chasing clients */}
+        {/* 2. Problem - 40% of time on non-accounting work */}
         <ProblemSection />
 
-        {/* 3. How It Works - 3-step flow */}
-        <HowItWorksSection />
+        {/* 3. Platform Overview - 7 feature cards */}
+        <PlatformOverviewSection />
 
-        {/* 4. Feature Showcase - 6 alternating feature blocks */}
-        <FeaturesShowcase />
-
-        {/* 5. AI Capabilities - Dedicated AI highlight */}
-        <AICapabilitiesSection />
-
-        {/* 6. Integrations - Gmail, Outlook, Excel */}
-        <IntegrationsSection />
-
-        {/* 7. Security / Trust - Differentiators */}
+        {/* 4. Trust / Differentiators */}
         <SecurityTrustSection />
 
-        {/* 8. CTA - Final conversion */}
+        {/* 5. CTA - Book a Demo */}
         <CTASection />
       </main>
       <Footer />

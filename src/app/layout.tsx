@@ -15,12 +15,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Vergo | Stop Chasing. Start Closing.",
-  description: "AI-powered request management and document collection for accounting teams. Send smart requests, track responses automatically, and close tasks faster.",
-  keywords: ["accounting software", "request management", "document collection", "AI accounting", "client follow-up", "automated reminders", "accounting workflow", "bookkeeping automation"],
+  title: "Vergo | Put Your Book Close on Autopilot",
+  description: "The operating system for accounting teams. Manage tasks, requests, documents, expenses, invoices, and reports in one AI-powered platform.",
+  keywords: ["accounting software", "accounting platform", "task management", "request management", "document collection", "AI accounting", "expense management", "invoice processing", "accounting workflow", "bookkeeping automation"],
   openGraph: {
-    title: "Vergo | Stop Chasing. Start Closing.",
-    description: "AI-powered request management and document collection for accounting teams. Send smart requests, track responses automatically, and close tasks faster.",
+    title: "Vergo | Put Your Book Close on Autopilot",
+    description: "The operating system for accounting teams. Manage tasks, requests, documents, expenses, invoices, and reports in one AI-powered platform.",
     type: "website",
   },
 };
