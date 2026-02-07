@@ -9,14 +9,17 @@ const tiers = [
   {
     name: "Individual",
     price: "Free",
-    description: "For individuals managing lightweight workflows or testing the platform.",
+    description: "For individuals or small teams getting started with request management.",
     features: [
-      "1 user",
+      "Up to 2 users",
       "Up to 50 requests per month",
-      "Core task management",
-      "Email reminders",
+      "AI inbox with classification & summaries",
+      "Smart completion detection",
+      "Basic automated reminders",
+      "Email integration (Gmail or Outlook)",
+      "Form builder with secure links",
     ],
-    cta: "Get started",
+    cta: "Sign up free",
     highlighted: false,
     href: "https://app.tryvergo.com/signup",
   },
@@ -28,9 +31,13 @@ const tiers = [
     features: [
       "Up to 100 users",
       "Unlimited requests",
-      "Unlimited storage",
-      "AP automation",
-      "Expense management",
+      "Full AI suite: completion, risk, drafts",
+      "Advanced reminder sequences",
+      "Board & task management",
+      "Databases & reports with AI insights",
+      "Document collection & review",
+      "Contact management & sync",
+      "Role-based access control",
     ],
     cta: "Get started",
     highlighted: true,
@@ -39,12 +46,15 @@ const tiers = [
   {
     name: "Enterprise",
     price: "Custom",
-    description: "For complex organizations with advanced workflow, security, and integration needs.",
+    description: "For complex organizations with advanced security, integration, and compliance needs.",
     features: [
       "100+ users",
+      "Everything in Team",
       "Advanced security & SSO",
       "Custom integrations",
       "Dedicated account manager",
+      "Custom onboarding & training",
+      "SLA & priority support",
     ],
     cta: "Contact sales",
     highlighted: false,
@@ -66,7 +76,7 @@ export default function PricingPage() {
               transition={{ duration: 0.5 }}
               className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6 tracking-tight"
             >
-              Pricing designed for <br className="hidden sm:block" /> finance teams.
+              Simple, transparent pricing.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -74,8 +84,7 @@ export default function PricingPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-lg sm:text-xl text-foreground-secondary max-w-2xl mx-auto"
             >
-              Transparent, predictable plans that scale with your organization. <br className="hidden sm:block" />
-              No hidden fees, no complex tiers.
+              Start free. Upgrade when your team grows. No surprises, no hidden fees.
             </motion.p>
           </Container>
         </section>
@@ -158,13 +167,20 @@ export default function PricingPage() {
         <section className="py-24 lg:py-48 bg-foreground text-white">
           <Container size="narrow" className="text-center">
             <h2 className="font-serif text-4xl sm:text-5xl mb-8">
-              Take command of your <br /> accounting workflows.
+              Ready to stop chasing?
             </h2>
-            <Link href="https://app.tryvergo.com/signup">
-              <Button variant="primary" size="lg" className="bg-white text-foreground hover:bg-white/90 border-transparent">
-                Get started for free
-              </Button>
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link href="https://app.tryvergo.com/signup">
+                <Button variant="primary" size="lg" className="bg-white text-foreground hover:bg-white/90 border-transparent">
+                  Sign up free
+                </Button>
+              </Link>
+              <Link href="https://app.tryvergo.com/demo">
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+                  Book a demo
+                </Button>
+              </Link>
+            </div>
           </Container>
         </section>
       </main>

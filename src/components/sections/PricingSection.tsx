@@ -8,14 +8,17 @@ const tiers = [
   {
     name: "Individual",
     price: "Free",
-    description: "For individuals managing lightweight workflows or testing the platform.",
+    description: "For individuals or small teams getting started with request management.",
     features: [
-      "1 user",
+      "Up to 2 users",
       "Up to 50 requests per month",
-      "Core task management",
-      "Email reminders",
+      "AI inbox with classification & summaries",
+      "Smart completion detection",
+      "Basic automated reminders",
+      "Email integration (Gmail or Outlook)",
+      "Form builder with secure links",
     ],
-    cta: "Get started",
+    cta: "Sign up free",
     highlighted: false,
     href: "https://app.tryvergo.com/signup",
   },
@@ -27,9 +30,13 @@ const tiers = [
     features: [
       "Up to 100 users",
       "Unlimited requests",
-      "Unlimited storage",
-      "AP automation",
-      "Expense management",
+      "Full AI suite: completion, risk, drafts",
+      "Advanced reminder sequences",
+      "Board & task management",
+      "Databases & reports with AI insights",
+      "Document collection & review",
+      "Contact management & sync",
+      "Role-based access control",
     ],
     cta: "Get started",
     highlighted: true,
@@ -38,12 +45,15 @@ const tiers = [
   {
     name: "Enterprise",
     price: "Custom",
-    description: "For complex organizations with advanced workflow, security, and integration needs.",
+    description: "For complex organizations with advanced security, integration, and compliance needs.",
     features: [
       "100+ users",
+      "Everything in Team",
       "Advanced security & SSO",
       "Custom integrations",
       "Dedicated account manager",
+      "Custom onboarding & training",
+      "SLA & priority support",
     ],
     cta: "Contact sales",
     highlighted: false,
@@ -53,7 +63,7 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <section className="py-24 lg:py-32">
+    <section id="pricing" className="py-24 lg:py-32">
       <Container size="wide">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-24">
@@ -64,7 +74,7 @@ export function PricingSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Transparent pricing for every team
+            Simple, transparent pricing
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -73,7 +83,7 @@ export function PricingSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-foreground-secondary max-w-2xl mx-auto"
           >
-            Choose the plan that fits your current workflow and scales as you grow.
+            Start free. Upgrade when your team grows. No surprises.
           </motion.p>
         </div>
 

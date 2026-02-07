@@ -7,20 +7,12 @@ const footerLinks = {
   product: {
     title: "Product",
     links: [
-      { name: "Platform", href: "/platform" },
-      { name: "Request", href: "/features/requests" },
-      { name: "Track", href: "/features/tasks" },
-      { name: "Remind", href: "/features/reminders" },
-      { name: "Review", href: "/features/approvals" },
+      { name: "AI Inbox", href: "/#features" },
+      { name: "Requests", href: "/#features" },
+      { name: "Reminders", href: "/#features" },
+      { name: "Forms", href: "/#features" },
+      { name: "Reports", href: "/#features" },
       { name: "Pricing", href: "/pricing" },
-    ],
-  },
-  customers: {
-    title: "Customers",
-    links: [
-      { name: "Small Business", href: "/solutions/small-business" },
-      { name: "Mid-Market", href: "/solutions/mid-market" },
-      { name: "Enterprise", href: "/solutions/enterprise" },
     ],
   },
   company: {
@@ -48,14 +40,14 @@ export function Footer() {
       <Container size="wide">
         <div className="py-16 lg:py-20">
           {/* Main footer content */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand column */}
             <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
               <Link href="/" className="inline-block mb-4">
                 <span className="text-2xl font-medium text-foreground tracking-tight">vergo</span>
               </Link>
               <p className="text-sm text-foreground-secondary max-w-xs leading-relaxed">
-                The workflow layer that gets accounting teams what they need — without the follow-up fatigue.
+                AI-powered request tracking for accounting teams. Send smart requests. Track responses automatically. Close tasks faster.
               </p>
             </div>
 
@@ -84,7 +76,7 @@ export function Footer() {
           {/* Bottom bar */}
           <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground-muted">
-              © {new Date().getFullYear()} Vergo. All rights reserved.
+              &copy; {new Date().getFullYear()} Vergo. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               {/* Social links */}

@@ -1,11 +1,13 @@
 import { Header, Footer } from "@/components/layout";
 import {
   HeroSection,
-  VideoDemoSection,
   ProblemSection,
-  PositioningSection,
-  FrameworkSection,
-  ComparisonSection,
+  HowItWorksSection,
+  FeaturesShowcase,
+  AICapabilitiesSection,
+  IntegrationsSection,
+  SecurityTrustSection,
+  PricingSection,
   CTASection,
 } from "@/components/sections";
 
@@ -14,22 +16,31 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* 1. Hero - Close-first positioning */}
+        {/* 1. Hero - Stop chasing. Start closing. */}
         <HeroSection />
-        
-        {/* 2. Video Demo - Prominent walkthrough */}
-        <VideoDemoSection />
-        
-        {/* 3. Problem - Managing the work bottleneck */}
+
+        {/* 2. Problem - 40% of time chasing clients */}
         <ProblemSection />
-        
-        {/* 4. Positioning - Execution Layer */}
-        <PositioningSection />
-        
-        {/* 5. The Framework - 5-part product structure */}
-        <ExecutionFramework />
-        
-        {/* 6. CTA - Final conversion */}
+
+        {/* 3. How It Works - 3-step flow */}
+        <HowItWorksSection />
+
+        {/* 4. Feature Showcase - 6 alternating feature blocks */}
+        <FeaturesShowcase />
+
+        {/* 5. AI Capabilities - Dedicated AI highlight */}
+        <AICapabilitiesSection />
+
+        {/* 6. Integrations - Gmail, Outlook, Excel */}
+        <IntegrationsSection />
+
+        {/* 7. Security / Trust - Differentiators */}
+        <SecurityTrustSection />
+
+        {/* 8. Pricing */}
+        <PricingSection />
+
+        {/* 9. CTA - Final conversion */}
         <CTASection />
       </main>
       <Footer />

@@ -8,13 +8,8 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   {
-    name: "Customers",
-    href: "#",
-    children: [
-      { name: "Small Business", href: "/solutions/small-business", description: "Teams of 1-10" },
-      { name: "Mid-Market", href: "/solutions/mid-market", description: "Growing operations" },
-      { name: "Enterprise", href: "/solutions/enterprise", description: "At scale" },
-    ],
+    name: "Features",
+    href: "/#features",
   },
   {
     name: "Pricing",
@@ -25,7 +20,6 @@ const navigation = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,65 +48,16 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navigation.map((item) => (
-              <div
+              <Link
                 key={item.name}
-                className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                href={item.href}
+                className={cn(
+                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                  "text-foreground-secondary hover:text-foreground"
+                )}
               >
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-1",
-                    "text-foreground-secondary hover:text-foreground"
-                  )}
-                >
-                  {item.name}
-                  {item.children && (
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
-                </Link>
-
-                {/* Dropdown */}
-                <AnimatePresence>
-                  {item.children && activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      transition={{ duration: 0.25, ease: "easeOut" }}
-                      className="absolute top-full left-0 mt-2 w-64 p-2 rounded-xl bg-background border border-border shadow-lg"
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.href}
-                          className="block px-4 py-3 rounded-lg hover:bg-background-secondary transition-colors"
-                        >
-                          <div className="text-sm font-medium text-foreground">
-                            {child.name}
-                          </div>
-                          <div className="text-xs text-foreground-muted mt-0.5">
-                            {child.description}
-                          </div>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {item.name}
+              </Link>
             ))}
           </div>
 
@@ -175,29 +120,14 @@ export function Header() {
             <Container>
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="block px-4 py-3 text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
-                      onClick={() => !item.children && setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.children && (
-                      <div className="ml-4 mt-1 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-4 py-2 text-sm text-foreground-muted hover:text-foreground rounded-lg hover:bg-background-secondary"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-3 text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
                 ))}
                 <div className="pt-4 space-y-2 border-t border-border">
                   <Link href="https://app.tryvergo.com/auth/signin">

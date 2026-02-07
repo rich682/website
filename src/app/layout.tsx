@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Vergo | Stop Chasing. Start Closing.",
-  description: "The workflow layer that gets accounting teams what they need — without the follow-up fatigue. Run month-end close, collect documents, and automate reminders.",
-  keywords: ["accounting", "month-end close", "document collection", "approvals workflow", "workflow automation", "accounting software"],
+  description: "AI-powered request management and document collection for accounting teams. Send smart requests, track responses automatically, and close tasks faster.",
+  keywords: ["accounting software", "request management", "document collection", "AI accounting", "client follow-up", "automated reminders", "accounting workflow", "bookkeeping automation"],
   openGraph: {
     title: "Vergo | Stop Chasing. Start Closing.",
-    description: "The workflow layer that gets accounting teams what they need — without the follow-up fatigue.",
+    description: "AI-powered request management and document collection for accounting teams. Send smart requests, track responses automatically, and close tasks faster.",
     type: "website",
   },
 };

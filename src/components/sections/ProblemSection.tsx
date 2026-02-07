@@ -7,38 +7,38 @@ const problems = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    label: "Endless email threads with no tracking",
+    description: "Requests go out via email and replies get buried. There is no way to know who responded, what they sent, or what is still missing.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    label: "Work repeats across time",
-    description: "Every day, week, and month is a new cycle. Managing these cycles in generic tools or spreadsheets is where chaos starts.",
+    label: "Manual follow-ups that get forgotten",
+    description: "You make a mental note to follow up, but by the time you remember, the deadline has passed. Clients slip through the cracks every month.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
-    label: "Generic tools don't model the close",
-    description: "Tasks in Asana or Monday are 'evergreen'. Accounting work is cycle-specific. You need a system that understands the close calendar.",
+    label: "Documents scattered across inboxes and drives",
+    description: "W-9s in email, invoices in a shared drive, receipts in a spreadsheet. Finding the right document means searching three different places.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    label: "Spreadsheets + email don't scale",
-    description: "Managing checklists in Excel and chasing evidence via email creates data silos. Information gets lost, and context disappears.",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    label: "Evidence and judgment get lost",
-    description: "Why was this reconciliation signed off? Where is the backup document? Without context, audit season is a nightmare.",
+    label: "No visibility into what's received vs. what's missing",
+    description: "Without a central system, you cannot tell at a glance which clients have responded, which documents are complete, and what still needs attention.",
   },
 ];
 
@@ -54,9 +54,9 @@ export function ProblemSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-8"
           >
-            The bottleneck isn&apos;t the math.
+            Accounting teams spend 40% of their time
             <br />
-            <span className="text-foreground-secondary italic">It&apos;s managing the work.</span>
+            <span className="text-foreground-secondary italic">chasing clients for documents and data.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -65,8 +65,7 @@ export function ProblemSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-foreground-secondary leading-relaxed max-w-2xl mx-auto"
           >
-            Accounting teams spend 40% of their time just managing the workflow. 
-            Generic tools aren&apos;t built for the unique cadence of finance.
+            The real bottleneck is not the accounting work itself. It is the endless cycle of requesting, waiting, following up, and tracking down what you need.
           </motion.p>
         </div>
 
