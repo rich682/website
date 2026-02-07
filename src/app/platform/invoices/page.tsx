@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { InvoicePipelineIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Invoices | Vergo",
@@ -70,6 +71,7 @@ export default function InvoicesPage() {
       title="From inbox to ledger, automated."
       subtitle="AI-powered invoice processing with data extraction, smart coding, approval workflows, and accounting software sync."
       features={features}
+      illustration={<InvoicePipelineIllustration />}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { KanbanIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Task Management | Vergo",
@@ -70,6 +71,7 @@ export default function TaskManagementPage() {
       title="Organize every close, every period."
       subtitle="Period-based boards with AI-powered task management. Never lose track of where your team stands on any engagement."
       features={features}
+      illustration={<KanbanIllustration />}
     />
   );
 }

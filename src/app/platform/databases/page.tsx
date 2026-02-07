@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DatabaseTableIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Databases | Vergo",
@@ -70,6 +71,7 @@ export default function DatabasesPage() {
       title="Your data, structured and connected."
       subtitle="Build custom databases that power your reports, requests, and workflows. The backbone of every accounting process in Vergo."
       features={features}
+      illustration={<DatabaseTableIllustration />}
     />
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Container } from "@/components/ui";
 import Link from "next/link";
+import { useRef } from "react";
 
 const platformFeatures = [
   {
@@ -77,7 +78,68 @@ const platformFeatures = [
   },
 ];
 
+// SVG connection lines between card positions (abstract flow)
+function ConnectedNodesOverlay({ isInView }: { isInView: boolean }) {
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <svg className="w-full h-full" viewBox="0 0 800 500" fill="none" preserveAspectRatio="xMidYMid meet">
+        {/* Central AI pulse */}
+        <motion.circle
+          cx="400"
+          cy="250"
+          r="8"
+          fill="currentColor"
+          className="text-accent"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={isInView ? { opacity: [0, 0.6, 0.3], scale: [0, 1.5, 1] } : {}}
+          transition={{ duration: 1.2, delay: 0.8 }}
+        />
+        <motion.circle
+          cx="400"
+          cy="250"
+          r="30"
+          fill="none"
+          stroke="currentColor"
+          className="text-accent"
+          strokeWidth="1"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={isInView ? { opacity: [0, 0.3, 0], scale: [0, 2, 3] } : {}}
+          transition={{ duration: 2, delay: 1, repeat: Infinity, repeatDelay: 3 }}
+        />
+        {/* Radiating lines to card positions */}
+        {[
+          { x1: 400, y1: 250, x2: 110, y2: 125 },
+          { x1: 400, y1: 250, x2: 310, y2: 125 },
+          { x1: 400, y1: 250, x2: 500, y2: 125 },
+          { x1: 400, y1: 250, x2: 690, y2: 125 },
+          { x1: 400, y1: 250, x2: 110, y2: 375 },
+          { x1: 400, y1: 250, x2: 310, y2: 375 },
+          { x1: 400, y1: 250, x2: 500, y2: 375 },
+        ].map((line, i) => (
+          <motion.line
+            key={i}
+            x1={line.x1}
+            y1={line.y1}
+            x2={line.x2}
+            y2={line.y2}
+            stroke="currentColor"
+            className="text-accent/20"
+            strokeWidth="1"
+            strokeDasharray="4 4"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 1 + i * 0.1 }}
+          />
+        ))}
+      </svg>
+    </div>
+  );
+}
+
 export function PlatformOverviewSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
     <section id="platform" className="py-20 lg:py-32">
       <Container size="wide">
@@ -102,33 +164,61 @@ export function PlatformOverviewSection() {
           </motion.p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {platformFeatures.map((feature, index) => (
-            <motion.div
-              key={feature.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-            >
-              <Link href={feature.href} className="block h-full">
-                <div className="h-full bg-background rounded-2xl p-6 border border-border hover:border-accent/30 hover:shadow-md transition-all group">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground mb-2">
-                    {feature.name}
-                  </h3>
-                  <p className="text-sm text-foreground-secondary leading-relaxed mb-3">
-                    {feature.description}
-                  </p>
-                  <span className="text-sm font-medium text-accent group-hover:underline">
-                    Learn more &rarr;
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+        <div ref={ref} className="relative max-w-6xl mx-auto">
+          {/* Background connection lines (desktop only) */}
+          <div className="hidden lg:block">
+            <ConnectedNodesOverlay isInView={isInView} />
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            {platformFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+              >
+                <Link href={feature.href} className="block h-full">
+                  <motion.div
+                    className="h-full bg-background rounded-2xl p-6 border border-border hover:border-accent/30 hover:shadow-md transition-all group"
+                    whileHover={{ y: -2 }}
+                    animate={
+                      isInView
+                        ? {
+                            borderColor: [
+                              "var(--border)",
+                              "rgba(253,69,0,0.2)",
+                              "var(--border)",
+                            ],
+                          }
+                        : {}
+                    }
+                    transition={{
+                      borderColor: {
+                        duration: 1.5,
+                        delay: 1.2 + index * 0.15,
+                        times: [0, 0.5, 1],
+                      },
+                    }}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-base font-semibold text-foreground mb-2">
+                      {feature.name}
+                    </h3>
+                    <p className="text-sm text-foreground-secondary leading-relaxed mb-3">
+                      {feature.description}
+                    </p>
+                    <span className="text-sm font-medium text-accent group-hover:underline">
+                      Learn more &rarr;
+                    </span>
+                  </motion.div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

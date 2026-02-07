@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { ScalingBlocksIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for Small Business | Vergo",
@@ -70,6 +71,7 @@ export default function SmallBusinessPage() {
       title="Big firm capabilities, small firm simplicity."
       subtitle="Get started in minutes with an all-in-one accounting platform. No training required, no client logins, and immediate value from day one."
       features={features}
+      illustration={<ScalingBlocksIllustration scale="small" />}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { ScalingBlocksIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for Enterprise | Vergo",
@@ -71,6 +72,7 @@ export default function EnterprisePage() {
       title="Enterprise-grade, accounting-specific."
       subtitle="Security, compliance, SSO, custom workflows, and dedicated support for organizations with complex accounting requirements."
       features={features}
+      illustration={<ScalingBlocksIllustration scale="large" />}
     />
   );
 }

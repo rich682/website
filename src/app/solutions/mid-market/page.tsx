@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { ScalingBlocksIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for Mid Market | Vergo",
@@ -70,6 +71,7 @@ export default function MidMarketPage() {
       title="Scale your accounting operations."
       subtitle="Team collaboration, multi-entity management, and AI-powered automation that grows with your business."
       features={features}
+      illustration={<ScalingBlocksIllustration scale="medium" />}
     />
   );
 }

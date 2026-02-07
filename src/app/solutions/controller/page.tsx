@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DashboardIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for Controllers | Vergo",
@@ -71,6 +72,7 @@ export default function ControllerPage() {
       title="Close with precision, every period."
       subtitle="Manage every step of the close process with repeatable checklists, AI-powered accuracy checks, and full oversight of your team's work."
       features={features}
+      illustration={<DashboardIllustration label="Controller View" />}
     />
   );
 }

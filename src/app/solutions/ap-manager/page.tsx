@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DashboardIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for AP Managers | Vergo",
@@ -70,6 +71,7 @@ export default function APManagerPage() {
       title="Invoices and expenses, under control."
       subtitle="AI-powered invoice processing, configurable approval workflows, duplicate detection, and a centralized vendor database."
       features={features}
+      illustration={<DashboardIllustration label="AP Dashboard" />}
     />
   );
 }

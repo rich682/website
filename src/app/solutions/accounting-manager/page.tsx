@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DashboardIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for Accounting Managers | Vergo",
@@ -70,6 +71,7 @@ export default function AccountingManagerPage() {
       title="Keep your team on track, every day."
       subtitle="Manage workloads, automate client follow-ups, and see real-time progress across every engagement and deadline."
       features={features}
+      illustration={<DashboardIllustration label="Team Overview" />}
     />
   );
 }

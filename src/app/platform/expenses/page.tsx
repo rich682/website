@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { ReceiptScanIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Expenses | Vergo",
@@ -71,6 +72,7 @@ export default function ExpensesPage() {
       title="Expenses, coded and approved in minutes."
       subtitle="AI-powered expense management with receipt OCR, automatic coding, and configurable approval workflows."
       features={features}
+      illustration={<ReceiptScanIllustration />}
     />
   );
 }

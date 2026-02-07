@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DashboardIllustration } from "@/components/illustrations/SolutionIllustrations";
 
 export const metadata: Metadata = {
   title: "Vergo for CFOs | Vergo",
@@ -70,6 +71,7 @@ export default function CFOPage() {
       title="Full visibility into your accounting operation."
       subtitle="Track every engagement, spot risks early, and make confident decisions with real-time data and AI-powered insights."
       features={features}
+      illustration={<DashboardIllustration label="CFO Dashboard" />}
     />
   );
 }

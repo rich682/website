@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { ReportsChartIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Reports | Vergo",
@@ -70,6 +71,7 @@ export default function ReportsPage() {
       title="Reports that build themselves."
       subtitle="Period-based reporting powered by your databases, with AI insights and one-click Excel export."
       features={features}
+      illustration={<ReportsChartIllustration />}
     />
   );
 }

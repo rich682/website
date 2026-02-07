@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { DocumentCollectionIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Documents | Vergo",
@@ -70,6 +71,7 @@ export default function DocumentsPage() {
       title="Every document, one place."
       subtitle="Collect, verify, and organize client documents automatically. From email attachments to form uploads, nothing falls through the cracks."
       features={features}
+      illustration={<DocumentCollectionIllustration />}
     />
   );
 }

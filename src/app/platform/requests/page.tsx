@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
+import { RequestFlowIllustration } from "@/components/illustrations/PlatformIllustrations";
 
 export const metadata: Metadata = {
   title: "Requests | Vergo",
@@ -71,6 +72,7 @@ export default function RequestsPage() {
       title="Send once. AI tracks every response."
       subtitle="Smart requests with automatic follow-ups, AI classification, and completion tracking. Your clients never need to log in."
       features={features}
+      illustration={<RequestFlowIllustration />}
     />
   );
 }
