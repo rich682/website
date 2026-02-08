@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import { Header, Footer } from "@/components/layout";
 import { Button, Container } from "@/components/ui";
+import Image from "next/image";
 import Link from "next/link";
 
 interface FeatureItem {
-  icon: React.ReactNode;
   title: string;
   description: string;
+  image: string;
+  bullets?: string[];
 }
 
 interface FeatureLandingPageProps {
@@ -16,10 +18,9 @@ interface FeatureLandingPageProps {
   title: string;
   subtitle: string;
   features: FeatureItem[];
-  illustration?: React.ReactNode;
 }
 
-export function FeatureLandingPage({ badge, title, subtitle, features, illustration }: FeatureLandingPageProps) {
+export function FeatureLandingPage({ badge, title, subtitle, features }: FeatureLandingPageProps) {
   return (
     <>
       <Header />
@@ -70,66 +71,67 @@ export function FeatureLandingPage({ badge, title, subtitle, features, illustrat
           </Container>
         </section>
 
-        {/* Illustration slot */}
-        {illustration && (
-          <section className="pb-12 lg:pb-20">
-            <Container size="default">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="max-w-xl mx-auto"
-              >
-                {illustration}
-              </motion.div>
-            </Container>
-          </section>
-        )}
+        {/* Alternating feature sections */}
+        {features.map((feature, index) => {
+          const isImageLeft = index % 2 === 0;
+          return (
+            <section
+              key={feature.title}
+              className={index % 2 === 0 ? "py-16 lg:py-24" : "py-16 lg:py-24 bg-background-secondary"}
+            >
+              <Container size="wide">
+                <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isImageLeft ? "" : "lg:direction-rtl"}`}>
+                  {/* Image */}
+                  <motion.div
+                    initial={{ opacity: 0, x: isImageLeft ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className={isImageLeft ? "order-1" : "order-1 lg:order-2"}
+                  >
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border">
+                      <Image
+                        src={feature.image}
+                        alt={feature.title}
+                        width={640}
+                        height={400}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </motion.div>
 
-        {/* Features list */}
-        <section className="pb-20 lg:pb-32">
-          <Container size="default">
-            <div className="max-w-2xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-background rounded-2xl border border-border shadow-sm p-8 lg:p-10"
-              >
-                <h2 className="font-serif text-2xl text-foreground mb-8">Features</h2>
-                <div className="space-y-6">
-                  {features.map((feature, index) => (
-                    <motion.div
-                      key={feature.title}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.06 }}
-                      className="flex items-start gap-4 group"
-                    >
-                      <motion.div
-                        className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0 mt-0.5"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        {feature.icon}
-                      </motion.div>
-                      <div>
-                        <h3 className="text-base font-semibold text-foreground mb-1">
-                          {feature.title}
-                        </h3>
-                        <p className="text-sm text-foreground-secondary leading-relaxed">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
+                  {/* Text content */}
+                  <motion.div
+                    initial={{ opacity: 0, x: isImageLeft ? 30 : -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className={isImageLeft ? "order-2" : "order-2 lg:order-1"}
+                  >
+                    <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4">
+                      {feature.title}
+                    </h2>
+                    <p className="text-lg text-foreground-secondary leading-relaxed mb-6">
+                      {feature.description}
+                    </p>
+                    {feature.bullets && feature.bullets.length > 0 && (
+                      <ul className="space-y-3">
+                        {feature.bullets.map((bullet) => (
+                          <li key={bullet} className="flex items-start gap-3 text-foreground-secondary">
+                            <svg className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-sm leading-relaxed">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </motion.div>
                 </div>
-              </motion.div>
-            </div>
-          </Container>
-        </section>
+              </Container>
+            </section>
+          );
+        })}
 
         {/* CTA */}
         <section className="py-16 lg:py-24 bg-background-secondary">
