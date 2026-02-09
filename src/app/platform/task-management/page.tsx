@@ -18,23 +18,23 @@ const features = [
     ],
   },
   {
-    title: "Kanban & List Views",
-    description: "Switch between Kanban boards, list views, and table views. Drag and drop tasks between stages, filter by assignee, and sort by priority.",
+    title: "Team Collaboration",
+    description: "Assign tasks to team members, leave comments, share updates, and track who is working on what. Everyone stays aligned without status meetings or email chains.",
     image: "/images/platform/task-management/task-management-2.png",
     bullets: [
-      "Drag-and-drop between stages",
-      "Filter by assignee, status, or priority",
-      "Multiple view modes for every workflow",
+      "Assign and reassign tasks across your team",
+      "In-context comments and activity history",
+      "Real-time visibility into team workload",
     ],
   },
   {
-    title: "AI Task Suggestions",
-    description: "Vergo AI analyzes incoming responses and suggests task completions, flagging items that may need attention before you even check.",
+    title: "Linked to Requests, Reports & Reconciliations",
+    description: "Tasks don't live in a silo. Every task can link directly to auto-requests, reports, and reconciliations -- so your team always has the full picture without switching between tools.",
     image: "/images/platform/task-management/task-management-3.png",
     bullets: [
-      "AI flags tasks ready to close",
-      "Smart suggestions from client responses",
-      "Proactive risk alerts on overdue items",
+      "Link tasks to auto-requests, reports, and reconciliations",
+      "See related items at a glance from any task",
+      "Complete workflows without leaving the board",
     ],
   },
 ];
