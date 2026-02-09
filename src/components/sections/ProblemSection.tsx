@@ -247,7 +247,9 @@ export function ProblemSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Accounting teams spend 60%+ of their time on work that is not accounting.
+            Accounting teams spend 60%+ of their time
+            <br />
+            on work that is not accounting.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
