@@ -89,11 +89,11 @@ const differentiators = [
   {
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
-    title: "No Client Login Required",
-    description: "Clients reply via normal email or fill out forms via secure token-based links. Zero friction for the people you are collecting from. They never need a Vergo account.",
+    title: "Audit-Friendly",
+    description: "Every action, approval, and change is logged in a complete audit trail. Structured sign-off workflows and locked periods mean you are always ready for review -- internal or external.",
   },
   {
     icon: (
@@ -132,7 +132,7 @@ export function SecurityTrustSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Why teams choose Vergo.
+            Why accounting teams choose Vergo.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

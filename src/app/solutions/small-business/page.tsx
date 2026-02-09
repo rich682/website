@@ -26,7 +26,7 @@ const features = [
     bullets: [
       "Up and running in under 10 minutes",
       "Zero training required for your team or clients",
-      "Clients respond via email -- no logins needed",
+      "Full audit trail from day one -- no extra setup",
     ],
   },
   {

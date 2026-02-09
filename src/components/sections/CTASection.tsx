@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 
 const trustBadges = [
-  { text: "No client login needed" },
+  { text: "Audit-friendly by design" },
   { text: "Setup in minutes" },
   { text: "Built for accounting teams" },
 ];

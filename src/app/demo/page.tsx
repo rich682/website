@@ -5,7 +5,7 @@ import { Container } from "@/components/ui";
 import Script from "next/script";
 
 const trustBadges = [
-  { text: "No client login needed" },
+  { text: "Audit-friendly by design" },
   { text: "Setup in minutes" },
   { text: "Built for accounting teams" },
 ];
