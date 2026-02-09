@@ -39,9 +39,8 @@ const footerLinks = {
   legal: {
     title: "Legal",
     links: [
-      { name: "Privacy", href: "/privacy" },
-      { name: "Terms", href: "/terms" },
-      { name: "Security", href: "/security" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Use", href: "/eula" },
     ],
   },
 };
