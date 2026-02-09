@@ -3,41 +3,41 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Vergo for Controllers | Vergo",
-  description: "Manage every close with precision. Track tasks, enforce processes, and ensure accuracy across every period with AI-powered oversight.",
+  description: "Manage every close with precision. Repeatable checklists, AI-powered accuracy checks, and approval gates that enforce quality every period.",
 };
 
 const IMAGES = "/images/solutions/controller/sol";
 
 const features = [
   {
-    title: "Close Management",
-    description: "Build repeatable close checklists tied to accounting periods. Every task, every deliverable, every review step tracked in one place.",
+    title: "Repeatable Close Process",
+    description: "Build close checklists tied to accounting periods and roll them forward with one click. Every task, deliverable, and review step is tracked -- so nothing falls through the cracks, period after period.",
     image: `${IMAGES}-1.png`,
+    bullets: [
+      "Period-based checklists for monthly, quarterly, and annual closes",
+      "One-click roll forward of tasks and auto-requests",
+      "Period-over-period comparison to track process improvement",
+    ],
   },
   {
-    title: "Accuracy & Reconciliation",
-    description: "AI flags discrepancies and anomalies across reports and databases. Catch errors during the close, not after the books are published.",
+    title: "AI-Powered Accuracy",
+    description: "AI flags discrepancies and anomalies across reports during the close -- not after the books are published. Document completeness is verified automatically so you know exactly what is received, pending, or overdue.",
     image: `${IMAGES}-2.png`,
+    bullets: [
+      "Automatic anomaly and discrepancy detection",
+      "AI-verified document completeness per engagement",
+      "Catch errors during close, not after publication",
+    ],
   },
   {
-    title: "Review & Oversight",
-    description: "Review every request, response, and document before tasks are marked complete. Set approval gates to enforce quality standards.",
+    title: "Review & Approval Gates",
+    description: "Enforce quality standards with configurable approval gates. Review every auto-request, response, and document before tasks are marked complete. Nothing moves forward without your sign-off.",
     image: `${IMAGES}-3.png`,
-  },
-  {
-    title: "Recurring Period Templates",
-    description: "Create templates for monthly, quarterly, and annual closes. Roll forward tasks, requests, and checklists with one click.",
-    image: `${IMAGES}-4.png`,
-  },
-  {
-    title: "Document Completeness",
-    description: "See at a glance which documents have been received, which are pending, and which are overdue. AI verifies documents match what was requested.",
-    image: `${IMAGES}-5.png`,
-  },
-  {
-    title: "Period-Over-Period Comparison",
-    description: "Compare current close progress against prior periods. Identify which areas are improving and which need process changes.",
-    image: `${IMAGES}-6.png`,
+    bullets: [
+      "Configurable approval gates at every stage",
+      "Full review of responses and documents before close",
+      "Audit trail of every review decision and approval",
+    ],
   },
 ];
 
@@ -46,7 +46,7 @@ export default function ControllerPage() {
     <FeatureLandingPage
       badge="For Controllers"
       title="Close with precision, every period."
-      subtitle="Manage every step of the close process with repeatable checklists, AI-powered accuracy checks, and full oversight of your team's work."
+      subtitle="Repeatable close checklists, AI-powered accuracy checks, and approval gates that enforce quality -- so every close is clean, complete, and on time."
       features={features}
     />
   );

@@ -3,41 +3,41 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Vergo for Small Business | Vergo",
-  description: "Get started in minutes with an accounting platform that is simple to use, requires no training, and delivers immediate value.",
+  description: "Scale your accounting practice without hiring. AI handles the follow-ups, classification, and reminders so you can focus on the work that matters.",
 };
 
 const IMAGES = "/images/solutions/small-business/sol";
 
 const features = [
   {
-    title: "Setup in Minutes",
-    description: "No complex onboarding or training required. Connect your email, create your first board, and send your first request in under 10 minutes.",
+    title: "Scale Without Hiring",
+    description: "AI handles client follow-ups, response classification, and document reminders automatically. Take on more clients without adding headcount -- Vergo does the work that used to require another person.",
     image: `${IMAGES}-1.png`,
+    bullets: [
+      "Automated follow-ups free up hours every week",
+      "AI classifies and organizes client responses",
+      "Handle more clients with the same team",
+    ],
   },
   {
-    title: "Email-First Workflow",
-    description: "Clients respond via email -- they never need to log in or learn a new tool. You work in Vergo, they work the way they always have.",
+    title: "Setup in Minutes, Not Months",
+    description: "No complex onboarding, no training, no IT department required. Connect your email, create your first board, and send your first auto-request in under 10 minutes. Clients respond via email -- they never need to log in.",
     image: `${IMAGES}-2.png`,
+    bullets: [
+      "Up and running in under 10 minutes",
+      "Zero training required for your team or clients",
+      "Clients respond via email -- no logins needed",
+    ],
   },
   {
-    title: "Automated Follow-Ups",
-    description: "Stop spending hours chasing documents. Set it once and Vergo handles reminders, so you can focus on the actual accounting work.",
+    title: "One Platform, Not Ten Tools",
+    description: "Replace the patchwork of spreadsheets, email folders, shared drives, and sticky notes with one integrated platform. Tasks, auto-requests, documents, expenses, and invoices -- all in one place.",
     image: `${IMAGES}-3.png`,
-  },
-  {
-    title: "All-in-One Platform",
-    description: "Tasks, requests, documents, expenses, and invoices in one place. Replace the patchwork of spreadsheets, email folders, and shared drives.",
-    image: `${IMAGES}-4.png`,
-  },
-  {
-    title: "Affordable & Transparent",
-    description: "Built for teams that need powerful tools without enterprise complexity or pricing. Get the features you need at a price that makes sense.",
-    image: `${IMAGES}-5.png`,
-  },
-  {
-    title: "Grow Without Switching",
-    description: "Start small and add features as you grow. Vergo scales with you -- from a solo practitioner to a growing firm -- without switching tools.",
-    image: `${IMAGES}-6.png`,
+    bullets: [
+      "Everything in one place instead of scattered tools",
+      "Grows with you from solo practitioner to firm",
+      "Affordable pricing without enterprise complexity",
+    ],
   },
 ];
 
@@ -45,8 +45,8 @@ export default function SmallBusinessPage() {
   return (
     <FeatureLandingPage
       badge="Small Business"
-      title="Big firm capabilities, small firm simplicity."
-      subtitle="Get started in minutes with an all-in-one accounting platform. No training required, no client logins, and immediate value from day one."
+      title="Do more with less. Scale without hiring."
+      subtitle="AI-powered automation that lets you take on more clients without adding headcount. Set up in minutes, not months."
       features={features}
     />
   );

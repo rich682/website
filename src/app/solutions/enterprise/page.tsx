@@ -3,41 +3,41 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Vergo for Enterprise | Vergo",
-  description: "Enterprise-grade security, compliance, custom workflows, and SSO. Built for organizations with complex accounting requirements.",
+  description: "Enterprise-grade security, compliance, and SSO with custom workflows and API integration. Built for organizations with complex accounting requirements.",
 };
 
 const IMAGES = "/images/solutions/enterprise/sol";
 
 const features = [
   {
-    title: "Enterprise Security",
-    description: "SOC 2 compliance, encryption at rest and in transit, role-based access control, and comprehensive audit logging for every action.",
+    title: "Enterprise Security & SSO",
+    description: "SOC 2 compliance, encryption at rest and in transit, and comprehensive role-based access control. SAML-based SSO integrates with your identity provider to enforce authentication policies and streamline provisioning.",
     image: `${IMAGES}-1.png`,
+    bullets: [
+      "SOC 2 compliance with encryption at rest and in transit",
+      "SAML-based SSO with your identity provider",
+      "Role-based access control across teams and entities",
+    ],
   },
   {
-    title: "Single Sign-On (SSO)",
-    description: "SAML-based SSO integration with your identity provider. Enforce authentication policies and streamline user provisioning.",
+    title: "Compliance & Audit Trail",
+    description: "Every action, approval, and document change is logged in a complete, searchable audit trail. Retention policies and data governance controls are built in -- so you are always ready for internal review or external audit.",
     image: `${IMAGES}-2.png`,
+    bullets: [
+      "Complete audit trail of every action and decision",
+      "Configurable retention policies and data governance",
+      "Compliance reporting for regulated environments",
+    ],
   },
   {
-    title: "Custom Workflows",
-    description: "Configure approval chains, task routing, and automation rules that match your organization's specific processes and compliance requirements.",
+    title: "Custom Workflows & Integration",
+    description: "Configure approval chains, task routing, and automation rules to match your organization's specific processes. Connect Vergo to your existing tech stack with API access, and get priority onboarding with dedicated account management.",
     image: `${IMAGES}-3.png`,
-  },
-  {
-    title: "Compliance & Audit",
-    description: "Complete audit trail of every action. Retention policies, data governance, and compliance reporting designed for regulated environments.",
-    image: `${IMAGES}-4.png`,
-  },
-  {
-    title: "API & Integrations",
-    description: "Connect Vergo to your existing tech stack with API access. Sync with ERP systems, document management platforms, and business intelligence tools.",
-    image: `${IMAGES}-5.png`,
-  },
-  {
-    title: "Dedicated Support",
-    description: "Priority onboarding, dedicated account management, and SLA-backed support. Your success team helps you configure, migrate, and optimize.",
-    image: `${IMAGES}-6.png`,
+    bullets: [
+      "Configurable workflows for your specific processes",
+      "API access for ERP and business intelligence integration",
+      "Dedicated account management and SLA-backed support",
+    ],
   },
 ];
 
@@ -46,7 +46,7 @@ export default function EnterprisePage() {
     <FeatureLandingPage
       badge="Enterprise"
       title="Enterprise-grade, accounting-specific."
-      subtitle="Security, compliance, SSO, custom workflows, and dedicated support for organizations with complex accounting requirements."
+      subtitle="Security, compliance, SSO, and custom workflows built for organizations with complex accounting requirements and strict governance needs."
       features={features}
     />
   );

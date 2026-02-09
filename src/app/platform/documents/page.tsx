@@ -19,10 +19,10 @@ const features = [
   },
   {
     title: "Automatic Verification",
-    description: "AI checks received documents against your request list. Know immediately whether a client sent the right file or if something is missing.",
+    description: "AI checks received documents against your auto-request list. Know immediately whether a client sent the right file or if something is missing.",
     image: "/images/platform/documents/documents-2.png",
     bullets: [
-      "AI matches documents to request items",
+      "AI matches documents to auto-request items",
       "Missing document alerts",
       "Duplicate file detection",
     ],

@@ -3,41 +3,41 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Vergo for Accounting Managers | Vergo",
-  description: "Keep your team on track with clear task assignments, automated request tracking, and real-time visibility into every deadline.",
+  description: "Keep your team on track with workload visibility, automated client follow-ups, and real-time progress tracking across every engagement.",
 };
 
 const IMAGES = "/images/solutions/accounting-manager/sol";
 
 const features = [
   {
-    title: "Team Workload Management",
-    description: "See who is working on what across every client and period. Balance workloads, reassign tasks, and prevent burnout before deadlines hit.",
+    title: "Team Workload Visibility",
+    description: "See who is working on what across every client and period from a single view. Balance workloads, reassign tasks, and prevent burnout before deadlines hit -- without asking your team for status updates.",
     image: `${IMAGES}-1.png`,
+    bullets: [
+      "Per-team-member workload across all engagements",
+      "Drag-and-drop task reassignment",
+      "Prevent bottlenecks before they affect deadlines",
+    ],
   },
   {
-    title: "Request Tracking",
-    description: "Send requests to clients and track every response automatically. AI classifies replies, flags missing items, and drafts follow-ups.",
+    title: "Automated Client Follow-Ups",
+    description: "Stop spending hours chasing clients for documents and responses. Send auto-requests once and let Vergo AI handle the rest -- classifying replies, flagging missing items, and sending polite, context-aware reminders.",
     image: `${IMAGES}-2.png`,
+    bullets: [
+      "AI classifies every client response automatically",
+      "Context-aware reminder emails on your team's behalf",
+      "Escalation rules for overdue and unresponsive clients",
+    ],
   },
   {
-    title: "Deadline Dashboard",
-    description: "Every deadline for every client in one view. Filter by team member, client, or period. Color-coded urgency so nothing gets missed.",
+    title: "Deadline & Progress Tracking",
+    description: "Every deadline for every client in one view with real-time completion percentages. Filter by team member, client, or period. Know exactly where you stand without asking anyone.",
     image: `${IMAGES}-3.png`,
-  },
-  {
-    title: "Automated Follow-Ups",
-    description: "Stop manually chasing clients. Set reminder schedules and let Vergo AI send polite, context-aware follow-up emails on your team's behalf.",
-    image: `${IMAGES}-4.png`,
-  },
-  {
-    title: "Kanban Task Boards",
-    description: "Drag-and-drop task boards for every engagement. Your team sees exactly what to work on next, with clear stages from start to close.",
-    image: `${IMAGES}-5.png`,
-  },
-  {
-    title: "Completion Tracking",
-    description: "Real-time progress bars per client, per task, and per period. Know exactly where you stand without asking anyone for a status update.",
-    image: `${IMAGES}-6.png`,
+    bullets: [
+      "Real-time progress bars per client and per period",
+      "Color-coded urgency so nothing gets missed",
+      "Filter and sort by team member, client, or deadline",
+    ],
   },
 ];
 
@@ -46,7 +46,7 @@ export default function AccountingManagerPage() {
     <FeatureLandingPage
       badge="For Accounting Managers"
       title="Keep your team on track, every day."
-      subtitle="Manage workloads, automate client follow-ups, and see real-time progress across every engagement and deadline."
+      subtitle="Workload visibility, automated client follow-ups, and real-time progress tracking -- so your team hits every deadline without the chaos."
       features={features}
     />
   );

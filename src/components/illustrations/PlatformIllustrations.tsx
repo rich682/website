@@ -70,7 +70,7 @@ export function KanbanIllustration() {
   );
 }
 
-/* ===== 2. Requests: Send-and-Track Flow ===== */
+/* ===== 2. Auto-Requests: Send-and-Track Flow ===== */
 export function RequestFlowIllustration() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -101,7 +101,7 @@ export function RequestFlowIllustration() {
           animate={isInView ? { opacity: [0, 1, 0] } : {}}
           transition={{ duration: 1, delay: 0.3, times: [0, 0.3, 1] }}
         >
-          Sending request...
+          Sending auto-request...
         </motion.div>
       </div>
 
@@ -220,73 +220,7 @@ export function DocumentCollectionIllustration() {
   );
 }
 
-/* ===== 5. Databases: Table Schema ===== */
-export function DatabaseTableIllustration() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  const headers = ["Name", "Type", "Status", "Amount"];
-  const rows = [
-    ["Acme Corp", "Client", "Active", "$12,500"],
-    ["Baker LLC", "Vendor", "Active", "$8,200"],
-    ["Smith & Co", "Client", "Pending", "$3,100"],
-  ];
-
-  return (
-    <div ref={ref} className="bg-background-secondary rounded-2xl p-6 border border-border">
-      <div className="bg-background rounded-lg border border-border/50 overflow-hidden text-[11px]">
-        {/* Header row */}
-        <div className="grid grid-cols-4 gap-px bg-border/50">
-          {headers.map((h, i) => (
-            <motion.div
-              key={h}
-              className="bg-background-tertiary px-2 py-1.5 font-semibold text-foreground-muted"
-              initial={{ opacity: 0, y: -10 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.3, delay: 0.3 + i * 0.08 }}
-            >
-              {h}
-            </motion.div>
-          ))}
-        </div>
-        {/* Data rows */}
-        {rows.map((row, ri) => (
-          <div key={ri} className="grid grid-cols-4 gap-px bg-border/30">
-            {row.map((cell, ci) => (
-              <motion.div
-                key={ci}
-                className="bg-background px-2 py-1.5 text-foreground-secondary"
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : {}}
-                transition={{ duration: 0.3, delay: 0.6 + ri * 0.15 + ci * 0.05 }}
-              >
-                {cell}
-              </motion.div>
-            ))}
-          </div>
-        ))}
-      </div>
-      {/* Connection indicators */}
-      <motion.div
-        className="mt-3 flex justify-center gap-3"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ delay: 1.4 }}
-      >
-        {["Reports", "Requests", "Forms"].map((label) => (
-          <span key={label} className="inline-flex items-center gap-1 text-[10px] text-accent font-medium bg-accent/10 px-2 py-0.5 rounded-full">
-            <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-            {label}
-          </span>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
-/* ===== 6. Expenses: Receipt Scan ===== */
+/* ===== 5. Expenses: Receipt Scan ===== */
 export function ReceiptScanIllustration() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });

@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Vergo | Put Your Book Close on Autopilot",
-  description: "The operating system for accounting teams. Manage tasks, requests, documents, expenses, invoices, and reports in one AI-powered platform.",
-  keywords: ["accounting software", "accounting platform", "task management", "request management", "document collection", "AI accounting", "expense management", "invoice processing", "accounting workflow", "bookkeeping automation"],
+  description: "The operating system for accounting teams. Manage tasks, auto-requests, documents, expenses, invoices, and reports in one AI-powered platform.",
+  keywords: ["accounting software", "accounting platform", "task management", "auto-request management", "document collection", "AI accounting", "expense management", "invoice processing", "accounting workflow", "bookkeeping automation"],
   openGraph: {
     title: "Vergo | Put Your Book Close on Autopilot",
-    description: "The operating system for accounting teams. Manage tasks, requests, documents, expenses, invoices, and reports in one AI-powered platform.",
+    description: "The operating system for accounting teams. Manage tasks, auto-requests, documents, expenses, invoices, and reports in one AI-powered platform.",
     type: "website",
   },
 };

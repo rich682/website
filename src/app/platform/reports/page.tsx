@@ -3,7 +3,7 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Reports | Vergo",
-  description: "Generate period-based reports with formulas, comparisons, and AI-powered insights. Pull data directly from databases and requests.",
+  description: "Generate period-based reports with formulas, comparisons, and AI-powered insights. Pull data directly from auto-requests and other modules.",
 };
 
 const features = [
@@ -15,16 +15,6 @@ const features = [
       "Reports tied to accounting periods",
       "Month-over-month and YoY comparisons",
       "Structured, repeatable layouts",
-    ],
-  },
-  {
-    title: "Database-Powered Data",
-    description: "Pull live data directly from your Vergo databases into reports. No copy-pasting, no stale spreadsheets -- always current.",
-    image: "/images/platform/reports/reports-2.png",
-    bullets: [
-      "Live data from Vergo databases",
-      "Auto-refresh on report generation",
-      "No manual data entry or copy-pasting",
     ],
   },
   {
@@ -54,7 +44,7 @@ export default function ReportsPage() {
     <FeatureLandingPage
       badge="Reports"
       title="Reports that build themselves."
-      subtitle="Period-based reporting powered by your databases, with AI insights and one-click Excel export."
+      subtitle="Period-based reporting with AI insights and one-click Excel export."
       features={features}
     />
   );

@@ -13,8 +13,8 @@ const platformFeatures = [
     image: "/images/platform/task-management/task-management-1.png",
   },
   {
-    name: "Requests",
-    description: "Send smart requests, track every response with AI, and automate follow-ups.",
+    name: "Auto-Requests",
+    description: "Send smart auto-requests, track every response with AI, and automate follow-ups.",
     href: "/platform/requests",
     image: "/images/platform/requests/requests-1.png",
   },
@@ -29,12 +29,6 @@ const platformFeatures = [
     description: "Collect, track, and manage every document from email, forms, or manual uploads.",
     href: "/platform/documents",
     image: "/images/platform/documents/documents-1.png",
-  },
-  {
-    name: "Databases",
-    description: "Build structured databases that power reports, requests, and workflows across the platform.",
-    href: "/platform/databases",
-    image: "/images/platform/databases/databases-1.png",
   },
   {
     name: "Expenses",
@@ -71,7 +65,7 @@ export function PlatformOverviewSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-foreground-secondary max-w-2xl mx-auto"
           >
-            Seven integrated modules designed specifically for accounting teams. Each one is powerful alone — together, they are transformative.
+            Six integrated modules designed specifically for accounting teams. Each one is powerful alone — together, they are transformative.
           </motion.p>
         </div>
 

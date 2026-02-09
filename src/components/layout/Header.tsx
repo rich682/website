@@ -8,10 +8,9 @@ import { cn } from "@/lib/utils";
 
 const platformLinks = [
   { name: "Task Management", href: "/platform/task-management", description: "Period-based boards & tasks" },
-  { name: "Requests", href: "/platform/requests", description: "Smart requests & AI tracking" },
+  { name: "Auto-Requests", href: "/platform/requests", description: "Smart auto-requests & AI tracking" },
   { name: "Reports", href: "/platform/reports", description: "Period reports & AI insights" },
   { name: "Documents", href: "/platform/documents", description: "Collect & manage documents" },
-  { name: "Databases", href: "/platform/databases", description: "Structured data across the platform" },
   { name: "Expenses", href: "/platform/expenses", description: "Tracking, approvals & coding" },
   { name: "Invoices", href: "/platform/invoices", description: "Processing & approval workflows" },
 ];

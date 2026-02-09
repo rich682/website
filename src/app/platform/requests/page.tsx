@@ -2,18 +2,18 @@ import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
-  title: "Requests | Vergo",
-  description: "Send smart requests, track every response with AI, and automate follow-ups. Stop chasing clients and start closing tasks.",
+  title: "Auto-Requests | Vergo",
+  description: "Send smart auto-requests, track every response with AI, and automate follow-ups. Stop chasing clients and start closing tasks.",
 };
 
 const features = [
   {
-    title: "Smart Request Builder",
-    description: "Create structured requests with specific line items. Clients see exactly what you need, broken down clearly so nothing gets missed.",
+    title: "Smart Auto-Request Builder",
+    description: "Create structured auto-requests with specific line items. Clients see exactly what you need, broken down clearly so nothing gets missed.",
     image: "/images/platform/requests/requests-1.png",
     bullets: [
-      "Structured line items per request",
-      "Templates for recurring request types",
+      "Structured line items per auto-request",
+      "Templates for recurring auto-request types",
       "Attach reference documents inline",
     ],
   },
@@ -29,12 +29,12 @@ const features = [
   },
   {
     title: "Completion & Risk Scoring",
-    description: "AI analyzes each response against your request and calculates a completion percentage and risk level. Know at a glance what still needs attention.",
+    description: "AI analyzes each response against your auto-request and calculates a completion percentage and risk level. Know at a glance what still needs attention.",
     image: "/images/platform/requests/requests-3.png",
     bullets: [
       "Per-item completion tracking",
       "Risk scoring based on responsiveness",
-      "Visual status indicators across all requests",
+      "Visual status indicators across all auto-requests",
     ],
   },
   {
@@ -52,9 +52,9 @@ const features = [
 export default function RequestsPage() {
   return (
     <FeatureLandingPage
-      badge="Requests"
+      badge="Auto-Requests"
       title="Send once. AI tracks every response."
-      subtitle="Smart requests with automatic follow-ups, AI classification, and completion tracking. Your clients never need to log in."
+      subtitle="Smart auto-requests with automatic follow-ups, AI classification, and completion tracking. Your clients never need to log in."
       features={features}
     />
   );

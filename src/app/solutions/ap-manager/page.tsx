@@ -3,41 +3,41 @@ import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
   title: "Vergo for AP Managers | Vergo",
-  description: "Streamline invoice processing, expense approvals, and vendor management with AI-powered automation and configurable workflows.",
+  description: "AI-powered invoice processing, configurable approval workflows, and centralized expense management. From receipt to ledger in minutes.",
 };
 
 const IMAGES = "/images/solutions/ap-manager/sol";
 
 const features = [
   {
-    title: "Invoice Processing",
-    description: "Receive invoices via email or upload. AI extracts vendor, amount, line items, and due dates automatically -- no manual data entry.",
+    title: "AI-Powered Invoice Processing",
+    description: "Receive invoices via email or upload and let AI handle the rest. Vergo extracts vendor, amount, line items, and due dates automatically -- then suggests GL codes based on vendor history. Duplicates are caught before they become double payments.",
     image: `${IMAGES}-1.png`,
+    bullets: [
+      "AI extracts all key fields from every invoice",
+      "Smart GL coding based on vendor history",
+      "Automatic duplicate detection and flagging",
+    ],
   },
   {
-    title: "AI Coding",
-    description: "Vergo AI suggests GL codes, departments, and cost centers based on vendor history and invoice content. Review and approve with one click.",
+    title: "Configurable Approval Workflows",
+    description: "Build multi-step approval chains based on amount, vendor, or department. Approvers are notified automatically and can review and act in one click -- no email threads, no lost approvals.",
     image: `${IMAGES}-2.png`,
+    bullets: [
+      "Multi-step chains by amount, vendor, or department",
+      "One-click approve or reject with audit trail",
+      "Automatic routing and escalation for stalled approvals",
+    ],
   },
   {
-    title: "Approval Workflows",
-    description: "Configure multi-step approval chains based on amount, vendor, or department. Approvers are notified automatically and can act in one click.",
+    title: "Centralized Expense Management",
+    description: "Centralize every expense submission with receipt OCR, automatic categorization, and configurable reimbursement workflows. Maintain a clean vendor directory with payment terms, contact info, and full interaction history.",
     image: `${IMAGES}-3.png`,
-  },
-  {
-    title: "Expense Management",
-    description: "Centralize expense submissions with receipt OCR, automatic categorization, and configurable reimbursement workflows.",
-    image: `${IMAGES}-4.png`,
-  },
-  {
-    title: "Duplicate Detection",
-    description: "AI checks every incoming invoice against existing records to prevent double payments. Flagged duplicates are held for review.",
-    image: `${IMAGES}-5.png`,
-  },
-  {
-    title: "Vendor Database",
-    description: "Maintain a structured vendor database with payment terms, contact info, and history. Vergo deduplicates records and tracks every interaction.",
-    image: `${IMAGES}-6.png`,
+    bullets: [
+      "Receipt OCR with automatic categorization",
+      "Vendor directory with terms and history",
+      "Configurable reimbursement workflows",
+    ],
   },
 ];
 
@@ -46,7 +46,7 @@ export default function APManagerPage() {
     <FeatureLandingPage
       badge="For AP Managers"
       title="Invoices and expenses, under control."
-      subtitle="AI-powered invoice processing, configurable approval workflows, duplicate detection, and a centralized vendor database."
+      subtitle="AI-powered invoice processing, configurable approval workflows, and centralized expense management -- from receipt to ledger in minutes."
       features={features}
     />
   );

@@ -8,10 +8,9 @@ const footerLinks = {
     title: "Platform",
     links: [
       { name: "Task Management", href: "/platform/task-management" },
-      { name: "Requests", href: "/platform/requests" },
+      { name: "Auto-Requests", href: "/platform/requests" },
       { name: "Reports", href: "/platform/reports" },
       { name: "Documents", href: "/platform/documents" },
-      { name: "Databases", href: "/platform/databases" },
       { name: "Expenses", href: "/platform/expenses" },
       { name: "Invoices", href: "/platform/invoices" },
     ],

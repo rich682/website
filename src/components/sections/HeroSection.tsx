@@ -27,7 +27,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg lg:text-xl text-foreground-secondary max-w-lg mb-8 leading-relaxed"
             >
-              Vergo is the operating system for accounting teams. Manage tasks, requests, documents, expenses, invoices, and reports -- all in one AI-powered platform.
+              Vergo is the operating system for accounting teams. Manage tasks, auto-requests, documents, expenses, invoices, and reports -- all in one AI-powered platform.
             </motion.p>
 
             <motion.div
@@ -83,7 +83,7 @@ export function HeroSection() {
           >
             <Image
               src="/images/hero-illustration.png"
-              alt="Vergo platform overview — Tasks, Requests, Reports, Documents, Databases, Expenses all connected with AI"
+              alt="Vergo platform overview — Tasks, Auto-Requests, Reports, Documents, Expenses, and Invoices all connected with AI"
               width={640}
               height={400}
               className="w-full h-auto rounded-2xl"
