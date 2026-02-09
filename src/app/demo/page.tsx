@@ -23,7 +23,7 @@ export default function DemoPage() {
                 Request a Demo
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl text-foreground leading-tight mb-6">
-                See how AI can transform your accounting operations.
+                Simplify your book close today.
               </h1>
               <p className="text-lg text-foreground-secondary max-w-lg mb-8 leading-relaxed">
                 Book a 30-minute demo and see how Vergo can help your team close faster, automate follow-ups, and eliminate busywork -- all in one platform.
