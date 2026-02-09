@@ -44,9 +44,9 @@ export default function DemoPage() {
             </div>
 
             {/* Right side - HubSpot meeting embed */}
-            <div className="min-h-[600px]">
+            <div className="min-h-[900px]">
               <div
-                className="meetings-iframe-container"
+                className="meetings-iframe-container [&>iframe]:!min-h-[850px]"
                 data-src="https://meetings.hubspot.com/rich-kane/rs?embed=true"
               />
               <Script
