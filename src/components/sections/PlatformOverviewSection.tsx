@@ -69,7 +69,7 @@ export function PlatformOverviewSection() {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {platformFeatures.map((feature, index) => (
             <motion.div
               key={feature.name}
@@ -77,7 +77,6 @@ export function PlatformOverviewSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
-              className={index === platformFeatures.length - 1 ? "md:col-span-2 md:max-w-[calc(50%-0.75rem)] md:mx-auto" : ""}
             >
               <Link href={feature.href} className="block h-full group">
                 <motion.div
@@ -85,22 +84,21 @@ export function PlatformOverviewSection() {
                   whileHover={{ y: -3 }}
                 >
                   {/* Image */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-[3/2]">
                     <Image
                       src={feature.image}
                       alt={feature.name}
-                      width={640}
-                      height={400}
-                      className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </div>
 
                   {/* Text content */}
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-1.5">
+                  <div className="p-5">
+                    <h3 className="text-base font-semibold text-foreground mb-1">
                       {feature.name}
                     </h3>
-                    <p className="text-sm text-foreground-secondary leading-relaxed mb-3">
+                    <p className="text-sm text-foreground-secondary leading-relaxed mb-2">
                       {feature.description}
                     </p>
                     <span className="text-sm font-medium text-accent group-hover:underline">

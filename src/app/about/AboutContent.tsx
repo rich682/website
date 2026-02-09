@@ -162,7 +162,7 @@ export function AboutContent() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6 tracking-tight"
           >
-            We are building the operating system for accounting.
+            Accounting Teams Deserve Better.
           </motion.h1>
 
           <motion.p

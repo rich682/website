@@ -1,6 +1,7 @@
 import { Header, Footer } from "@/components/layout";
 import {
   HeroSection,
+  InvestorLogosSection,
   ProblemSection,
   PlatformOverviewSection,
   SecurityTrustSection,
@@ -14,6 +15,9 @@ export default function HomePage() {
       <main>
         {/* 1. Hero - Put your book close on autopilot */}
         <HeroSection />
+
+        {/* Investor logos */}
+        <InvestorLogosSection />
 
         {/* 2. Problem - 40% of time on non-accounting work */}
         <ProblemSection />
