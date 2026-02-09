@@ -28,16 +28,6 @@ const features = [
     ],
   },
   {
-    title: "Completion & Risk Scoring",
-    description: "AI analyzes each response against your auto-request and calculates a completion percentage and risk level. Know at a glance what still needs attention.",
-    image: "/images/platform/requests/requests-3.png",
-    bullets: [
-      "Per-item completion tracking",
-      "Risk scoring based on responsiveness",
-      "Visual status indicators across all auto-requests",
-    ],
-  },
-  {
     title: "Automated Reminders",
     description: "Set follow-up schedules and let Vergo handle the rest. AI drafts polite, context-aware reminder emails on your behalf.",
     image: "/images/platform/requests/requests-4.png",

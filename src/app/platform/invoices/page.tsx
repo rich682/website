@@ -37,16 +37,6 @@ const features = [
       "One-click approve or reject",
     ],
   },
-  {
-    title: "Accounting Software Sync",
-    description: "Export approved invoices to QuickBooks, Xero, or your GL system. Sync vendor records and payment status bidirectionally.",
-    image: "/images/platform/invoices/invoices-4.png",
-    bullets: [
-      "QuickBooks and Xero integration",
-      "Bidirectional vendor sync",
-      "Payment status tracking",
-    ],
-  },
 ];
 
 export default function InvoicesPage() {

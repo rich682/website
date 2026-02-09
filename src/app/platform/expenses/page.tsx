@@ -37,16 +37,6 @@ const features = [
       "Automatic notifications to approvers",
     ],
   },
-  {
-    title: "Receipt OCR",
-    description: "Upload a photo of a receipt and AI extracts the vendor, amount, date, and tax. No manual data entry required.",
-    image: "/images/platform/expenses/expenses-4.png",
-    bullets: [
-      "Photo-to-data in seconds",
-      "Extracts vendor, amount, date, and tax",
-      "Works with photos, scans, and PDFs",
-    ],
-  },
 ];
 
 export default function ExpensesPage() {

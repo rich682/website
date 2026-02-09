@@ -25,10 +25,10 @@ const platformFeatures = [
     image: "/images/platform/reports/reports-1.png",
   },
   {
-    name: "Documents",
-    description: "Collect, track, and manage every document from email, forms, or manual uploads.",
-    href: "/platform/documents",
-    image: "/images/platform/documents/documents-1.png",
+    name: "Reconciliations",
+    description: "Automate account reconciliations with AI-powered matching, variance detection, and period-end sign-off.",
+    href: "/platform/reconciliations",
+    image: "/images/platform/reconciliations/reconciliations-1.png",
   },
   {
     name: "Expenses",
@@ -56,7 +56,7 @@ export function PlatformOverviewSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Everything you need, in one platform.
+            Everything you need to close your books faster.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -10,7 +10,7 @@ const footerLinks = {
       { name: "Task Management", href: "/platform/task-management" },
       { name: "Auto-Requests", href: "/platform/requests" },
       { name: "Reports", href: "/platform/reports" },
-      { name: "Documents", href: "/platform/documents" },
+      { name: "Reconciliations", href: "/platform/reconciliations" },
       { name: "Expenses", href: "/platform/expenses" },
       { name: "Invoices", href: "/platform/invoices" },
     ],

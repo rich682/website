@@ -111,7 +111,7 @@ const differentiators = [
       </svg>
     ),
     title: "Everything in One Place",
-    description: "Auto-requests, replies, documents, forms, and reports are all connected. No more hunting through email threads, shared drives, and spreadsheets.",
+    description: "Auto-requests, replies, reconciliations, expenses, and reports are all connected. No more hunting through email threads, shared drives, and spreadsheets.",
   },
 ];
 

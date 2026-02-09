@@ -55,7 +55,7 @@ export function ProductMockup({ variant = "checklist", className }: ProductMocku
               { label: "Bank reconciliation", status: "complete", assignee: "Sarah M." },
               { label: "Revenue recognition", status: "complete", assignee: "John D." },
               { label: "Accrued items", status: "complete", assignee: "Sarah M." },
-              { label: "Document collection", status: "pending", assignee: "Mike R.", overdue: true },
+              { label: "Account reconciliation", status: "pending", assignee: "Mike R.", overdue: true },
               { label: "Team submissions", status: "pending", assignee: "Team" },
             ].map((item, index) => (
               <motion.div

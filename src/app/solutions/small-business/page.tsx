@@ -11,7 +11,7 @@ const IMAGES = "/images/solutions/small-business/sol";
 const features = [
   {
     title: "Scale Without Hiring",
-    description: "AI handles client follow-ups, response classification, and document reminders automatically. Take on more clients without adding headcount -- Vergo does the work that used to require another person.",
+    description: "AI handles client follow-ups, response classification, and reconciliation reminders automatically. Take on more clients without adding headcount -- Vergo does the work that used to require another person.",
     image: `${IMAGES}-1.png`,
     bullets: [
       "Automated follow-ups free up hours every week",
@@ -31,7 +31,7 @@ const features = [
   },
   {
     title: "One Platform, Not Ten Tools",
-    description: "Replace the patchwork of spreadsheets, email folders, shared drives, and sticky notes with one integrated platform. Tasks, auto-requests, documents, expenses, and invoices -- all in one place.",
+    description: "Replace the patchwork of spreadsheets, email folders, shared drives, and sticky notes with one integrated platform. Tasks, auto-requests, reconciliations, expenses, and invoices -- all in one place.",
     image: `${IMAGES}-3.png`,
     bullets: [
       "Everything in one place instead of scattered tools",

@@ -134,7 +134,7 @@ const values = [
   },
   {
     title: "Everything Connected",
-    description: "Tasks, auto-requests, documents, expenses, invoices, and reports are all part of one integrated platform. No more switching between disconnected tools.",
+    description: "Tasks, auto-requests, reconciliations, expenses, invoices, and reports are all part of one integrated platform. No more switching between disconnected tools.",
     iconPath: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
   },
 ];
@@ -195,7 +195,7 @@ export function AboutContent() {
                 Accounting teams are the backbone of every business, yet they are stuck using tools built for someone else. Generic project management apps, scattered email threads, shared drives, and spreadsheets held together with good intentions.
               </p>
               <p>
-                Vergo exists to give accounting teams a platform that actually fits how they work. One place to manage tasks by period, send and track auto-requests, collect documents, process invoices and expenses, and generate reports -- all connected, all powered by AI.
+                Vergo exists to give accounting teams a platform that actually fits how they work. One place to manage tasks by period, send and track auto-requests, reconcile accounts, process invoices and expenses, and generate reports -- all connected, all powered by AI.
               </p>
               <p>
                 We believe accounting teams deserve software that understands their world: periods and deadlines, clients and entities, compliance and accuracy. Not another generic tool they have to bend to fit their workflow.
@@ -264,7 +264,7 @@ export function AboutContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Link href="https://app.tryvergo.com/demo">
+            <Link href="/demo">
               <Button variant="primary" size="lg">
                 Book a Demo
               </Button>

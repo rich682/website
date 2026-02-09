@@ -174,7 +174,7 @@ export function ReportsChartIllustration() {
   );
 }
 
-/* ===== 4. Documents: File Collection ===== */
+/* ===== 4. Reconciliations: Account Matching ===== */
 export function DocumentCollectionIllustration() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });

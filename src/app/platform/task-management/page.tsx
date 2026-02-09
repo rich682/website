@@ -37,16 +37,6 @@ const features = [
       "Proactive risk alerts on overdue items",
     ],
   },
-  {
-    title: "Progress Tracking",
-    description: "See real-time completion percentages per board and per client. Know exactly where you stand in every accounting period at a glance.",
-    image: "/images/platform/task-management/task-management-4.png",
-    bullets: [
-      "Real-time completion percentages",
-      "Per-client and per-period dashboards",
-      "Team-level workload visibility",
-    ],
-  },
 ];
 
 export default function TaskManagementPage() {

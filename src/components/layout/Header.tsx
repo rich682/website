@@ -10,7 +10,7 @@ const platformLinks = [
   { name: "Task Management", href: "/platform/task-management", description: "Period-based boards & tasks" },
   { name: "Auto-Requests", href: "/platform/requests", description: "Smart auto-requests & AI tracking" },
   { name: "Reports", href: "/platform/reports", description: "Period reports & AI insights" },
-  { name: "Documents", href: "/platform/documents", description: "Collect & manage documents" },
+  { name: "Reconciliations", href: "/platform/reconciliations", description: "AI-powered account reconciliations" },
   { name: "Expenses", href: "/platform/expenses", description: "Tracking, approvals & coding" },
   { name: "Invoices", href: "/platform/invoices", description: "Processing & approval workflows" },
 ];
@@ -258,7 +258,7 @@ export function Header() {
             >
               Sign In
             </Link>
-            <Link href="https://app.tryvergo.com/demo">
+            <Link href="/demo">
               <Button variant="primary" size="sm">
                 Book a Demo
               </Button>
@@ -353,7 +353,7 @@ export function Header() {
                       Sign In
                     </Button>
                   </Link>
-                  <Link href="https://app.tryvergo.com/demo">
+                  <Link href="/demo">
                     <Button variant="primary" size="md" className="w-full justify-center">
                       Book a Demo
                     </Button>

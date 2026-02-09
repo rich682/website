@@ -62,7 +62,7 @@ export function FeatureLandingPage({ badge, title, subtitle, features }: Feature
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Link href="https://app.tryvergo.com/demo">
+              <Link href="/demo">
                 <Button variant="primary" size="lg">
                   Book a Demo
                 </Button>
@@ -160,7 +160,7 @@ export function FeatureLandingPage({ badge, title, subtitle, features }: Feature
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Link href="https://app.tryvergo.com/demo">
+              <Link href="/demo">
                 <Button variant="primary" size="lg">
                   Book a Demo
                 </Button>

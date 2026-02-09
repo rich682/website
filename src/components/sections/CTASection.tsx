@@ -87,7 +87,7 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Link href="https://app.tryvergo.com/demo">
+          <Link href="/demo">
             <Button variant="primary" size="lg">
               Book a Demo
             </Button>
