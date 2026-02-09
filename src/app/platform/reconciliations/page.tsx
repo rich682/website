@@ -8,33 +8,33 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    title: "AI-Powered Transaction Matching",
-    description: "Vergo automatically matches transactions across accounts, bank feeds, and subledgers. AI learns your patterns and handles the routine matching so your team only reviews exceptions.",
+    title: "AI-Powered Reconciliations",
+    description: "Vergo automatically matches transactions across bank statements, general ledgers, and subledgers. AI learns your patterns and handles routine matching -- your team only reviews the exceptions.",
     image: "/images/platform/reconciliations/reconciliations-1.png",
     bullets: [
-      "Automatic matching across bank feeds and GL",
+      "94% auto-match rate across bank feeds and GL",
       "AI learns your matching rules over time",
       "Exception-only review workflow",
     ],
   },
   {
-    title: "Variance Detection & Alerts",
-    description: "Surface discrepancies the moment they appear, not at the end of the close. AI flags unexpected variances, missing entries, and balance mismatches so your team can investigate before deadlines hit.",
+    title: "PDF vs. Excel Capabilities",
+    description: "Import data from any source -- PDF bank statements, Excel exports, CSV files. Vergo AI extracts, structures, and normalizes the data automatically so you can reconcile without manual data entry.",
     image: "/images/platform/reconciliations/reconciliations-2.png",
     bullets: [
-      "Real-time variance detection across accounts",
-      "Threshold-based alerts for material differences",
-      "Period-over-period trend analysis",
+      "AI extracts line items from PDF statements",
+      "Direct Excel and CSV import with auto-mapping",
+      "Normalize data across formats in seconds",
     ],
   },
   {
-    title: "Period-End Sign-Off",
-    description: "Track every reconciliation to completion with structured sign-off workflows. Managers review, approve, and lock reconciliations per period -- creating a clean audit trail for every account.",
+    title: "AI Analysis & Risk Report",
+    description: "Every reconciliation generates an AI-powered risk report. Surface unusual variances, missing entries, and duplicate transactions before the books close -- not after.",
     image: "/images/platform/reconciliations/reconciliations-3.png",
     bullets: [
-      "Structured approval workflows per account",
-      "Lock reconciliations after manager sign-off",
-      "Complete audit trail of every review and approval",
+      "Risk scoring across all reconciled accounts",
+      "Flag unusual variances and duplicate transactions",
+      "Period-over-period trend analysis and audit trail",
     ],
   },
 ];
