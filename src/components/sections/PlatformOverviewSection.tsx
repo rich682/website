@@ -1,145 +1,56 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui";
+import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 
 const platformFeatures = [
   {
     name: "Task Management",
     description: "Organize work into period-based boards with AI-powered task tracking and Kanban views.",
     href: "/platform/task-management",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
+    image: "/images/platform/task-management/task-management-1.png",
   },
   {
     name: "Requests",
     description: "Send smart requests, track every response with AI, and automate follow-ups.",
     href: "/platform/requests",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-      </svg>
-    ),
+    image: "/images/platform/requests/requests-1.png",
   },
   {
     name: "Reports",
     description: "Generate period-based reports with formulas, comparisons, and AI-powered insights.",
     href: "/platform/reports",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    image: "/images/platform/reports/reports-1.png",
   },
   {
     name: "Documents",
     description: "Collect, track, and manage every document from email, forms, or manual uploads.",
     href: "/platform/documents",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
+    image: "/images/platform/documents/documents-1.png",
   },
   {
     name: "Databases",
     description: "Build structured databases that power reports, requests, and workflows across the platform.",
     href: "/platform/databases",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-      </svg>
-    ),
+    image: "/images/platform/databases/databases-1.png",
   },
   {
     name: "Expenses",
     description: "Streamline expense tracking, approvals, and reimbursements with AI coding.",
     href: "/platform/expenses",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-      </svg>
-    ),
+    image: "/images/platform/expenses/expenses-1.png",
   },
   {
     name: "Invoices",
     description: "Automate invoice processing, approval workflows, and accounting software sync.",
     href: "/platform/invoices",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
-      </svg>
-    ),
+    image: "/images/platform/invoices/invoices-1.png",
   },
 ];
 
-// SVG connection lines between card positions (abstract flow)
-function ConnectedNodesOverlay({ isInView }: { isInView: boolean }) {
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      <svg className="w-full h-full" viewBox="0 0 800 500" fill="none" preserveAspectRatio="xMidYMid meet">
-        {/* Central AI pulse */}
-        <motion.circle
-          cx="400"
-          cy="250"
-          r="8"
-          fill="currentColor"
-          className="text-accent"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: [0, 0.6, 0.3], scale: [0, 1.5, 1] } : {}}
-          transition={{ duration: 1.2, delay: 0.8 }}
-        />
-        <motion.circle
-          cx="400"
-          cy="250"
-          r="30"
-          fill="none"
-          stroke="currentColor"
-          className="text-accent"
-          strokeWidth="1"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: [0, 0.3, 0], scale: [0, 2, 3] } : {}}
-          transition={{ duration: 2, delay: 1, repeat: Infinity, repeatDelay: 3 }}
-        />
-        {/* Radiating lines to card positions */}
-        {[
-          { x1: 400, y1: 250, x2: 110, y2: 125 },
-          { x1: 400, y1: 250, x2: 310, y2: 125 },
-          { x1: 400, y1: 250, x2: 500, y2: 125 },
-          { x1: 400, y1: 250, x2: 690, y2: 125 },
-          { x1: 400, y1: 250, x2: 110, y2: 375 },
-          { x1: 400, y1: 250, x2: 310, y2: 375 },
-          { x1: 400, y1: 250, x2: 500, y2: 375 },
-        ].map((line, i) => (
-          <motion.line
-            key={i}
-            x1={line.x1}
-            y1={line.y1}
-            x2={line.x2}
-            y2={line.y2}
-            stroke="currentColor"
-            className="text-accent/20"
-            strokeWidth="1"
-            strokeDasharray="4 4"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 1 + i * 0.1 }}
-          />
-        ))}
-      </svg>
-    </div>
-  );
-}
-
 export function PlatformOverviewSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
     <section id="platform" className="py-20 lg:py-32">
       <Container size="wide">
@@ -160,52 +71,39 @@ export function PlatformOverviewSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-foreground-secondary max-w-2xl mx-auto"
           >
-            Seven integrated modules designed specifically for accounting teams. Each one is powerful alone -- together, they are transformative.
+            Seven integrated modules designed specifically for accounting teams. Each one is powerful alone — together, they are transformative.
           </motion.p>
         </div>
 
-        <div ref={ref} className="relative max-w-6xl mx-auto">
-          {/* Background connection lines (desktop only) */}
-          <div className="hidden lg:block">
-            <ConnectedNodesOverlay isInView={isInView} />
-          </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {platformFeatures.map((feature, index) => (
+            <motion.div
+              key={feature.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className={index === platformFeatures.length - 1 ? "md:col-span-2 md:max-w-[calc(50%-0.75rem)] md:mx-auto" : ""}
+            >
+              <Link href={feature.href} className="block h-full group">
+                <motion.div
+                  className="h-full bg-background rounded-2xl border border-border overflow-hidden hover:border-accent/30 hover:shadow-lg transition-all"
+                  whileHover={{ y: -3 }}
+                >
+                  {/* Image */}
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={feature.image}
+                      alt={feature.name}
+                      width={640}
+                      height={400}
+                      className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            {platformFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.06 }}
-              >
-                <Link href={feature.href} className="block h-full">
-                  <motion.div
-                    className="h-full bg-background rounded-2xl p-6 border border-border hover:border-accent/30 hover:shadow-md transition-all group"
-                    whileHover={{ y: -2 }}
-                    animate={
-                      isInView
-                        ? {
-                            borderColor: [
-                              "var(--border)",
-                              "rgba(253,69,0,0.2)",
-                              "var(--border)",
-                            ],
-                          }
-                        : {}
-                    }
-                    transition={{
-                      borderColor: {
-                        duration: 1.5,
-                        delay: 1.2 + index * 0.15,
-                        times: [0, 0.5, 1],
-                      },
-                    }}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-base font-semibold text-foreground mb-2">
+                  {/* Text content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-1.5">
                       {feature.name}
                     </h3>
                     <p className="text-sm text-foreground-secondary leading-relaxed mb-3">
@@ -214,11 +112,11 @@ export function PlatformOverviewSection() {
                     <span className="text-sm font-medium text-accent group-hover:underline">
                       Learn more &rarr;
                     </span>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                  </div>
+                </motion.div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </Container>
     </section>
