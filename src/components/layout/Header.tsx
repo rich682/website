@@ -238,6 +238,17 @@ export function Header() {
               </AnimatePresence>
             </div>
 
+            {/* Integrations link */}
+            <Link
+              href="/integrations"
+              className={cn(
+                "px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                "text-foreground-secondary hover:text-foreground"
+              )}
+            >
+              Integrations
+            </Link>
+
             {/* Company link */}
             <Link
               href="/about"
@@ -335,8 +346,15 @@ export function Header() {
                   ))}
                 </div>
 
-                {/* Company link */}
+                {/* Integrations & Company links */}
                 <div className="pt-3 border-t border-border">
+                  <Link
+                    href="/integrations"
+                    className="block px-4 py-2.5 text-sm font-medium text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Integrations
+                  </Link>
                   <Link
                     href="/about"
                     className="block px-4 py-2.5 text-sm font-medium text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"

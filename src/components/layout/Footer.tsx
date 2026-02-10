@@ -13,6 +13,7 @@ const footerLinks = {
       { name: "Reconciliations", href: "/platform/reconciliations" },
       { name: "Expenses", href: "/platform/expenses" },
       { name: "Invoices", href: "/platform/invoices" },
+      { name: "Integrations", href: "/integrations" },
     ],
   },
   solutions: {
