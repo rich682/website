@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
-  title: "Invoices | Vergo",
+  title: "AP Automation | Vergo",
   description: "Automate invoice processing, approval workflows, and accounting software sync. From receipt to ledger in minutes.",
 };
 
@@ -42,7 +42,7 @@ const features = [
 export default function InvoicesPage() {
   return (
     <FeatureLandingPage
-      badge="Invoices"
+      badge="AP Automation"
       title="From inbox to ledger, automated."
       subtitle="AI-powered invoice processing with data extraction, smart coding, approval workflows, and accounting software sync."
       features={features}

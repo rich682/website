@@ -9,10 +9,11 @@ import { cn } from "@/lib/utils";
 const platformLinks = [
   { name: "Task Management", href: "/platform/task-management", description: "Period-based boards & tasks" },
   { name: "Auto-Requests", href: "/platform/requests", description: "Smart auto-requests & AI tracking" },
-  { name: "Reports", href: "/platform/reports", description: "Period reports & AI insights" },
-  { name: "Reconciliations", href: "/platform/reconciliations", description: "AI-powered account reconciliations" },
-  { name: "Expenses", href: "/platform/expenses", description: "Tracking, approvals & coding" },
-  { name: "Invoices", href: "/platform/invoices", description: "Processing & approval workflows" },
+  { name: "Auto-Reports", href: "/platform/reports", description: "Period reports & AI insights" },
+  { name: "Auto-Reconcile", href: "/platform/reconciliations", description: "AI-powered account reconciliations" },
+  { name: "Expense Management", href: "/platform/expenses", description: "Tracking, approvals & coding" },
+  { name: "AP Automation", href: "/platform/invoices", description: "Processing & approval workflows" },
+  { name: "AI Analysis", href: "/platform/ai-analysis", description: "Native AI engine & insights" },
 ];
 
 const solutionsByRole = [

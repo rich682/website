@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
-  title: "Reports | Vergo",
+  title: "Auto-Reports | Vergo",
   description: "Generate period-based reports with formulas, comparisons, and AI-powered insights. Pull data directly from auto-requests and other modules.",
 };
 
@@ -42,7 +42,7 @@ const features = [
 export default function ReportsPage() {
   return (
     <FeatureLandingPage
-      badge="Reports"
+      badge="Auto-Reports"
       title="Reports that build themselves."
       subtitle="Period-based reporting with AI insights and one-click Excel export."
       features={features}

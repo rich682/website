@@ -26,7 +26,7 @@ const modules = [
     ),
   },
   {
-    name: "Reports",
+    name: "Auto-Reports",
     color: "#059669",
     bg: "#ECFDF5",
     icon: (
@@ -36,7 +36,7 @@ const modules = [
     ),
   },
   {
-    name: "Reconciliations",
+    name: "Auto-Reconcile",
     color: "#7C3AED",
     bg: "#F5F3FF",
     icon: (
@@ -46,7 +46,7 @@ const modules = [
     ),
   },
   {
-    name: "Expenses",
+    name: "Expense Management",
     color: "#DC2626",
     bg: "#FEF2F2",
     icon: (
@@ -56,7 +56,7 @@ const modules = [
     ),
   },
   {
-    name: "Invoices",
+    name: "AP Automation",
     color: "#2563EB",
     bg: "#EFF6FF",
     icon: (
@@ -86,6 +86,7 @@ function HeroIllustration() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="w-full max-w-sm bg-white/60 backdrop-blur-xl rounded-2xl border border-white/40 shadow-xl p-5 sm:p-6"
         >
+          {/* 6 Module Grid */}
           <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
             {modules.map((mod, i) => (
               <motion.div
@@ -108,11 +109,34 @@ function HeroIllustration() {
             ))}
           </div>
 
+          {/* AI Analysis — Wide Foundation Tile */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.98 }}
+            className="mt-2.5 sm:mt-3 bg-white/80 rounded-xl p-3 sm:p-3.5 flex items-center gap-3 border border-emerald-200/60 shadow-sm"
+          >
+            <div
+              className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+              style={{ backgroundColor: "#ECFDF5", color: "#10B981" }}
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <span className="text-[11px] sm:text-xs font-semibold text-gray-800">
+              AI Analysis
+            </span>
+            <span className="ml-auto text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-semibold uppercase tracking-wide">
+              Native
+            </span>
+          </motion.div>
+
           {/* Connecting lines + badge */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.0 }}
+            transition={{ duration: 0.4, delay: 1.1 }}
             className="mt-4 flex flex-col items-center"
           >
             {/* Decorative connector lines */}

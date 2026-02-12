@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { FeatureLandingPage } from "@/components/sections/FeatureLandingPage";
 
 export const metadata: Metadata = {
-  title: "Reconciliations | Vergo",
+  title: "Auto-Reconcile | Vergo",
   description: "Automate account reconciliations with AI-powered matching, variance detection, and period-end sign-off. Close faster with confidence.",
 };
 
@@ -42,7 +42,7 @@ const features = [
 export default function ReconciliationsPage() {
   return (
     <FeatureLandingPage
-      badge="Reconciliations"
+      badge="Auto-Reconcile"
       title="Reconcile faster. Close with confidence."
       subtitle="AI-powered transaction matching, real-time variance detection, and structured sign-off workflows that make every close cleaner and faster."
       features={features}
