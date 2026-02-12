@@ -70,7 +70,7 @@ export function PlatformOverviewSection() {
         </div>
 
         {/* Wrapper container for modules + AI Analysis foundation */}
-        <div className="max-w-6xl mx-auto rounded-3xl border border-border/50 bg-gradient-to-b from-background via-background to-background-secondary/40 p-4 sm:p-6">
+        <div className="max-w-6xl mx-auto rounded-3xl border border-emerald-200/60 bg-gradient-to-b from-emerald-50/30 via-background to-background-pastel-green/50 p-4 sm:p-6">
           {/* 6 Module Cards Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {platformFeatures.map((feature, index) => (
@@ -139,16 +139,16 @@ export function PlatformOverviewSection() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 lg:p-8 lg:w-2/3 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="text-xl lg:text-2xl font-semibold text-foreground">
+                  <div className="p-5 lg:p-6 lg:w-2/3 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-base font-semibold text-foreground">
                         AI Analysis
                       </h3>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-accent/10 text-accent text-[11px] font-semibold uppercase tracking-wide">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-accent/10 text-accent text-[10px] font-semibold uppercase tracking-wide">
                         Native
                       </span>
                     </div>
-                    <p className="text-sm lg:text-base text-foreground-secondary leading-relaxed mb-4 max-w-xl">
+                    <p className="text-sm text-foreground-secondary leading-relaxed mb-2 max-w-xl">
                       The intelligence layer powering every module. AI that learns from your data to automate coding, detect anomalies, and surface insights across your entire close.
                     </p>
                     <span className="text-sm font-medium text-accent group-hover:underline">
