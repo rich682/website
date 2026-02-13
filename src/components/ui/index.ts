@@ -6,3 +6,4 @@ export { FloatingShapes } from "./FloatingShapes";
 export { AnimatedIcon } from "./AnimatedIcon";
 export { CountUp } from "./CountUp";
 export { AISparkle, AIBadge } from "./AISparkle";
+export { HeroAnimation } from "./HeroAnimation";
