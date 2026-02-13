@@ -17,18 +17,6 @@ const footerLinks = {
       { name: "Integrations", href: "/integrations" },
     ],
   },
-  solutions: {
-    title: "Solutions",
-    links: [
-      { name: "CFO", href: "/solutions/cfo" },
-      { name: "Controller", href: "/solutions/controller" },
-      { name: "Accounting Manager", href: "/solutions/accounting-manager" },
-      { name: "AP Manager", href: "/solutions/ap-manager" },
-      { name: "Small Business", href: "/solutions/small-business" },
-      { name: "Mid Market", href: "/solutions/mid-market" },
-      { name: "Enterprise", href: "/solutions/enterprise" },
-    ],
-  },
   company: {
     title: "Company",
     links: [
@@ -52,9 +40,9 @@ export function Footer() {
     <footer className="bg-background-secondary border-t border-border">
       <Container size="wide">
         <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand column */}
-            <div className="col-span-2 md:col-span-5 lg:col-span-1 mb-8 lg:mb-0">
+            <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
               <Link href="/" className="inline-block mb-4">
                 <span className="text-2xl font-medium text-foreground tracking-tight">vergo</span>
               </Link>

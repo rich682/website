@@ -18,7 +18,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight mb-6"
             >
-              Put your teams book close on autopilot.
+              Take the stress out of your teams book close.
             </motion.h1>
 
             <motion.p

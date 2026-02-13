@@ -112,7 +112,7 @@ export function ProblemSection() {
           >
             Accounting teams spend 60%+ of their time
             <br />
-            on work that is not accounting.
+            on work that&apos;s not actually accounting.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

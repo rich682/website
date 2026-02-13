@@ -16,87 +16,11 @@ const platformLinks = [
   { name: "AI Analysis", href: "/platform/ai-analysis", description: "Native AI engine & insights" },
 ];
 
-const solutionsByRole = [
-  {
-    name: "CFO",
-    href: "/solutions/cfo",
-    description: "Visibility, risk oversight & reporting",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Controller",
-    href: "/solutions/controller",
-    description: "Close management & accuracy",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Accounting Manager",
-    href: "/solutions/accounting-manager",
-    description: "Team workload & deadlines",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-  },
-  {
-    name: "AP Manager",
-    href: "/solutions/ap-manager",
-    description: "Invoices, expenses & vendors",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
-      </svg>
-    ),
-  },
-];
-
-const solutionsByType = [
-  {
-    name: "Small Business",
-    href: "/solutions/small-business",
-    description: "Simple setup, immediate value",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Mid Market",
-    href: "/solutions/mid-market",
-    description: "Scale teams & multi-entity",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
-  {
-    name: "Enterprise",
-    href: "/solutions/enterprise",
-    description: "Security, compliance & SSO",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
-  },
-];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [platformOpen, setPlatformOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,79 +85,6 @@ export function Header() {
                         <div className="text-xs text-foreground-muted mt-0.5">{link.description}</div>
                       </Link>
                     ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Solutions mega-menu dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setSolutionsOpen(true)}
-              onMouseLeave={() => setSolutionsOpen(false)}
-            >
-              <button
-                className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-1",
-                  "text-foreground-secondary hover:text-foreground"
-                )}
-              >
-                Solutions
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              <AnimatePresence>
-                {solutionsOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[520px] rounded-xl bg-background border border-border shadow-lg"
-                  >
-                    <div className="grid grid-cols-2 divide-x divide-border">
-                      {/* By Role */}
-                      <div className="p-4">
-                        <div className="px-3 pb-2 text-[11px] font-semibold text-foreground-muted uppercase tracking-wider">By Role</div>
-                        {solutionsByRole.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-background-secondary transition-colors"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
-                              {item.icon}
-                            </div>
-                            <div>
-                              <div className="text-sm font-medium text-foreground">{item.name}</div>
-                              <div className="text-xs text-foreground-muted mt-0.5">{item.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-
-                      {/* By Company Type */}
-                      <div className="p-4">
-                        <div className="px-3 pb-2 text-[11px] font-semibold text-foreground-muted uppercase tracking-wider">By Company Type</div>
-                        {solutionsByType.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-background-secondary transition-colors"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent flex-shrink-0 mt-0.5">
-                              {item.icon}
-                            </div>
-                            <div>
-                              <div className="text-sm font-medium text-foreground">{item.name}</div>
-                              <div className="text-xs text-foreground-muted mt-0.5">{item.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -317,35 +168,6 @@ export function Header() {
                     {link.name}
                   </Link>
                 ))}
-
-                {/* Solutions section */}
-                <div className="pt-3 border-t border-border">
-                  <div className="px-4 py-2 text-xs font-semibold text-foreground-muted uppercase tracking-wide">Solutions &mdash; By Role</div>
-                  {solutionsByRole.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-4 py-2.5 text-sm text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-
-                <div className="pt-1">
-                  <div className="px-4 py-2 text-xs font-semibold text-foreground-muted uppercase tracking-wide">Solutions &mdash; By Company Type</div>
-                  {solutionsByType.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-4 py-2.5 text-sm text-foreground-secondary hover:text-foreground rounded-lg hover:bg-background-secondary"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
 
                 {/* Integrations & Company links */}
                 <div className="pt-3 border-t border-border">

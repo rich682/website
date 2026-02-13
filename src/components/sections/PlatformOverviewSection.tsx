@@ -56,7 +56,7 @@ export function PlatformOverviewSection() {
             transition={{ duration: 0.5 }}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Everything you need to close your books faster.
+            Close faster, track everything in one place and unlock insights.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
