@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,7 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${playfair.variable} antialiased bg-background text-foreground`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
