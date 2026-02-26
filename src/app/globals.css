@@ -79,6 +79,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Dark hero */
+.hero-dark {
+  background-color: #0e0e0e;
+}
+
 /* Serif headings */
 .font-serif {
   font-family: var(--font-serif), Georgia, serif;

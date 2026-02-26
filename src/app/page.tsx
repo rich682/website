@@ -85,27 +85,39 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="pt-36 pb-24 lg:pt-48 lg:pb-36">
+      <section className="hero-dark pt-36 pb-24 lg:pt-48 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Put your book close on autopilot
           </h1>
-          <p className="mt-8 text-lg sm:text-xl text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-white text-black font-medium hover:bg-white/90 transition-colors duration-300"
             >
               Request demo
             </Link>
             <Link
               href="/product"
-              className="inline-flex items-center px-7 py-3 rounded-md border border-border text-foreground font-medium hover:border-foreground-muted transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md border border-white/20 text-white font-medium hover:border-white/40 transition-colors duration-300"
             >
               See the product
             </Link>
+          </div>
+
+          {/* Video Demo Placeholder */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="relative aspect-video rounded-2xl bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden flex items-center justify-center cursor-pointer group">
+              <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <p className="absolute bottom-6 text-sm text-white/40">Watch the product demo</p>
+            </div>
           </div>
         </div>
       </section>
