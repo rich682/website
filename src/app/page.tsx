@@ -84,6 +84,43 @@ const testimonials = [
 export default function HomePage() {
   return (
     <main>
+      {/* Testimonials */}
+      <section className="bg-[#111111] pt-32 pb-16 lg:pt-40 lg:pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+            {testimonials.map((t) => (
+              <div key={t.name} className="text-center">
+                <p className="font-serif text-2xl sm:text-3xl text-white leading-snug">
+                  {t.name}
+                </p>
+                <p className="mt-2 text-sm text-white/40">
+                  {t.title}
+                </p>
+                <p className="mt-6 text-base text-white/60 leading-relaxed">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Placeholder */}
+      <section className="bg-[#111111] py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/10 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent" />
+            <div className="relative flex flex-col items-center gap-3 text-white/30">
+              <svg className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-sm">Product video</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="hero-dark pt-36 pb-24 lg:pt-48 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -96,45 +133,16 @@ export default function HomePage() {
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-white text-black font-medium hover:bg-white/90 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-[#111111] font-medium hover:bg-white/90 transition-colors"
             >
               Request demo
             </Link>
             <Link
               href="/product"
-              className="inline-flex items-center px-7 py-3 rounded-md border border-white/20 text-white font-medium hover:border-white/40 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-3.5 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors"
             >
               See the product
             </Link>
-          </div>
-
-          {/* Video Demo Placeholder */}
-          <div className="mt-16 max-w-5xl mx-auto">
-            <div className="relative aspect-video rounded-2xl bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden flex items-center justify-center cursor-pointer group">
-              <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
-                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="absolute bottom-6 text-sm text-white/40">Watch the product demo</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Ticker */}
-      <section className="py-14 border-y border-border bg-background-secondary">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
-            {testimonials.map((t) => (
-              <div key={t.name} className="text-center">
-                <p className="text-sm text-foreground-secondary italic leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <p className="mt-4 text-sm font-medium text-foreground">{t.name}</p>
-                <p className="text-xs text-foreground-muted mt-0.5">{t.title}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -142,15 +150,6 @@ export default function HomePage() {
       {/* Feature Cards Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight">
-              Why teams choose Vergo
-            </h2>
-            <p className="mt-5 text-foreground-secondary max-w-xl mx-auto leading-relaxed">
-              A modern platform designed from the ground up for accounting workflows.
-            </p>
-          </div>
-
           <div className="space-y-24">
             {features.map((feature, idx) => (
               <div key={feature.label} className="grid lg:grid-cols-2 gap-16 items-center">

@@ -1,37 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-      <nav className="max-w-4xl mx-auto px-6 h-12 flex items-center justify-between bg-[#1a1a1a] rounded-full shadow-lg">
-        {/* Logo */}
-        <Link href="/" className="text-base font-semibold tracking-tight text-white">
-          Vergo
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link href="/product" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
+      <nav
+        className={`flex items-center justify-between w-full max-w-6xl h-[72px] px-8 rounded-2xl border border-white/10 transition-all duration-300 ${
+          scrolled
+            ? "bg-black/90 backdrop-blur-xl"
+            : "bg-white/[0.08] backdrop-blur-md"
+        }`}
+      >
+        {/* Left Nav Links */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/product" className="text-sm text-white/70 hover:text-white transition-colors">
             Product
           </Link>
-          <Link href="/company" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
+          <Link href="/company" className="text-sm text-white/70 hover:text-white transition-colors">
             Company
           </Link>
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <a href="https://app.tryvergo.com" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
+        {/* Center Logo */}
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <svg className="w-5 h-5 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C10.34 2 9 3.34 9 5s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-7 5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm14 0c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-7 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+          </svg>
+          <span className="text-xl font-semibold tracking-tight text-white">
+            VERGO
+          </span>
+        </Link>
+
+        {/* Right CTA */}
+        <div className="hidden md:flex items-center gap-5">
+          <a href="https://app.tryvergo.com" className="text-sm text-white/70 hover:text-white transition-colors">
             Log in
           </a>
           <Link
             href="/demo"
-            className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/60 hover:bg-white/10 transition-all duration-300"
+            className="inline-flex items-center px-5 py-2.5 rounded-full bg-black text-white text-sm font-medium border border-white/20 hover:bg-white/10 transition-colors"
           >
             Request demo
           </Link>
@@ -57,18 +77,18 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 mx-auto max-w-4xl rounded-2xl bg-[#1a1a1a] border border-white/10 overflow-hidden">
-          <div className="px-6 py-5 space-y-4">
+        <div className="md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border border-white/10 bg-black/90 backdrop-blur-xl">
+          <div className="px-6 py-4 space-y-4">
             <Link
               href="/product"
-              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
+              className="block text-sm text-white/70 hover:text-white transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Product
             </Link>
             <Link
               href="/company"
-              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
+              className="block text-sm text-white/70 hover:text-white transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Company
@@ -76,13 +96,13 @@ export default function Header() {
             <hr className="border-white/10" />
             <a
               href="https://app.tryvergo.com"
-              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
+              className="block text-sm text-white/70 hover:text-white transition-colors"
             >
               Log in
             </a>
             <Link
               href="/demo"
-              className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/60 hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center px-5 py-2.5 rounded-full bg-white/10 text-white text-sm font-medium border border-white/20 hover:bg-white/20 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Request demo
