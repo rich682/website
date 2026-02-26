@@ -3,37 +3,37 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Logo & Description */}
           <div>
-            <Link href="/" className="text-xl font-bold tracking-tight text-foreground">
+            <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
               Vergo
             </Link>
-            <p className="mt-2 text-sm text-foreground-muted max-w-xs">
+            <p className="mt-3 text-sm text-foreground-muted max-w-xs leading-relaxed">
               The operating system for accounting teams.
             </p>
           </div>
 
           {/* Nav Links */}
-          <div className="flex gap-16">
+          <div className="flex gap-20">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground-muted mb-3">
+              <h4 className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
                 Navigation
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li>
-                  <Link href="/product" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+                  <Link href="/product" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Product
                   </Link>
                 </li>
                 <li>
-                  <Link href="/company" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+                  <Link href="/company" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Company
                   </Link>
                 </li>
                 <li>
-                  <Link href="/demo" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+                  <Link href="/demo" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Request demo
                   </Link>
                 </li>
@@ -41,17 +41,17 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground-muted mb-3">
+              <h4 className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
                 Legal
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li>
-                  <Link href="/privacy" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+                  <Link href="/privacy" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Privacy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-sm text-foreground-secondary hover:text-foreground transition-colors">
+                  <Link href="/terms" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Terms
                   </Link>
                 </li>
@@ -61,16 +61,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-foreground-muted">
             &copy; {new Date().getFullYear()} Vergo. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground-muted hover:text-foreground transition-colors"
+              className="text-foreground-muted hover:text-foreground transition-colors duration-300"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ export default function Footer() {
               href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground-muted hover:text-foreground transition-colors"
+              className="text-foreground-muted hover:text-foreground transition-colors duration-300"
               aria-label="X (Twitter)"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

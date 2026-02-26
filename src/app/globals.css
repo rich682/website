@@ -1,44 +1,44 @@
 @import "tailwindcss";
 
-/* Vergo Design System - Calm, Professional, Trustworthy */
+/* Vergo Design System - Refined, Institutional, Authoritative */
 :root {
-  /* Primary backgrounds */
-  --background: #FFFFFF;
-  --background-secondary: #FBF9F6;
-  --background-tertiary: #F5F3EE;
-  --background-orange: #FFF5F0;
-  --background-pastel-orange: #FEF3EE;
-  --background-pastel-green: #F0F9F4;
-  
-  /* Text colors */
+  /* Primary backgrounds - warm ivory tones */
+  --background: #FAFAF8;
+  --background-secondary: #F3F1EC;
+  --background-tertiary: #ECEAE4;
+
+  /* Text colors - strong hierarchy */
   --foreground: #1A1A1A;
-  --foreground-secondary: #6B7280;
-  --foreground-muted: #9CA3AF;
-  --foreground-on-orange: #1A1A1A;
-  
-  /* Accent colors - Vergo Orange (CTA) */
-  --accent: #FD4500;
-  --accent-hover: #E63E00;
-  --accent-light: rgba(253, 69, 0, 0.08);
-  
-  /* Secondary accent - Dark */
+  --foreground-secondary: #555555;
+  --foreground-muted: #8A8A8A;
+
+  /* Accent - dark, institutional (primary CTAs) */
+  --accent: #1A1A1A;
+  --accent-hover: #333333;
+  --accent-light: rgba(26, 26, 26, 0.06);
+
+  /* Brand highlight - muted warm copper */
+  --highlight: #A67C52;
+  --highlight-light: rgba(166, 124, 82, 0.10);
+
+  /* Secondary accent */
   --secondary: #1A1A1A;
   --secondary-hover: #333333;
-  
-  /* Status colors */
-  --success: #22C55E;
-  --warning: #F59E0B;
-  --error: #EF4444;
-  
-  /* Border colors */
-  --border: #E5E5E5;
-  --border-hover: #D1D5DB;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-  
+
+  /* Status colors - muted, sophisticated */
+  --success: #5A7A64;
+  --warning: #B8976A;
+  --error: #A65D57;
+
+  /* Border colors - warm neutrals */
+  --border: #E3E1DB;
+  --border-hover: #D1CFCA;
+
+  /* Shadows - subtle, refined */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+
   /* Animation timing */
   --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -48,15 +48,14 @@
   --color-background: var(--background);
   --color-background-secondary: var(--background-secondary);
   --color-background-tertiary: var(--background-tertiary);
-  --color-background-orange: var(--background-orange);
-  --color-background-pastel-orange: var(--background-pastel-orange);
-  --color-background-pastel-green: var(--background-pastel-green);
   --color-foreground: var(--foreground);
   --color-foreground-secondary: var(--foreground-secondary);
   --color-foreground-muted: var(--foreground-muted);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
+  --color-highlight: var(--highlight);
+  --color-highlight-light: var(--highlight-light);
   --color-secondary: var(--secondary);
   --color-border: var(--border);
   --color-border-hover: var(--border-hover);
@@ -64,7 +63,7 @@
   --color-warning: var(--warning);
   --color-error: var(--error);
   --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-instrument-serif);
 }
 
 /* Base styles */
@@ -85,25 +84,25 @@ body {
   font-family: var(--font-serif), Georgia, serif;
 }
 
-/* Selection styling */
+/* Selection styling - subtle */
 ::selection {
   background: var(--accent-light);
-  color: var(--accent);
+  color: var(--foreground);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background-secondary);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -112,7 +111,7 @@ body {
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 1.5px solid var(--foreground);
   outline-offset: 2px;
 }
 
@@ -127,27 +126,21 @@ body {
   }
 }
 
-/* Orange background section */
-.bg-orange-section {
-  background-color: var(--background-orange);
-  color: var(--foreground-on-orange);
-}
-
 /* Cream background section */
 .bg-cream-section {
   background-color: var(--background-secondary);
 }
 
-/* Section padding utility */
+/* Section padding utility - generous breathing room */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -168,17 +161,17 @@ body {
   padding-right: 1.5rem;
 }
 
-/* Card styles */
+/* Card styles - refined */
 .card {
   background: var(--background);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  transition: all 0.2s ease;
+  border-radius: 0.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Link styles */
@@ -188,10 +181,12 @@ a {
 }
 
 .link-accent {
-  color: var(--accent);
+  color: var(--foreground);
   transition: color 0.2s ease;
+  border-bottom: 1px solid var(--border);
 }
 
 .link-accent:hover {
-  color: var(--accent-hover);
+  color: var(--foreground);
+  border-bottom-color: var(--foreground);
 }

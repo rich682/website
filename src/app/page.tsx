@@ -85,24 +85,24 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-44 lg:pb-32">
+      <section className="pt-36 pb-24 lg:pt-48 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-tight max-w-4xl mx-auto">
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Put your book close on autopilot
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg sm:text-xl text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-colors"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
             >
               Request demo
             </Link>
             <Link
               href="/product"
-              className="inline-flex items-center px-6 py-3 rounded-full border border-border text-foreground font-medium hover:border-border-hover hover:bg-background-secondary transition-colors"
+              className="inline-flex items-center px-7 py-3 rounded-md border border-border text-foreground font-medium hover:border-foreground-muted transition-colors duration-300"
             >
               See the product
             </Link>
@@ -111,16 +111,16 @@ export default function HomePage() {
       </section>
 
       {/* Testimonial Ticker */}
-      <section className="py-12 border-y border-border bg-background-secondary">
+      <section className="py-14 border-y border-border bg-background-secondary">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {testimonials.map((t) => (
               <div key={t.name} className="text-center">
                 <p className="text-sm text-foreground-secondary italic leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <p className="mt-3 text-sm font-medium text-foreground">{t.name}</p>
-                <p className="text-xs text-foreground-muted">{t.title}</p>
+                <p className="mt-4 text-sm font-medium text-foreground">{t.name}</p>
+                <p className="text-xs text-foreground-muted mt-0.5">{t.title}</p>
               </div>
             ))}
           </div>
@@ -130,39 +130,39 @@ export default function HomePage() {
       {/* Feature Cards Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl sm:text-4xl text-foreground">
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight">
               Why teams choose Vergo
             </h2>
-            <p className="mt-4 text-foreground-secondary max-w-xl mx-auto">
+            <p className="mt-5 text-foreground-secondary max-w-xl mx-auto leading-relaxed">
               A modern platform designed from the ground up for accounting workflows.
             </p>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-24">
             {features.map((feature, idx) => (
-              <div key={feature.label} className="grid lg:grid-cols-2 gap-12 items-center">
+              <div key={feature.label} className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wide mb-4">
+                  <span className="inline-flex items-center text-xs font-medium uppercase tracking-widest text-foreground-muted mb-5">
                     {feature.label}
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-4">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-5">
                     {feature.title}
                   </h3>
                   <p className="text-foreground-secondary leading-relaxed mb-8">
                     {feature.description}
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-5">
                     {feature.items.map((item) => (
                       <div key={item.name} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="w-5 h-5 rounded-full bg-highlight-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg className="w-3 h-3 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <div>
                           <p className="font-medium text-foreground">{item.name}</p>
-                          <p className="text-sm text-foreground-secondary">{item.detail}</p>
+                          <p className="text-sm text-foreground-secondary mt-0.5">{item.detail}</p>
                         </div>
                       </div>
                     ))}
@@ -170,7 +170,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Placeholder image area */}
-                <div className={`rounded-2xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
                   <span className="text-foreground-muted text-sm">Product screenshot</span>
                 </div>
               </div>
@@ -182,16 +182,15 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="section-padding bg-background-secondary">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-2xl font-bold tracking-tight text-foreground mb-2">Vergo</p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight mb-6">
             Start closing faster today
           </h2>
-          <p className="text-foreground-secondary mb-8 max-w-lg mx-auto">
+          <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
             Join the accounting teams that are putting their book close on autopilot.
           </p>
           <Link
             href="/demo"
-            className="inline-flex items-center px-6 py-3 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </Link>

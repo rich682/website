@@ -40,19 +40,19 @@ export default function CompanyPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-32 pb-16 lg:pt-44 lg:pb-24">
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-[1.1] tracking-tight">
               Designed for teams that intend to succeed
             </h1>
-            <p className="mt-6 text-lg text-foreground-secondary leading-relaxed">
+            <p className="mt-8 text-lg text-foreground-secondary leading-relaxed">
               Our founding team has experienced the pain of manual book closes, disconnected tools, and endless follow-up emails. We built Vergo to fix it.
             </p>
           </div>
 
           {/* Hero image placeholder */}
-          <div className="mt-12 rounded-2xl bg-background-secondary border border-border aspect-[2/1] flex items-center justify-center">
+          <div className="mt-16 rounded-xl bg-background-secondary border border-border aspect-[2/1] flex items-center justify-center">
             <span className="text-foreground-muted text-sm">Team photo</span>
           </div>
         </div>
@@ -61,9 +61,9 @@ export default function CompanyPage() {
       {/* Manifesto */}
       <section className="section-padding border-t border-border">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-3xl sm:text-4xl text-foreground leading-snug mb-6">
+              <h2 className="font-serif text-3xl sm:text-4xl text-foreground leading-snug mb-6 tracking-tight">
                 World-class accounting teams deserve world-class tools
               </h2>
               <p className="text-foreground-secondary leading-relaxed mb-6">
@@ -75,7 +75,7 @@ export default function CompanyPage() {
             </div>
 
             {/* Image placeholder */}
-            <div className="rounded-2xl bg-background-secondary border border-border aspect-square flex items-center justify-center">
+            <div className="rounded-xl bg-background-secondary border border-border aspect-square flex items-center justify-center">
               <span className="text-foreground-muted text-sm">Team discussion photo</span>
             </div>
           </div>
@@ -85,11 +85,11 @@ export default function CompanyPage() {
       {/* Founders */}
       <section className="section-padding border-t border-border bg-background-secondary">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <span className="text-xs font-semibold uppercase tracking-wider text-foreground-muted mb-2 block">
+          <div className="mb-16">
+            <span className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-3 block">
               Leadership
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-foreground">
+            <h2 className="font-serif text-3xl sm:text-4xl text-foreground tracking-tight">
               The right team to build this
             </h2>
           </div>
@@ -98,16 +98,16 @@ export default function CompanyPage() {
             {founders.map((founder, idx) => (
               <div key={idx} className="card p-6">
                 {/* Avatar placeholder */}
-                <div className="w-full aspect-square rounded-xl bg-background-tertiary mb-4 flex items-center justify-center">
+                <div className="w-full aspect-square rounded-lg bg-background-tertiary mb-5 flex items-center justify-center">
                   <span className="text-foreground-muted text-xs">Photo</span>
                 </div>
                 <h3 className="font-medium text-foreground">{founder.name}</h3>
-                <p className="text-sm text-accent mb-2">{founder.title}</p>
+                <p className="text-sm text-foreground-muted mb-3">{founder.title}</p>
                 <p className="text-sm text-foreground-secondary leading-relaxed">
                   {founder.bio}
                 </p>
-                <div className="mt-4 flex gap-3">
-                  <a href="#" className="text-foreground-muted hover:text-foreground transition-colors" aria-label="LinkedIn">
+                <div className="mt-5 flex gap-3">
+                  <a href="#" className="text-foreground-muted hover:text-foreground transition-colors duration-300" aria-label="LinkedIn">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
@@ -122,7 +122,7 @@ export default function CompanyPage() {
       {/* Investors */}
       <section className="section-padding border-t border-border">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-16 tracking-tight">
             Backed by top-tier investors
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-12">
@@ -141,27 +141,26 @@ export default function CompanyPage() {
       {/* Quote */}
       <section className="section-padding border-t border-border bg-background-secondary">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <blockquote className="font-serif text-2xl sm:text-3xl text-foreground leading-relaxed italic">
+          <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground leading-relaxed italic tracking-tight">
             &ldquo;AI is changing how accounting teams operate. Vergo will chart the path.&rdquo;
           </blockquote>
-          <p className="mt-6 text-sm font-medium text-foreground">Founder Name</p>
-          <p className="text-xs text-foreground-muted">Co-Founder &amp; CEO</p>
+          <p className="mt-8 text-sm font-medium text-foreground">Founder Name</p>
+          <p className="text-xs text-foreground-muted mt-0.5">Co-Founder &amp; CEO</p>
         </div>
       </section>
 
       {/* CTA - Careers */}
       <section className="section-padding border-t border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-2xl font-bold tracking-tight text-foreground mb-2">Vergo</p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
             Join our team
           </h2>
-          <p className="text-foreground-secondary mb-8 max-w-lg mx-auto">
+          <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
             We&apos;re building the future of accounting software. If that excites you, we&apos;d love to hear from you.
           </p>
           <Link
             href="#"
-            className="inline-flex items-center px-6 py-3 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             See open roles
           </Link>
