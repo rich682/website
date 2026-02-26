@@ -85,24 +85,24 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="pt-36 pb-24 lg:pt-48 lg:pb-36">
+      <section className="pt-36 pb-24 lg:pt-48 lg:pb-36 bg-[#0e0e0e]">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Put your book close on autopilot
           </h1>
-          <p className="mt-8 text-lg sm:text-xl text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-white text-[#0e0e0e] font-medium hover:bg-white/90 transition-colors duration-300"
             >
               Request demo
             </Link>
             <Link
               href="/product"
-              className="inline-flex items-center px-7 py-3 rounded-md border border-border text-foreground font-medium hover:border-foreground-muted transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md border border-white/20 text-white font-medium hover:border-white/40 transition-colors duration-300"
             >
               See the product
             </Link>
