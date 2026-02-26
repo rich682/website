@@ -26,9 +26,9 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="#" className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-300">
+          <a href="https://app.tryvergo.com" className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-300">
             Log in
-          </Link>
+          </a>
           <Link
             href="/demo"
             className="inline-flex items-center px-5 py-2 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors duration-300"
@@ -74,12 +74,12 @@ export default function Header() {
               Company
             </Link>
             <hr className="border-border" />
-            <Link
-              href="#"
+            <a
+              href="https://app.tryvergo.com"
               className="block text-sm text-foreground-muted hover:text-foreground transition-colors duration-300"
             >
               Log in
-            </Link>
+            </a>
             <Link
               href="/demo"
               className="inline-flex items-center px-5 py-2 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors duration-300"
