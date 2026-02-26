@@ -85,7 +85,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="pt-36 pb-24 lg:pt-48 lg:pb-36 bg-[#0e0e0e]">
+      <section className="hero-dark pt-36 pb-24 lg:pt-48 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Put your book close on autopilot
@@ -96,7 +96,7 @@ export default function HomePage() {
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-white text-[#0e0e0e] font-medium hover:bg-white/90 transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-white text-black font-medium hover:bg-white/90 transition-colors duration-300"
             >
               Request demo
             </Link>
