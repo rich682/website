@@ -107,6 +107,18 @@ export default function HomePage() {
               See the product
             </Link>
           </div>
+
+          {/* Video Demo Placeholder */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="relative aspect-video rounded-2xl bg-[#1a1a1a] border border-white/10 shadow-2xl overflow-hidden flex items-center justify-center cursor-pointer group">
+              <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <p className="absolute bottom-6 text-sm text-white/40">Watch the product demo</p>
+            </div>
+          </div>
         </div>
       </section>
 
