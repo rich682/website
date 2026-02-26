@@ -109,18 +109,18 @@ export default function ProductPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-32 pb-16 lg:pt-44 lg:pb-24">
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-tight max-w-4xl mx-auto">
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
             The platform built for accounting teams
           </h1>
-          <p className="mt-6 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
             Everything you need to manage your book close — tasks, requests, reconciliations, reports, and AI — in one unified workflow.
           </p>
-          <div className="mt-10">
+          <div className="mt-12">
             <Link
               href="/demo"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-colors"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
             >
               Request demo
             </Link>
@@ -135,9 +135,9 @@ export default function ProductPage() {
             {productSections.map((s) => (
               <div
                 key={s.number}
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors duration-300"
               >
-                <span className="text-xs font-bold text-accent">{s.number}</span>
+                <span className="text-xs font-medium text-foreground-muted">{s.number}</span>
                 <span className="text-sm font-medium text-foreground">{s.category}</span>
               </div>
             ))}
@@ -150,27 +150,27 @@ export default function ProductPage() {
         {productSections.map((section, idx) => (
           <section key={section.number} className="section-padding">
             <div className="max-w-7xl mx-auto px-6">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-xs font-bold">
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-background-secondary border border-border text-foreground-muted text-xs font-medium">
                       {section.number}
                     </span>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-foreground-muted">
+                    <span className="text-xs font-medium uppercase tracking-widest text-foreground-muted">
                       {section.category}
                     </span>
                   </div>
-                  <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-4">
+                  <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-5">
                     {section.title}
                   </h2>
                   <p className="text-foreground-secondary leading-relaxed mb-8">
                     {section.description}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {section.features.map((f) => (
                       <li key={f} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0">
-                          <svg className="w-3 h-3 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="w-5 h-5 rounded-full bg-highlight-light flex items-center justify-center flex-shrink-0">
+                          <svg className="w-3 h-3 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
@@ -181,7 +181,7 @@ export default function ProductPage() {
                 </div>
 
                 {/* Placeholder screenshot */}
-                <div className={`rounded-2xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
                   <span className="text-foreground-muted text-sm">Product screenshot</span>
                 </div>
               </div>
@@ -193,17 +193,17 @@ export default function ProductPage() {
       {/* Testimonials */}
       <section className="section-padding border-t border-border bg-background-secondary">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground text-center mb-12">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground text-center mb-16 tracking-tight">
             The results speak for themselves
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t) => (
               <div key={t.name} className="card p-6">
-                <p className="text-sm text-foreground-secondary italic leading-relaxed mb-4">
+                <p className="text-sm text-foreground-secondary italic leading-relaxed mb-5">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <p className="text-sm font-medium text-foreground">{t.name}</p>
-                <p className="text-xs text-foreground-muted">{t.title}</p>
+                <p className="text-xs text-foreground-muted mt-0.5">{t.title}</p>
               </div>
             ))}
           </div>
@@ -213,13 +213,12 @@ export default function ProductPage() {
       {/* CTA */}
       <section className="section-padding">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-2xl font-bold tracking-tight text-foreground mb-2">Vergo</p>
-          <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
             Start closing faster today
           </h2>
           <Link
             href="/demo"
-            className="inline-flex items-center px-6 py-3 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </Link>
