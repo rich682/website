@@ -7,31 +7,31 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border/60">
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
+      <nav className="max-w-4xl mx-auto px-6 h-12 flex items-center justify-between bg-[#1a1a1a] rounded-full shadow-lg">
         {/* Logo */}
-        <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
+        <Link href="/" className="text-base font-semibold tracking-tight text-white">
           Vergo
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/product" className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-300">
+          <Link href="/product" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
             Product
           </Link>
-          <Link href="/company" className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-300">
+          <Link href="/company" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
             Company
           </Link>
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-6">
-          <a href="https://app.tryvergo.com" className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-300">
+        <div className="hidden md:flex items-center gap-4">
+          <a href="https://app.tryvergo.com" className="text-sm text-white/60 hover:text-white transition-colors duration-300">
             Log in
           </a>
           <Link
             href="/demo"
-            className="inline-flex items-center px-5 py-2 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/60 hover:bg-white/10 transition-all duration-300"
           >
             Request demo
           </Link>
@@ -39,7 +39,7 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -57,32 +57,32 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-background">
-          <div className="px-6 py-6 space-y-4">
+        <div className="md:hidden mt-2 mx-auto max-w-4xl rounded-2xl bg-[#1a1a1a] border border-white/10 overflow-hidden">
+          <div className="px-6 py-5 space-y-4">
             <Link
               href="/product"
-              className="block text-sm text-foreground-muted hover:text-foreground transition-colors duration-300"
+              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Product
             </Link>
             <Link
               href="/company"
-              className="block text-sm text-foreground-muted hover:text-foreground transition-colors duration-300"
+              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Company
             </Link>
-            <hr className="border-border" />
+            <hr className="border-white/10" />
             <a
               href="https://app.tryvergo.com"
-              className="block text-sm text-foreground-muted hover:text-foreground transition-colors duration-300"
+              className="block text-sm text-white/60 hover:text-white transition-colors duration-300"
             >
               Log in
             </a>
             <Link
               href="/demo"
-              className="inline-flex items-center px-5 py-2 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors duration-300"
+              className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/60 hover:bg-white/10 transition-all duration-300"
               onClick={() => setMobileMenuOpen(false)}
             >
               Request demo
