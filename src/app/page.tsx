@@ -122,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* Hero Section */}
-      <section className="bg-[#0e0e0e] pt-36 pb-24 lg:pt-48 lg:pb-36">
+      <section className="bg-[#0e0e0e] pt-16 pb-24 lg:pt-20 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Put your book close on autopilot
