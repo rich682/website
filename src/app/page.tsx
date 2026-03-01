@@ -65,19 +65,22 @@ const features = [
 
 const testimonials = [
   {
+    quote: "Finally, a platform built specifically for accounting teams. The AI features are genuinely useful, not just marketing buzz.",
+    name: "Emily Park",
+    role: "CFO",
+    company: "GrowthCo",
+  },
+  {
     quote: "Vergo transformed how our accounting team operates. We closed the books 5 days faster in the first month.",
     name: "Sarah Chen",
-    title: "Controller, TechCorp",
+    role: "Controller",
+    company: "TechCorp",
   },
   {
     quote: "The automation alone saved us 40 hours per close cycle. It's a game-changer for mid-market companies.",
     name: "Michael Torres",
-    title: "VP of Finance, ScaleUp Inc.",
-  },
-  {
-    quote: "Finally, a platform built specifically for accounting teams. The AI features are genuinely useful, not just marketing buzz.",
-    name: "Emily Park",
-    title: "CFO, GrowthCo",
+    role: "Accounting Manager",
+    company: "ScaleUp Inc.",
   },
 ];
 
@@ -91,10 +94,10 @@ export default function HomePage() {
             {testimonials.map((t) => (
               <div key={t.name} className="text-center">
                 <p className="font-serif text-2xl sm:text-3xl text-white leading-snug">
-                  {t.name}
+                  {t.role}
                 </p>
                 <p className="mt-2 text-sm text-white/40">
-                  {t.title}
+                  {t.name}, {t.company}
                 </p>
                 <p className="mt-6 text-base text-white/60 leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
@@ -125,7 +128,7 @@ export default function HomePage() {
       <section className="bg-[#0e0e0e] pt-16 pb-24 lg:pt-20 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            Put your book close on autopilot
+            Get in control of month end
           </h1>
           <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.

@@ -18,11 +18,11 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Vergo | Put Your Book Close on Autopilot",
+  title: "Vergo | Get in Control of Month End",
   description: "The operating system for accounting teams. Manage tasks, auto-requests, reconciliations, expenses, invoices, and reports in one AI-powered platform.",
   keywords: ["accounting software", "accounting platform", "task management", "auto-request management", "account reconciliation", "AI accounting", "expense management", "invoice processing", "accounting workflow", "bookkeeping automation"],
   openGraph: {
-    title: "Vergo | Put Your Book Close on Autopilot",
+    title: "Vergo | Get in Control of Month End",
     description: "The operating system for accounting teams. Manage tasks, auto-requests, reconciliations, expenses, invoices, and reports in one AI-powered platform.",
     type: "website",
   },
