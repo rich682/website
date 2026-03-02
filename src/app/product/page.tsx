@@ -4,16 +4,16 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Product | Vergo",
   description:
-    "Explore how Vergo helps accounting teams manage tasks, automate requests, reconcile accounts, and close books faster.",
+    "See how Vergo helps accounting teams create tasks, connect their tools, setup automation agents, and close month-end stress-free.",
 };
 
 const productSections = [
   {
     number: "01",
-    category: "Organize",
-    title: "Manage every close task in one place",
+    category: "Tasks",
+    title: "Create month-end tasks",
     description:
-      "Create, assign, and track tasks across your entire close checklist. Set dependencies, deadlines, and recurring schedules so nothing falls through the cracks.",
+      "Build your close checklist from scratch or from templates. Assign owners, set deadlines, and track dependencies so nothing falls through the cracks.",
     features: [
       "Customizable close checklists",
       "Task dependencies and deadlines",
@@ -22,62 +22,51 @@ const productSections = [
   },
   {
     number: "02",
-    category: "Automate",
-    title: "Auto-request documents and approvals",
+    category: "Connect",
+    title: "Connect accounting software & create databases",
     description:
-      "Automatically send requests to stakeholders for the documents, sign-offs, and data you need. Track status in real time and send smart reminders.",
+      "Integrate your ERP, GL, and other accounting tools directly into Vergo. Create structured databases that give your agents the data they need to work.",
     features: [
-      "Automated request workflows",
-      "Real-time status tracking",
-      "Smart reminder sequences",
+      "ERP and GL integrations",
+      "Custom database creation",
+      "Automated data syncing",
     ],
   },
   {
     number: "03",
-    category: "Reconcile",
-    title: "Match transactions with confidence",
+    category: "Agents",
+    title: "Setup automation agents",
     description:
-      "AI-powered reconciliation that automatically matches transactions, identifies discrepancies, and flags items for review.",
+      "Configure AI agents to handle the repetitive work across your close. Each agent is purpose-built for a specific function and works autonomously on your behalf.",
     features: [
-      "Auto-matching engine",
-      "Exception flagging",
-      "Audit trail for every match",
+      "Stakeholder Requests",
+      "Reconciliations",
+      "Reports",
+      "Data Analysis",
     ],
   },
   {
     number: "04",
-    category: "Analyze",
-    title: "Surface insights with AI",
+    category: "Approve",
+    title: "Controlled approval of agent work",
     description:
-      "Let AI review your data, spot anomalies, and suggest journal entries. Get answers to questions about your financials instantly.",
+      "Every piece of agent output is surfaced for human review before it goes live. Your team stays in control with clear approval workflows and full audit trails.",
     features: [
-      "Anomaly detection",
-      "AI-suggested entries",
-      "Natural language queries",
+      "Human-in-the-loop review",
+      "Approval workflows",
+      "Full audit trail",
     ],
   },
   {
     number: "05",
-    category: "Report",
-    title: "Generate reports in seconds",
+    category: "Close",
+    title: "Close month-end faster and more controlled",
     description:
-      "Build and share financial reports with real-time data. Customize templates and schedule automated distribution.",
+      "With tasks managed, agents running, and approvals in place, your team closes the books faster — with more confidence and less stress.",
     features: [
-      "Real-time dashboards",
-      "Custom report templates",
-      "Automated distribution",
-    ],
-  },
-  {
-    number: "06",
-    category: "Collaborate",
-    title: "Work together seamlessly",
-    description:
-      "Comments, @mentions, and activity feeds keep your team aligned. Everyone sees the same source of truth.",
-    features: [
-      "Inline comments and threads",
-      "Activity feeds per task",
-      "Role-based permissions",
+      "Faster close cycles",
+      "Real-time progress tracking",
+      "Complete close visibility",
     ],
   },
 ];
@@ -112,10 +101,10 @@ export default function ProductPage() {
       <section className="pt-36 pb-20 lg:pt-48 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            The platform built for accounting teams
+            Vergo customers close their books stress-free
           </h1>
           <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
-            Everything you need to manage your book close — tasks, requests, reconciliations, reports, and AI — in one unified workflow.
+            Vergo customers close their books stress-free
           </p>
           <div className="mt-12">
             <Link
@@ -131,7 +120,7 @@ export default function ProductPage() {
       {/* Product Flow Nav */}
       <section className="border-y border-border bg-background-secondary">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {productSections.map((s) => (
               <div
                 key={s.number}

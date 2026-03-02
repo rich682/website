@@ -180,9 +180,11 @@ body {
 }
 
 /* Link styles */
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .link-accent {
@@ -195,3 +197,95 @@ a {
   color: var(--foreground);
   border-bottom-color: var(--foreground);
 }
+
+/* ============================================
+   Feature Mockup Animations
+   ============================================ */
+
+/* --- Coordination Mockup (Feature 1) --- */
+@keyframes coord-check {
+  0%, 15% { opacity: 0; transform: scale(0); }
+  20% { opacity: 1; transform: scale(1.15); }
+  25%, 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes coord-status {
+  0%, 15% { opacity: 0; }
+  25%, 100% { opacity: 1; }
+}
+
+@keyframes coord-progress {
+  0%, 8% { width: 20%; }
+  28% { width: 50%; }
+  52% { width: 78%; }
+  72%, 100% { width: 100%; }
+}
+
+.coord-check-1 { animation: coord-check 11s var(--ease-out) infinite; }
+.coord-check-2 { animation: coord-check 11s var(--ease-out) 2s infinite; }
+.coord-check-3 { animation: coord-check 11s var(--ease-out) 4s infinite; }
+.coord-status-1 { animation: coord-status 11s var(--ease-out) infinite; }
+.coord-status-2 { animation: coord-status 11s var(--ease-out) 2s infinite; }
+.coord-status-3 { animation: coord-status 11s var(--ease-out) 4s infinite; }
+.coord-progress { animation: coord-progress 11s var(--ease-out) infinite; }
+
+/* --- White Glove Mockup (Feature 2) --- */
+@keyframes wg-slide-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wg-fade-out {
+  0% { opacity: 1; height: auto; }
+  100% { opacity: 0; height: 0; overflow: hidden; }
+}
+
+@keyframes wg-dot-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.wg-msg-1 { opacity: 0; animation: wg-slide-up 0.5s var(--ease-out) 0.5s forwards; }
+.wg-msg-2 { opacity: 0; animation: wg-slide-up 0.5s var(--ease-out) 2.5s forwards; }
+.wg-typing {
+  opacity: 0;
+  animation: wg-slide-up 0.3s var(--ease-out) 4s forwards,
+             wg-fade-out 0.3s var(--ease-out) 6s forwards;
+}
+.wg-msg-3 { opacity: 0; animation: wg-slide-up 0.5s var(--ease-out) 6.3s forwards; }
+.wg-dot-1 { animation: wg-dot-pulse 1s ease-in-out infinite; }
+.wg-dot-2 { animation: wg-dot-pulse 1s ease-in-out 0.15s infinite; }
+.wg-dot-3 { animation: wg-dot-pulse 1s ease-in-out 0.3s infinite; }
+
+/* --- AI Agents Mockup (Feature 3) --- */
+@keyframes agent-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.8); }
+}
+
+@keyframes agent-bar-fill {
+  0%, 10% { width: 35%; }
+  50%, 100% { width: 92%; }
+}
+
+@keyframes agent-status-flip {
+  0%, 30% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
+  40%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+@keyframes agent-sparkline {
+  0% { stroke-dashoffset: 300; }
+  60%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes agent-typewriter {
+  0%, 25% { max-width: 0; }
+  65%, 100% { max-width: 200px; }
+}
+
+.agent-dot { animation: agent-pulse 2s ease-in-out infinite; }
+.agent-bar { animation: agent-bar-fill 9s var(--ease-out) infinite; }
+.agent-status-1 { animation: agent-status-flip 9s var(--ease-out) infinite; }
+.agent-status-2 { animation: agent-status-flip 9s var(--ease-out) 1.5s infinite; }
+.agent-line { stroke-dasharray: 300; animation: agent-sparkline 9s var(--ease-out) infinite; }
+.agent-type { overflow: hidden; white-space: nowrap; animation: agent-typewriter 9s var(--ease-out) infinite; }

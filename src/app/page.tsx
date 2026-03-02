@@ -1,63 +1,73 @@
 import Link from "next/link";
+import CoordinationMockup from "@/components/animations/CoordinationMockup";
+import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
+import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
+import ScrollReveal from "@/components/ScrollReveal";
+
+const featureMockups = [CoordinationMockup, WhiteGloveMockup, AIAgentsMockup];
 
 const features = [
   {
-    label: "All-in-One",
-    title: "Everything your accounting team needs, unified.",
+    label: "Coordination",
+    title: "Everything to coordinate month-end",
     description:
-      "Manage tasks, reconciliations, expenses, invoices, and reports in a single platform. No more switching between disconnected tools.",
+      "Tasks, reconciliations, reports, and deadlines — all managed in a single platform purpose-built for the close.",
     items: [
       {
-        name: "Task Management",
-        detail: "Organize and track every close task with smart assignments and deadlines.",
+        name: "Close Checklists",
+        detail: "Create and manage every month-end task with dependencies and deadlines.",
       },
       {
-        name: "Auto-Requests",
-        detail: "Automatically request documents and approvals from stakeholders.",
+        name: "Stakeholder Requests",
+        detail: "Automatically request documents, sign-offs, and data from across the business.",
       },
       {
-        name: "AI-Powered Insights",
-        detail: "Surface anomalies, suggest entries, and accelerate review cycles.",
+        name: "Real-Time Visibility",
+        detail: "Track progress across your entire close in one unified view.",
       },
     ],
   },
   {
-    label: "Time to Value",
-    title: "Up and running in days, not months.",
+    label: "White Glove",
+    title: "Dedicated Account Manager",
     description:
-      "Vergo is designed for fast onboarding. Our team handles setup so your accounting team can focus on what matters.",
+      "Every Vergo customer gets a dedicated account manager who handles setup, onboarding, and ongoing support so your team can focus on the close.",
     items: [
       {
-        name: "Guided Onboarding",
-        detail: "Dedicated implementation support to get you live quickly.",
+        name: "Hands-On Onboarding",
+        detail: "Your account manager configures Vergo to match your workflows from day one.",
       },
       {
-        name: "Smart Defaults",
-        detail: "Pre-built templates and workflows based on industry best practices.",
+        name: "Ongoing Support",
+        detail: "A single point of contact who knows your business and your close process.",
       },
       {
-        name: "Instant Collaboration",
-        detail: "Invite your team and start working together immediately.",
+        name: "Best Practice Guidance",
+        detail: "Recommendations based on what works for teams like yours.",
       },
     ],
   },
   {
-    label: "AI Working for You",
-    title: "Automation that handles the busywork.",
+    label: "AI Agents",
+    title: "Agents working for you",
     description:
-      "Let AI handle repetitive tasks while your team focuses on high-value analysis and strategic decisions.",
+      "Autonomous agents handle the repetitive work — reconciliations, stakeholder follow-ups, reports, and data analysis — so your team focuses on what matters.",
     items: [
       {
-        name: "Auto-Reconciliation",
+        name: "Stakeholder Requests",
+        detail: "Chase outstanding items and send smart reminders on your behalf.",
+      },
+      {
+        name: "Reconciliations",
         detail: "Automatically match transactions and flag exceptions for review.",
       },
       {
-        name: "Smart Follow-ups",
-        detail: "AI tracks outstanding items and sends reminders on your behalf.",
+        name: "Reports",
+        detail: "Generate and distribute reports with real-time data, on schedule.",
       },
       {
-        name: "Copilot",
-        detail: "An AI assistant that helps you navigate your data and answer questions.",
+        name: "Data Analysis",
+        detail: "Surface anomalies, spot trends, and answer questions about your financials.",
       },
     ],
   },
@@ -183,10 +193,15 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Placeholder image area */}
-                <div className={`rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <span className="text-foreground-muted text-sm">Product screenshot</span>
-                </div>
+                {/* Animated product mockup */}
+                <ScrollReveal
+                  className={`rounded-xl bg-background-secondary border border-border aspect-[4/3] overflow-hidden ${idx % 2 === 1 ? "lg:order-1" : ""}`}
+                >
+                  {(() => {
+                    const Mockup = featureMockups[idx];
+                    return <Mockup />;
+                  })()}
+                </ScrollReveal>
               </div>
             ))}
           </div>
