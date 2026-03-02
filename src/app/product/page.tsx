@@ -80,24 +80,19 @@ const productSections = [
 
 const testimonials = [
   {
-    quote: "We cut our close time in half within the first quarter.",
-    name: "David Lin",
-    title: "Accounting Manager, Presto",
+    quote: "Finally, a platform built specifically for accounting teams. The AI features are genuinely useful, not just marketing buzz.",
+    name: "Emily Park",
+    title: "CFO, GrowthCo",
   },
   {
-    quote: "The auto-request feature alone saves my team 20 hours a month.",
-    name: "Rachel Adams",
-    title: "Controller, Finway",
+    quote: "Vergo transformed how our accounting team operates. We closed the books 5 days faster in the first month.",
+    name: "Sarah Chen",
+    title: "Controller, TechCorp",
   },
   {
-    quote: "Vergo is the only tool that actually understands how accountants work.",
-    name: "James Okoro",
-    title: "VP Finance, Helix",
-  },
-  {
-    quote: "Our auditors love the clean audit trail Vergo provides.",
-    name: "Priya Sharma",
-    title: "CFO, Nexus Solutions",
+    quote: "The automation alone saved us 40 hours per close cycle. It's a game-changer for mid-market companies.",
+    name: "Michael Torres",
+    title: "Accountant, ScaleUp Inc.",
   },
 ];
 
@@ -190,7 +185,7 @@ export default function ProductPage() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground text-center mb-16 tracking-tight">
             The results speak for themselves
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div key={t.name} className="card p-6">
                 <p className="text-sm text-foreground-secondary italic leading-relaxed mb-5">
@@ -208,7 +203,7 @@ export default function ProductPage() {
       <section className="section-padding">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
-            Start closing faster today
+            End book close chaos today
           </h2>
           <Link
             href="/demo"

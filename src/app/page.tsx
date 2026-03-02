@@ -89,7 +89,7 @@ const testimonials = [
   {
     quote: "The automation alone saved us 40 hours per close cycle. It's a game-changer for mid-market companies.",
     name: "Michael Torres",
-    role: "Accounting Manager",
+    role: "Accountant",
     company: "ScaleUp Inc.",
   },
 ];
@@ -212,7 +212,7 @@ export default function HomePage() {
       <section className="section-padding bg-background-secondary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight mb-6">
-            Start closing faster today
+            End book close chaos today
           </h2>
           <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
             Join the accounting teams that are putting their book close on autopilot.
