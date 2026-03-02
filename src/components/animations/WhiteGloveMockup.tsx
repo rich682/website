@@ -1,16 +1,20 @@
+import Image from "next/image";
+
 export default function WhiteGloveMockup() {
   return (
     <div className="w-full h-full p-4 sm:p-6 flex flex-col">
       {/* Chat header */}
       <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-border">
-        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-highlight flex items-center justify-center flex-shrink-0">
-          <span className="text-[9px] sm:text-[10px] font-medium text-white">
-            AM
-          </span>
-        </div>
+        <Image
+          src="/images/avatars/sarah.jpg"
+          alt="Sarah"
+          width={28}
+          height={28}
+          className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-cover flex-shrink-0"
+        />
         <div className="flex-1 min-w-0">
           <span className="text-[10px] sm:text-xs font-medium text-foreground">
-            Your Account Manager
+            Sarah - Vergo Account Manager
           </span>
         </div>
         <div className="flex items-center gap-1.5 flex-shrink-0">
@@ -23,18 +27,19 @@ export default function WhiteGloveMockup() {
 
       {/* Messages */}
       <div className="flex-1 space-y-2.5 sm:space-y-3 overflow-hidden">
-        {/* AM message 1 */}
+        {/* Sarah message 1 */}
         <div className="wg-msg-1 flex justify-start">
           <div className="max-w-[82%] px-2.5 sm:px-3 py-2 rounded-lg rounded-tl-sm bg-background border border-border text-[10px] sm:text-xs text-foreground-secondary leading-relaxed">
-            I&apos;ve reviewed your close workflow. Here are 3 optimizations we
-            can make.
+            I&apos;ve reviewed your March close. There are 3 AI Agents we can
+            build that would save you 20 hours. Would you like to jump on a call
+            to discuss?
           </div>
         </div>
 
         {/* User message */}
         <div className="wg-msg-2 flex justify-end">
           <div className="max-w-[82%] px-2.5 sm:px-3 py-2 rounded-lg rounded-tr-sm bg-accent text-[10px] sm:text-xs text-white leading-relaxed">
-            Can you set those up for us?
+            Yes, absolutely! Are you free tomorrow afternoon?
           </div>
         </div>
 
@@ -47,10 +52,10 @@ export default function WhiteGloveMockup() {
           </div>
         </div>
 
-        {/* AM message 3 */}
+        {/* Sarah message 3 */}
         <div className="wg-msg-3 flex justify-start">
           <div className="max-w-[82%] px-2.5 sm:px-3 py-2 rounded-lg rounded-tl-sm bg-background border border-border text-[10px] sm:text-xs text-foreground-secondary leading-relaxed">
-            Already done. Your next close will use the new flow.
+            Yep - just sent a calendar invite over
           </div>
         </div>
       </div>

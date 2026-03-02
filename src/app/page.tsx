@@ -138,7 +138,7 @@ export default function HomePage() {
       <section className="bg-[#0e0e0e] pt-16 pb-24 lg:pt-20 lg:pb-36">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            Get in control of month end
+            Built for Accounting Teams who love control & efficiency
           </h1>
           <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
