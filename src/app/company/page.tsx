@@ -9,9 +9,11 @@ export const metadata: Metadata = {
 };
 
 const investors = [
-  "Investor 1",
-  "Investor 2",
-  "Investor 3",
+  { name: "Nine Four Ventures", logo: "/images/investors/nine-four-ventures.png" },
+  { name: "CRV", logo: "/images/investors/crv.svg" },
+  { name: "Valar Ventures", logo: "/images/investors/valar-ventures.png" },
+  { name: "Forum Ventures", logo: "/images/investors/forum-ventures.png" },
+  { name: "Wischoff Ventures", logo: "/images/investors/wischoff-ventures.svg" },
 ];
 
 export default function CompanyPage() {
@@ -29,16 +31,6 @@ export default function CompanyPage() {
             </p>
           </div>
 
-          {/* Hero image */}
-          <div className="mt-16 rounded-2xl overflow-hidden aspect-[2/1] relative bg-[#1a1a1a]">
-            <Image
-              src="/images/company/team-hero.jpg"
-              alt="Accounting team reviewing financial reports together"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
         </div>
       </section>
 
@@ -211,13 +203,19 @@ export default function CompanyPage() {
           <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-16 tracking-tight">
             Backed by top-tier investors
           </h2>
-          <div className="flex flex-wrap items-center justify-center gap-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {investors.map((investor) => (
               <div
-                key={investor}
-                className="w-40 h-16 rounded-lg bg-background-secondary border border-border flex items-center justify-center"
+                key={investor.name}
+                className="aspect-[3/2] rounded-xl bg-[#1C1C1A] border border-white/5 flex items-center justify-center p-6"
               >
-                <span className="text-sm text-foreground-muted">{investor}</span>
+                <Image
+                  src={investor.logo}
+                  alt={investor.name}
+                  width={160}
+                  height={48}
+                  className="object-contain max-h-8 sm:max-h-10 w-auto opacity-80 brightness-0 invert"
+                />
               </div>
             ))}
           </div>
@@ -230,7 +228,10 @@ export default function CompanyPage() {
           <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground leading-relaxed italic tracking-tight">
             &ldquo;AI is changing the way accounting teams can organize their book close, cut through the noise and automate repetitive monthly tasks&rdquo;
           </blockquote>
-          <p className="mt-8 text-sm font-medium text-foreground">Rich Kane</p>
+          <div className="mt-8 w-16 h-16 rounded-full bg-background border border-border mx-auto flex items-center justify-center overflow-hidden">
+            <span className="text-foreground-muted text-xs">RK</span>
+          </div>
+          <p className="mt-3 text-sm font-medium text-foreground">Rich Kane</p>
           <p className="text-xs text-foreground-muted mt-0.5">Founder &amp; CEO of Vergo</p>
         </div>
       </section>
@@ -239,7 +240,7 @@ export default function CompanyPage() {
       <section className="section-padding border-t border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
-            End book close chaos today
+            Work on higher value tasks today
           </h2>
           <Link
             href="/demo"

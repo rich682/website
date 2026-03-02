@@ -257,7 +257,7 @@ body {
 .wg-dot-2 { animation: wg-dot-pulse 1s ease-in-out 0.15s infinite; }
 .wg-dot-3 { animation: wg-dot-pulse 1s ease-in-out 0.3s infinite; }
 
-/* --- AI Agents Mockup (Feature 3) --- */
+/* --- AI Agents Mockup (Feature 2) — Build → Execute → Review --- */
 @keyframes agent-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(1.8); }
@@ -268,27 +268,36 @@ body {
   50%, 100% { width: 92%; }
 }
 
-@keyframes agent-status-flip {
-  0%, 30% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
-  40%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+@keyframes agent-step-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes agent-sparkline {
-  0% { stroke-dashoffset: 300; }
-  60%, 100% { stroke-dashoffset: 0; }
+@keyframes agent-review-flip {
+  0%, 60% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
+  70%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
 }
 
-@keyframes agent-typewriter {
-  0%, 25% { max-width: 0; }
-  65%, 100% { max-width: 200px; }
+@keyframes agent-approve-pulse {
+  0%, 70% { transform: scale(1); box-shadow: none; }
+  75% { transform: scale(0.95); }
+  80% { transform: scale(1.02); box-shadow: 0 0 12px rgba(90, 122, 100, 0.3); }
+  100% { transform: scale(1); box-shadow: none; }
+}
+
+@keyframes agent-config-in {
+  0%, 5% { opacity: 0; max-height: 0; }
+  20%, 100% { opacity: 1; max-height: 60px; }
 }
 
 .agent-dot { animation: agent-pulse 2s ease-in-out infinite; }
 .agent-bar { animation: agent-bar-fill 9s var(--ease-out) infinite; }
-.agent-status-1 { animation: agent-status-flip 9s var(--ease-out) infinite; }
-.agent-status-2 { animation: agent-status-flip 9s var(--ease-out) 1.5s infinite; }
-.agent-line { stroke-dasharray: 300; animation: agent-sparkline 9s var(--ease-out) infinite; }
-.agent-type { overflow: hidden; white-space: nowrap; animation: agent-typewriter 9s var(--ease-out) infinite; }
+.agent-build { opacity: 0; animation: agent-step-in 0.5s var(--ease-out) 0.3s forwards; }
+.agent-execute { opacity: 0; animation: agent-step-in 0.5s var(--ease-out) 1.5s forwards; }
+.agent-review { opacity: 0; animation: agent-step-in 0.5s var(--ease-out) 3s forwards; }
+.agent-review-badge { animation: agent-review-flip 9s var(--ease-out) 3.5s both; }
+.agent-approve-btn { animation: agent-approve-pulse 9s var(--ease-out) 3.5s infinite; }
+.agent-config-badge { opacity: 0; animation: agent-step-in 0.3s var(--ease-out) 0.8s forwards; }
 
 /* ============================================
    Product Page Mockup Animations

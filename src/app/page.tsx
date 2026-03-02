@@ -4,7 +4,7 @@ import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const featureMockups = [CoordinationMockup, WhiteGloveMockup, AIAgentsMockup];
+const featureMockups = [CoordinationMockup, AIAgentsMockup, WhiteGloveMockup];
 
 const features = [
   {
@@ -28,6 +28,30 @@ const features = [
     ],
   },
   {
+    label: "AI Agents",
+    title: "Build Agents, review their work",
+    description:
+      "You define what each agent does. You set the rules, thresholds, and schedules. Agents handle the repetitive execution — reconciliations, follow-ups, reports — and surface their work for your review before anything is finalized.",
+    items: [
+      {
+        name: "You Build the Agents",
+        detail: "Define agent tasks, set rules, and configure thresholds — you're always in the driver's seat.",
+      },
+      {
+        name: "Agents Execute the Work",
+        detail: "Reconciliations, stakeholder follow-ups, reports, and data analysis run on your schedule.",
+      },
+      {
+        name: "You Review & Approve",
+        detail: "Every agent output surfaces for your review. Nothing is finalized without your sign-off.",
+      },
+      {
+        name: "Full Audit Trail",
+        detail: "Every action logged with timestamps — complete traceability from agent task to approved result.",
+      },
+    ],
+  },
+  {
     label: "White Glove",
     title: "Dedicated Account Manager",
     description:
@@ -44,30 +68,6 @@ const features = [
       {
         name: "Best Practice Guidance",
         detail: "Recommendations based on what works for teams like yours.",
-      },
-    ],
-  },
-  {
-    label: "AI Agents",
-    title: "Agents working for you",
-    description:
-      "Autonomous agents handle the repetitive work — reconciliations, stakeholder follow-ups, reports, and data analysis — so your team focuses on what matters.",
-    items: [
-      {
-        name: "Stakeholder Requests",
-        detail: "Chase outstanding items and send smart reminders on your behalf.",
-      },
-      {
-        name: "Reconciliations",
-        detail: "Automatically match transactions and flag exceptions for review.",
-      },
-      {
-        name: "Reports",
-        detail: "Generate and distribute reports with real-time data, on schedule.",
-      },
-      {
-        name: "Data Analysis",
-        detail: "Surface anomalies, spot trends, and answer questions about your financials.",
       },
     ],
   },
