@@ -1,5 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ScrollReveal from "@/components/ScrollReveal";
+import ProductWorkflowNav from "@/components/ProductWorkflowNav";
+import TasksMockup from "@/components/animations/TasksMockup";
+import ConnectMockup from "@/components/animations/ConnectMockup";
+import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
+import ApproveMockup from "@/components/animations/ApproveMockup";
+import CloseMockup from "@/components/animations/CloseMockup";
 
 export const metadata: Metadata = {
   title: "Product | Vergo",
@@ -117,27 +124,19 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* Product Flow Nav */}
-      <section className="border-y border-border bg-background-secondary">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {productSections.map((s) => (
-              <div
-                key={s.number}
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-background transition-colors duration-300"
-              >
-                <span className="text-xs font-medium text-foreground-muted">{s.number}</span>
-                <span className="text-sm font-medium text-foreground">{s.category}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Product Workflow Nav */}
+      <ProductWorkflowNav
+        steps={productSections.map((s) => ({
+          number: s.number,
+          category: s.category,
+          sectionId: `step-${s.category.toLowerCase()}`,
+        }))}
+      />
 
       {/* Product Feature Sections */}
       <div className="divide-y divide-border">
         {productSections.map((section, idx) => (
-          <section key={section.number} className="section-padding">
+          <section key={section.number} id={`step-${section.category.toLowerCase()}`} className="section-padding">
             <div className="max-w-7xl mx-auto px-6">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
@@ -169,10 +168,16 @@ export default function ProductPage() {
                   </ul>
                 </div>
 
-                {/* Placeholder screenshot */}
-                <div className={`rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <span className="text-foreground-muted text-sm">Product screenshot</span>
-                </div>
+                {/* Animated mockup */}
+                <ScrollReveal className={idx % 2 === 1 ? "lg:order-1" : ""}>
+                  <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    {idx === 0 && <TasksMockup />}
+                    {idx === 1 && <ConnectMockup />}
+                    {idx === 2 && <AgentSetupMockup />}
+                    {idx === 3 && <ApproveMockup />}
+                    {idx === 4 && <CloseMockup />}
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
           </section>

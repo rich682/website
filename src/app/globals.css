@@ -289,3 +289,109 @@ body {
 .agent-status-2 { animation: agent-status-flip 9s var(--ease-out) 1.5s infinite; }
 .agent-line { stroke-dasharray: 300; animation: agent-sparkline 9s var(--ease-out) infinite; }
 .agent-type { overflow: hidden; white-space: nowrap; animation: agent-typewriter 9s var(--ease-out) infinite; }
+
+/* ============================================
+   Product Page Mockup Animations
+   ============================================ */
+
+/* --- Tasks Mockup (Product 01) --- */
+@keyframes task-row-in {
+  0%, 10% { opacity: 0; transform: translateY(6px); }
+  18%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes task-check-in {
+  0%, 30% { opacity: 0; transform: scale(0); }
+  38% { opacity: 1; transform: scale(1.15); }
+  42%, 100% { opacity: 1; transform: scale(1); }
+}
+
+.task-row-1 { animation: task-row-in 10s var(--ease-out) infinite; }
+.task-row-2 { animation: task-row-in 10s var(--ease-out) 1s infinite; }
+.task-row-3 { animation: task-row-in 10s var(--ease-out) 2s infinite; }
+.task-check-1 { animation: task-check-in 10s var(--ease-out) infinite; }
+.task-check-2 { animation: task-check-in 10s var(--ease-out) 1s infinite; }
+.task-check-3 { animation: task-check-in 10s var(--ease-out) 2s infinite; }
+
+/* --- Connect Mockup (Product 02) --- */
+@keyframes connect-line {
+  0%, 15% { width: 0; }
+  30%, 100% { width: 100%; }
+}
+
+@keyframes connect-status {
+  0%, 28% { opacity: 0; background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
+  35%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+.connect-line-1 { animation: connect-line 10s var(--ease-out) infinite; }
+.connect-line-2 { animation: connect-line 10s var(--ease-out) 1.5s infinite; }
+.connect-line-3 { animation: connect-line 10s var(--ease-out) 3s infinite; }
+.connect-status-1 { animation: connect-status 10s var(--ease-out) infinite; }
+.connect-status-2 { animation: connect-status 10s var(--ease-out) 1.5s infinite; }
+.connect-status-3 { animation: connect-status 10s var(--ease-out) 3s infinite; }
+
+/* --- Agent Setup Mockup (Product 03) --- */
+@keyframes toggle-on {
+  0%, 15% { background-color: var(--border); }
+  25%, 100% { background-color: var(--success); }
+}
+
+@keyframes toggle-knob {
+  0%, 15% { transform: translateX(0); }
+  25%, 100% { transform: translateX(14px); }
+}
+
+@keyframes agent-setup-glow {
+  0%, 15% { box-shadow: none; }
+  25% { box-shadow: 0 0 8px rgba(90, 122, 100, 0.4); }
+  40%, 100% { box-shadow: none; }
+}
+
+.toggle-1 { animation: toggle-on 10s var(--ease-out) infinite; }
+.toggle-2 { animation: toggle-on 10s var(--ease-out) 1.2s infinite; }
+.toggle-3 { animation: toggle-on 10s var(--ease-out) 2.4s infinite; }
+.toggle-4 { animation: toggle-on 10s var(--ease-out) 3.6s infinite; }
+.toggle-knob-1 { animation: toggle-knob 10s var(--ease-out) infinite; }
+.toggle-knob-2 { animation: toggle-knob 10s var(--ease-out) 1.2s infinite; }
+.toggle-knob-3 { animation: toggle-knob 10s var(--ease-out) 2.4s infinite; }
+.toggle-knob-4 { animation: toggle-knob 10s var(--ease-out) 3.6s infinite; }
+.toggle-glow-1 { animation: agent-setup-glow 10s var(--ease-out) infinite; }
+.toggle-glow-2 { animation: agent-setup-glow 10s var(--ease-out) 1.2s infinite; }
+.toggle-glow-3 { animation: agent-setup-glow 10s var(--ease-out) 2.4s infinite; }
+.toggle-glow-4 { animation: agent-setup-glow 10s var(--ease-out) 3.6s infinite; }
+
+/* --- Approve Mockup (Product 04) --- */
+@keyframes approve-btn {
+  0%, 20% { background-color: var(--accent); color: #fff; }
+  30%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+.approve-btn-1 { animation: approve-btn 11s var(--ease-out) infinite; }
+.approve-btn-2 { animation: approve-btn 11s var(--ease-out) 2s infinite; }
+.approve-btn-3 { animation: approve-btn 11s var(--ease-out) 4s infinite; }
+
+/* --- Close Mockup (Product 05) --- */
+@keyframes close-ring {
+  0%, 5% { stroke-dashoffset: 251; }
+  70%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes close-status {
+  0%, 60% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
+  72%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+@keyframes close-sparkle {
+  0%, 68% { opacity: 0; transform: scale(0); }
+  75% { opacity: 1; transform: scale(1); }
+  90%, 100% { opacity: 0; transform: scale(0.5); }
+}
+
+.close-ring { stroke-dasharray: 251; animation: close-ring 10s var(--ease-out) infinite; }
+.close-status { animation: close-status 10s var(--ease-out) infinite; }
+.close-sparkle-1 { animation: close-sparkle 10s var(--ease-out) infinite; }
+.close-sparkle-2 { animation: close-sparkle 10s var(--ease-out) 0.2s infinite; }
+.close-sparkle-3 { animation: close-sparkle 10s var(--ease-out) 0.4s infinite; }
+.close-sparkle-4 { animation: close-sparkle 10s var(--ease-out) 0.15s infinite; }
+.close-sparkle-5 { animation: close-sparkle 10s var(--ease-out) 0.35s infinite; }
