@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -13,7 +12,6 @@ const investors = [
   { name: "CRV", logo: "/images/investors/crv.svg" },
   { name: "Valar Ventures", logo: "/images/investors/valar-ventures.png" },
   { name: "Forum Ventures", logo: "/images/investors/forum-ventures.png" },
-  { name: "Wischoff Ventures", logo: "/images/investors/wischoff-ventures.svg" },
 ];
 
 export default function CompanyPage() {
@@ -203,18 +201,18 @@ export default function CompanyPage() {
           <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-16 tracking-tight">
             Backed by top-tier investors
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
             {investors.map((investor) => (
               <div
                 key={investor.name}
-                className="aspect-[3/2] rounded-xl bg-[#1C1C1A] border border-white/5 flex items-center justify-center p-6"
+                className="flex items-center justify-center p-4"
               >
                 <Image
                   src={investor.logo}
                   alt={investor.name}
-                  width={160}
-                  height={48}
-                  className="object-contain max-h-8 sm:max-h-10 w-auto opacity-80 brightness-0 invert"
+                  width={200}
+                  height={60}
+                  className="object-contain max-h-10 sm:max-h-14 w-auto"
                 />
               </div>
             ))}
@@ -240,14 +238,16 @@ export default function CompanyPage() {
       <section className="section-padding border-t border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
-            Work on higher value tasks today
+            Work on higher value tasks today.
           </h2>
-          <Link
-            href="/demo"
+          <a
+            href="https://calendly.com/vergo-ai/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
-          </Link>
+          </a>
         </div>
       </section>
     </main>

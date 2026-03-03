@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProductWorkflowNav from "@/components/ProductWorkflowNav";
@@ -17,18 +16,6 @@ export const metadata: Metadata = {
 const productSections = [
   {
     number: "01",
-    category: "Tasks",
-    title: "Create month-end tasks",
-    description:
-      "Build your close checklist from scratch or from templates. Assign owners, set deadlines, and track dependencies so nothing falls through the cracks.",
-    features: [
-      "Customizable close checklists",
-      "Task dependencies and deadlines",
-      "Recurring task templates",
-    ],
-  },
-  {
-    number: "02",
     category: "Connect",
     title: "Connect accounting software & create databases",
     description:
@@ -37,6 +24,18 @@ const productSections = [
       "ERP and GL integrations",
       "Custom database creation",
       "Automated data syncing",
+    ],
+  },
+  {
+    number: "02",
+    category: "Tasks",
+    title: "Create month-end tasks",
+    description:
+      "Build your close checklist from scratch or from templates. Assign owners, set deadlines, and track dependencies so nothing falls through the cracks.",
+    features: [
+      "Customizable close checklists",
+      "Task dependencies and deadlines",
+      "Recurring task templates",
     ],
   },
   {
@@ -67,7 +66,7 @@ const productSections = [
   {
     number: "05",
     category: "Close",
-    title: "Close month-end faster and more controlled",
+    title: "Close audit-ready, faster & more controlled",
     description:
       "With tasks managed, agents running, and approvals in place, your team closes the books faster — with more confidence and less stress.",
     features: [
@@ -109,12 +108,14 @@ export default function ProductPage() {
             Vergo customers close their books stress-free
           </p>
           <div className="mt-12">
-            <Link
-              href="/demo"
+            <a
+              href="https://calendly.com/vergo-ai/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
             >
               Request demo
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -166,8 +167,8 @@ export default function ProductPage() {
                 {/* Animated mockup */}
                 <ScrollReveal className={idx % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
-                    {idx === 0 && <TasksMockup />}
-                    {idx === 1 && <ConnectMockup />}
+                    {idx === 0 && <ConnectMockup />}
+                    {idx === 1 && <TasksMockup />}
                     {idx === 2 && <AgentSetupMockup />}
                     {idx === 3 && <ApproveMockup />}
                     {idx === 4 && <CloseMockup />}
@@ -205,12 +206,14 @@ export default function ProductPage() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
             End book close chaos today
           </h2>
-          <Link
-            href="/demo"
+          <a
+            href="https://calendly.com/vergo-ai/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
-          </Link>
+          </a>
         </div>
       </section>
     </main>

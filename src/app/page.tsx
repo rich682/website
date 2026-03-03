@@ -144,12 +144,14 @@ export default function HomePage() {
             The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/demo"
+            <a
+              href="https://calendly.com/vergo-ai/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-[#111111] font-medium hover:bg-white/90 transition-colors"
             >
               Request demo
-            </Link>
+            </a>
             <Link
               href="/product"
               className="inline-flex items-center px-8 py-3.5 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors"
@@ -217,12 +219,14 @@ export default function HomePage() {
           <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
             Join the accounting teams that are putting their book close on autopilot.
           </p>
-          <Link
-            href="/demo"
+          <a
+            href="https://calendly.com/vergo-ai/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
-          </Link>
+          </a>
         </div>
       </section>
     </main>
