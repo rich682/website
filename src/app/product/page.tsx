@@ -8,7 +8,7 @@ import ApproveMockup from "@/components/animations/ApproveMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
 
 export const metadata: Metadata = {
-  title: "Product | Vergo",
+  title: "Platform | Vergo",
   description:
     "See how Vergo helps accounting teams create tasks, connect their tools, setup automation agents, and close month-end stress-free.",
 };

@@ -15,7 +15,7 @@ export default function Header() {
         {/* Left Nav Links */}
         <div className="hidden md:flex items-center gap-6">
           <Link href="/product" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            Product
+            Platform
           </Link>
           <Link href="/company" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Company
@@ -78,7 +78,7 @@ export default function Header() {
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Product
+              Platform
             </Link>
             <Link
               href="/company"

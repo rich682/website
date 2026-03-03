@@ -24,7 +24,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link href="/product" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
-                    Product
+                    Platform
                   </Link>
                 </li>
                 <li>

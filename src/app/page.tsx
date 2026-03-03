@@ -29,12 +29,12 @@ const features = [
   },
   {
     label: "AI Agents",
-    title: "Build Agents, review their work",
+    title: "Launch Agents, review their work",
     description:
       "You define what each agent does. You set the rules, thresholds, and schedules. Agents handle the repetitive execution — reconciliations, follow-ups, reports — and surface their work for your review before anything is finalized.",
     items: [
       {
-        name: "You Build the Agents",
+        name: "Your account manager builds agents with you",
         detail: "Define agent tasks, set rules, and configure thresholds — you're always in the driver's seat.",
       },
       {
@@ -44,10 +44,6 @@ const features = [
       {
         name: "You Review & Approve",
         detail: "Every agent output surfaces for your review. Nothing is finalized without your sign-off.",
-      },
-      {
-        name: "Full Audit Trail",
-        detail: "Every action logged with timestamps — complete traceability from agent task to approved result.",
       },
     ],
   },
@@ -156,7 +152,7 @@ export default function HomePage() {
               href="/product"
               className="inline-flex items-center px-8 py-3.5 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors"
             >
-              See the product
+              See the platform
             </Link>
           </div>
         </div>
