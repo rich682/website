@@ -204,7 +204,7 @@ export default function ProductPage() {
       <section className="section-padding">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
-            End book close chaos today
+            Work on higher value tasks today.
           </h2>
           <a
             href="https://calendly.com/vergo-ai/new-meeting"
