@@ -36,14 +36,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}>
+      <head>
         <Script
           id="reb2b"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("9NMMZH482MNW");`,
           }}
         />
+      </head>
+      <body className={`${geistSans.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}>
         <Header />
         {children}
         <Footer />
