@@ -11,7 +11,6 @@ const investors = [
   { name: "Nine Four Ventures", logo: "/images/investors/nine-four-ventures.png" },
   { name: "CRV", logo: "/images/investors/crv.svg" },
   { name: "Valar Ventures", logo: "/images/investors/valar-ventures.png" },
-  { name: "Forum Ventures", logo: "/images/investors/forum-ventures.png" },
 ];
 
 export default function CompanyPage() {
@@ -51,7 +50,7 @@ export default function CompanyPage() {
             {/* Team discussion image */}
             <div className="rounded-xl overflow-hidden aspect-square relative">
               <Image
-                src="/images/company/team-discussion.jpg"
+                src="/images/company/team-discussion.png"
                 alt="Accountants discussing financial data and close processes"
                 fill
                 className="object-cover"
@@ -201,7 +200,7 @@ export default function CompanyPage() {
           <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-16 tracking-tight">
             Backed by top-tier investors
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+          <div className="grid grid-cols-3 gap-10">
             {investors.map((investor) => (
               <div
                 key={investor.name}
@@ -210,9 +209,9 @@ export default function CompanyPage() {
                 <Image
                   src={investor.logo}
                   alt={investor.name}
-                  width={200}
-                  height={60}
-                  className="object-contain max-h-10 sm:max-h-14 w-auto"
+                  width={280}
+                  height={80}
+                  className="object-contain max-h-14 sm:max-h-20 w-auto"
                 />
               </div>
             ))}
@@ -226,8 +225,13 @@ export default function CompanyPage() {
           <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground leading-relaxed italic tracking-tight">
             &ldquo;AI is changing the way accounting teams can organize their book close, cut through the noise and automate repetitive monthly tasks&rdquo;
           </blockquote>
-          <div className="mt-8 w-16 h-16 rounded-full bg-background border border-border mx-auto flex items-center justify-center overflow-hidden">
-            <span className="text-foreground-muted text-xs">RK</span>
+          <div className="mt-8 w-16 h-16 rounded-full bg-background border border-border mx-auto flex items-center justify-center overflow-hidden relative">
+            <Image
+              src="/images/avatars/rich-kane.jpg"
+              alt="Rich Kane"
+              fill
+              className="object-cover"
+            />
           </div>
           <p className="mt-3 text-sm font-medium text-foreground">Rich Kane</p>
           <p className="text-xs text-foreground-muted mt-0.5">Founder &amp; CEO of Vergo</p>

@@ -6,19 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "remotion:studio": "remotion studio src/remotion/index.ts",
-    "remotion:render": "remotion render src/remotion/index.ts ProductVideo public/video/product-video.mp4"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@remotion/cli": "^4.0.431",
-    "@remotion/player": "^4.0.431",
     "clsx": "^2.1.1",
     "framer-motion": "^12.26.2",
     "next": "16.1.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "remotion": "^4.0.431"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
