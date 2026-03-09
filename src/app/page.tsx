@@ -77,13 +77,13 @@ const testimonials = [
     company: "GrowthCo",
   },
   {
-    quote: "Vergo transformed how our accounting team operates. We closed the books 5 days faster in the first month.",
+    quote: "We closed the books 5 days faster in the first month with Vergo. The visibility alone was worth it.",
     name: "Sarah Chen",
     role: "Controller",
     company: "TechCorp",
   },
   {
-    quote: "The automation alone saved us 40 hours per close cycle. It's a game-changer for mid-market companies.",
+    quote: "The automation alone saved us 40 hours per close cycle. We finally have time for actual analysis.",
     name: "Michael Torres",
     role: "Accountant",
     company: "ScaleUp Inc.",
@@ -100,7 +100,7 @@ export default function HomePage() {
             For Accounting Teams who love control & efficiency
           </h1>
           <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
-            The AI-native platform that replaces disconnected tools and manual workflows. Built for accounting teams that move fast.
+            One platform to coordinate your close, automate the repetitive work, and keep your team in control.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -197,7 +197,7 @@ export default function HomePage() {
             Work on higher value tasks today.
           </h2>
           <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
-            Join the accounting teams that are putting their book close on autopilot.
+            Join the accounting teams closing faster with less manual work.
           </p>
           <a
             href="https://calendly.com/vergo-ai/new-meeting"

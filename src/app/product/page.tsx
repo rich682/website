@@ -43,7 +43,7 @@ const productSections = [
     category: "Agents",
     title: "Setup automation agents",
     description:
-      "Configure AI agents to handle the repetitive work across your close. Each agent is purpose-built for a specific function and works autonomously on your behalf.",
+      "Configure AI agents to handle the repetitive work across your close. Each agent handles a specific function and surfaces its work for your review.",
     features: [
       "Stakeholder Requests",
       "Reconciliations",
@@ -84,12 +84,12 @@ const testimonials = [
     title: "CFO, GrowthCo",
   },
   {
-    quote: "Vergo transformed how our accounting team operates. We closed the books 5 days faster in the first month.",
+    quote: "We closed the books 5 days faster in the first month with Vergo. The visibility alone was worth it.",
     name: "Sarah Chen",
     title: "Controller, TechCorp",
   },
   {
-    quote: "The automation alone saved us 40 hours per close cycle. It's a game-changer for mid-market companies.",
+    quote: "The automation alone saved us 40 hours per close cycle. We finally have time for actual analysis.",
     name: "Michael Torres",
     title: "Accountant, ScaleUp Inc.",
   },

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Instrument_Serif } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -19,11 +20,11 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: "Vergo | Get in Control of Month End",
-  description: "The operating system for accounting teams. Manage tasks, auto-requests, reconciliations, expenses, invoices, and reports in one AI-powered platform.",
+  description: "The collaboration platform for accounting teams. Manage tasks, requests, reconciliations, and reports — all in one place.",
   keywords: ["accounting software", "accounting platform", "task management", "auto-request management", "account reconciliation", "AI accounting", "expense management", "invoice processing", "accounting workflow", "bookkeeping automation"],
   openGraph: {
     title: "Vergo | Get in Control of Month End",
-    description: "The operating system for accounting teams. Manage tasks, auto-requests, reconciliations, expenses, invoices, and reports in one AI-powered platform.",
+    description: "The collaboration platform for accounting teams. Manage tasks, requests, reconciliations, and reports — all in one place.",
     type: "website",
   },
 };
@@ -36,6 +37,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}>
+        <Script
+          id="reb2b"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("9NMMZH482MNW");`,
+          }}
+        />
         <Header />
         {children}
         <Footer />

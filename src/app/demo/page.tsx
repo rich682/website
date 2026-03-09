@@ -4,7 +4,7 @@ import Script from "next/script";
 
 const trustBadges = [
   { text: "Audit-friendly by design" },
-  { text: "Setup in minutes" },
+  { text: "Guided setup with a dedicated account manager" },
   { text: "Built for accounting teams" },
 ];
 
@@ -19,10 +19,10 @@ export default function DemoPage() {
               Request a Demo
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl text-foreground leading-[1.1] mb-6 tracking-tight">
-              Simplify your book close today.
+              Get control of your book close today.
             </h1>
             <p className="text-lg text-foreground-secondary max-w-lg mb-10 leading-relaxed">
-              Book a 30-minute demo and see how Vergo can help your team close faster, automate follow-ups, and eliminate busywork -- all in one platform.
+              Book a 30-minute demo and see how Vergo can help your team close faster, automate follow-ups, and free up time for higher-value work -- all in one platform.
             </p>
 
             <div className="space-y-5">

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Company | Vergo",
   description:
-    "Meet the team behind Vergo. We're building the operating system for accounting teams.",
+    "Meet the team behind Vergo. We're building the collaboration platform for accounting teams.",
 };
 
 const investors = [
@@ -37,13 +37,13 @@ export default function CompanyPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="font-serif text-3xl sm:text-4xl text-foreground leading-snug mb-6 tracking-tight">
-                World-class accounting teams deserve world-class tools
+                Your team deserves better tools for the close
               </h2>
               <p className="text-foreground-secondary leading-relaxed mb-6">
                 For too long, accounting teams have been stuck with spreadsheets, emails, and legacy software that wasn&apos;t designed for how they actually work. The book close is one of the most critical processes in any business, yet it&apos;s still powered by manual effort and fragmented tools.
               </p>
               <p className="text-foreground-secondary leading-relaxed">
-                We built Vergo so accounting teams can focus on analysis and strategy instead of chasing documents and reconciling spreadsheets. Our mission is to make every book close effortless.
+                We built Vergo so accounting teams can focus on analysis and strategy instead of chasing documents and reconciling spreadsheets. Our mission is to make every book close more predictable and less painful.
               </p>
             </div>
 
@@ -223,7 +223,7 @@ export default function CompanyPage() {
       <section className="section-padding border-t border-border bg-background-secondary">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <blockquote className="font-serif text-2xl sm:text-3xl lg:text-4xl text-foreground leading-relaxed italic tracking-tight">
-            &ldquo;AI is changing the way accounting teams can organize their book close, cut through the noise and automate repetitive monthly tasks&rdquo;
+            &ldquo;Accounting teams deserve a single platform to coordinate the close, cut through the noise, and let automation handle the repetitive work&rdquo;
           </blockquote>
           <div className="mt-8 w-16 h-16 rounded-full bg-background border border-border mx-auto flex items-center justify-center overflow-hidden relative">
             <Image
