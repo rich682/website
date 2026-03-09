@@ -93,29 +93,8 @@ const testimonials = [
 export default function HomePage() {
   return (
     <main>
-      {/* Testimonials */}
-      <section className="bg-[#111111] pt-32 pb-16 lg:pt-40 lg:pb-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-            {testimonials.map((t) => (
-              <div key={t.name} className="text-center">
-                <p className="font-serif text-2xl sm:text-3xl text-white leading-snug">
-                  {t.role}
-                </p>
-                <p className="mt-2 text-sm text-white/40">
-                  {t.name}, {t.company}
-                </p>
-                <p className="mt-6 text-base text-white/60 leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
-      <section className="bg-[#0e0e0e] pt-16 pb-24 lg:pt-20 lg:pb-36">
+      <section className="bg-[#0e0e0e] pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Built for Accounting Teams who love control & efficiency
@@ -138,6 +117,27 @@ export default function HomePage() {
             >
               See the platform
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-[#111111] py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+            {testimonials.map((t) => (
+              <div key={t.name} className="text-center">
+                <p className="font-serif text-2xl sm:text-3xl text-white leading-snug">
+                  {t.role}
+                </p>
+                <p className="mt-2 text-sm text-white/40">
+                  {t.name}, {t.company}
+                </p>
+                <p className="mt-6 text-base text-white/60 leading-relaxed">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
