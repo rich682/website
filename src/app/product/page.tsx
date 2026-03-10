@@ -120,6 +120,23 @@ export default function ProductPage() {
         </div>
       </section>
 
+      {/* Video Demo */}
+      <section className="pb-20 lg:pb-28">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="rounded-xl bg-background-secondary border border-border aspect-video flex flex-col items-center justify-center overflow-hidden relative">
+            {/* Play button */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center mb-4 shadow-lg">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <p className="text-sm text-foreground-muted">
+              Product demo coming soon
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Product Workflow Nav */}
       <ProductWorkflowNav
         steps={productSections.map((s) => ({

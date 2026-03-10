@@ -28,6 +28,16 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/integrations" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
+                    Integrations
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/compare" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
+                    Compare
+                  </Link>
+                </li>
+                <li>
                   <Link href="/company" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Company
                   </Link>

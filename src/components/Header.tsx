@@ -17,6 +17,12 @@ export default function Header() {
           <Link href="/product" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Platform
           </Link>
+          <Link href="/integrations" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            Integrations
+          </Link>
+          <Link href="/compare" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            Compare
+          </Link>
           <Link href="/company" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Company
           </Link>
@@ -79,6 +85,20 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Platform
+            </Link>
+            <Link
+              href="/integrations"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Integrations
+            </Link>
+            <Link
+              href="/compare"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Compare
             </Link>
             <Link
               href="/company"
