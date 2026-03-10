@@ -65,7 +65,7 @@ export default function ComparePage() {
             Why Vergo
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.1] max-w-5xl mx-auto tracking-tight">
-            The only platform that combines close management, AI Agents, AP and Expense automation
+            The only platform that offers close management, AP Automation, Expense Management & AI Agents
           </h1>
           <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
             Stop stitching together point solutions. Vergo replaces your spreadsheets, project management tools, and legacy close software with one unified platform.
@@ -165,7 +165,7 @@ export default function ComparePage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>

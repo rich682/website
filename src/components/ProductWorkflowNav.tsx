@@ -69,7 +69,7 @@ export default function ProductWorkflowNav({ steps }: { steps: WorkflowStep[] })
                   <span
                     className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-semibold transition-all duration-300 ${
                       isActive
-                        ? "bg-accent text-white"
+                        ? "bg-accent text-black"
                         : isCompleted
                         ? "bg-success text-white"
                         : "bg-border text-foreground-muted"

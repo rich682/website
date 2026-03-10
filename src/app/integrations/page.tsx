@@ -73,7 +73,7 @@ export default function IntegrationsPage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>

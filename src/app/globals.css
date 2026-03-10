@@ -12,10 +12,10 @@
   --foreground-secondary: #555555;
   --foreground-muted: #8A8A8A;
 
-  /* Accent - dark, institutional (primary CTAs) */
-  --accent: #1A1A1A;
-  --accent-hover: #333333;
-  --accent-light: rgba(26, 26, 26, 0.06);
+  /* Accent - orange (primary CTAs) */
+  --accent: #F27A2A;
+  --accent-hover: #E06A1A;
+  --accent-light: rgba(242, 122, 42, 0.08);
 
   /* Brand highlight - muted warm copper */
   --highlight: #A67C52;
@@ -372,7 +372,7 @@ body {
 
 /* --- Approve Mockup (Product 04) --- */
 @keyframes approve-btn {
-  0%, 20% { background-color: var(--accent); color: #fff; }
+  0%, 20% { background-color: var(--accent); color: #000; }
   30%, 100% { background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
 }
 

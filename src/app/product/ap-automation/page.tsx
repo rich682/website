@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
-import AIAgentsSection from "@/components/AIAgentsSection";
 import ApproveMockup from "@/components/animations/ApproveMockup";
+import ConnectMockup from "@/components/animations/ConnectMockup";
 
 export const metadata: Metadata = {
   title: "AP Automation | Vergo",
   description:
-    "Automate your accounts payable workflow. From invoice capture to approval routing and payment processing, Vergo handles it all.",
+    "Automate your accounts payable workflow. From invoice capture to approval routing and syncing to your accounting software, Vergo handles it all.",
 };
 
 const features = [
@@ -40,21 +40,16 @@ const features = [
     ),
   },
   {
-    category: "Payment Processing",
-    title: "Process payments on schedule",
+    category: "Accounting Sync",
+    title: "Sync to your accounting software",
     description:
-      "Batch-process approved invoices and schedule payments to optimize cash flow. Track payment status and maintain a complete payment history.",
+      "Approved invoices sync directly to your ERP or general ledger. No more double entry — Vergo keeps your books up to date automatically.",
     items: [
-      "Batch payment processing",
-      "Cash flow optimization",
-      "Payment status tracking",
+      "Direct ERP and GL sync",
+      "Automatic journal entries",
+      "Real-time reconciliation",
     ],
-    mockup: null,
-    icon: (
-      <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    mockup: "connect",
   },
 ];
 
@@ -71,14 +66,14 @@ export default function APAutomationPage() {
             Accounts payable on autopilot
           </h1>
           <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
-            From invoice capture to payment processing, automate your entire AP workflow with smart routing, approvals, and full audit trails.
+            From invoice capture to syncing with your accounting software, automate your entire AP workflow with smart routing, approvals, and full audit trails.
           </p>
           <div className="mt-12">
             <a
               href="https://calendly.com/vergo-ai/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
             >
               Request demo
             </a>
@@ -119,6 +114,7 @@ export default function APAutomationPage() {
                 <ScrollReveal className={idx % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
                     {section.mockup === "approve" && <ApproveMockup />}
+                    {section.mockup === "connect" && <ConnectMockup />}
                     {section.mockup === null && (
                       <div className="text-center p-8">
                         <div className="w-12 h-12 rounded-full bg-highlight-light flex items-center justify-center mx-auto mb-3">
@@ -135,9 +131,6 @@ export default function APAutomationPage() {
         ))}
       </div>
 
-      {/* AI Agents Section */}
-      <AIAgentsSection />
-
       {/* CTA */}
       <section className="section-padding border-t border-border">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -151,7 +144,7 @@ export default function APAutomationPage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>

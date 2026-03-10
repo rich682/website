@@ -9,7 +9,6 @@ const platformLinks = [
   { label: "Close Management", href: "/product/close-management", description: "Streamline month-end close" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
-  { label: "Analytics", href: "/product/analytics", description: "Real-time reporting & insights" },
   { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
 ];
 
@@ -95,6 +94,9 @@ export default function Header() {
             )}
           </div>
 
+          <Link href="/ai-agents" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            AI Agents
+          </Link>
           <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Pricing
           </Link>
@@ -187,6 +189,13 @@ export default function Header() {
               </div>
             )}
 
+            <Link
+              href="/ai-agents"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              AI Agents
+            </Link>
             <Link
               href="/pricing"
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"

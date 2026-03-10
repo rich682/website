@@ -2,9 +2,11 @@ import Link from "next/link";
 import CoordinationMockup from "@/components/animations/CoordinationMockup";
 import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
+import ApproveMockup from "@/components/animations/ApproveMockup";
+import ConnectMockup from "@/components/animations/ConnectMockup";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const featureMockups = [CoordinationMockup, AIAgentsMockup, WhiteGloveMockup];
+const featureMockups = [CoordinationMockup, ApproveMockup, ConnectMockup, AIAgentsMockup, WhiteGloveMockup];
 
 const features = [
   {
@@ -26,6 +28,49 @@ const features = [
         detail: "Track progress across your entire close in one unified view.",
       },
     ],
+    href: "/product/close-management",
+  },
+  {
+    label: "AP Automation",
+    title: "Accounts payable on autopilot",
+    description:
+      "From invoice capture to approval routing and syncing with your accounting software — automate your entire AP workflow with full audit trails.",
+    items: [
+      {
+        name: "Automatic Invoice Capture",
+        detail: "Forward invoices by email or upload directly. Data is extracted automatically.",
+      },
+      {
+        name: "Smart Approval Routing",
+        detail: "Multi-level approval chains based on amount, department, or vendor.",
+      },
+      {
+        name: "Accounting Software Sync",
+        detail: "Approved invoices sync directly to your ERP or general ledger.",
+      },
+    ],
+    href: "/product/ap-automation",
+  },
+  {
+    label: "Expense Management",
+    title: "Connect any credit card, automate expenses",
+    description:
+      "Link any card, match receipts automatically, and enforce spending policies in real time. No more chasing expense reports at month-end.",
+    items: [
+      {
+        name: "Any Credit Card",
+        detail: "Connect corporate, personal, or virtual cards from any provider.",
+      },
+      {
+        name: "Automatic Receipt Matching",
+        detail: "Snap a photo or forward receipts — Vergo matches them to transactions automatically.",
+      },
+      {
+        name: "Policy Enforcement",
+        detail: "Out-of-policy expenses are flagged instantly so nothing slips through.",
+      },
+    ],
+    href: "/product/expense-management",
   },
   {
     label: "AI Agents",
@@ -46,6 +91,7 @@ const features = [
         detail: "Every agent output surfaces for your review. Nothing is finalized without your sign-off.",
       },
     ],
+    href: "/ai-agents",
   },
   {
     label: "White Glove",
@@ -173,6 +219,17 @@ export default function HomePage() {
                       </div>
                     ))}
                   </div>
+                  {feature.href && (
+                    <Link
+                      href={feature.href}
+                      className="inline-flex items-center gap-1.5 mt-8 text-sm font-medium text-highlight hover:text-highlight/80 transition-colors"
+                    >
+                      Learn more
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
                 </div>
 
                 {/* Animated product mockup */}
@@ -203,7 +260,7 @@ export default function HomePage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>

@@ -123,7 +123,7 @@ export default function PricingPage() {
                   rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 ${
                     tier.highlight
-                      ? "bg-accent text-white hover:bg-accent-hover"
+                      ? "bg-accent text-black hover:bg-accent-hover"
                       : "bg-foreground text-background hover:bg-foreground/90"
                   }`}
                 >
@@ -169,7 +169,7 @@ export default function PricingPage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>

@@ -17,7 +17,7 @@ const productSections = [
   {
     number: "01",
     category: "Connect",
-    title: "Connect accounting software & create databases",
+    title: "Connects to your accounting software",
     description:
       "Integrate your ERP, GL, and other accounting tools directly into Vergo. Create structured databases that give your agents the data they need to work.",
     features: [
@@ -112,7 +112,7 @@ export default function ProductPage() {
               href="https://calendly.com/vergo-ai/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
             >
               Request demo
             </a>
@@ -120,22 +120,6 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* Video Demo */}
-      <section className="pb-20 lg:pb-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="rounded-xl bg-background-secondary border border-border aspect-video flex flex-col items-center justify-center overflow-hidden relative">
-            {/* Play button */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent flex items-center justify-center mb-4 shadow-lg">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-sm text-foreground-muted">
-              Product demo coming soon
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Product Workflow Nav */}
       <ProductWorkflowNav
@@ -227,7 +211,7 @@ export default function ProductPage() {
             href="https://calendly.com/vergo-ai/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
           </a>
