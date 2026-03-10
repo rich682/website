@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -108,9 +109,13 @@ export default function Header() {
 
         {/* Center Logo */}
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
-          <svg className="w-5 h-5 opacity-80" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C10.34 2 9 3.34 9 5s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-7 5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm14 0c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-7 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-          </svg>
+          <Image
+            src="/images/white icon 2.png"
+            alt="Vergo"
+            width={20}
+            height={20}
+            className="opacity-90"
+          />
           <span className="text-xl font-semibold tracking-tight">
             VERGO
           </span>

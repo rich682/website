@@ -186,12 +186,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Feature Cards Section */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-24">
-            {features.map((feature, idx) => (
-              <div key={feature.label} className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Feature Sections */}
+      <div className="divide-y divide-border">
+        {features.map((feature, idx) => (
+          <section key={feature.label} className="section-padding">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
                   <span className="inline-flex items-center text-xs font-medium uppercase tracking-widest text-foreground-muted mb-5">
                     {feature.label}
@@ -240,10 +240,10 @@ export default function HomePage() {
                   })()}
                 </ScrollReveal>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        ))}
+      </div>
 
       {/* CTA Section */}
       <section className="section-padding bg-background-secondary">

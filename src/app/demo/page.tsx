@@ -8,12 +8,12 @@ const trustBadges = [
   { text: "Built for accounting teams" },
 ];
 
-function CalendlyEmbed() {
+function HubSpotEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
     script.async = true;
     document.head.appendChild(script);
 
@@ -25,8 +25,8 @@ function CalendlyEmbed() {
   return (
     <div
       ref={containerRef}
-      className="calendly-inline-widget"
-      data-url="https://calendly.com/vergo-ai/new-meeting"
+      className="meetings-iframe-container"
+      data-src="https://meetings.hubspot.com/rich-kane/vergoclosemanagement?embed=true"
       style={{ minWidth: 320, height: 700 }}
     />
   );
@@ -34,11 +34,11 @@ function CalendlyEmbed() {
 
 export default function DemoPage() {
   return (
-    <main className="pt-28 lg:pt-36 pb-20 lg:pb-28">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+    <main className="pt-36 lg:pt-48 pb-24 lg:pb-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left side - copy */}
-          <div className="lg:sticky lg:top-32">
+          <div className="lg:sticky lg:top-36 lg:py-8">
             <span className="inline-flex items-center text-xs font-medium uppercase tracking-widest text-foreground-muted mb-5">
               Schedule a Demo
             </span>
@@ -77,8 +77,8 @@ export default function DemoPage() {
             </div>
           </div>
 
-          {/* Right side - Calendly embed */}
-          <CalendlyEmbed />
+          {/* Right side - HubSpot embed */}
+          <HubSpotEmbed />
         </div>
       </div>
     </main>
