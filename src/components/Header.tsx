@@ -1,10 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+const platformLinks = [
+  { label: "Overview", href: "/product", description: "See the full platform" },
+  { label: "Close Management", href: "/product/close-management", description: "Streamline month-end close" },
+  { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
+  { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
+  { label: "Analytics", href: "/product/analytics", description: "Real-time reporting & insights" },
+  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [platformOpen, setPlatformOpen] = useState(false);
+  const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setPlatformOpen(false);
+    setMobileMenuOpen(false);
+    setMobilePlatformOpen(false);
+  }, [pathname]);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setPlatformOpen(false);
+      }
+    }
+    if (platformOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [platformOpen]);
+
+  // Close dropdown on Escape
+  useEffect(() => {
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setPlatformOpen(false);
+      }
+    }
+    if (platformOpen) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [platformOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
@@ -14,11 +61,42 @@ export default function Header() {
       >
         {/* Left Nav Links */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="/product" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            Platform
-          </Link>
-          <Link href="/integrations" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            Integrations
+          {/* Platform Dropdown */}
+          <div ref={dropdownRef} className="relative">
+            <button
+              onClick={() => setPlatformOpen(!platformOpen)}
+              className="flex items-center gap-1 text-sm opacity-90 hover:opacity-60 transition-opacity"
+            >
+              Platform
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${platformOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Dropdown Panel */}
+            {platformOpen && (
+              <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-white/[0.15] bg-black/80 backdrop-blur-2xl p-2 shadow-2xl">
+                {platformLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex flex-col gap-0.5 px-4 py-3 rounded-lg hover:bg-white/[0.08] transition-colors"
+                  >
+                    <span className="text-sm font-medium text-white/90">{link.label}</span>
+                    <span className="text-xs text-white/50">{link.description}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            Pricing
           </Link>
           <Link href="/compare" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Compare
@@ -78,31 +156,54 @@ export default function Header() {
           className="md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border border-white/[0.15] bg-black/80 backdrop-blur-2xl"
           style={{ color: "white" }}
         >
-          <div className="px-6 py-4 space-y-4">
-            <Link
-              href="/product"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
-              onClick={() => setMobileMenuOpen(false)}
+          <div className="px-6 py-4 space-y-1">
+            {/* Platform accordion */}
+            <button
+              onClick={() => setMobilePlatformOpen(!mobilePlatformOpen)}
+              className="flex items-center justify-between w-full text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
             >
               Platform
-            </Link>
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${mobilePlatformOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {mobilePlatformOpen && (
+              <div className="pl-4 pb-2 space-y-1">
+                {platformLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block text-sm opacity-70 hover:opacity-60 transition-opacity py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
             <Link
-              href="/integrations"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              href="/pricing"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Integrations
+              Pricing
             </Link>
             <Link
               href="/compare"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
               Compare
             </Link>
             <Link
               href="/company"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
               Company
@@ -110,7 +211,7 @@ export default function Header() {
             <hr className="border-white/10" />
             <a
               href="https://app.tryvergo.com"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
             >
               Log in
             </a>

@@ -1,0 +1,162 @@
+import type { Metadata } from "next";
+import ScrollReveal from "@/components/ScrollReveal";
+import AIAgentsSection from "@/components/AIAgentsSection";
+import ApproveMockup from "@/components/animations/ApproveMockup";
+
+export const metadata: Metadata = {
+  title: "AP Automation | Vergo",
+  description:
+    "Automate your accounts payable workflow. From invoice capture to approval routing and payment processing, Vergo handles it all.",
+};
+
+const features = [
+  {
+    category: "Invoice Capture",
+    title: "Capture invoices automatically",
+    description:
+      "Forward invoices by email or upload directly. Vergo extracts line items, amounts, and vendor details automatically — no manual data entry required.",
+    items: [
+      "Email and upload capture",
+      "Automatic data extraction",
+      "Vendor matching and coding",
+    ],
+    mockup: "approve",
+  },
+  {
+    category: "Approval Workflows",
+    title: "Route approvals with full control",
+    description:
+      "Set up multi-level approval chains based on amount, department, or vendor. Approvers review and sign off from anywhere with a complete audit trail.",
+    items: [
+      "Multi-level approval chains",
+      "Threshold-based routing",
+      "Mobile-friendly approvals",
+    ],
+    mockup: null,
+    icon: (
+      <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    category: "Payment Processing",
+    title: "Process payments on schedule",
+    description:
+      "Batch-process approved invoices and schedule payments to optimize cash flow. Track payment status and maintain a complete payment history.",
+    items: [
+      "Batch payment processing",
+      "Cash flow optimization",
+      "Payment status tracking",
+    ],
+    mockup: null,
+    icon: (
+      <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+];
+
+export default function APAutomationPage() {
+  return (
+    <main>
+      {/* Hero */}
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
+            AP Automation
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.1] max-w-5xl mx-auto tracking-tight">
+            Accounts payable on autopilot
+          </h1>
+          <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
+            From invoice capture to payment processing, automate your entire AP workflow with smart routing, approvals, and full audit trails.
+          </p>
+          <div className="mt-12">
+            <a
+              href="https://calendly.com/vergo-ai/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+            >
+              Request demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Sections */}
+      <div className="divide-y divide-border">
+        {features.map((section, idx) => (
+          <section key={section.category} className="section-padding">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
+                  <p className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
+                    {section.category}
+                  </p>
+                  <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-5">
+                    {section.title}
+                  </h2>
+                  <p className="text-foreground-secondary leading-relaxed mb-8">
+                    {section.description}
+                  </p>
+                  <ul className="space-y-4">
+                    {section.items.map((f) => (
+                      <li key={f} className="flex items-center gap-3">
+                        <div className="w-5 h-5 rounded-full bg-highlight-light flex items-center justify-center flex-shrink-0">
+                          <svg className="w-3 h-3 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="text-sm text-foreground">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <ScrollReveal className={idx % 2 === 1 ? "lg:order-1" : ""}>
+                  <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    {section.mockup === "approve" && <ApproveMockup />}
+                    {section.mockup === null && (
+                      <div className="text-center p-8">
+                        <div className="w-12 h-12 rounded-full bg-highlight-light flex items-center justify-center mx-auto mb-3">
+                          {section.icon}
+                        </div>
+                        <p className="text-sm text-foreground-muted">{section.category}</p>
+                      </div>
+                    )}
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      {/* AI Agents Section */}
+      <AIAgentsSection />
+
+      {/* CTA */}
+      <section className="section-padding border-t border-border">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-6 tracking-tight">
+            Stop chasing invoices
+          </h2>
+          <p className="text-foreground-secondary mb-8 leading-relaxed">
+            See how Vergo automates your accounts payable from end to end.
+          </p>
+          <a
+            href="https://calendly.com/vergo-ai/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent-hover transition-colors duration-300"
+          >
+            Request demo
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}

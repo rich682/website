@@ -28,8 +28,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/integrations" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
-                    Integrations
+                  <Link href="/pricing" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
+                    Pricing
                   </Link>
                 </li>
                 <li>
