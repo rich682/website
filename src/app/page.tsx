@@ -249,7 +249,7 @@ export default function HomePage() {
       <section className="section-padding bg-background-secondary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight mb-6">
-            Work on higher value tasks today.
+            Let your accounting team work on higher value tasks today.
           </h2>
           <p className="text-foreground-secondary mb-10 max-w-lg mx-auto leading-relaxed">
             Join the accounting teams closing faster with less manual work.
