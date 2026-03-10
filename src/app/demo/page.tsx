@@ -1,10 +1,36 @@
-import Script from "next/script";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 const trustBadges = [
   { text: "Audit-friendly by design" },
   { text: "Guided setup with a dedicated account manager" },
   { text: "Built for accounting teams" },
 ];
+
+function CalendlyEmbed() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="calendly-inline-widget"
+      data-url="https://calendly.com/vergo-ai/new-meeting"
+      style={{ minWidth: 320, height: 700 }}
+    />
+  );
+}
 
 export default function DemoPage() {
   return (
@@ -52,17 +78,7 @@ export default function DemoPage() {
           </div>
 
           {/* Right side - Calendly embed */}
-          <div>
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/vergo-ai/new-meeting"
-              style={{ minWidth: 320, height: 700 }}
-            />
-            <Script
-              src="https://assets.calendly.com/assets/external/widget.js"
-              strategy="afterInteractive"
-            />
-          </div>
+          <CalendlyEmbed />
         </div>
       </div>
     </main>
