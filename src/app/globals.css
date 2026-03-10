@@ -406,6 +406,37 @@ body {
 .close-sparkle-5 { animation: close-sparkle 10s var(--ease-out) 0.35s infinite; }
 
 /* ============================================
+   Invoice Capture Mockup (AP Automation – Invoice Capture)
+   ============================================ */
+@keyframes inv-capture-row-in {
+  0%, 10% { opacity: 0; transform: translateY(8px); }
+  20%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes inv-capture-icon {
+  0%, 15% { background-color: var(--background-tertiary); color: var(--foreground-muted); }
+  22% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); transform: scale(1.1); }
+  32%, 100% { background-color: rgba(90, 122, 100, 0.15); color: var(--success); transform: scale(1); }
+}
+
+@keyframes inv-capture-badge {
+  0%, 25% { opacity: 0; background-color: var(--accent); color: #000; }
+  32% { opacity: 1; background-color: var(--accent); color: #000; }
+  42%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+.inv-capture-row-1 { animation: inv-capture-row-in 10s var(--ease-out) infinite; }
+.inv-capture-row-2 { animation: inv-capture-row-in 10s var(--ease-out) 1.5s infinite; }
+.inv-capture-row-3 { animation: inv-capture-row-in 10s var(--ease-out) 3s infinite; }
+.inv-capture-icon-1 { animation: inv-capture-icon 10s var(--ease-out) infinite; }
+.inv-capture-icon-2 { animation: inv-capture-icon 10s var(--ease-out) 1.5s infinite; }
+.inv-capture-icon-3 { animation: inv-capture-icon 10s var(--ease-out) 3s infinite; }
+.inv-capture-badge-1 { animation: inv-capture-badge 10s var(--ease-out) infinite; }
+.inv-capture-badge-2 { animation: inv-capture-badge 10s var(--ease-out) 1.5s infinite; }
+.inv-capture-badge-3 { animation: inv-capture-badge 10s var(--ease-out) 3s infinite; }
+.inv-capture-footer-dot { animation: agent-pulse 2s ease-in-out infinite; }
+
+/* ============================================
    Deadlines Mockup (Close Management – Deadline Management)
    ============================================ */
 @keyframes deadline-row-in {

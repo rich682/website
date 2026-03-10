@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
-import ApproveMockup from "@/components/animations/ApproveMockup";
+import InvoiceCaptureMockup from "@/components/animations/InvoiceCaptureMockup";
 import ConnectMockup from "@/components/animations/ConnectMockup";
 import ApprovalWorkflowMockup from "@/components/animations/ApprovalWorkflowMockup";
 
@@ -21,7 +21,7 @@ const features = [
       "Automatic data extraction",
       "Vendor matching and coding",
     ],
-    mockup: "approve",
+    mockup: "invoice-capture",
   },
   {
     category: "Approval Workflows",
@@ -109,7 +109,7 @@ export default function APAutomationPage() {
 
                 <ScrollReveal className={idx % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
-                    {section.mockup === "approve" && <ApproveMockup />}
+                    {section.mockup === "invoice-capture" && <InvoiceCaptureMockup />}
                     {section.mockup === "connect" && <ConnectMockup />}
                     {section.mockup === "approval-workflow" && <ApprovalWorkflowMockup />}
                   </div>
