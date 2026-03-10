@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import ApproveMockup from "@/components/animations/ApproveMockup";
 import ConnectMockup from "@/components/animations/ConnectMockup";
+import ApprovalWorkflowMockup from "@/components/animations/ApprovalWorkflowMockup";
 
 export const metadata: Metadata = {
   title: "AP Automation | Vergo",
@@ -32,12 +33,7 @@ const features = [
       "Threshold-based routing",
       "Mobile-friendly approvals",
     ],
-    mockup: null,
-    icon: (
-      <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    mockup: "approval-workflow",
   },
   {
     category: "Accounting Sync",
@@ -115,14 +111,7 @@ export default function APAutomationPage() {
                   <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
                     {section.mockup === "approve" && <ApproveMockup />}
                     {section.mockup === "connect" && <ConnectMockup />}
-                    {section.mockup === null && (
-                      <div className="text-center p-8">
-                        <div className="w-12 h-12 rounded-full bg-highlight-light flex items-center justify-center mx-auto mb-3">
-                          {section.icon}
-                        </div>
-                        <p className="text-sm text-foreground-muted">{section.category}</p>
-                      </div>
-                    )}
+                    {section.mockup === "approval-workflow" && <ApprovalWorkflowMockup />}
                   </div>
                 </ScrollReveal>
               </div>

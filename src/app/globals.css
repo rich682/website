@@ -404,3 +404,193 @@ body {
 .close-sparkle-3 { animation: close-sparkle 10s var(--ease-out) 0.4s infinite; }
 .close-sparkle-4 { animation: close-sparkle 10s var(--ease-out) 0.15s infinite; }
 .close-sparkle-5 { animation: close-sparkle 10s var(--ease-out) 0.35s infinite; }
+
+/* ============================================
+   Deadlines Mockup (Close Management – Deadline Management)
+   ============================================ */
+@keyframes deadline-row-in {
+  0%, 10% { opacity: 0; transform: translateX(-8px); }
+  20%, 100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes deadline-dot-done {
+  0%, 18% { border-color: var(--border); background-color: transparent; }
+  28%, 100% { border-color: var(--success); background-color: var(--success); }
+}
+
+@keyframes deadline-dot-risk {
+  0%, 35% { border-color: var(--border); background-color: transparent; }
+  45% { border-color: var(--warning); background-color: var(--warning); }
+  55%, 65% { border-color: var(--warning); background-color: transparent; }
+  75%, 100% { border-color: var(--warning); background-color: var(--warning); }
+}
+
+@keyframes deadline-badge-done {
+  0%, 22% { opacity: 0; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+  32%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+@keyframes deadline-badge-risk {
+  0%, 38% { opacity: 0; }
+  48%, 100% { opacity: 1; background-color: rgba(184, 151, 106, 0.15); color: var(--warning); }
+}
+
+@keyframes deadline-progress {
+  0%, 10% { width: 0; }
+  60%, 100% { width: 67%; }
+}
+
+.deadline-row-1 { animation: deadline-row-in 10s var(--ease-out) infinite; }
+.deadline-row-2 { animation: deadline-row-in 10s var(--ease-out) 1s infinite; }
+.deadline-row-3 { animation: deadline-row-in 10s var(--ease-out) 2s infinite; }
+.deadline-dot-1 { animation: deadline-dot-done 10s var(--ease-out) infinite; }
+.deadline-dot-2 { animation: deadline-dot-done 10s var(--ease-out) 1s infinite; }
+.deadline-dot-3 { animation: deadline-dot-risk 10s var(--ease-out) 2s infinite; }
+.deadline-badge-1 { animation: deadline-badge-done 10s var(--ease-out) infinite; }
+.deadline-badge-2 { animation: deadline-badge-done 10s var(--ease-out) 1s infinite; }
+.deadline-badge-3 { animation: deadline-badge-risk 10s var(--ease-out) 2s infinite; }
+.deadline-progress { animation: deadline-progress 10s var(--ease-out) infinite; }
+.deadline-pct { animation: deadline-row-in 10s var(--ease-out) 1.5s infinite; }
+
+/* ============================================
+   Approval Workflow Mockup (AP Automation – Approval Workflows)
+   ============================================ */
+@keyframes approval-level-in {
+  0%, 8% { opacity: 0; transform: translateY(8px); }
+  18%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes approval-step-active {
+  0%, 15% { background-color: var(--background-tertiary); color: var(--foreground-muted); }
+  25%, 100% { background-color: rgba(90, 122, 100, 0.2); color: var(--success); }
+}
+
+@keyframes approval-status-in {
+  0%, 22% { opacity: 0; background-color: var(--accent); color: #000; }
+  30% { opacity: 1; background-color: var(--accent); color: #000; }
+  40%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+@keyframes approval-connector-grow {
+  0%, 20% { background-color: var(--border); height: 0; }
+  35%, 100% { background-color: var(--success); height: 100%; }
+}
+
+.approval-level-1 { animation: approval-level-in 11s var(--ease-out) infinite; }
+.approval-level-2 { animation: approval-level-in 11s var(--ease-out) 1.5s infinite; }
+.approval-level-3 { animation: approval-level-in 11s var(--ease-out) 3s infinite; }
+.approval-step-1 { animation: approval-step-active 11s var(--ease-out) infinite; }
+.approval-step-2 { animation: approval-step-active 11s var(--ease-out) 1.5s infinite; }
+.approval-step-3 { animation: approval-step-active 11s var(--ease-out) 3s infinite; }
+.approval-status-1 { animation: approval-status-in 11s var(--ease-out) infinite; }
+.approval-status-2 { animation: approval-status-in 11s var(--ease-out) 1.5s infinite; }
+.approval-status-3 { animation: approval-status-in 11s var(--ease-out) 3s infinite; }
+.approval-connector-1 { animation: approval-connector-grow 11s var(--ease-out) 0.8s infinite; }
+.approval-connector-2 { animation: approval-connector-grow 11s var(--ease-out) 2.3s infinite; }
+.approval-footer-dot { animation: agent-pulse 2s ease-in-out infinite; }
+
+/* ============================================
+   Card Connections Mockup (Expense Management – Card Connections)
+   ============================================ */
+@keyframes card-conn-row-in {
+  0%, 8% { opacity: 0; transform: translateY(6px); }
+  18%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes card-conn-bar {
+  0%, 15% { width: 0; }
+  30%, 100% { width: 100%; }
+}
+
+@keyframes card-conn-status {
+  0%, 28% { opacity: 0; color: var(--foreground-muted); }
+  35%, 100% { opacity: 1; color: var(--success); }
+}
+
+.card-conn-row-1 { animation: card-conn-row-in 10s var(--ease-out) infinite; }
+.card-conn-row-2 { animation: card-conn-row-in 10s var(--ease-out) 1.2s infinite; }
+.card-conn-row-3 { animation: card-conn-row-in 10s var(--ease-out) 2.4s infinite; }
+.card-conn-bar-1 { animation: card-conn-bar 10s var(--ease-out) infinite; }
+.card-conn-bar-2 { animation: card-conn-bar 10s var(--ease-out) 1.2s infinite; }
+.card-conn-bar-3 { animation: card-conn-bar 10s var(--ease-out) 2.4s infinite; }
+.card-conn-status-1 { animation: card-conn-status 10s var(--ease-out) infinite; }
+.card-conn-status-2 { animation: card-conn-status 10s var(--ease-out) 1.2s infinite; }
+.card-conn-status-3 { animation: card-conn-status 10s var(--ease-out) 2.4s infinite; }
+.card-conn-footer-dot { animation: agent-pulse 2s ease-in-out infinite; }
+
+/* ============================================
+   Receipt Matching Mockup (Expense Management – Receipt Matching)
+   ============================================ */
+@keyframes receipt-row-in {
+  0%, 10% { opacity: 0; transform: translateY(6px); }
+  20%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes receipt-icon-match {
+  0%, 20% { background-color: var(--background-tertiary); color: var(--foreground-muted); }
+  30% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); transform: scale(1.1); }
+  40%, 100% { background-color: rgba(90, 122, 100, 0.15); color: var(--success); transform: scale(1); }
+}
+
+@keyframes receipt-match-in {
+  0%, 28% { opacity: 0; background-color: var(--accent); color: #000; }
+  35% { opacity: 1; background-color: var(--accent); color: #000; }
+  45%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+.receipt-row-1 { animation: receipt-row-in 10s var(--ease-out) infinite; }
+.receipt-row-2 { animation: receipt-row-in 10s var(--ease-out) 1.5s infinite; }
+.receipt-row-3 { animation: receipt-row-in 10s var(--ease-out) 3s infinite; }
+.receipt-icon-1 { animation: receipt-icon-match 10s var(--ease-out) infinite; }
+.receipt-icon-2 { animation: receipt-icon-match 10s var(--ease-out) 1.5s infinite; }
+.receipt-icon-3 { animation: receipt-icon-match 10s var(--ease-out) 3s infinite; }
+.receipt-match-1 { animation: receipt-match-in 10s var(--ease-out) infinite; }
+.receipt-match-2 { animation: receipt-match-in 10s var(--ease-out) 1.5s infinite; }
+.receipt-match-3 { animation: receipt-match-in 10s var(--ease-out) 3s infinite; }
+.receipt-footer-dot { animation: agent-pulse 2s ease-in-out infinite; }
+
+/* ============================================
+   Policy Enforcement Mockup (Expense Management – Policy Enforcement)
+   ============================================ */
+@keyframes policy-row-in {
+  0%, 10% { opacity: 0; transform: translateX(-6px); }
+  20%, 100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes policy-shield-pass {
+  0%, 18% { background-color: var(--background-tertiary); color: var(--foreground-muted); }
+  28%, 100% { background-color: rgba(90, 122, 100, 0.15); color: var(--success); }
+}
+
+@keyframes policy-shield-flag {
+  0%, 28% { background-color: var(--background-tertiary); color: var(--foreground-muted); }
+  38% { background-color: rgba(184, 151, 106, 0.2); color: var(--warning); transform: scale(1.1); }
+  48%, 100% { background-color: rgba(184, 151, 106, 0.15); color: var(--warning); transform: scale(1); }
+}
+
+@keyframes policy-badge-pass {
+  0%, 22% { opacity: 0; }
+  32%, 100% { opacity: 1; background-color: rgba(90, 122, 100, 0.12); color: var(--success); }
+}
+
+@keyframes policy-badge-flag {
+  0%, 35% { opacity: 0; }
+  45% { opacity: 1; background-color: rgba(184, 151, 106, 0.2); color: var(--warning); transform: scale(1.05); }
+  55%, 100% { opacity: 1; background-color: rgba(184, 151, 106, 0.15); color: var(--warning); transform: scale(1); }
+}
+
+@keyframes policy-footer-pulse {
+  0%, 35% { background-color: var(--success); }
+  45%, 100% { background-color: var(--warning); }
+}
+
+.policy-row-1 { animation: policy-row-in 10s var(--ease-out) infinite; }
+.policy-row-2 { animation: policy-row-in 10s var(--ease-out) 1.2s infinite; }
+.policy-row-3 { animation: policy-row-in 10s var(--ease-out) 2.4s infinite; }
+.policy-shield-1 { animation: policy-shield-pass 10s var(--ease-out) infinite; }
+.policy-shield-2 { animation: policy-shield-pass 10s var(--ease-out) 1.2s infinite; }
+.policy-shield-3 { animation: policy-shield-flag 10s var(--ease-out) 2.4s infinite; }
+.policy-badge-1 { animation: policy-badge-pass 10s var(--ease-out) infinite; }
+.policy-badge-2 { animation: policy-badge-pass 10s var(--ease-out) 1.2s infinite; }
+.policy-badge-3 { animation: policy-badge-flag 10s var(--ease-out) 2.4s infinite; }
+.policy-footer-dot { animation: policy-footer-pulse 10s var(--ease-out) 2.4s infinite; }

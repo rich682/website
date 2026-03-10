@@ -11,7 +11,7 @@ const tiers = [
     name: "Essentials",
     description:
       "For teams looking to organize and streamline their close, AP, and expense workflows.",
-    price: "$15",
+    price: "$20",
     priceDetail: "/person/month",
     cta: "Get Started",
     highlight: false,

@@ -15,7 +15,7 @@ const features: { name: string; supported: string[] }[] = [
   },
   {
     name: "Close Management",
-    supported: ["Vergo", "FloQast", "BlackLine"],
+    supported: ["Vergo", "Monday", "Asana", "FloQast", "BlackLine"],
   },
   {
     name: "AI Agents",

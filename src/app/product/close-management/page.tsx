@@ -3,6 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 import TasksMockup from "@/components/animations/TasksMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
+import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 
 export const metadata: Metadata = {
   title: "Close Management | Vergo",
@@ -45,7 +46,7 @@ const features = [
       "At-risk task alerts",
       "Cross-team visibility",
     ],
-    mockup: null,
+    mockup: "deadlines",
   },
 ];
 
@@ -111,16 +112,7 @@ export default function CloseManagementPage() {
                   <div className="rounded-xl bg-background-secondary border border-border aspect-[4/3] flex items-center justify-center overflow-hidden">
                     {section.mockup === "tasks" && <TasksMockup />}
                     {section.mockup === "close" && <CloseMockup />}
-                    {section.mockup === null && (
-                      <div className="text-center p-8">
-                        <div className="w-12 h-12 rounded-full bg-highlight-light flex items-center justify-center mx-auto mb-3">
-                          <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
-                        <p className="text-sm text-foreground-muted">Deadline tracking</p>
-                      </div>
-                    )}
+                    {section.mockup === "deadlines" && <DeadlinesMockup />}
                   </div>
                 </ScrollReveal>
               </div>

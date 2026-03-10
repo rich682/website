@@ -10,6 +10,7 @@ const platformLinks = [
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
   { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+  { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
 ];
 
 export default function Header() {
@@ -79,7 +80,7 @@ export default function Header() {
 
             {/* Dropdown Panel */}
             {platformOpen && (
-              <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-white/[0.15] bg-black/80 backdrop-blur-2xl p-2 shadow-2xl">
+              <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-white/[0.15] bg-black p-2 shadow-2xl">
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -94,9 +95,6 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/ai-agents" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            AI Agents
-          </Link>
           <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Pricing
           </Link>
@@ -155,7 +153,7 @@ export default function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div
-          className="md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border border-white/[0.15] bg-black/80 backdrop-blur-2xl"
+          className="md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border border-white/[0.15] bg-black"
           style={{ color: "white" }}
         >
           <div className="px-6 py-4 space-y-1">
@@ -189,13 +187,6 @@ export default function Header() {
               </div>
             )}
 
-            <Link
-              href="/ai-agents"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              AI Agents
-            </Link>
             <Link
               href="/pricing"
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
