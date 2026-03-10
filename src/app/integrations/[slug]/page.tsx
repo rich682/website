@@ -85,9 +85,7 @@ export default async function IntegrationPage({
                 {integration.description}
               </p>
               <a
-                href="https://calendly.com/vergo-ai/new-meeting"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/demo"
                 className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
               >
                 Request demo
@@ -168,9 +166,7 @@ export default async function IntegrationPage({
             See how Vergo works with {integration.name} in a live demo.
           </p>
           <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo

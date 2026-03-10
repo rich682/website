@@ -43,9 +43,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://calendly.com/vergo-ai/new-meeting" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
+                  <Link href="/demo" className="text-sm text-foreground-secondary hover:text-foreground transition-colors duration-300">
                     Request demo
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

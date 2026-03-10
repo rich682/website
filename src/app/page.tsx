@@ -150,9 +150,7 @@ export default function HomePage() {
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://calendly.com/vergo-ai/new-meeting"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/demo"
               className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-[#111111] font-medium hover:bg-white/90 transition-colors"
             >
               Request demo
@@ -257,9 +255,7 @@ export default function HomePage() {
             Join the accounting teams closing faster with less manual work.
           </p>
           <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo

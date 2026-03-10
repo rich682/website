@@ -118,9 +118,7 @@ export default function PricingPage() {
 
                 {/* CTA */}
                 <a
-                  href="https://calendly.com/vergo-ai/new-meeting"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/demo"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 ${
                     tier.highlight
                       ? "bg-accent text-black hover:bg-accent-hover"
@@ -166,9 +164,7 @@ export default function PricingPage() {
             Talk to our team and we&apos;ll help you find the best fit for your accounting workflows.
           </p>
           <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo

@@ -162,9 +162,7 @@ export default function ComparePage() {
             See how Vergo replaces multiple tools with one platform built for accounting teams.
           </p>
           <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo

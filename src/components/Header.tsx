@@ -121,15 +121,13 @@ export default function Header() {
           <a href="https://app.tryvergo.com" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Log in
           </a>
-          <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/demo"
             className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border border-white/[0.15] hover:bg-white/10 transition-colors"
             style={{ backgroundColor: "rgba(20,20,20,0.9)" }}
           >
             Request demo
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -215,16 +213,14 @@ export default function Header() {
             >
               Log in
             </a>
-            <a
-              href="https://calendly.com/vergo-ai/new-meeting"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border border-white/[0.15] hover:bg-white/10 transition-colors"
               style={{ backgroundColor: "rgba(20,20,20,0.9)" }}
               onClick={() => setMobileMenuOpen(false)}
             >
               Request demo
-            </a>
+            </Link>
           </div>
         </div>
       )}

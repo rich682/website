@@ -70,9 +70,7 @@ export default function IntegrationsPage() {
             We&apos;re adding new integrations regularly. Get in touch and we&apos;ll prioritize yours.
           </p>
           <a
-            href="https://calendly.com/vergo-ai/new-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
           >
             Request demo
