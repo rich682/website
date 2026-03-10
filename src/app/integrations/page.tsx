@@ -40,11 +40,6 @@ export default function IntegrationsPage() {
                   <span className="text-sm font-medium text-foreground">
                     {integration.name}
                   </span>
-                  {integration.beta && (
-                    <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-background-tertiary text-foreground-muted border border-border">
-                      Beta
-                    </span>
-                  )}
                 </div>
                 <svg
                   className="w-4 h-4 text-foreground-muted opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"

@@ -71,12 +71,7 @@ export default async function IntegrationPage({
                   <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground tracking-tight">
                     {integration.name}
                   </h1>
-                  {integration.beta && (
-                    <span className="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-background-tertiary text-foreground-muted border border-border">
-                      Beta
-                    </span>
-                  )}
-                </div>
+                  </div>
               </div>
               <p className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
                 {integration.category}

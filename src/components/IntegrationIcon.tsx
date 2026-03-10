@@ -13,6 +13,7 @@ const logoMap: Record<string, string> = {
   freeagent: "/images/integrations/Platformfreeagent_square_kRtyDG2-thumbnail-144x144.png",
   moneybird: "/images/integrations/PlatformMoneybird-thumbnail-144x144.png",
   dynamics: "/images/integrations/Microsoft_Dynamics_365_Business_Central_Color_9xEF667-thumbnail-144x144.png",
+  excel: "/images/integrations/Microsoft_Office_Excel_(2019–2025).svg.png",
 };
 
 const nameMap: Record<string, string> = {
@@ -46,18 +47,8 @@ export default function IntegrationIcon({ icon, className = "w-10 h-10" }: { ico
     );
   }
 
-  // Fallback SVG for excel and unknown integrations
+  // Fallback SVG for unknown integrations
   const iconColor = "currentColor";
-
-  if (icon === "excel") {
-    return (
-      <svg className={className} viewBox="0 0 40 40" fill="none">
-        <rect x="8" y="6" width="24" height="28" rx="3" stroke={iconColor} strokeWidth="1.5" />
-        <path d="M14 16l5 8M19 16l-5 8" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M24 14v12M22 16h4M22 20h4M22 24h4" stroke={iconColor} strokeWidth="1" strokeLinecap="round" opacity="0.4" />
-      </svg>
-    );
-  }
 
   return (
     <svg className={className} viewBox="0 0 40 40" fill="none">

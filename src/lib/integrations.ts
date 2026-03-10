@@ -3,7 +3,7 @@ export interface Integration {
   name: string;
   category: string;
   description: string;
-  beta?: boolean;
+
   icon: string; // SVG path or identifier
 }
 
@@ -38,7 +38,6 @@ export const integrations: Integration[] = [
     category: "ERP / General Ledger",
     description:
       "Integrate Sage Intacct to automate multi-entity close, intercompany eliminations, and financial reporting workflows.",
-    beta: true,
     icon: "sage-intacct",
   },
   {
@@ -103,7 +102,6 @@ export const integrations: Integration[] = [
     category: "ERP / General Ledger",
     description:
       "Integrate Dynamics 365 Business Central to sync GL data, dimensions, and financial reports into Vergo for an automated close.",
-    beta: true,
     icon: "dynamics",
   },
   {
