@@ -117,7 +117,7 @@ const features = [
 
 const testimonials = [
   {
-    quote: "The integration with our ERP made the decision easy. With a few clicks in the Vergo app - our team are turning their receipts in more timely.",
+    quote: "The integration with our ERP made the decision easy. With a few clicks in the Vergo app - our team are turning expenses in more timely, not to mention the ease of review and approval with the online platform.",
     name: "Laurie Weisensel",
     role: "CFO",
     company: "DNT",

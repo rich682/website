@@ -79,19 +79,19 @@ const productSections = [
 
 const testimonials = [
   {
-    quote: "Finally, a platform built specifically for accounting teams. The AI features are genuinely useful, not just marketing buzz.",
-    name: "Emily Park",
-    title: "CFO, GrowthCo",
+    quote: "The integration with our ERP made the decision easy. With a few clicks in the Vergo app - our team are turning expenses in more timely, not to mention the ease of review and approval with the online platform.",
+    name: "Laurie Weisensel",
+    title: "CFO, DNT",
   },
   {
-    quote: "We closed the books 5 days faster in the first month with Vergo. The visibility alone was worth it.",
-    name: "Sarah Chen",
-    title: "Controller, TechCorp",
+    quote: "Since the transition to Vergo, we have been able to cut back the time spent on reconciliations immensely. What was a full time job previously, takes about an hour to process daily!",
+    name: "Taylor Ricard",
+    title: "Controller, Moss Utilities",
   },
   {
-    quote: "The automation alone saved us 40 hours per close cycle. We finally have time for actual analysis.",
-    name: "Michael Torres",
-    title: "Accountant, ScaleUp Inc.",
+    quote: "Since the signing I cannot speak highly enough of the customer service we have received, the team are continuously improving the product and are always on hand to jump on a call.",
+    name: "Mark Goan",
+    title: "Accountant, JMB",
   },
 ];
 
