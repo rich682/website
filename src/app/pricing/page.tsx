@@ -10,44 +10,45 @@ const tiers = [
   {
     name: "Essentials",
     description:
-      "For teams looking to organize and streamline their close, AP, and expense workflows.",
+      "Organize and streamline your close, AP, and expense workflows in one platform.",
     price: "$20",
     priceDetail: "/person/month",
-    cta: "Get Started",
     highlight: false,
+    popular: false,
     includes: null,
     features: [
-      "Accounting Integrations",
       "Close Management",
       "AP Automation",
       "Expense Management",
     ],
   },
   {
-    name: "Agent Mode",
+    name: "Pro",
     description:
-      "Everything in Essentials, plus AI agents that handle the repetitive work and a dedicated account manager.",
+      "Unlock accounting integrations, AI agents, and a dedicated account manager.",
     price: "Custom",
     priceDetail: null,
-    cta: "Request Demo",
     highlight: true,
+    popular: true,
     includes: "Everything in Essentials, plus:",
     features: [
-      "Custom AI Agents",
+      "Accounting Integrations",
+      "Access to AI Agents",
       "Dedicated Account Manager",
     ],
   },
   {
     name: "Enterprise",
     description:
-      "For organizations with multiple entities and complex accounting needs.",
+      "For organizations with multiple entities that need advanced security controls.",
     price: "Custom",
     priceDetail: null,
-    cta: "Request Demo",
     highlight: false,
-    includes: "Everything in Agent Mode, plus:",
+    popular: false,
+    includes: "Everything in Pro, plus:",
     features: [
       "Multi-entity support",
+      "Enterprise-grade security",
     ],
   },
 ];
@@ -93,26 +94,33 @@ export default function PricingPage() {
                     : "border-border bg-background shadow-sm"
                 }`}
               >
+                {/* Popular badge */}
+                {tier.popular && (
+                  <span className="inline-flex self-start items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-accent/10 text-accent mb-4">
+                    Most popular
+                  </span>
+                )}
+
                 {/* Tier name */}
-                <h3 className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-3">
+                <h3 className="text-2xl font-semibold text-foreground mb-3 tracking-tight">
                   {tier.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-foreground-secondary leading-relaxed mb-6">
+                <p className="text-sm text-foreground-secondary leading-relaxed mb-6 min-h-[3.75rem]">
                   {tier.description}
                 </p>
 
                 {/* Price */}
-                <div className="mb-6">
+                <div className="mb-6 min-h-[2.5rem] flex items-baseline">
                   {tier.priceDetail ? (
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-foreground-muted text-sm">From</span>
-                      <span className="text-3xl font-semibold text-foreground">{tier.price}</span>
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-foreground-muted text-sm">Starts at</span>
+                      <span className="text-2xl font-normal text-foreground">{tier.price}</span>
                       <span className="text-sm text-foreground-muted">{tier.priceDetail}</span>
                     </div>
                   ) : (
-                    <span className="text-3xl font-semibold text-foreground">{tier.price}</span>
+                    <span className="text-2xl font-normal text-foreground uppercase tracking-wide">{tier.price}</span>
                   )}
                 </div>
 
@@ -125,7 +133,7 @@ export default function PricingPage() {
                       : "bg-foreground text-background hover:bg-foreground/90"
                   }`}
                 >
-                  {tier.cta}
+                  Request Demo
                 </a>
 
                 {/* Divider */}
@@ -133,12 +141,9 @@ export default function PricingPage() {
 
                 {/* Features */}
                 <div className="flex-1">
-                  {tier.includes && (
-                    <p className="text-sm text-foreground-muted mb-4">{tier.includes}</p>
-                  )}
-                  {!tier.includes && (
-                    <p className="text-sm text-foreground-muted mb-4">What&apos;s included:</p>
-                  )}
+                  <p className="text-sm text-foreground-muted mb-4">
+                    {tier.includes ?? "What\u2019s included:"}
+                  </p>
                   <ul className="space-y-3">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3">
