@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const investors = [
-  { name: "Nine Four Ventures", logo: "/images/investors/nine-four-ventures.png" },
+  { name: "Nine Four Ventures", logo: "/images/investors/nine-four-ventures.webp" },
   { name: "CRV", logo: "/images/investors/crv.svg" },
-  { name: "Valar Ventures", logo: "/images/investors/valar-ventures.png" },
+  { name: "Valar Ventures", logo: "/images/investors/valar-ventures.webp" },
 ];
 
 export default function CompanyPage() {
@@ -50,7 +50,7 @@ export default function CompanyPage() {
             {/* Team discussion image */}
             <div className="rounded-xl overflow-hidden aspect-square relative">
               <Image
-                src="/images/company/team-discussion.png"
+                src="/images/company/team-discussion.webp"
                 alt="Accountants discussing financial data and close processes"
                 fill
                 className="object-cover"
