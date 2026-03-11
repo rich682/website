@@ -33,7 +33,7 @@ const features = [
   },
   {
     label: "Reporting",
-    title: "Reports that build themselves",
+    title: "Build the exact reports you need",
     description:
       "Build custom reports, flag variances automatically, and let AI surface the trends that matter — so your team spends less time pulling data and more time acting on it.",
     items: [
