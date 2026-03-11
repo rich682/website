@@ -26,8 +26,8 @@ const tiers = [
     name: "Pro",
     description:
       "Unlock accounting integrations, AI agents, and a dedicated account manager.",
-    price: "Custom",
-    priceDetail: null,
+    price: "$30",
+    priceDetail: "/person/month",
     highlight: true,
     popular: true,
     includes: "Everything in Essentials, plus:",
