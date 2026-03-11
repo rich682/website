@@ -5,6 +5,7 @@ import TasksMockup from "@/components/animations/TasksMockup";
 import ConnectMockup from "@/components/animations/ConnectMockup";
 import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
+import AIInsightsMockup from "@/components/animations/AIInsightsMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
 
 export const metadata: Metadata = {
@@ -53,8 +54,8 @@ const productSections = [
   },
   {
     number: "04",
-    category: "Approve",
-    title: "Controlled approval of agent work",
+    category: "Review",
+    title: "Review and approve agent work",
     description:
       "Every piece of agent output is surfaced for human review before it goes live. Your team stays in control with clear approval workflows and full audit trails.",
     features: [
@@ -65,10 +66,22 @@ const productSections = [
   },
   {
     number: "05",
+    category: "Analyze",
+    title: "Surface trends, risks, and opportunities",
+    description:
+      "Vergo analyzes your financial data to highlight what matters most. Spot variances, track trends over time, and surface risks and opportunities — so your team can act on insights instead of digging for them.",
+    features: [
+      "Automated trend analysis",
+      "Variance and risk detection",
+      "AI-powered insights and forecasts",
+    ],
+  },
+  {
+    number: "06",
     category: "Close",
     title: "Close audit-ready, faster & more controlled",
     description:
-      "With tasks managed, agents running, and approvals in place, your team closes the books faster — with more confidence and less stress.",
+      "With tasks managed, agents running, and insights surfaced, your team closes the books faster — with more confidence and less stress.",
     features: [
       "Faster close cycles",
       "Real-time progress tracking",
@@ -170,7 +183,8 @@ export default function ProductPage() {
                     {idx === 1 && <TasksMockup />}
                     {idx === 2 && <AgentSetupMockup />}
                     {idx === 3 && <ApproveMockup />}
-                    {idx === 4 && <CloseMockup />}
+                    {idx === 4 && <AIInsightsMockup />}
+                    {idx === 5 && <CloseMockup />}
                   </div>
                 </ScrollReveal>
               </div>

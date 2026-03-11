@@ -1,12 +1,13 @@
 import Link from "next/link";
 import CoordinationMockup from "@/components/animations/CoordinationMockup";
+import ReportingMockup from "@/components/animations/ReportingMockup";
 import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
 import ConnectMockup from "@/components/animations/ConnectMockup";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const featureMockups = [CoordinationMockup, ApproveMockup, ConnectMockup, AIAgentsMockup, WhiteGloveMockup];
+const featureMockups = [CoordinationMockup, ReportingMockup, ApproveMockup, ConnectMockup, AIAgentsMockup, WhiteGloveMockup];
 
 const features = [
   {
@@ -29,6 +30,27 @@ const features = [
       },
     ],
     href: "/product/close-management",
+  },
+  {
+    label: "Reporting",
+    title: "Reports that build themselves",
+    description:
+      "Build custom reports, flag variances automatically, and let AI surface the trends that matter — so your team spends less time pulling data and more time acting on it.",
+    items: [
+      {
+        name: "Custom Report Builder",
+        detail: "Build tailored financial reports and export to PDF or Excel in one click.",
+      },
+      {
+        name: "Automated Variance Analysis",
+        detail: "Compare actuals to budgets or prior periods with threshold-based alerts.",
+      },
+      {
+        name: "AI Insights & Trends",
+        detail: "Surface anomalies, forecast trends, and generate plain-language summaries.",
+      },
+    ],
+    href: "/product/reporting",
   },
   {
     label: "AP Automation",

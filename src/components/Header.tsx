@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const platformLinks = [
   { label: "Overview", href: "/product", description: "See the full platform" },
   { label: "Close Management", href: "/product/close-management", description: "Streamline month-end close" },
+  { label: "Reporting", href: "/product/reporting", description: "Custom reports and AI insights" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
   { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
