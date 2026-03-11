@@ -27,8 +27,8 @@ const tiers = [
       "Unlock accounting integrations, AI agents, and a dedicated account manager.",
     price: "$30",
     priceDetail: "/person/month",
-    highlight: true,
-    popular: true,
+    highlight: false,
+    popular: false,
     includes: "Everything in Essentials, plus:",
     features: [
       "Accounting Integrations",
@@ -40,7 +40,7 @@ const tiers = [
     name: "Pro + AP Suite",
     description:
       "Add full accounts payable and expense management to your Pro workflows.",
-    price: "Custom",
+    price: "Custom pricing based on volumes",
     priceDetail: null,
     highlight: false,
     popular: false,
@@ -119,7 +119,7 @@ export default function PricingPage() {
                       <span className="text-sm text-foreground-muted">{tier.priceDetail}</span>
                     </div>
                   ) : (
-                    <span className="text-2xl font-normal text-foreground uppercase tracking-wide">{tier.price}</span>
+                    <span className="text-sm font-normal text-foreground-secondary leading-relaxed">{tier.price}</span>
                   )}
                 </div>
 
