@@ -10,7 +10,7 @@ const tiers = [
   {
     name: "Essentials",
     description:
-      "Organize and streamline your close, AP, and expense workflows in one platform.",
+      "Manage your close and build reports with everything your team needs to stay organized.",
     price: "$20",
     priceDetail: "/person/month",
     highlight: false,
@@ -18,8 +18,7 @@ const tiers = [
     includes: null,
     features: [
       "Close Management",
-      "AP Automation",
-      "Expense Management",
+      "Reporting",
     ],
   },
   {
@@ -38,17 +37,17 @@ const tiers = [
     ],
   },
   {
-    name: "Enterprise",
+    name: "Pro + AP Suite",
     description:
-      "For organizations with multiple entities that need advanced security controls.",
+      "Add full accounts payable and expense management to your Pro workflows.",
     price: "Custom",
     priceDetail: null,
     highlight: false,
     popular: false,
     includes: "Everything in Pro, plus:",
     features: [
-      "Multi-entity support",
-      "Enterprise-grade security",
+      "AP Automation",
+      "Expense Management",
     ],
   },
 ];
@@ -115,7 +114,7 @@ export default function PricingPage() {
                 <div className="mb-6 min-h-[2.5rem] flex items-baseline">
                   {tier.priceDetail ? (
                     <div className="flex items-baseline gap-1.5">
-                      <span className="text-foreground-muted text-sm">Starts at</span>
+                      <span className="text-foreground-muted text-sm">From</span>
                       <span className="text-2xl font-normal text-foreground">{tier.price}</span>
                       <span className="text-sm text-foreground-muted">{tier.priceDetail}</span>
                     </div>
