@@ -48,7 +48,7 @@ export default function TestIntegrationsPage() {
             {integrations.map((integration) => (
               <Link
                 key={integration.slug}
-                href={`/integrations/${integration.slug}`}
+                href={`/test/integrations/${integration.slug}`}
                 className="flex items-center gap-4 p-5 group shadow-sm rounded-xl border border-[#E5E7EB] bg-white hover:border-[#D1D5DB] transition-colors"
               >
                 <div className="flex-shrink-0 text-[#999]">
