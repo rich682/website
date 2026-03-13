@@ -95,7 +95,7 @@ export default function Header() {
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
-                    href={link.noPrefix ? link.href : `${prefix}${link.href}`}
+                    href={`${prefix}${link.href}`}
                     className={`flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors ${
                       isLight ? "hover:bg-[#F5F5F5]" : "hover:bg-white/[0.08]"
                     }`}
@@ -199,7 +199,7 @@ export default function Header() {
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
-                    href={link.noPrefix ? link.href : `${prefix}${link.href}`}
+                    href={`${prefix}${link.href}`}
                     className="block text-sm opacity-70 hover:opacity-60 transition-opacity py-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
