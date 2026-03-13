@@ -13,6 +13,8 @@ const features: { name: string; supported: string[] }[] = [
   { name: "Accounting Integrations", supported: ["Vergo", "FloQast", "BlackLine"] },
   { name: "Close Collaboration", supported: ["Vergo", "Monday", "Asana", "FloQast", "BlackLine"] },
   { name: "AI Agents", supported: ["Vergo", "FloQast", "BlackLine"] },
+  { name: "AI Analysis", supported: ["Vergo", "FloQast", "BlackLine"] },
+  { name: "Custom Reports", supported: ["Vergo", "FloQast", "BlackLine"] },
   { name: "Expense Management", supported: ["Vergo"] },
   { name: "AP Automation", supported: ["Vergo"] },
   { name: "Dedicated Account Manager", supported: ["Vergo"] },
@@ -64,9 +66,9 @@ export default function ComparePage() {
             Why Vergo
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            The only platform that offers
+            The only platform that offers{" "}
             <span className="block text-[#6366F1]">
-              close management, AP Automation, Expense Management &amp; AI Agents
+              everything accounting teams need to close
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#666] max-w-2xl mx-auto leading-relaxed">
