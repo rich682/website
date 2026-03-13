@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing | Vergo",
   description:
-    "Simple, transparent pricing for accounting teams. Start with Essentials or unlock AI Agents and dedicated support with Agent Mode.",
+    "Simple, transparent pricing for accounting teams. Start with Essentials or unlock AI Agents and dedicated support with Pro.",
 };
 
 const tiers = [
@@ -16,10 +16,7 @@ const tiers = [
     highlight: false,
     popular: false,
     includes: null,
-    features: [
-      "Close Management",
-      "Reporting",
-    ],
+    features: ["Close Collaboration", "Reporting"],
   },
   {
     name: "Pro",
@@ -45,18 +42,25 @@ const tiers = [
     highlight: false,
     popular: false,
     includes: "Everything in Pro, plus:",
-    features: [
-      "AP Automation",
-      "Expense Management",
-    ],
+    features: ["AP Automation", "Expense Management"],
   },
 ];
 
 function CheckIcon() {
   return (
-    <div className="w-5 h-5 rounded-full bg-highlight-light flex items-center justify-center flex-shrink-0">
-      <svg className="w-3 h-3 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+    <div className="w-5 h-5 rounded-full bg-[rgba(99,102,241,0.08)] flex items-center justify-center flex-shrink-0">
+      <svg
+        className="w-3 h-3 text-[#6366F1]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2.5}
+          d="M5 13l4 4L19 7"
+        />
       </svg>
     </div>
   );
@@ -64,49 +68,56 @@ function CheckIcon() {
 
 export default function PricingPage() {
   return (
-    <main>
+    <main
+      style={
+        {
+          "--background": "#FFFFFF",
+          "--background-secondary": "#F7F7F8",
+          "--background-tertiary": "#EFEFEF",
+          "--highlight": "#6366F1",
+          "--highlight-light": "rgba(99, 102, 241, 0.08)",
+          "--border": "#E5E7EB",
+          "--border-hover": "#D1D5DB",
+          "--success": "#22C55E",
+          "--warning": "#F59E0B",
+          "--error": "#EF4444",
+        } as React.CSSProperties
+      }
+      className="bg-white"
+    >
       {/* Hero */}
-      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28">
+      <section className="pt-36 pb-20 lg:pt-48 lg:pb-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-foreground-muted mb-4">
+          <p className="text-xs font-medium uppercase tracking-widest text-[#6366F1] mb-4">
             Pricing
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-foreground leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            Simple pricing, no surprises
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
+            Free Trial,{" "}
+            <span className="block text-[#6366F1]">Simple Pricing</span>
           </h1>
-          <p className="mt-8 text-lg text-foreground-secondary max-w-2xl mx-auto leading-relaxed">
-            Start with the essentials or unlock AI agents and dedicated support. Every plan includes full access to the platform.
+          <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
+            Start with the essentials or unlock AI agents and dedicated support.
+            Every plan includes full access to the platform.
           </p>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-20 lg:pb-28 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-xl border p-8 flex flex-col ${
-                  tier.highlight
-                    ? "border-accent bg-background shadow-lg ring-1 ring-accent/20"
-                    : "border-border bg-background shadow-sm"
-                }`}
+                className="rounded-xl border border-[#E5E7EB] bg-white p-8 flex flex-col shadow-sm"
               >
-                {/* Popular badge */}
-                {tier.popular && (
-                  <span className="inline-flex self-start items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-accent/10 text-accent mb-4">
-                    Most popular
-                  </span>
-                )}
-
                 {/* Tier name */}
-                <h3 className="text-2xl font-semibold text-foreground mb-3 tracking-tight">
+                <h3 className="text-2xl font-semibold text-[#111] mb-3 tracking-tight">
                   {tier.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-foreground-secondary leading-relaxed mb-6 min-h-[3.75rem]">
+                <p className="text-sm text-[#666] leading-relaxed mb-6 min-h-[3.75rem]">
                   {tier.description}
                 </p>
 
@@ -114,40 +125,42 @@ export default function PricingPage() {
                 <div className="mb-6 min-h-[2.5rem] flex items-baseline">
                   {tier.priceDetail ? (
                     <div className="flex items-baseline gap-1.5">
-                      <span className="text-foreground-muted text-sm">From</span>
-                      <span className="text-2xl font-normal text-foreground">{tier.price}</span>
-                      <span className="text-sm text-foreground-muted">{tier.priceDetail}</span>
+                      <span className="text-[#999] text-sm">From</span>
+                      <span className="text-2xl font-normal text-[#111]">
+                        {tier.price}
+                      </span>
+                      <span className="text-sm text-[#999]">
+                        {tier.priceDetail}
+                      </span>
                     </div>
                   ) : (
-                    <span className="text-sm font-normal text-foreground-secondary leading-relaxed">{tier.price}</span>
+                    <span className="text-sm font-normal text-[#666] leading-relaxed">
+                      {tier.price}
+                    </span>
                   )}
                 </div>
 
                 {/* CTA */}
                 <a
-                  href="/demo"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 ${
-                    tier.highlight
-                      ? "bg-accent text-black hover:bg-accent-hover"
-                      : "bg-foreground text-background hover:bg-foreground/90"
-                  }`}
+                  href="https://app.tryvergo.com/signup"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 bg-[#111] text-white hover:bg-[#333]"
                 >
-                  Request Demo
+                  Start Free Trial
                 </a>
 
                 {/* Divider */}
-                <div className="border-t border-border mb-6" />
+                <div className="border-t border-[#E5E7EB] mb-6" />
 
                 {/* Features */}
                 <div className="flex-1">
-                  <p className="text-sm text-foreground-muted mb-4">
+                  <p className="text-sm text-[#999] mb-4">
                     {tier.includes ?? "What\u2019s included:"}
                   </p>
                   <ul className="space-y-3">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3">
                         <CheckIcon />
-                        <span className="text-sm text-foreground">{feature}</span>
+                        <span className="text-sm text-[#111]">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -159,19 +172,21 @@ export default function PricingPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding border-t border-border">
+      <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4 tracking-tight">
-            Not sure which plan is right?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111] mb-4 tracking-tight">
+            Start Free Trial{" "}
+            <span className="block text-[#6366F1]">Today</span>
           </h2>
-          <p className="text-foreground-secondary mb-8 leading-relaxed">
-            Talk to our team and we&apos;ll help you find the best fit for your accounting workflows.
+          <p className="text-[#666] mb-8 leading-relaxed">
+            Talk to our team and we&apos;ll help you find the best fit for your
+            accounting workflows.
           </p>
           <a
-            href="/demo"
-            className="inline-flex items-center px-7 py-3 rounded-md bg-accent text-black font-medium hover:bg-accent-hover transition-colors duration-300"
+            href="https://app.tryvergo.com/signup"
+            className="inline-flex items-center px-7 py-3 rounded-md bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Request demo
+            Start Free Trial
           </a>
         </div>
       </section>

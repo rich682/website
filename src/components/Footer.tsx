@@ -1,38 +1,16 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const pathname = usePathname();
-  const isTest = pathname?.startsWith("/test");
-  const prefix = isTest ? "/test" : "";
-
   return (
-    <footer
-      className={`border-t ${
-        isTest
-          ? "border-[#E5E7EB] bg-white"
-          : "border-border bg-background"
-      }`}
-    >
+    <footer className="border-t border-[#E5E7EB] bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Logo & Description */}
           <div>
-            <Link
-              href={prefix || "/"}
-              className={`text-lg font-semibold tracking-tight ${
-                isTest ? "text-[#111]" : "text-foreground"
-              }`}
-            >
+            <Link href="/" className="text-lg font-semibold tracking-tight text-[#111]">
               Vergo
             </Link>
-            <p
-              className={`mt-3 text-sm max-w-xs leading-relaxed ${
-                isTest ? "text-[#999]" : "text-foreground-muted"
-              }`}
-            >
+            <p className="mt-3 text-sm max-w-xs leading-relaxed text-[#999]">
               The collaboration platform for accounting teams.
             </p>
           </div>
@@ -40,107 +18,50 @@ export default function Footer() {
           {/* Nav Links */}
           <div className="flex gap-20">
             <div>
-              <h4
-                className={`text-xs font-medium uppercase tracking-widest mb-4 ${
-                  isTest ? "text-[#999]" : "text-foreground-muted"
-                }`}
-              >
+              <h4 className="text-xs font-medium uppercase tracking-widest mb-4 text-[#999]">
                 Navigation
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href={`${prefix}/product`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/product" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Platform
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`${prefix}/pricing`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/pricing" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`${prefix}/compare`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/compare" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Compare
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`${prefix}/company`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/company" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Company
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href={isTest ? "https://app.tryvergo.com/signup" : `${prefix}/demo`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
-                    {isTest ? "Get Started" : "Request demo"}
+                  <a href="https://app.tryvergo.com/signup" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
+                    Get Started
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4
-                className={`text-xs font-medium uppercase tracking-widest mb-4 ${
-                  isTest ? "text-[#999]" : "text-foreground-muted"
-                }`}
-              >
+              <h4 className="text-xs font-medium uppercase tracking-widest mb-4 text-[#999]">
                 Legal
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <Link
-                    href={`${prefix}/privacy`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/privacy" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Privacy
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`${prefix}/terms`}
-                    className={`text-sm transition-colors duration-300 ${
-                      isTest
-                        ? "text-[#666] hover:text-[#111]"
-                        : "text-foreground-secondary hover:text-foreground"
-                    }`}
-                  >
+                  <Link href="/terms" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Terms
                   </Link>
                 </li>
@@ -150,12 +71,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div
-          className={`mt-16 pt-8 border-t ${
-            isTest ? "border-[#E5E7EB]" : "border-border"
-          }`}
-        >
-          <p className={`text-xs ${isTest ? "text-[#999]" : "text-foreground-muted"}`}>
+        <div className="mt-16 pt-8 border-t border-[#E5E7EB]">
+          <p className="text-xs text-[#999]">
             &copy; {new Date().getFullYear()} Vergo. All rights reserved.
           </p>
         </div>
