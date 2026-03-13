@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Vergo | The Workflow Platform for Accounting Teams",
   description:
-    "Coordinate your close, automate reconciliations, and stop managing month-end across spreadsheets, email, and Slack.",
+    "Coordinate your close, automate reconciliations, and stop managing month-end across spreadsheets, email, and Teams.",
 };
 
 const coreFeatures = [
@@ -194,7 +194,7 @@ export default function TestPage() {
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Coordinate your close, automate reconciliations, and stop managing
-            month-end across spreadsheets, email, and Slack.
+            month-end across spreadsheets, email, and Teams.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
