@@ -145,7 +145,7 @@ export default function ExpenseManagementPage() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/demo"
+              href="/test/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
               Get a walkthrough
@@ -244,7 +244,7 @@ export default function ExpenseManagementPage() {
             policies automatically.
           </p>
           <a
-            href="/demo"
+            href="/test/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
             Get a walkthrough
@@ -303,7 +303,7 @@ export default function ExpenseManagementPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/demo"
+              href="/test/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
               Get a walkthrough
