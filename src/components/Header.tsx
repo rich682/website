@@ -21,6 +21,7 @@ export default function Header() {
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const isLight = pathname === "/test";
 
   // Close dropdown on route change
   useEffect(() => {
@@ -58,8 +59,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
       <nav
-        className="flex items-center justify-between w-full max-w-6xl h-[72px] px-8 rounded-2xl border border-white/[0.15] bg-black/40 backdrop-blur-2xl"
-        style={{ color: "white" }}
+        className={`flex items-center justify-between w-full max-w-6xl h-[72px] px-8 rounded-2xl border backdrop-blur-2xl ${
+          isLight
+            ? "border-[#E5E7EB] bg-white/80 text-[#111]"
+            : "border-white/[0.15] bg-black/40 text-white"
+        }`}
       >
         {/* Left Nav Links */}
         <div className="hidden md:flex items-center gap-6">
@@ -82,15 +86,21 @@ export default function Header() {
 
             {/* Dropdown Panel */}
             {platformOpen && (
-              <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-white/[0.15] bg-black p-2 shadow-2xl">
+              <div className={`absolute top-full left-0 mt-4 w-[320px] rounded-xl border p-2 shadow-2xl ${
+                isLight
+                  ? "border-[#E5E7EB] bg-white"
+                  : "border-white/[0.15] bg-black"
+              }`}>
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="flex flex-col gap-0.5 px-4 py-3 rounded-lg hover:bg-white/[0.08] transition-colors"
+                    className={`flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors ${
+                      isLight ? "hover:bg-[#F5F5F5]" : "hover:bg-white/[0.08]"
+                    }`}
                   >
-                    <span className="text-sm font-medium text-white/90">{link.label}</span>
-                    <span className="text-xs text-white/50">{link.description}</span>
+                    <span className={`text-sm font-medium ${isLight ? "text-[#111]" : "text-white/90"}`}>{link.label}</span>
+                    <span className={`text-xs ${isLight ? "text-[#888]" : "text-white/50"}`}>{link.description}</span>
                   </Link>
                 ))}
               </div>
@@ -115,7 +125,7 @@ export default function Header() {
             alt="Vergo"
             width={20}
             height={20}
-            className="opacity-90"
+            className={`opacity-90 ${isLight ? "invert" : ""}`}
           />
           <span className="text-xl font-semibold tracking-tight">
             VERGO
@@ -129,8 +139,12 @@ export default function Header() {
           </a>
           <Link
             href="/demo"
-            className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border border-white/[0.15] hover:bg-white/10 transition-colors"
-            style={{ backgroundColor: "rgba(20,20,20,0.9)" }}
+            className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
+              isLight
+                ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
+                : "border-white/[0.15] hover:bg-white/10"
+            }`}
+            style={isLight ? undefined : { backgroundColor: "rgba(20,20,20,0.9)" }}
           >
             Request demo
           </Link>
@@ -157,8 +171,11 @@ export default function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div
-          className="md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border border-white/[0.15] bg-black"
-          style={{ color: "white" }}
+          className={`md:hidden absolute top-[calc(72px+1.5rem)] left-4 right-4 rounded-2xl border ${
+            isLight
+              ? "border-[#E5E7EB] bg-white text-[#111]"
+              : "border-white/[0.15] bg-black text-white"
+          }`}
         >
           <div className="px-6 py-4 space-y-1">
             {/* Platform accordion */}
@@ -212,7 +229,7 @@ export default function Header() {
             >
               Company
             </Link>
-            <hr className="border-white/10" />
+            <hr className={isLight ? "border-[#E5E7EB]" : "border-white/10"} />
             <a
               href="https://app.tryvergo.com"
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
@@ -221,8 +238,12 @@ export default function Header() {
             </a>
             <Link
               href="/demo"
-              className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border border-white/[0.15] hover:bg-white/10 transition-colors"
-              style={{ backgroundColor: "rgba(20,20,20,0.9)" }}
+              className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
+                isLight
+                  ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
+                  : "border-white/[0.15] hover:bg-white/10"
+              }`}
+              style={isLight ? undefined : { backgroundColor: "rgba(20,20,20,0.9)" }}
               onClick={() => setMobileMenuOpen(false)}
             >
               Request demo
