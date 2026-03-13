@@ -16,7 +16,7 @@ const tiers = [
     highlight: false,
     popular: false,
     includes: null,
-    features: ["Close Management", "Reporting"],
+    features: ["Close Collaboration", "Reporting"],
   },
   {
     name: "Pro",

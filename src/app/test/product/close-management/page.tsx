@@ -7,7 +7,7 @@ import CloseMockup from "@/components/animations/CloseMockup";
 import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 
 export const metadata: Metadata = {
-  title: "Close Management | Vergo",
+  title: "Close Collaboration | Vergo",
   description:
     "Streamline your month-end close with task tracking, reconciliation workflows, and deadline management. Close faster with full visibility.",
 };
@@ -98,7 +98,7 @@ export default function CloseManagementPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4">
-            Close Management
+            Close Collaboration
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             Close the books faster, with{" "}

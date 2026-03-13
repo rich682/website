@@ -167,7 +167,7 @@ export default function ProductPage() {
               href="/test/product/close-management"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
             >
-              See close management
+              See close collaboration
               <svg
                 className="w-4 h-4 ml-1.5"
                 fill="none"

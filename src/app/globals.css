@@ -215,19 +215,25 @@ body {
 }
 
 @keyframes coord-progress {
-  0%, 8% { width: 20%; }
-  28% { width: 50%; }
-  52% { width: 78%; }
+  0%, 5% { width: 10%; }
+  18% { width: 30%; }
+  32% { width: 50%; }
+  46% { width: 70%; }
+  60% { width: 90%; }
   72%, 100% { width: 100%; }
 }
 
-.coord-check-1 { animation: coord-check 11s var(--ease-out) infinite; }
-.coord-check-2 { animation: coord-check 11s var(--ease-out) 2s infinite; }
-.coord-check-3 { animation: coord-check 11s var(--ease-out) 4s infinite; }
-.coord-status-1 { animation: coord-status 11s var(--ease-out) infinite; }
-.coord-status-2 { animation: coord-status 11s var(--ease-out) 2s infinite; }
-.coord-status-3 { animation: coord-status 11s var(--ease-out) 4s infinite; }
-.coord-progress { animation: coord-progress 11s var(--ease-out) infinite; }
+.coord-check-1 { animation: coord-check 14s var(--ease-out) infinite; }
+.coord-check-2 { animation: coord-check 14s var(--ease-out) 1.5s infinite; }
+.coord-check-3 { animation: coord-check 14s var(--ease-out) 3s infinite; }
+.coord-check-4 { animation: coord-check 14s var(--ease-out) 4.5s infinite; }
+.coord-check-5 { animation: coord-check 14s var(--ease-out) 6s infinite; }
+.coord-status-1 { animation: coord-status 14s var(--ease-out) infinite; }
+.coord-status-2 { animation: coord-status 14s var(--ease-out) 1.5s infinite; }
+.coord-status-3 { animation: coord-status 14s var(--ease-out) 3s infinite; }
+.coord-status-4 { animation: coord-status 14s var(--ease-out) 4.5s infinite; }
+.coord-status-5 { animation: coord-status 14s var(--ease-out) 6s infinite; }
+.coord-progress { animation: coord-progress 14s var(--ease-out) infinite; }
 
 /* --- White Glove Mockup (Feature 2) --- */
 @keyframes wg-slide-up {

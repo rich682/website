@@ -11,7 +11,7 @@ const competitors = ["Vergo", "Excel", "Monday", "Asana", "FloQast", "BlackLine"
 
 const features: { name: string; supported: string[] }[] = [
   { name: "Accounting Integrations", supported: ["Vergo", "FloQast", "BlackLine"] },
-  { name: "Close Management", supported: ["Vergo", "Monday", "Asana", "FloQast", "BlackLine"] },
+  { name: "Close Collaboration", supported: ["Vergo", "Monday", "Asana", "FloQast", "BlackLine"] },
   { name: "AI Agents", supported: ["Vergo", "FloQast", "BlackLine"] },
   { name: "Expense Management", supported: ["Vergo"] },
   { name: "AP Automation", supported: ["Vergo"] },

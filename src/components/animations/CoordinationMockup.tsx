@@ -1,8 +1,10 @@
 export default function CoordinationMockup() {
   const tasks = [
-    { name: "Revenue Recognition", cls: "1" },
-    { name: "AP Reconciliation", cls: "2" },
-    { name: "Intercompany Entries", cls: "3" },
+    { name: "Revenue Recognition", cls: "1", owner: "SM", color: "#6366F1" },
+    { name: "AP Reconciliation", cls: "2", owner: "JR", color: "#F59E0B" },
+    { name: "Intercompany Entries", cls: "3", owner: "KL", color: "#22C55E" },
+    { name: "Bank Reconciliation", cls: "4", owner: "SM", color: "#6366F1" },
+    { name: "Accruals Review", cls: "5", owner: "JR", color: "#F59E0B" },
   ];
 
   return (
@@ -18,14 +20,14 @@ export default function CoordinationMockup() {
       </div>
 
       {/* Task rows */}
-      <div className="space-y-2.5 sm:space-y-3 flex-1">
+      <div className="space-y-2 sm:space-y-2.5 flex-1">
         {tasks.map((task) => (
           <div
             key={task.name}
-            className="flex items-center gap-2.5 sm:gap-3 p-2 sm:p-2.5 rounded-lg bg-background border border-border"
+            className="flex items-center gap-2 sm:gap-2.5 p-2 sm:p-2.5 rounded-lg bg-background border border-border"
           >
             {/* Checkbox */}
-            <div className="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-border flex-shrink-0">
+            <div className="relative w-4 h-4 sm:w-[18px] sm:h-[18px] rounded-full border border-border flex-shrink-0">
               <div
                 className={`coord-check-${task.cls} absolute inset-0 rounded-full bg-success flex items-center justify-center`}
               >
@@ -50,6 +52,14 @@ export default function CoordinationMockup() {
               {task.name}
             </span>
 
+            {/* Avatar */}
+            <div
+              className="w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[7px] sm:text-[8px] font-semibold text-white"
+              style={{ backgroundColor: task.color }}
+            >
+              {task.owner}
+            </div>
+
             {/* Status pill */}
             <span
               className={`coord-status-${task.cls} text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.5 rounded-full bg-success/10 text-success font-medium`}
@@ -61,7 +71,7 @@ export default function CoordinationMockup() {
       </div>
 
       {/* Progress bar */}
-      <div className="mt-4 sm:mt-5">
+      <div className="mt-3 sm:mt-4">
         <div className="flex items-center justify-between mb-1.5">
           <span className="text-[9px] sm:text-[10px] text-foreground-muted">
             Close Progress
