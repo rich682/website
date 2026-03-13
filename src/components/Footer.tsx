@@ -122,7 +122,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/privacy"
+                    href={`${prefix}/privacy`}
                     className={`text-sm transition-colors duration-300 ${
                       isTest
                         ? "text-[#666] hover:text-[#111]"
@@ -134,7 +134,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/terms"
+                    href={`${prefix}/terms`}
                     className={`text-sm transition-colors duration-300 ${
                       isTest
                         ? "text-[#666] hover:text-[#111]"
