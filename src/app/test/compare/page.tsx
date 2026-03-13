@@ -221,10 +221,10 @@ export default function ComparePage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              href="/test/demo"
+              href="https://app.tryvergo.com/signup"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-semibold hover:bg-[#E8913A] transition-colors text-sm"
             >
-              Get a walkthrough
+              Get Started
             </Link>
             <Link
               href="/test/product"

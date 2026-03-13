@@ -138,8 +138,8 @@ export default function Header() {
           <a href="https://app.tryvergo.com" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Log in
           </a>
-          <Link
-            href={`${prefix}/demo`}
+          <a
+            href={isLight ? "https://app.tryvergo.com/signup" : `${prefix}/demo`}
             className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
               isLight
                 ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
@@ -147,8 +147,8 @@ export default function Header() {
             }`}
             style={isLight ? undefined : { backgroundColor: "rgba(20,20,20,0.9)" }}
           >
-            Request demo
-          </Link>
+            {isLight ? "Get Started" : "Request demo"}
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -237,8 +237,8 @@ export default function Header() {
             >
               Log in
             </a>
-            <Link
-              href={`${prefix}/demo`}
+            <a
+              href={isLight ? "https://app.tryvergo.com/signup" : `${prefix}/demo`}
               className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
                 isLight
                   ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
@@ -247,8 +247,8 @@ export default function Header() {
               style={isLight ? undefined : { backgroundColor: "rgba(20,20,20,0.9)" }}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Request demo
-            </Link>
+              {isLight ? "Get Started" : "Request demo"}
+            </a>
           </div>
         </div>
       )}

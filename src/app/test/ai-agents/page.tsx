@@ -136,10 +136,10 @@ export default function AIAgentsPage() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/test/demo"
+              href="https://app.tryvergo.com/signup"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get a walkthrough
+              Get Started
             </a>
             <Link
               href="/test/product"
@@ -229,14 +229,14 @@ export default function AIAgentsPage() {
             Put your agents to work
           </h2>
           <p className="mt-3 text-[#555]">
-            Get a walkthrough of the platform with your dedicated account
+            Start your free trial and get set up with your dedicated account
             manager.
           </p>
           <a
-            href="/test/demo"
+            href="https://app.tryvergo.com/signup"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get a walkthrough
+            Get Started
           </a>
         </div>
       </section>
@@ -322,10 +322,10 @@ export default function AIAgentsPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/test/demo"
+              href="https://app.tryvergo.com/signup"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get a walkthrough
+              Get Started
             </a>
             <Link
               href="/test/product"

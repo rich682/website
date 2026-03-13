@@ -97,16 +97,16 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`${prefix}/demo`}
+                  <a
+                    href={isTest ? "https://app.tryvergo.com/signup" : `${prefix}/demo`}
                     className={`text-sm transition-colors duration-300 ${
                       isTest
                         ? "text-[#666] hover:text-[#111]"
                         : "text-foreground-secondary hover:text-foreground"
                     }`}
                   >
-                    Request demo
-                  </Link>
+                    {isTest ? "Get Started" : "Request demo"}
+                  </a>
                 </li>
               </ul>
             </div>

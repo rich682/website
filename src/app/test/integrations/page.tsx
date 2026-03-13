@@ -90,10 +90,10 @@ export default function TestIntegrationsPage() {
             we&apos;ll prioritize yours.
           </p>
           <a
-            href="/test/demo"
+            href="https://app.tryvergo.com/signup"
             className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Request demo
+            Get Started
           </a>
         </div>
       </section>

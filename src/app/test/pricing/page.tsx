@@ -142,10 +142,10 @@ export default function PricingPage() {
 
                 {/* CTA */}
                 <a
-                  href="/test/demo"
+                  href="https://app.tryvergo.com/signup"
                   className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 bg-[#111] text-white hover:bg-[#333]"
                 >
-                  Request Demo
+                  Get Started
                 </a>
 
                 {/* Divider */}
@@ -183,10 +183,10 @@ export default function PricingPage() {
             accounting workflows.
           </p>
           <a
-            href="/test/demo"
+            href="https://app.tryvergo.com/signup"
             className="inline-flex items-center px-7 py-3 rounded-md bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Request demo
+            Get Started
           </a>
         </div>
       </section>

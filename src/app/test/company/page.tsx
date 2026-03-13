@@ -659,10 +659,10 @@ export default function CompanyPage() {
             <span className="text-[#6366F1]">higher value</span> tasks today.
           </h2>
           <a
-            href="/test/demo"
+            href="https://app.tryvergo.com/signup"
             className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-semibold hover:bg-[#E8913A] transition-colors"
           >
-            Request demo
+            Get Started
           </a>
         </div>
       </section>
