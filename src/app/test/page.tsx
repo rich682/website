@@ -227,22 +227,41 @@ export default function TestPage() {
       </section>
 
       {/* ============ SOCIAL PROOF BAR ============ */}
-      <section className="py-6 border-y border-[#E5E7EB] bg-[#FAFAFA]">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-sm text-[#888]">
-            <span className="font-medium text-[#777]">
-              Trusted by accounting teams at
-            </span>
-            <div className="flex items-center gap-8">
-              {["DNT", "Moss Utilities", "JMB"].map((company) => (
-                <span
-                  key={company}
-                  className="font-semibold text-[#333] tracking-wide text-base"
-                >
-                  {company}
-                </span>
-              ))}
-            </div>
+      <section className="py-6 border-y border-[#E5E7EB] bg-[#FAFAFA] overflow-hidden">
+        <p className="text-center text-xs font-medium uppercase tracking-widest text-[#999] mb-4">
+          Trusted by accounting teams at
+        </p>
+        <div className="ticker-wrap">
+          <div className="ticker">
+            {[
+              "Blackline", "Bold LV", "BWC", "Dig it", "DNT", "enCompass",
+              "FDL Star", "Heartland", "Hospitality Build", "ICS",
+              "Industry Standard USA", "Jarrell", "Lindamood", "LVR",
+              "Marriot Construction", "Miller", "New Cast", "Northern Lights",
+              "Pacific Tech", "Paintech", "Taurus", "TMG", "Two State", "Unity",
+            ].map((company) => (
+              <span
+                key={company}
+                className="inline-block px-8 font-semibold text-[#333] tracking-wide text-sm whitespace-nowrap"
+              >
+                {company}
+              </span>
+            ))}
+            {[
+              "Blackline", "Bold LV", "BWC", "Dig it", "DNT", "enCompass",
+              "FDL Star", "Heartland", "Hospitality Build", "ICS",
+              "Industry Standard USA", "Jarrell", "Lindamood", "LVR",
+              "Marriot Construction", "Miller", "New Cast", "Northern Lights",
+              "Pacific Tech", "Paintech", "Taurus", "TMG", "Two State", "Unity",
+            ].map((company) => (
+              <span
+                key={`dup-${company}`}
+                className="inline-block px-8 font-semibold text-[#333] tracking-wide text-sm whitespace-nowrap"
+                aria-hidden="true"
+              >
+                {company}
+              </span>
+            ))}
           </div>
         </div>
       </section>
