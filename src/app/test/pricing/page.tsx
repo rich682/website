@@ -93,7 +93,7 @@ export default function PricingPage() {
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Simple pricing,{" "}
-            <span className="text-[#6366F1]">no surprises</span>
+            <span className="block text-[#6366F1]">no surprises</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Start with the essentials or unlock AI agents and dedicated support.

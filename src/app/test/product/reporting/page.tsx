@@ -102,7 +102,7 @@ export default function ReportingPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             Reports, insights, and analysis —{" "}
-            <span className="text-[#6366F1]">built for accountants</span>
+            <span className="block text-[#6366F1]">built for accountants</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Build custom reports, flag variances automatically, and let AI

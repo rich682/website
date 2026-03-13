@@ -64,8 +64,8 @@ export default function ComparePage() {
             Why Vergo
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            The only platform that offers{" "}
-            <span className="text-[#6366F1]">
+            The only platform that offers
+            <span className="block text-[#6366F1]">
               close management, AP Automation, Expense Management &amp; AI Agents
             </span>
           </h1>

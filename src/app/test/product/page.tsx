@@ -150,7 +150,7 @@ export default function ProductPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             Vergo customers close their books{" "}
-            <span className="text-[#6366F1]">stress-free</span>
+            <span className="block text-[#6366F1]">stress-free</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             The workflow platform that connects your accounting tools, automates

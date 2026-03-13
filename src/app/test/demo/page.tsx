@@ -60,7 +60,7 @@ export default function TestDemoPage() {
               Schedule a Demo
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-[#111] leading-[1.1] mb-6 tracking-tight">
-              See Vergo <span className="text-[#6366F1]">in action.</span>
+              See Vergo <span className="block text-[#6366F1]">in action.</span>
             </h1>
             <p className="text-lg text-[#666] max-w-lg mb-10 leading-relaxed">
               Book a 30-minute demo and see how Vergo can help your team close

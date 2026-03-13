@@ -127,7 +127,7 @@ export default function AIAgentsPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             You build. Agents execute.{" "}
-            <span className="text-[#6366F1]">You review.</span>
+            <span className="block text-[#6366F1]">You review.</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Configure AI agents to handle the repetitive work across your close.

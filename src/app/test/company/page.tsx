@@ -38,7 +38,7 @@ export default function CompanyPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] tracking-tight">
               Designed for accounting teams who love{" "}
-              <span className="text-[#6366F1]">efficiency and control</span>
+              <span className="block text-[#6366F1]">efficiency and control</span>
             </h1>
             <p className="mt-8 text-lg text-[#666] leading-relaxed">
               Our founding team has experienced the pain of manual book closes,

@@ -36,7 +36,7 @@ export default function TestIntegrationsPage() {
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Supported{" "}
-            <span className="text-[#6366F1]">accounting platforms</span>
+            <span className="block text-[#6366F1]">accounting platforms</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Connect your ERP, general ledger, or upload spreadsheets directly.
