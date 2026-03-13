@@ -3,8 +3,8 @@ import CoordinationMockup from "@/components/animations/CoordinationMockup";
 import ReportingMockup from "@/components/animations/ReportingMockup";
 import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
-import ApproveMockup from "@/components/animations/ApproveMockup";
-import ConnectMockup from "@/components/animations/ConnectMockup";
+import InvoiceCaptureMockup from "@/components/animations/InvoiceCaptureMockup";
+import CardConnectionsMockup from "@/components/animations/CardConnectionsMockup";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
@@ -103,7 +103,7 @@ const secondaryFeatures = [
       "Accounting software sync",
     ],
     href: "/product/ap-automation",
-    Mockup: ApproveMockup,
+    Mockup: InvoiceCaptureMockup,
   },
   {
     title: "Expense Management",
@@ -115,7 +115,7 @@ const secondaryFeatures = [
       "Policy enforcement",
     ],
     href: "/product/expense-management",
-    Mockup: ConnectMockup,
+    Mockup: CardConnectionsMockup,
   },
 ];
 
@@ -227,7 +227,7 @@ export default function TestPage() {
       </section>
 
       {/* ============ SOCIAL PROOF BAR ============ */}
-      <section className="py-6 border-y border-[#E5E7EB] bg-[#FAFAFA]">
+      <section className="py-6 border-y border-[#E5E7EB] bg-white">
         <p className="text-center text-xs font-medium uppercase tracking-widest text-[#999] mb-4">
           Trusted by accounting teams at
         </p>
@@ -530,7 +530,7 @@ export default function TestPage() {
       </section>
 
       {/* ============ DIFFERENTIATION ============ */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F8] border-y border-[#E5E7EB]">
+      <section className="py-16 lg:py-24 bg-white border-y border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
@@ -632,7 +632,7 @@ export default function TestPage() {
       </section>
 
       {/* ============ SUPPORT / ACCOUNT MANAGER ============ */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F8] border-t border-[#E5E7EB]">
+      <section className="py-16 lg:py-24 bg-white border-t border-[#E5E7EB]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>

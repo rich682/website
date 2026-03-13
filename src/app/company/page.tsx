@@ -629,7 +629,7 @@ export default function CompanyPage() {
       </section>
 
       {/* ============ QUOTE ============ */}
-      <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-[#F7F7F8]">
+      <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111] leading-relaxed italic tracking-tight">
             &ldquo;Accounting teams deserve a single platform to coordinate the

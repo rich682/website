@@ -149,7 +149,7 @@ export default async function IntegrationPage({
       </section>
 
       {/* How it works */}
-      <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-[#F7F7F8]">
+      <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#111] text-center mb-16 tracking-tight">
             How it works

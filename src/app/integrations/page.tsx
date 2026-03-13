@@ -29,7 +29,7 @@ export default function TestIntegrationsPage() {
       className="bg-white"
     >
       {/* Hero + Integration Grid */}
-      <section className="pt-36 pb-16 lg:pt-48 lg:pb-24 bg-[#F7F7F8]">
+      <section className="pt-36 pb-16 lg:pt-48 lg:pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16 lg:mb-20">
           <p className="text-xs font-medium uppercase tracking-widest text-[#6366F1] mb-4">
             Integrate once

@@ -242,7 +242,7 @@ export default function AIAgentsPage() {
       </section>
 
       {/* ============ AGENT TYPES ============ */}
-      <section className="py-16 lg:py-24 bg-[#F7F7F8] border-y border-[#E5E7EB]">
+      <section className="py-16 lg:py-24 bg-white border-y border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4 inline-block">
