@@ -145,7 +145,7 @@ export default function PricingPage() {
                   href="https://app.tryvergo.com/signup"
                   className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 bg-[#111] text-white hover:bg-[#333]"
                 >
-                  Get Started
+                  Start Free Trial
                 </a>
 
                 {/* Divider */}
@@ -186,7 +186,7 @@ export default function PricingPage() {
             href="https://app.tryvergo.com/signup"
             className="inline-flex items-center px-7 py-3 rounded-md bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Get Started
+            Start Free Trial
           </a>
         </div>
       </section>
