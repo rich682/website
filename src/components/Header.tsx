@@ -21,7 +21,7 @@ export default function Header() {
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const isLight = pathname === "/test";
+  const isLight = pathname?.startsWith("/test");
 
   // Close dropdown on route change
   useEffect(() => {

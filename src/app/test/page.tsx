@@ -37,7 +37,7 @@ const coreFeatures = [
           "See exactly where your close stands at any point, down to individual tasks.",
       },
     ],
-    href: "/product/close-management",
+    href: "/test/product/close-management",
     Mockup: CoordinationMockup,
   },
   {
@@ -62,7 +62,7 @@ const coreFeatures = [
           "Every output surfaces for your review before anything is posted or sent.",
       },
     ],
-    href: "/ai-agents",
+    href: "/test/ai-agents",
     Mockup: AIAgentsMockup,
   },
   {
@@ -87,7 +87,7 @@ const coreFeatures = [
           "See what's changed across periods without digging through spreadsheets.",
       },
     ],
-    href: "/product/reporting",
+    href: "/test/product/reporting",
     Mockup: ReportingMockup,
   },
 ];
@@ -102,7 +102,7 @@ const secondaryFeatures = [
       "Smart approval routing",
       "Accounting software sync",
     ],
-    href: "/product/ap-automation",
+    href: "/test/product/ap-automation",
     Mockup: ApproveMockup,
   },
   {
@@ -114,7 +114,7 @@ const secondaryFeatures = [
       "Automatic receipt matching",
       "Policy enforcement",
     ],
-    href: "/product/expense-management",
+    href: "/test/product/expense-management",
     Mockup: ConnectMockup,
   },
 ];
@@ -204,7 +204,7 @@ export default function TestPage() {
               Get a walkthrough
             </a>
             <Link
-              href="/product"
+              href="/test/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
             >
               See how it works
@@ -737,7 +737,7 @@ export default function TestPage() {
               Get a walkthrough
             </a>
             <Link
-              href="/product"
+              href="/test/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"
             >
               See the platform
