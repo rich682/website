@@ -683,7 +683,7 @@ export default function TestPage() {
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Ready to run your close from one platform?
+            Ready to help your accounting team?
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
             Join the accounting teams closing faster with less manual work.
