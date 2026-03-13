@@ -74,6 +74,20 @@ export default function TestIntegrationsPage() {
                 </svg>
               </Link>
             ))}
+
+            {/* Custom Integrations tile */}
+            <div className="flex items-center gap-4 p-5 shadow-sm rounded-xl border border-dashed border-[#6366F1]/30 bg-[#EEF2FF]">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#6366F1]/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="text-sm font-semibold text-[#6366F1]">
+                  Custom Integrations Available
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
