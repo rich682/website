@@ -11,7 +11,7 @@ const platformLinks = [
   { label: "Reporting", href: "/product/reporting", description: "Custom reports and AI insights" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
-  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools", noPrefix: true },
   { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
 ];
 
@@ -22,6 +22,7 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const isLight = pathname?.startsWith("/test");
+  const prefix = isLight ? "/test" : "";
 
   // Close dropdown on route change
   useEffect(() => {
@@ -94,7 +95,7 @@ export default function Header() {
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
-                    href={link.href}
+                    href={link.noPrefix ? link.href : `${prefix}${link.href}`}
                     className={`flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors ${
                       isLight ? "hover:bg-[#F5F5F5]" : "hover:bg-white/[0.08]"
                     }`}
@@ -107,19 +108,19 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+          <Link href={`${prefix}/pricing`} className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Pricing
           </Link>
-          <Link href="/compare" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+          <Link href={`${prefix}/compare`} className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Compare
           </Link>
-          <Link href="/company" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+          <Link href={`${prefix}/company`} className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Company
           </Link>
         </div>
 
         {/* Center Logo */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <Link href={prefix || "/"} className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
           <Image
             src="/images/white-icon.webp"
             alt="Vergo"
@@ -138,7 +139,7 @@ export default function Header() {
             Log in
           </a>
           <Link
-            href="/demo"
+            href={`${prefix}/demo`}
             className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
               isLight
                 ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
@@ -198,7 +199,7 @@ export default function Header() {
                 {platformLinks.map((link) => (
                   <Link
                     key={link.href}
-                    href={link.href}
+                    href={link.noPrefix ? link.href : `${prefix}${link.href}`}
                     className="block text-sm opacity-70 hover:opacity-60 transition-opacity py-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -209,21 +210,21 @@ export default function Header() {
             )}
 
             <Link
-              href="/pricing"
+              href={`${prefix}/pricing`}
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link
-              href="/compare"
+              href={`${prefix}/compare`}
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
               Compare
             </Link>
             <Link
-              href="/company"
+              href={`${prefix}/company`}
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -237,7 +238,7 @@ export default function Header() {
               Log in
             </a>
             <Link
-              href="/demo"
+              href={`${prefix}/demo`}
               className={`inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors ${
                 isLight
                   ? "border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
