@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 
 import TasksMockup from "@/components/animations/TasksMockup";
+import CollaborationMockup from "@/components/animations/CollaborationMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
 import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 
@@ -24,6 +25,18 @@ const features = [
       "Recurring task templates",
     ],
     mockup: "tasks",
+  },
+  {
+    category: "Team Collaboration",
+    title: "Work together on every task in real time",
+    description:
+      "Comment directly on tasks, tag teammates for sign-off, and keep every conversation tied to the work. No more chasing updates over email or Teams — your whole team collaborates in one place.",
+    items: [
+      "Threaded comments on every task",
+      "Tag teammates for review and sign-off",
+      "Full activity history and audit trail",
+    ],
+    mockup: "collaboration",
   },
   {
     category: "Reconciliation",
@@ -185,6 +198,7 @@ export default function CloseManagementPage() {
                   }`}
                 >
                   {section.mockup === "tasks" && <TasksMockup />}
+                  {section.mockup === "collaboration" && <CollaborationMockup />}
                   {section.mockup === "close" && <CloseMockup />}
                   {section.mockup === "deadlines" && <DeadlinesMockup />}
                 </ScrollReveal>
