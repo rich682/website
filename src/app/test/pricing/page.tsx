@@ -175,8 +175,8 @@ export default function PricingPage() {
       <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111] mb-4 tracking-tight">
-            Not sure which plan is{" "}
-            <span className="text-[#6366F1]">right</span>?
+            Start Free Trial{" "}
+            <span className="block text-[#6366F1]">Today</span>
           </h2>
           <p className="text-[#666] mb-8 leading-relaxed">
             Talk to our team and we&apos;ll help you find the best fit for your
