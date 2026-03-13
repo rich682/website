@@ -189,7 +189,7 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            The collaboration tool
+            The AI collaboration tool
             <span className="block text-[#6366F1]">for accounting teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
@@ -227,10 +227,11 @@ export default function TestPage() {
       </section>
 
       {/* ============ SOCIAL PROOF BAR ============ */}
-      <section className="py-6 border-y border-[#E5E7EB] bg-[#FAFAFA] overflow-hidden">
+      <section className="py-6 border-y border-[#E5E7EB] bg-[#FAFAFA]">
         <p className="text-center text-xs font-medium uppercase tracking-widest text-[#999] mb-4">
           Trusted by accounting teams at
         </p>
+        <div className="max-w-5xl mx-auto px-6 overflow-hidden">
         <div className="ticker-wrap">
           <div className="ticker">
             {[
@@ -263,6 +264,7 @@ export default function TestPage() {
               </span>
             ))}
           </div>
+        </div>
         </div>
       </section>
 
