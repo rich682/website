@@ -11,8 +11,8 @@ const platformLinks = [
   { label: "Reporting", href: "/product/reporting", description: "Custom reports and AI insights" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
-  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
   { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
+  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
 ];
 
 export default function Header() {
