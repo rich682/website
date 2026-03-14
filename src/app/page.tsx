@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const coreFeatures = [
   {
     label: "Close Collaboration",
-    title: "Run your entire close from one place",
+    title: "Keep your team aligned through every close",
     description:
       "Build your close checklist, assign tasks across teams, and track progress in real time. No more status update meetings or spreadsheet trackers.",
     items: [

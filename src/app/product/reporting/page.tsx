@@ -7,7 +7,7 @@ import VarianceAnalysisMockup from "@/components/animations/VarianceAnalysisMock
 import AIInsightsMockup from "@/components/animations/AIInsightsMockup";
 
 export const metadata: Metadata = {
-  title: "Reporting | Vergo",
+  title: "Reporting & Analytics | Vergo",
   description:
     "Build custom reports, analyze variances automatically, and surface AI-powered insights and trends — all from one platform.",
 };
@@ -98,16 +98,16 @@ export default function ReportingPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4">
-            Reporting
+            Reporting & Analytics
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Reports, insights, and analysis —{" "}
-            <span className="block text-[#6366F1]">built for accountants</span>
+            AI-powered insights{" "}
+            <span className="block text-[#6366F1]">that drive smarter decisions</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Build custom reports, flag variances automatically, and let AI
-            surface the trends that matter. Everything your team needs to turn
-            data into decisions.
+            Build custom reports, spot trends automatically, and let AI surface
+            the insights that matter. From variance analysis to forecasting —
+            everything your team needs to close with confidence.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
@@ -256,11 +256,11 @@ export default function ReportingPage() {
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Reporting that works for you
+            Smarter reporting starts here
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo helps accounting teams build better reports and surface
-            insights faster.
+            See how Vergo helps accounting teams surface AI-powered insights,
+            track trends, and make better decisions every close.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a

@@ -17,20 +17,6 @@ export const metadata: Metadata = {
 const productSections = [
   {
     number: "01",
-    category: "Connect",
-    title: "Connects to your accounting software",
-    description:
-      "Integrate your ERP, GL, and other accounting tools directly into Vergo. Create structured databases that give your agents the data they need to work.",
-    features: [
-      "ERP and GL integrations",
-      "Custom database creation",
-      "Automated data syncing",
-    ],
-    Mockup: ConnectMockup,
-    href: undefined as string | undefined,
-  },
-  {
-    number: "02",
     category: "Tasks",
     title: "Create month-end tasks",
     description:
@@ -44,9 +30,51 @@ const productSections = [
     href: "/product/close-management",
   },
   {
+    number: "02",
+    category: "Collaborate",
+    title: "Collaborate with your accounting team",
+    description:
+      "Keep everyone aligned with shared workflows, approval chains, and real-time visibility. Request documents, collect sign-offs, and track progress — all in one place.",
+    features: [
+      "Cross-team requests and sign-offs",
+      "Approval workflows",
+      "Real-time progress tracking",
+    ],
+    Mockup: ApproveMockup,
+    href: undefined as string | undefined,
+  },
+  {
     number: "03",
+    category: "Connect",
+    title: "Connect your accounting software",
+    description:
+      "Integrate your ERP, GL, and other accounting tools directly into Vergo. Create structured databases that give your agents the data they need to work.",
+    features: [
+      "ERP and GL integrations",
+      "Custom database creation",
+      "Automated data syncing",
+    ],
+    Mockup: ConnectMockup,
+    href: undefined as string | undefined,
+  },
+  {
+    number: "04",
+    category: "Setup",
+    title: "Setup reports, analysis, reconciliations and more",
+    description:
+      "Configure the workflows that power your close. Build custom reports, automate reconciliations, and set up variance analysis — so your team focuses on insights, not assembly.",
+    features: [
+      "Custom report builder",
+      "Automated reconciliations",
+      "Variance and trend analysis",
+    ],
+    Mockup: AIInsightsMockup,
+    href: "/product/reporting",
+  },
+  {
+    number: "05",
     category: "Agents",
-    title: "Setup automation agents",
+    title: "AI agents automate each task every month",
     description:
       "Configure AI agents to handle the repetitive work across your close. Each agent handles a specific function and surfaces its work for your review.",
     features: [
@@ -59,43 +87,15 @@ const productSections = [
     href: "/ai-agents",
   },
   {
-    number: "04",
-    category: "Review",
-    title: "Review and approve agent work",
-    description:
-      "Every piece of agent output is surfaced for human review before it goes live. Your team stays in control with clear approval workflows and full audit trails.",
-    features: [
-      "Human-in-the-loop review",
-      "Approval workflows",
-      "Full audit trail",
-    ],
-    Mockup: ApproveMockup,
-    href: undefined as string | undefined,
-  },
-  {
-    number: "05",
-    category: "Analyze",
-    title: "Surface trends, risks, and opportunities",
-    description:
-      "Vergo analyzes your financial data to highlight what matters most. Spot variances, track trends over time, and surface risks and opportunities — so your team can act on insights instead of digging for them.",
-    features: [
-      "Automated trend analysis",
-      "Variance and risk detection",
-      "AI-powered insights and forecasts",
-    ],
-    Mockup: AIInsightsMockup,
-    href: "/product/reporting",
-  },
-  {
     number: "06",
     category: "Close",
-    title: "Close audit-ready, faster & more controlled",
+    title: "Close month with more insights, more control, and less stress",
     description:
-      "With tasks managed, agents running, and insights surfaced, your team closes the books faster — with more confidence and less stress.",
+      "With tasks managed, agents running, and insights surfaced, your team closes the books faster — with full visibility and confidence every period.",
     features: [
       "Faster close cycles",
-      "Real-time progress tracking",
       "Complete close visibility",
+      "Full audit trail",
     ],
     Mockup: CloseMockup,
     href: "/product/close-management",
@@ -149,8 +149,8 @@ export default function ProductPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Vergo customers close their books{" "}
-            <span className="block text-[#6366F1]">stress-free</span>
+            Welcome to a{" "}
+            <span className="block text-[#6366F1]">stress-free month end</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             The workflow platform that connects your accounting tools, automates
