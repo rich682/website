@@ -4,7 +4,7 @@ import TasksMockup from "@/components/animations/TasksMockup";
 import ConnectMockup from "@/components/animations/ConnectMockup";
 import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
-import AIInsightsMockup from "@/components/animations/AIInsightsMockup";
+import WorkflowSetupMockup from "@/components/animations/WorkflowSetupMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
 import type { Metadata } from "next";
 
@@ -68,7 +68,7 @@ const productSections = [
       "Automated reconciliations",
       "Variance and trend analysis",
     ],
-    Mockup: AIInsightsMockup,
+    Mockup: WorkflowSetupMockup,
     href: "/product/reporting",
   },
   {

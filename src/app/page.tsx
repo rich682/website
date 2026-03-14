@@ -42,7 +42,7 @@ const coreFeatures = [
   },
   {
     label: "Reporting",
-    title: "Build reports without pulling data manually",
+    title: "Build custom reports, combining any data source together",
     description:
       "Create custom financial reports, catch variances automatically, and see what's changed across periods — so your team focuses on analysis, not assembly.",
     items: [
