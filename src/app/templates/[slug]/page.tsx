@@ -74,7 +74,7 @@ export default async function TemplatePage({ params }: Props) {
             {template.category}
           </span>
           <h1 className="mt-4 text-4xl sm:text-5xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            {template.title}
+            {/template/i.test(template.title) ? template.title : `${template.title} Template`}
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#666] max-w-2xl leading-relaxed">
             {template.description}
