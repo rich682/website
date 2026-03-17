@@ -460,6 +460,662 @@ export const templates: Template[] = [
       "Creates accountability for departmental budget performance",
     ],
   },
+  {
+    slug: "period-end-accrual-tracker",
+    title: "Period-End Accrual Tracker",
+    description:
+      "Document and track all period-end accruals in one place. Ensure consistent treatment month to month and maintain detailed support for external audits.",
+    category: "Close Management",
+    tags: ["Accruals", "Close", "Monthly"],
+    steps: [
+      {
+        title: "List all accrual categories",
+        description:
+          "Identify all types of accruals your business makes: utilities, rent, payroll, professional fees, warranty obligations, vacation accrual, etc.",
+      },
+      {
+        title: "Document accrual calculation logic",
+        description:
+          "For each accrual, document how it's calculated: percentage of revenue, fixed monthly amount, days-based calculation, or management estimate with support.",
+      },
+      {
+        title: "Calculate accrual amount",
+        description:
+          "Using documented methodology, calculate the accrual amount for the period. Pull supporting documentation (invoices, timesheets, contracts).",
+      },
+      {
+        title: "Prepare journal entry",
+        description:
+          "Create the accrual journal entry debiting expense and crediting accrued liability. Include account codes and description of accrual basis.",
+      },
+      {
+        title: "Reconcile to GL and prior period",
+        description:
+          "Verify accrual entries posted to GL. Compare to prior period and investigate significant changes in accrual amounts.",
+      },
+    ],
+    benefits: [
+      "Ensures accruals are recorded consistently each period",
+      "Prevents under- or over-accrual of expenses",
+      "Provides clear audit trail showing calculation methodology",
+      "Reduces adjustments needed during year-end audit",
+    ],
+  },
+  {
+    slug: "intercompany-reconciliation",
+    title: "Intercompany Reconciliation",
+    description:
+      "Track and reconcile intercompany transactions between related entities. Ensure balance sheet intercompany accounts tie perfectly.",
+    category: "Close Management",
+    tags: ["Reconciliation", "Intercompany", "Close"],
+    steps: [
+      {
+        title: "Identify all intercompany entities",
+        description:
+          "List all affiliated companies and entities that conduct business with each other. Note reporting entity and non-consolidated entities.",
+      },
+      {
+        title: "Extract intercompany transaction detail",
+        description:
+          "Pull all intercompany sales, expenses, transfers, and loans from each entity's GL for the current period and year-to-date.",
+      },
+      {
+        title: "Match transactions between entities",
+        description:
+          "Compare transactions recorded by Company A as payable to those recorded by Company B as receivable. Identify any timing differences or mismatches.",
+      },
+      {
+        title: "Identify reconciling items",
+        description:
+          "Document items that don't match: outstanding advances, unrecorded transactions, timing differences, or erroneous entries.",
+      },
+      {
+        title: "Post correcting entries",
+        description:
+          "Record necessary adjustments to align intercompany accounts. Ensure offsetting entries maintain consolidated trial balance.",
+      },
+    ],
+    benefits: [
+      "Eliminates errors in consolidated financial statements",
+      "Identifies unauthorized or unapproved intercompany transactions",
+      "Reduces consolidation adjustments needed during month-end",
+      "Ensures cash flow accuracy for intercompany transactions",
+    ],
+  },
+  {
+    slug: "account-review-workpaper",
+    title: "Account Review Workpaper",
+    description:
+      "Systematically review balance sheet and GL accounts for reasonableness, accuracy, and proper classification before finalizing month-end close.",
+    category: "Close Management",
+    tags: ["Review", "Workpaper", "Close"],
+    steps: [
+      {
+        title: "Select accounts for detailed review",
+        description:
+          "Identify high-risk or high-dollar accounts: cash, AR, inventory, fixed assets, debt, equity accounts requiring thorough review.",
+      },
+      {
+        title: "Analyze account activity",
+        description:
+          "Review all transactions posted to the account during the period. Identify unusual items, large transactions, or items outside normal business.",
+      },
+      {
+        title: "Verify supporting documentation",
+        description:
+          "For significant transactions, pull supporting documentation: invoices, contracts, receipts, loan agreements, asset purchase documents.",
+      },
+      {
+        title: "Document conclusions",
+        description:
+          "Note that you reviewed the account, found no issues, or identify specific adjustments needed. Sign and date the workpaper.",
+      },
+      {
+        title: "Follow up on exceptions",
+        description:
+          "For any issues identified, determine root cause and record correcting entry. Communicate material items to accounting leadership.",
+      },
+    ],
+    benefits: [
+      "Catches errors and unusual items before external audit",
+      "Demonstrates management review of all significant accounts",
+      "Identifies control weaknesses or process improvements needed",
+      "Creates documentation of management assertions for auditor",
+    ],
+  },
+  {
+    slug: "close-timeline-checklist",
+    title: "Close Timeline Checklist",
+    description:
+      "Day-by-day close timeline showing what needs to happen each day. Track actual completion dates and identify bottlenecks in real-time.",
+    category: "Close Management",
+    tags: ["Close", "Timeline", "Planning"],
+    steps: [
+      {
+        title: "Map daily tasks and owners",
+        description:
+          "Create calendar with Day 1 through Day N of close. For each day, list tasks that must be completed, owner, and deadline.",
+      },
+      {
+        title: "Identify critical path items",
+        description:
+          "Highlight tasks that block other work (e.g., bank reconciliation before cash adjustment). Mark these as high-priority and monitor closely.",
+      },
+      {
+        title: "Include sign-off checkboxes",
+        description:
+          "Add checkbox for each task with space for initials and date completed. Use this to track actual progress against plan.",
+      },
+      {
+        title: "Build in escalation triggers",
+        description:
+          "Define when a task is considered late and requires escalation (e.g., if a task should complete by 2pm and it's 4pm, escalate).",
+      },
+      {
+        title: "Distribute and update daily",
+        description:
+          "Share checklist with team at start of close. Update daily to show progress, identify slippage, and adjust remaining timeline.",
+      },
+    ],
+    benefits: [
+      "Keeps entire team synchronized on close progress",
+      "Identifies bottlenecks early so you can add resources",
+      "Reduces close timeline by keeping momentum and focus",
+      "Provides real-time visibility to executive team on close status",
+    ],
+  },
+  {
+    slug: "fixed-asset-reconciliation",
+    title: "Fixed Asset Reconciliation",
+    description:
+      "Reconcile fixed asset GL accounts to the fixed asset register. Track additions, disposals, and depreciation each period.",
+    category: "Reconciliation",
+    tags: ["Fixed Assets", "Reconciliation", "Audit-Ready"],
+    steps: [
+      {
+        title: "Pull asset register and GL balances",
+        description:
+          "Extract the fixed asset register (cost, accumulated depreciation, net book value) and the corresponding GL account balances.",
+      },
+      {
+        title: "Reconcile asset cost balances",
+        description:
+          "Tie total asset cost per register to GL gross fixed asset account. Investigate any differences in accumulated totals.",
+      },
+      {
+        title: "Reconcile depreciation",
+        description:
+          "Compare accumulated depreciation per register to GL accumulated depreciation account. Verify depreciation expense calculation.",
+      },
+      {
+        title: "Document additions and disposals",
+        description:
+          "List all assets purchased during period with cost, purchase date, and depreciation method. Document any asset disposals with gains/losses.",
+      },
+      {
+        title: "Verify net book value",
+        description:
+          "Calculate: Asset cost - Accumulated depreciation = Net book value. Reconcile to GL net asset account and prior period reconciliation.",
+      },
+    ],
+    benefits: [
+      "Catches errors in asset capitalization decisions",
+      "Ensures depreciation is calculated correctly and consistently",
+      "Identifies assets fully depreciated or no longer in service",
+      "Provides audit trail for asset addition and disposal approvals",
+    ],
+  },
+  {
+    slug: "accounts-receivable-aging-schedule",
+    title: "Accounts Receivable Aging Schedule",
+    description:
+      "Analyze outstanding customer invoices by age. Identify overdue accounts and estimate allowance for doubtful accounts.",
+    category: "Reconciliation",
+    tags: ["Receivables", "Aging", "Monthly"],
+    steps: [
+      {
+        title: "Extract open invoices",
+        description:
+          "Pull all open customer invoices from AR subledger. Include invoice date, amount, customer name, and invoice number.",
+      },
+      {
+        title: "Age invoices by days outstanding",
+        description:
+          "Categorize each invoice: current, 1-30 days late, 31-60 days late, 61-90 days late, 90+ days late. Calculate days outstanding from invoice date.",
+      },
+      {
+        title: "Calculate aging totals",
+        description:
+          "Sum total receivables in each aging bucket. Calculate percentage of total that falls in each category.",
+      },
+      {
+        title: "Identify problem accounts",
+        description:
+          "Highlight customers with large overdue balances or invoices aged 90+ days. Note whether customer is disputing, on payment plan, or in collections.",
+      },
+      {
+        title: "Estimate and record allowance",
+        description:
+          "Apply historical bad debt percentage or specific analysis to determine allowance for doubtful accounts. Record or adjust provision.",
+      },
+    ],
+    benefits: [
+      "Provides early warning of collection issues",
+      "Supports accurate accounts receivable valuation",
+      "Identifies which customers to focus collection efforts on",
+      "Helps forecast cash flow based on collection timing",
+    ],
+  },
+  {
+    slug: "accounts-payable-aging-schedule",
+    title: "Accounts Payable Aging Schedule",
+    description:
+      "Analyze outstanding vendor invoices by age. Track payment obligations and identify discrepancies with vendor statements.",
+    category: "Reconciliation",
+    tags: ["Payables", "Aging", "Monthly"],
+    steps: [
+      {
+        title: "Extract open vendor invoices",
+        description:
+          "Pull all open vendor invoices from AP subledger. Include invoice date, due date, vendor name, invoice number, and amount.",
+      },
+      {
+        title: "Age invoices by days outstanding",
+        description:
+          "Categorize each invoice: current, 1-30 days past due, 31-60 days past due, 61-90 days past due, 90+ days past due.",
+      },
+      {
+        title: "Calculate aging totals",
+        description:
+          "Sum AP in each aging category. Compare total to GL accounts payable account. Investigate any differences.",
+      },
+      {
+        title: "Identify overdue items",
+        description:
+          "Flag invoices that are significantly past due. Determine if they're in dispute, on hold, or overlooked for payment.",
+      },
+      {
+        title: "Reconcile to vendor statements",
+        description:
+          "Obtain vendor statements and reconcile to aging schedule. Identify items vendor claims are unpaid that you've recorded as paid.",
+      },
+    ],
+    benefits: [
+      "Ensures you're paying bills on time to maintain vendor relationships",
+      "Identifies disputed invoices or vendor statement mismatches",
+      "Improves cash flow management and payment planning",
+      "Catches duplicate payments or invoices recorded in error",
+    ],
+  },
+  {
+    slug: "accrued-expenses-reconciliation",
+    title: "Accrued Expenses Reconciliation",
+    description:
+      "Reconcile accrued expense GL accounts to supporting schedules. Verify accruals are appropriate and adjust reversal entries.",
+    category: "Reconciliation",
+    tags: ["Accruals", "Reconciliation", "Close"],
+    steps: [
+      {
+        title: "Identify all accrual accounts",
+        description:
+          "List all GL accounts that contain period-end accruals: accrued payroll, accrued utilities, accrued professional fees, warranty reserves, etc.",
+      },
+      {
+        title: "Reconcile to supporting schedules",
+        description:
+          "For each accrual account, tie GL balance to the supporting accrual schedule or calculation. Verify all components are included.",
+      },
+      {
+        title: "Review accrual methodology",
+        description:
+          "Confirm accrual calculation logic is documented and consistently applied. Test calculation for reasonableness (e.g., utilities based on usage).",
+      },
+      {
+        title: "Track reversals",
+        description:
+          "Document which accruals from prior period were reversed. Verify reversals matched actual payment or expense posted.",
+      },
+      {
+        title: "Prepare new accruals",
+        description:
+          "Record new period accruals. Ensure offset to appropriate expense account and that supporting documentation is attached.",
+      },
+    ],
+    benefits: [
+      "Prevents double-recording of expenses and accruals",
+      "Ensures accruals are reversed when actual invoice is recorded",
+      "Maintains consistent accrual methodology period to period",
+      "Provides clear audit trail for accrual vs. actual reconciliation",
+    ],
+  },
+  {
+    slug: "manual-adjustment-log",
+    title: "Manual Adjustment Log",
+    description:
+      "Log and track all manual GL adjustments made during the close period. Maintain history of what was adjusted and why.",
+    category: "Journal Entries",
+    tags: ["Adjustments", "Close", "Audit-Ready"],
+    steps: [
+      {
+        title: "Set up adjustment tracker",
+        description:
+          "Create spreadsheet with columns: Adjustment #, Date, Description, GL Accounts, Debit, Credit, Preparer, Approver, Post Status.",
+      },
+      {
+        title: "Log each adjustment",
+        description:
+          "As adjustments are prepared, immediately log them. Include clear description of business purpose (e.g., 'Reverse prior month accrual for utilities').",
+      },
+      {
+        title: "Get approval before posting",
+        description:
+          "Require manager sign-off on every adjustment before it posts to GL. Document approver name and date of approval.",
+      },
+      {
+        title: "Verify posting to GL",
+        description:
+          "After GL posting, confirm adjustment appears in GL with correct amounts and accounts. Mark as 'Posted' in tracker.",
+      },
+      {
+        title: "Prepare audit summary",
+        description:
+          "At period end, prepare summary of all adjustments for external auditors. Tie each adjustment to supporting documentation.",
+      },
+    ],
+    benefits: [
+      "Prevents unauthorized adjustments from posting to GL",
+      "Creates complete record of all manual adjustments for audit",
+      "Enables quick investigation of any GL variances",
+      "Supports management controls over financial reporting",
+    ],
+  },
+  {
+    slug: "consolidation-entry-template",
+    title: "Consolidation Entry Template",
+    description:
+      "Template for recording consolidation eliminations and adjustments. Standardize consolidation entries across periods.",
+    category: "Journal Entries",
+    tags: ["Consolidation", "Journal Entries", "Multi-entity"],
+    steps: [
+      {
+        title: "Identify consolidation adjustments",
+        description:
+          "List all consolidation entries needed: eliminate intercompany sales and profit, adjust equity method investments, record purchase accounting adjustments.",
+      },
+      {
+        title: "Document entry structure",
+        description:
+          "For each consolidation entry, document the GL accounts affected, debit/credit amounts, and the business purpose.",
+      },
+      {
+        title: "Build formula-based template",
+        description:
+          "Create spreadsheet template where consolidation amounts link to underlying schedules (e.g., intercompany sales total, intercompany profit).",
+      },
+      {
+        title: "Test consolidation entries",
+        description:
+          "Verify that consolidated trial balance balances after all consolidation entries. Test that subsidiary balances eliminate appropriately.",
+      },
+      {
+        title: "Document and file",
+        description:
+          "Prepare summary of all consolidation entries with supporting detail. File in close documentation for external auditors.",
+      },
+    ],
+    benefits: [
+      "Ensures consolidation entries are consistent and complete",
+      "Reduces consolidation errors and adjustment cycles",
+      "Creates clear record of consolidation methodology",
+      "Streamlines multi-period consolidation process",
+    ],
+  },
+  {
+    slug: "reclassification-journal-entry",
+    title: "Reclassification Journal Entry",
+    description:
+      "Document reclassifications between GL accounts for proper financial statement presentation. Track all reclass entries in one place.",
+    category: "Journal Entries",
+    tags: ["Reclassification", "Presentation", "Close"],
+    steps: [
+      {
+        title: "Identify presentation needs",
+        description:
+          "Determine which GL accounts need to be reclassified for proper financial statement presentation. Example: move certain expenses to COGS.",
+      },
+      {
+        title: "Document reclassification logic",
+        description:
+          "For each reclassification, document which accounts are involved, amounts to reclassify, and the reason (e.g., 'For financial statement presentation only').",
+      },
+      {
+        title: "Create the journal entry",
+        description:
+          "Record reclassification entry: debit target account, credit source account. Include reference to supporting analysis.",
+      },
+      {
+        title: "Verify trial balance",
+        description:
+          "Confirm reclassification entry doesn't change total equity or net income. Trial balance should balance before and after entry.",
+      },
+      {
+        title: "File and communicate",
+        description:
+          "Document the reclassification purpose and amounts. Communicate with auditors that these are presentation entries with no economic impact.",
+      },
+    ],
+    benefits: [
+      "Ensures GL structure supports multiple reporting requirements",
+      "Makes it easy to adjust presentation without GL structure changes",
+      "Provides transparency to auditors about presentation-only entries",
+      "Simplifies period-over-period comparison of results",
+    ],
+  },
+  {
+    slug: "accrual-entry-workpaper",
+    title: "Accrual Entry Workpaper",
+    description:
+      "Support document for period-end accrual entries. Show calculation basis, supporting documentation, and approval.",
+    category: "Journal Entries",
+    tags: ["Accruals", "Workpaper", "Close"],
+    steps: [
+      {
+        title: "Document accrual basis",
+        description:
+          "Write clear description of what is being accrued and why. Example: 'Utilities for February used but not yet invoiced by utility company'.",
+      },
+      {
+        title: "Show calculation",
+        description:
+          "Detail the accrual calculation: historical monthly average, usage-based estimate with support, percentage of revenue, or other methodology.",
+      },
+      {
+        title: "Reference supporting detail",
+        description:
+          "Note where the calculation comes from: prior invoices, usage reports, contract terms, or management estimates with support.",
+      },
+      {
+        title: "Record the entry",
+        description:
+          "Show the GL entry: which accounts are debited/credited, amounts, and account codes. Example: Debit Utilities Expense, Credit Accrued Utilities.",
+      },
+      {
+        title: "Obtain approval and file",
+        description:
+          "Have preparer initial and manager approve. File workpaper with GL entries so audit trail is complete.",
+      },
+    ],
+    benefits: [
+      "Demonstrates management review of accrual basis",
+      "Provides auditors clear support for accrual amounts",
+      "Makes it easy to reverse and re-accrue in next period",
+      "Helps new team members understand accrual methodology",
+    ],
+  },
+  {
+    slug: "reversing-entry-schedule",
+    title: "Reversing Entry Schedule",
+    description:
+      "Track which accrual and deferral entries reverse into the next period. Ensure reversals are posted and reconcile to actuals.",
+    category: "Journal Entries",
+    tags: ["Reversals", "Accruals", "Close"],
+    steps: [
+      {
+        title: "Identify entries to reverse",
+        description:
+          "List all accrual and deferral entries from closing that will reverse in next period. Mark these entries as 'To be Reversed'.",
+      },
+      {
+        title: "Create reversal schedule",
+        description:
+          "Document each reversing entry: original entry date, amount, accounts, and date reversal should post (usually first day of next period).",
+      },
+      {
+        title: "Post reversals",
+        description:
+          "On first day of next period, record reversals of all identified entries. Use same accounts and amounts as original, but opposite direction.",
+      },
+      {
+        title: "Monitor actual payments",
+        description:
+          "Track when actual invoices are received (e.g., utility bill). Verify amount matches accrual. Investigate significant variances.",
+      },
+      {
+        title: "Reconcile reversal to actual",
+        description:
+          "When actual invoice posts to GL, confirm the reversal worked correctly. If accrual and actual don't match, document the variance.",
+      },
+    ],
+    benefits: [
+      "Prevents double-recording of accruals when actual expenses post",
+      "Ensures consistent treatment of accruals and reversals",
+      "Makes it easy to track and explain accrual vs. actual differences",
+      "Reduces month-end adjustment needs in following period",
+    ],
+  },
+  {
+    slug: "month-end-close-entry-register",
+    title: "Month-End Close Entry Register",
+    description:
+      "Comprehensive register of all journal entries posted during the close period. Central location for all close-related GL activity.",
+    category: "Journal Entries",
+    tags: ["Close", "Register", "Audit-Ready"],
+    steps: [
+      {
+        title: "Create entry register template",
+        description:
+          "Set up register with columns: Entry #, Date, Description, GL Accounts (debit and credit), Amounts, Preparer, Approver, Post Date.",
+      },
+      {
+        title: "Log all close entries",
+        description:
+          "Record every journal entry posted during close: accruals, reversals, reclassifications, consolidation entries, and manual adjustments.",
+      },
+      {
+        title: "Organize by entry type",
+        description:
+          "Group entries by type (accruals, reversals, adjustments, etc.) so it's easy to find related entries and understand the close flow.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Sum all entries by account in the register. Verify amounts match GL activity for the close period.",
+      },
+      {
+        title: "Prepare for audit",
+        description:
+          "Print register and file with supporting documentation. Use as master reference when auditors ask about specific GL entries.",
+      },
+    ],
+    benefits: [
+      "Provides single-source reference for all close-related GL activity",
+      "Makes it easy for auditors to trace GL entries back to support",
+      "Enables quick investigation of any GL account variance",
+      "Demonstrates complete control and documentation of close process",
+    ],
+  },
+  {
+    slug: "ap-aging-report",
+    title: "AP Aging Report",
+    description:
+      "Formal aging report of all outstanding accounts payable. Shows vendor balances and payment status for management and audit review.",
+    category: "Accounts Payable",
+    tags: ["Payables", "Aging", "Reporting"],
+    steps: [
+      {
+        title: "Generate AP subledger",
+        description:
+          "Extract all open vendor invoices from accounting system. Include vendor name, invoice number, invoice date, due date, and amount.",
+      },
+      {
+        title: "Calculate days outstanding",
+        description:
+          "For each invoice, calculate number of days from due date to period-end date. Classify as current, 1-30, 31-60, 61-90, or 90+ days.",
+      },
+      {
+        title: "Prepare aging summary",
+        description:
+          "Create summary table showing total AP by aging category. Calculate percentage of total in each bucket. Compare to prior period.",
+      },
+      {
+        title: "Add vendor detail",
+        description:
+          "Include list of top vendors by payable balance. Note any vendors with unusually old invoices or large pending amounts.",
+      },
+      {
+        title: "Review and communicate",
+        description:
+          "Review report with accounting leadership. Discuss plan for paying down aged items and resolving any disputed invoices.",
+      },
+    ],
+    benefits: [
+      "Provides management visibility into AP obligations and timing",
+      "Helps optimize cash flow by planning payment schedule",
+      "Identifies vendors to contact regarding overdue or disputed invoices",
+      "Supports audit assertions about AP completeness and accuracy",
+    ],
+  },
+  {
+    slug: "vendor-statement-reconciliation",
+    title: "Vendor Statement Reconciliation",
+    description:
+      "Reconcile vendor monthly statements to your AP records. Resolve discrepancies and identify missing or incorrectly recorded invoices.",
+    category: "Accounts Payable",
+    tags: ["Payables", "Reconciliation", "Monthly"],
+    steps: [
+      {
+        title: "Collect vendor statements",
+        description:
+          "Obtain monthly statements from all significant vendors. Note vendor name, statement date, and statement total amount due.",
+      },
+      {
+        title: "Extract your AP records",
+        description:
+          "Pull all invoices from that vendor in your system for the same time period. Include invoice number, date, amount, and payment status.",
+      },
+      {
+        title: "Match invoices",
+        description:
+          "Line-by-line, match invoices on your records to vendor statement. Check off invoices that both parties agree have been received.",
+      },
+      {
+        title: "Identify discrepancies",
+        description:
+          "Flag items that don't match: invoices you recorded but vendor doesn't show, invoices vendor shows but you haven't recorded, or amount differences.",
+      },
+      {
+        title: "Resolve and document",
+        description:
+          "Investigate each discrepancy. Document resolution: payment made after statement date, invoice not yet received, or correction needed.",
+      },
+    ],
+    benefits: [
+      "Catches duplicate invoices before payment",
+      "Identifies invoices you forgot to record or paid incorrectly",
+      "Resolves vendor billing disputes before they escalate",
+      "Ensures AP balance accurately reflects your actual obligations",
+    ],
+  },
 ];
 
 export function getTemplateBySlug(slug: string): Template | undefined {
