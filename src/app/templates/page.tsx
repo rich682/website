@@ -8,7 +8,21 @@ export const metadata: Metadata = {
     "Ready-made accounting templates for close management, workpapers, and more. Download and customize for your team.",
 };
 
-export default function TemplatesPage() {
+const PAGE_SIZE = 12;
+
+export default async function TemplatesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, parseInt(pageParam ?? "1", 10) || 1);
+  const totalPages = Math.ceil(templates.length / PAGE_SIZE);
+  const safePage = Math.min(currentPage, totalPages);
+
+  const start = (safePage - 1) * PAGE_SIZE;
+  const pageTemplates = templates.slice(start, start + PAGE_SIZE);
+
   return (
     <main
       style={
@@ -40,10 +54,15 @@ export default function TemplatesPage() {
       </section>
 
       {/* ============ TEMPLATES GRID ============ */}
-      <section className="pb-24 bg-white">
+      <section className="pb-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
+          {/* Count */}
+          <p className="text-sm text-[#999] mb-6">
+            Showing {start + 1}–{Math.min(start + PAGE_SIZE, templates.length)} of {templates.length} templates
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {templates.map((template) => (
+            {pageTemplates.map((template) => (
               <Link
                 key={template.slug}
                 href={`/templates/${template.slug}`}
@@ -96,6 +115,81 @@ export default function TemplatesPage() {
               </Link>
             ))}
           </div>
+
+          {/* ============ PAGINATION ============ */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex items-center justify-center gap-2">
+              {/* Prev */}
+              {safePage > 1 ? (
+                <Link
+                  href={`/templates?page=${safePage - 1}`}
+                  className="flex items-center gap-1.5 rounded-full border border-[#E5E7EB] bg-white px-4 py-2 text-sm font-medium text-[#111] hover:border-[#D1D5DB] transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Previous
+                </Link>
+              ) : (
+                <span className="flex items-center gap-1.5 rounded-full border border-[#E5E7EB] bg-[#F7F7F8] px-4 py-2 text-sm font-medium text-[#CCC] cursor-not-allowed">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Previous
+                </span>
+              )}
+
+              {/* Page numbers */}
+              <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter((p) => p === 1 || p === totalPages || Math.abs(p - safePage) <= 1)
+                  .reduce<(number | "...")[]>((acc, p, idx, arr) => {
+                    if (idx > 0 && p - (arr[idx - 1] as number) > 1) acc.push("...");
+                    acc.push(p);
+                    return acc;
+                  }, [])
+                  .map((item, idx) =>
+                    item === "..." ? (
+                      <span key={`ellipsis-${idx}`} className="w-9 h-9 flex items-center justify-center text-sm text-[#999]">
+                        …
+                      </span>
+                    ) : (
+                      <Link
+                        key={item}
+                        href={`/templates?page=${item}`}
+                        className={`w-9 h-9 flex items-center justify-center rounded-full text-sm font-medium transition-colors ${
+                          item === safePage
+                            ? "bg-[#6366F1] text-white"
+                            : "border border-[#E5E7EB] text-[#111] hover:border-[#D1D5DB]"
+                        }`}
+                      >
+                        {item}
+                      </Link>
+                    )
+                  )}
+              </div>
+
+              {/* Next */}
+              {safePage < totalPages ? (
+                <Link
+                  href={`/templates?page=${safePage + 1}`}
+                  className="flex items-center gap-1.5 rounded-full border border-[#E5E7EB] bg-white px-4 py-2 text-sm font-medium text-[#111] hover:border-[#D1D5DB] transition-colors"
+                >
+                  Next
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              ) : (
+                <span className="flex items-center gap-1.5 rounded-full border border-[#E5E7EB] bg-[#F7F7F8] px-4 py-2 text-sm font-medium text-[#CCC] cursor-not-allowed">
+                  Next
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
