@@ -8,15 +8,37 @@ export const metadata: Metadata = {
 
 const tiers = [
   {
+    name: "Free",
+    description:
+      "Get started with the basics for individual users.",
+    price: "$0",
+    priceDetail: null,
+    cta: "Get Started",
+    highlight: false,
+    popular: false,
+    includes: null,
+    features: ["1 User", "Month-End Checklist"],
+  },
+  {
     name: "Essentials",
     description:
       "Manage your close and build reports with everything your team needs to stay organized.",
     price: "$20",
     priceDetail: "/person/month",
+    cta: "Start Free Trial",
     highlight: false,
     popular: false,
     includes: null,
-    features: ["Close Collaboration", "Reporting"],
+    features: [
+      "Close Collaboration",
+      "Auto-Create Tasks in Next Period",
+      "Reporting",
+      "Reconciliations",
+      "Databases",
+      "Analysis",
+      "Access to Expense Management",
+      "Access to AP Automation",
+    ],
   },
   {
     name: "Pro",
@@ -24,6 +46,7 @@ const tiers = [
       "Unlock accounting integrations, AI agents, and a dedicated account manager.",
     price: "$30",
     priceDetail: "/person/month",
+    cta: "Start Free Trial",
     highlight: false,
     popular: false,
     includes: "Everything in Essentials, plus:",
@@ -34,15 +57,16 @@ const tiers = [
     ],
   },
   {
-    name: "Pro + AP Suite",
+    name: "Agent Mode",
     description:
-      "Add full accounts payable and expense management to your Pro workflows.",
-    price: "Custom pricing based on volumes",
+      "Automate any task with AI agents on top of your Pro workflows.",
+    price: "Custom pricing",
     priceDetail: null,
+    cta: "Start Free Trial",
     highlight: false,
     popular: false,
     includes: "Everything in Pro, plus:",
-    features: ["AP Automation", "Expense Management"],
+    features: ["Automate Any Task with AI Agents"],
   },
 ];
 
@@ -92,8 +116,8 @@ export default function PricingPage() {
             Pricing
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            Free Trial,{" "}
-            <span className="block text-[#6366F1]">Simple Pricing</span>
+            For any team size,{" "}
+            <span className="block text-[#6366F1]">simple pricing</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Start with the essentials or unlock AI agents and dedicated support.
@@ -104,8 +128,8 @@ export default function PricingPage() {
 
       {/* Pricing Cards */}
       <section className="pb-20 lg:pb-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-6">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
@@ -117,27 +141,33 @@ export default function PricingPage() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#666] leading-relaxed mb-6 min-h-[3.75rem]">
+                <p className="text-sm text-[#666] leading-relaxed mb-6 min-h-[4.5rem]">
                   {tier.description}
                 </p>
 
                 {/* Price */}
-                <div className="mb-6 min-h-[2.5rem] flex items-baseline">
-                  {tier.priceDetail ? (
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-[#999] text-sm">From</span>
+                <div className="mb-6 h-[2.5rem] flex items-end">
+                  <div className="flex items-baseline gap-1.5">
+                    {tier.priceDetail ? (
+                      <>
+                        <span className="text-[#999] text-sm">From</span>
+                        <span className="text-2xl font-normal text-[#111]">
+                          {tier.price}
+                        </span>
+                        <span className="text-sm text-[#999]">
+                          {tier.priceDetail}
+                        </span>
+                      </>
+                    ) : tier.price.startsWith("$") ? (
                       <span className="text-2xl font-normal text-[#111]">
                         {tier.price}
                       </span>
-                      <span className="text-sm text-[#999]">
-                        {tier.priceDetail}
+                    ) : (
+                      <span className="text-sm font-normal text-[#666] leading-relaxed">
+                        {tier.price}
                       </span>
-                    </div>
-                  ) : (
-                    <span className="text-sm font-normal text-[#666] leading-relaxed">
-                      {tier.price}
-                    </span>
-                  )}
+                    )}
+                  </div>
                 </div>
 
                 {/* CTA */}
@@ -145,7 +175,7 @@ export default function PricingPage() {
                   href="https://app.tryvergo.com/signup"
                   className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 bg-[#111] text-white hover:bg-[#333]"
                 >
-                  Start Free Trial
+                  {tier.cta}
                 </a>
 
                 {/* Divider */}
