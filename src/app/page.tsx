@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CoordinationMockup from "@/components/animations/CoordinationMockup";
+import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
 import ReportingMockup from "@/components/animations/ReportingMockup";
 import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 const coreFeatures = [
   {
     label: "Close Collaboration",
-    title: "Keep your team aligned through every close",
+    title: "Keep track of all month-end tasks in one place, collaborate with your team",
     description:
       "Build your close checklist, assign tasks across teams, and track progress in real time. No more status update meetings or spreadsheet trackers.",
     items: [
@@ -27,18 +28,43 @@ const coreFeatures = [
           "Create every month-end task with owners, deadlines, and dependencies.",
       },
       {
-        name: "Cross-team requests",
-        detail:
-          "Automatically request documents and sign-offs from stakeholders outside accounting.",
-      },
-      {
         name: "Progress tracking",
         detail:
           "See exactly where your close stands at any point, down to individual tasks.",
       },
+      {
+        name: "Seamless collaboration",
+        detail:
+          "Assign work, leave comments, and keep everyone informed in real time.",
+      },
     ],
     href: "/product/close-management",
     Mockup: CoordinationMockup,
+  },
+  {
+    label: "Request Tracking",
+    title: "Send requests and track responses from all your stakeholders",
+    description:
+      "Easily send requests to employees, vendors, clients, and contractors. Track their responses and attachments in one centralized place.",
+    items: [
+      {
+        name: "Send requests",
+        detail:
+          "Request documents, approvals, or data from anyone outside your team.",
+      },
+      {
+        name: "Track responses",
+        detail:
+          "Monitor status and see who has responded, who hasn't, and when.",
+      },
+      {
+        name: "Manage attachments",
+        detail:
+          "Collect and organize all files and responses in one secure location.",
+      },
+    ],
+    href: "/product/close-management",
+    Mockup: RequestTrackingMockup,
   },
   {
     label: "Reporting",
@@ -342,7 +368,7 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 0v1.5c0 .621-.504 1.125-1.125 1.125" />
                   </svg>
                 ),
-                label: "Spreadsheets",
+                label: "Excel",
                 detail: "Task trackers that go stale",
               },
               {
@@ -659,75 +685,6 @@ export default function TestPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ SUPPORT / ACCOUNT MANAGER ============ */}
-      <section className="py-16 lg:py-24 bg-white border-t border-[#E5E7EB]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4">
-                Support
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#111] leading-snug mb-4">
-                Your team gets a dedicated account manager
-              </h3>
-              <p className="text-[#555] leading-relaxed mb-6">
-                Every Vergo customer works with a dedicated account manager who
-                sets up your workspace, builds your workflows, and is available
-                whenever you need help.
-              </p>
-              <div className="space-y-4">
-                {[
-                  {
-                    name: "Hands-on onboarding",
-                    detail:
-                      "Your account manager configures Vergo to match your workflows from day one.",
-                  },
-                  {
-                    name: "Ongoing support",
-                    detail:
-                      "A single point of contact who knows your business and your close process.",
-                  },
-                  {
-                    name: "Best practice guidance",
-                    detail:
-                      "Recommendations based on what works for teams like yours.",
-                  },
-                ].map((item) => (
-                  <div key={item.name} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-3 h-3 text-[#6366F1]"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2.5}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#111] text-sm">
-                        {item.name}
-                      </p>
-                      <p className="text-sm text-[#555] mt-0.5">
-                        {item.detail}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <ScrollReveal className="rounded-xl bg-white border border-[#E5E7EB] aspect-[4/3] overflow-hidden">
-              <WhiteGloveMockup />
-            </ScrollReveal>
           </div>
         </div>
       </section>

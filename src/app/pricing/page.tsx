@@ -31,6 +31,7 @@ const tiers = [
     includes: null,
     features: [
       "Close Collaboration",
+      "Request Tracking",
       "Auto-Create Tasks in Next Period",
       "Reporting",
       "Reconciliations",

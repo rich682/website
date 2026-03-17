@@ -2059,6 +2059,2690 @@ export const templates: Template[] = [
       "Supports legal action if collection becomes necessary",
     ],
   },
+  // PHASE 4: Close Management (11 more templates)
+  {
+    slug: "intercompany-transaction-summary",
+    title: "Intercompany Transaction Summary",
+    description:
+      "Centralize and track all intercompany transactions for consolidation purposes and ensure all transactions are properly eliminated.",
+    category: "Close Management",
+    tags: ["Consolidation", "Close"],
+    steps: [
+      {
+        title: "Identify all intercompany transactions",
+        description:
+          "Pull a list of all sales, transfers, and services between subsidiary entities during the period.",
+      },
+      {
+        title: "Document transaction terms",
+        description:
+          "Record pricing, volume, dates, and any transfer pricing documentation supporting the terms.",
+      },
+      {
+        title: "Create elimination entries",
+        description:
+          "Prepare consolidation entries to eliminate intercompany revenue, payables, and receivables.",
+      },
+      {
+        title: "Test reconciliation",
+        description:
+          "Verify that payables from one entity match receivables from the counterparty to ensure completeness.",
+      },
+      {
+        title: "Tie to consolidation schedule",
+        description:
+          "Link the elimination entries to the main consolidation workpaper for audit trail.",
+      },
+    ],
+    benefits: [
+      "Ensures accurate consolidation without double-counting revenue",
+      "Maintains transfer pricing documentation for tax compliance",
+      "Reduces consolidation errors and adjustment rework",
+      "Provides clear visibility into intercompany activity",
+    ],
+  },
+  {
+    slug: "subsidiary-revaluation-report",
+    title: "Subsidiary Revaluation Report",
+    description:
+      "Track and document the revaluation of subsidiary investments, assets, or equity interests for reporting and compliance.",
+    category: "Close Management",
+    tags: ["Investments", "Consolidation"],
+    steps: [
+      {
+        title: "Obtain subsidiary financial statements",
+        description:
+          "Gather the latest audited or reviewed financial statements from each subsidiary.",
+      },
+      {
+        title: "Calculate fair value adjustments",
+        description:
+          "Determine whether fair value adjustments are needed based on recent appraisals, market data, or impairment indicators.",
+      },
+      {
+        title: "Document revaluation basis",
+        description:
+          "Record the methodology used (e.g., market approach, income approach, cost approach) and supporting calculations.",
+      },
+      {
+        title: "Prepare journal entries",
+        description:
+          "Create entries to adjust the investment account and recognize gains or losses in comprehensive income.",
+      },
+    ],
+    benefits: [
+      "Ensures investments are valued at fair value per accounting standards",
+      "Supports management assertions on asset valuation",
+      "Provides documentation for auditor and regulatory review",
+      "Prevents understated or overstated subsidiary values",
+    ],
+  },
+  {
+    slug: "equity-rollforward-schedule",
+    title: "Equity Roll-forward Schedule",
+    description:
+      "Track all changes to shareholder equity during the period including contributions, distributions, earnings, and other comprehensive income.",
+    category: "Close Management",
+    tags: ["Equity", "Close"],
+    steps: [
+      {
+        title: "Start with beginning balances",
+        description:
+          "Pull the opening equity balance for each component (common stock, retained earnings, AOCI, etc.).",
+      },
+      {
+        title: "Record contributions and distributions",
+        description:
+          "Add stock issuances, capital contributions, dividends paid, and share repurchases during the period.",
+      },
+      {
+        title: "Include net income and OCI",
+        description:
+          "Roll forward net income and other comprehensive income items affecting equity this period.",
+      },
+      {
+        title: "Reconcile to trial balance",
+        description:
+          "Verify ending balances tie to the general ledger accounts at period end.",
+      },
+    ],
+    benefits: [
+      "Ensures statement of changes in equity is complete and accurate",
+      "Provides clear tracking of all equity transactions",
+      "Supports management assertions on equity accuracy",
+      "Streamlines audit procedures for equity accounts",
+    ],
+  },
+  {
+    slug: "deferred-tax-calculation-workpaper",
+    title: "Deferred Tax Calculation Workpaper",
+    description:
+      "Calculate deferred tax assets and liabilities based on temporary differences between GAAP and tax basis.",
+    category: "Close Management",
+    tags: ["Tax", "Close"],
+    steps: [
+      {
+        title: "Identify temporary differences",
+        description:
+          "List all significant items where GAAP basis differs from tax basis (e.g., depreciation, reserves, bad debt).",
+      },
+      {
+        title: "Determine tax rate",
+        description:
+          "Apply the appropriate statutory tax rate for the jurisdiction where the temporary difference originates.",
+      },
+      {
+        title: "Calculate deferred tax amounts",
+        description:
+          "Multiply each temporary difference by the applicable tax rate to determine deferred tax asset or liability.",
+      },
+      {
+        title: "Assess valuation allowance",
+        description:
+          "Evaluate whether a valuation allowance is needed for deferred tax assets based on realizability.",
+      },
+      {
+        title: "Prepare journal entry",
+        description:
+          "Record the deferred tax expense or benefit and update the deferred tax balance sheet account.",
+      },
+    ],
+    benefits: [
+      "Ensures deferred tax balances comply with ASC 740 requirements",
+      "Reduces audit issues and tax examination adjustments",
+      "Supports accurate tax provision calculation",
+      "Provides workpaper support for tax positions taken",
+    ],
+  },
+  {
+    slug: "goodwill-impairment-analysis",
+    title: "Goodwill Impairment Analysis",
+    description:
+      "Test goodwill for impairment by comparing fair value of reporting units to their carrying amounts.",
+    category: "Close Management",
+    tags: ["Impairment", "Consolidation"],
+    steps: [
+      {
+        title: "Identify reporting units",
+        description:
+          "Determine which operating segments represent separate reporting units for goodwill testing purposes.",
+      },
+      {
+        title: "Estimate fair value of reporting unit",
+        description:
+          "Use market data, comparable transactions, or discounted cash flow analysis to estimate fair value.",
+      },
+      {
+        title: "Compare to carrying amount",
+        description:
+          "Determine whether the fair value of the reporting unit exceeds its carrying amount including goodwill.",
+      },
+      {
+        title: "Document impairment conclusion",
+        description:
+          "Record whether goodwill is impaired and prepare supporting documentation for the analysis.",
+      },
+    ],
+    benefits: [
+      "Ensures goodwill is tested for impairment per ASC 350",
+      "Prevents overstated intangible asset balances",
+      "Provides audit support for significant judgments in valuation",
+      "Protects against future goodwill write-downs",
+    ],
+  },
+  {
+    slug: "related-party-transaction-log",
+    title: "Related Party Transaction Log",
+    description:
+      "Maintain a centralized log of all related party transactions for disclosure and control compliance purposes.",
+    category: "Close Management",
+    tags: ["Compliance", "Close"],
+    steps: [
+      {
+        title: "Define related parties",
+        description:
+          "Establish criteria for identifying related parties (shareholders, management, affiliated entities, etc.).",
+      },
+      {
+        title: "Identify transactions",
+        description:
+          "Search across all entity records for transactions involving related parties and document details.",
+      },
+      {
+        title: "Document terms and pricing",
+        description:
+          "Record the business purpose, terms, pricing rationale, and any board approvals for each transaction.",
+      },
+      {
+        title: "Prepare disclosure",
+        description:
+          "Compile information for financial statement footnote disclosure as required by accounting standards.",
+      },
+    ],
+    benefits: [
+      "Ensures all related party transactions are disclosed per ASC 850",
+      "Supports management assertions on related party transactions",
+      "Reduces audit procedures and findings",
+      "Demonstrates good internal controls over transaction authorization",
+    ],
+  },
+  {
+    slug: "contingent-liability-assessment",
+    title: "Contingent Liability Assessment",
+    description:
+      "Evaluate potential liabilities from pending litigation, claims, or other contingencies to determine appropriate accounting.",
+    category: "Close Management",
+    tags: ["Litigation", "Close"],
+    steps: [
+      {
+        title: "Obtain litigation summary",
+        description:
+          "Request from legal counsel a summary of all pending or threatened litigation and claims.",
+      },
+      {
+        title: "Assess probability",
+        description:
+          "Evaluate whether an unfavorable outcome is probable, reasonably possible, or remote.",
+      },
+      {
+        title: "Estimate loss amount",
+        description:
+          "Determine the range of potential loss and the best estimate if probable and measurable.",
+      },
+      {
+        title: "Determine accounting treatment",
+        description:
+          "Record a liability and expense if probable and measurable, otherwise evaluate disclosure requirements.",
+      },
+    ],
+    benefits: [
+      "Ensures contingent liabilities are properly accounted for under ASC 450",
+      "Prevents understated liabilities in the balance sheet",
+      "Provides required disclosures for litigation and claims",
+      "Supports management assertions on liabilities",
+    ],
+  },
+  {
+    slug: "sub-ledger-account-reconciliation",
+    title: "Sub-ledger Account Reconciliation",
+    description:
+      "Reconcile detailed sub-ledger accounts to the general ledger control account to ensure completeness and accuracy.",
+    category: "Close Management",
+    tags: ["Reconciliation", "Close"],
+    steps: [
+      {
+        title: "Pull sub-ledger detail",
+        description:
+          "Extract detailed transaction listing from the sub-ledger system or module for the account.",
+      },
+      {
+        title: "Sum sub-ledger transactions",
+        description:
+          "Total all sub-ledger transactions for the period and verify the sum matches the period activity.",
+      },
+      {
+        title: "Compare to GL control account",
+        description:
+          "Reconcile the sub-ledger total to the general ledger control account balance.",
+      },
+      {
+        title: "Investigate differences",
+        description:
+          "Research and resolve any reconciling items such as timing differences or posting errors.",
+      },
+      {
+        title: "Document sign-off",
+        description:
+          "Record the preparer and reviewer sign-off and attach supporting reconciliation to workpaper.",
+      },
+    ],
+    benefits: [
+      "Ensures sub-ledger records are complete and accurate",
+      "Detects posting errors, duplicate entries, or missing transactions",
+      "Provides audit trail for detailed account balances",
+      "Reduces errors and manual adjustments at close",
+    ],
+  },
+  {
+    slug: "manual-adjustment-sign-off-sheet",
+    title: "Manual Adjustment Sign-off Sheet",
+    description:
+      "Document all manual journal entries recorded during the close period with evidence of preparation, review, and approval.",
+    category: "Close Management",
+    tags: ["Journal Entries", "Close"],
+    steps: [
+      {
+        title: "List all manual entries",
+        description:
+          "Create a summary of every manual journal entry posted during the close (excluding automated feeds).",
+      },
+      {
+        title: "Document entry details",
+        description:
+          "Record the date, description, amount, accounts affected, and business purpose for each entry.",
+      },
+      {
+        title: "Require evidence",
+        description:
+          "Attach supporting documentation (e.g., calculations, authorizations, emails) to each entry.",
+      },
+      {
+        title: "Verify preparer initials",
+        description:
+          "Confirm that the employee preparing each entry has initialed and dated it.",
+      },
+      {
+        title: "Obtain approvals",
+        description:
+          "Collect evidence that a manager or accounting lead has reviewed and approved each adjustment.",
+      },
+    ],
+    benefits: [
+      "Provides clear audit trail for all manual close entries",
+      "Prevents unauthorized or erroneous adjustments",
+      "Reduces audit questions on adjustment justification",
+      "Strengthens internal controls over journal entry approval",
+    ],
+  },
+  {
+    slug: "period-end-accrual-review",
+    title: "Period-End Accrual Review",
+    description:
+      "Review all period-end accrual entries to ensure they are appropriate, reasonable, and supported by evidence.",
+    category: "Close Management",
+    tags: ["Accruals", "Close"],
+    steps: [
+      {
+        title: "Identify accrual entries",
+        description:
+          "Obtain a list of all period-end accruals recorded for utilities, professional fees, bonuses, etc.",
+      },
+      {
+        title: "Verify supporting evidence",
+        description:
+          "Ensure each accrual is supported by an invoice, contract, or other appropriate documentation.",
+      },
+      {
+        title: "Assess reasonableness",
+        description:
+          "Compare accrual amounts to prior period or budgeted amounts to identify anomalies.",
+      },
+      {
+        title: "Review subsequent payments",
+        description:
+          "Check that accruals recorded in the prior period were paid in the following period.",
+      },
+      {
+        title: "Approve accrual schedule",
+        description:
+          "Obtain sign-off from a manager confirming the appropriateness of all accruals.",
+      },
+    ],
+    benefits: [
+      "Ensures accruals are properly supported and reasonable",
+      "Prevents over-accruals that distort reported income",
+      "Reduces audit procedures and findings",
+      "Provides clear documentation of accrual judgments",
+    ],
+  },
+  {
+    slug: "balance-sheet-certification-template",
+    title: "Balance Sheet Certification Template",
+    description:
+      "Obtain signed certification from account owners that balance sheet accounts are accurate, complete, and free from error.",
+    category: "Close Management",
+    tags: ["Certification", "Close"],
+    steps: [
+      {
+        title: "Prepare account listing",
+        description:
+          "List all balance sheet accounts with their period-end balances for each account owner to review.",
+      },
+      {
+        title: "Distribute to account owners",
+        description:
+          "Send the listing to responsible managers with instructions for review and sign-off.",
+      },
+      {
+        title: "Document review and issues",
+        description:
+          "Require account owners to confirm accuracy or document any exceptions or issues identified.",
+      },
+      {
+        title: "Investigate and resolve exceptions",
+        description:
+          "Follow up on any flagged issues and ensure appropriate corrections are made.",
+      },
+      {
+        title: "Collect signed certifications",
+        description:
+          "Obtain signed documentation from account owners confirming their balance sheet accounts.",
+      },
+    ],
+    benefits: [
+      "Demonstrates that account owners have reviewed and accepted their balances",
+      "Creates accountability for balance sheet accuracy",
+      "Provides audit evidence of management's review",
+      "Identifies and resolves issues before financial statement issuance",
+    ],
+  },
+  // PHASE 4: Reconciliation (10 more templates)
+  {
+    slug: "inventory-reconciliation",
+    title: "Inventory Reconciliation",
+    description:
+      "Reconcile physical inventory counts to perpetual inventory records and the general ledger control account.",
+    category: "Reconciliation",
+    tags: ["Inventory", "Reconciliation"],
+    steps: [
+      {
+        title: "Obtain physical count results",
+        description:
+          "Collect the results from the physical inventory count including quantities and locations.",
+      },
+      {
+        title: "Extract perpetual records",
+        description:
+          "Pull the perpetual inventory system records showing quantities on hand for the same locations and items.",
+      },
+      {
+        title: "Reconcile quantities",
+        description:
+          "Compare physical counts to perpetual records and identify variances by item and location.",
+      },
+      {
+        title: "Investigate variances",
+        description:
+          "Determine root causes of variances such as shrinkage, counting errors, or timing differences.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify that the perpetual inventory balance ties to the GL inventory account at period end.",
+      },
+    ],
+    benefits: [
+      "Ensures inventory valuation is accurate for financial reporting",
+      "Identifies and prevents inventory shrinkage and losses",
+      "Detects obsolete or slow-moving inventory requiring write-down",
+      "Provides audit support for significant inventory balances",
+    ],
+  },
+  {
+    slug: "intangible-asset-rollforward",
+    title: "Intangible Asset Roll-forward",
+    description:
+      "Track the roll-forward of intangible assets including patents, trademarks, customer relationships, and software.",
+    category: "Reconciliation",
+    tags: ["Intangibles", "Reconciliation"],
+    steps: [
+      {
+        title: "List all intangible assets",
+        description:
+          "Create a schedule of all identified intangible assets with acquisition date and original cost.",
+      },
+      {
+        title: "Document useful lives",
+        description:
+          "Record the estimated useful life for each asset and the amortization method applied.",
+      },
+      {
+        title: "Calculate amortization",
+        description:
+          "Compute straight-line amortization for the period and update accumulated amortization.",
+      },
+      {
+        title: "Reconcile to trial balance",
+        description:
+          "Verify the rollforward ending balances tie to the GL accounts for intangible assets.",
+      },
+    ],
+    benefits: [
+      "Ensures intangible assets are properly amortized over useful lives",
+      "Prevents incorrect or missed amortization entries",
+      "Provides clear tracking of intangible asset activity",
+      "Supports GAAP compliance and audit requirements",
+    ],
+  },
+  {
+    slug: "deferred-tax-reconciliation",
+    title: "Deferred Tax Asset/Liability Schedule",
+    description:
+      "Maintain a comprehensive schedule of deferred tax assets and liabilities with roll-forward of temporary differences.",
+    category: "Reconciliation",
+    tags: ["Deferred Tax", "Reconciliation"],
+    steps: [
+      {
+        title: "Pull prior year deferred tax",
+        description:
+          "Obtain the beginning balance of deferred tax assets and liabilities from the prior close.",
+      },
+      {
+        title: "Identify current period changes",
+        description:
+          "List temporary differences created or reversed during the current period.",
+      },
+      {
+        title: "Calculate DTA/DTL balances",
+        description:
+          "Apply current tax rates to temporary differences to calculate ending deferred tax positions.",
+      },
+      {
+        title: "Assess valuation allowance",
+        description:
+          "Evaluate whether a valuation allowance should be recorded against deferred tax assets.",
+      },
+      {
+        title: "Reconcile tax provision",
+        description:
+          "Tie the change in deferred tax position to the tax expense recorded on the income statement.",
+      },
+    ],
+    benefits: [
+      "Ensures deferred tax positions are accurate and complete",
+      "Provides clear tracking of temporary difference changes",
+      "Supports accurate income tax provision calculation",
+      "Reduces audit findings related to deferred tax",
+    ],
+  },
+  {
+    slug: "lease-liability-reconciliation",
+    title: "Lease Liability Reconciliation",
+    description:
+      "Reconcile lease liabilities and right-of-use assets from the lease accounting system to the balance sheet.",
+    category: "Reconciliation",
+    tags: ["Leases", "Reconciliation"],
+    steps: [
+      {
+        title: "Extract lease accounting data",
+        description:
+          "Pull all lease records from the lease accounting system showing lease liability and ROU asset balances.",
+      },
+      {
+        title: "Verify lease identification",
+        description:
+          "Confirm that all executed leases are included in the system and no incorrect leases are present.",
+      },
+      {
+        title: "Reconcile to balance sheet",
+        description:
+          "Compare the lease liability and ROU asset totals from the system to the GL accounts.",
+      },
+      {
+        title: "Verify lease payments",
+        description:
+          "Test that actual lease payments match the expected payment schedule in the system.",
+      },
+    ],
+    benefits: [
+      "Ensures ASC 842 lease accounting is complete and accurate",
+      "Detects missing or duplicate leases in the accounting system",
+      "Provides audit support for lease liability and ROU asset balances",
+      "Reduces audit procedures related to lease compliance",
+    ],
+  },
+  {
+    slug: "pension-benefit-reconciliation",
+    title: "Pension/Benefit Obligation Reconciliation",
+    description:
+      "Reconcile the pension or benefit plan obligation calculated by actuaries to the balance sheet accrued liability.",
+    category: "Reconciliation",
+    tags: ["Pension", "Reconciliation"],
+    steps: [
+      {
+        title: "Obtain actuarial valuation",
+        description:
+          "Collect the actuarial report showing the projected benefit obligation or accumulated benefit obligation.",
+      },
+      {
+        title: "Verify plan data",
+        description:
+          "Confirm that actuarial assumptions and participant data used are accurate and complete.",
+      },
+      {
+        title: "Reconcile to GL account",
+        description:
+          "Compare the actuarial obligation to the accrued pension liability recorded on the balance sheet.",
+      },
+      {
+        title: "Document adjustments",
+        description:
+          "Prepare reconciling items such as time lag adjustments or measurement date differences.",
+      },
+      {
+        title: "Review expense calculation",
+        description:
+          "Verify that pension expense recognized matches the actuarial calculation.",
+      },
+    ],
+    benefits: [
+      "Ensures pension obligations are accurate per ASC 715",
+      "Provides clear tracking of benefit plan activity",
+      "Supports management pension expense assertions",
+      "Reduces audit procedures for significant liability",
+    ],
+  },
+  {
+    slug: "derivative-contract-reconciliation",
+    title: "Derivative Contract Reconciliation",
+    description:
+      "Reconcile derivative instruments (hedges, swaps, forwards) recorded in the accounting system to contract terms and fair values.",
+    category: "Reconciliation",
+    tags: ["Derivatives", "Reconciliation"],
+    steps: [
+      {
+        title: "List all derivative contracts",
+        description:
+          "Create a master schedule of all outstanding derivative instruments and their terms.",
+      },
+      {
+        title: "Obtain counterparty valuations",
+        description:
+          "Collect fair value estimates from counterparties or independent pricing services.",
+      },
+      {
+        title: "Verify hedge designation",
+        description:
+          "Confirm that derivatives are properly designated as cash flow, fair value, or net investment hedges.",
+      },
+      {
+        title: "Reconcile recorded amounts",
+        description:
+          "Verify that fair value gains/losses and balance sheet positions match accounting records.",
+      },
+    ],
+    benefits: [
+      "Ensures derivative positions are accurately valued and recorded",
+      "Prevents improperly designated hedges affecting earnings",
+      "Provides clear audit trail for derivative accounting",
+      "Supports compliance with ASC 815 hedge accounting rules",
+    ],
+  },
+  {
+    slug: "environmental-liability-schedule",
+    title: "Environmental Liability Schedule",
+    description:
+      "Track environmental remediation liabilities and costs related to contaminated sites or spill cleanup.",
+    category: "Reconciliation",
+    tags: ["Environmental", "Reconciliation"],
+    steps: [
+      {
+        title: "Identify contaminated sites",
+        description:
+          "Document all known or suspected environmental contamination at company facilities.",
+      },
+      {
+        title: "Obtain remediation estimates",
+        description:
+          "Collect engineering estimates for the cost to remediate each identified environmental issue.",
+      },
+      {
+        title: "Assess timing and probability",
+        description:
+          "Determine when remediation will occur and whether the liability should be accrued.",
+      },
+      {
+        title: "Record accrual and disclosures",
+        description:
+          "Prepare the liability accrual and document required environmental disclosures.",
+      },
+    ],
+    benefits: [
+      "Ensures environmental liabilities are properly accounted for per ASC 450",
+      "Prevents unexpected environmental remediation costs",
+      "Provides required environmental liability disclosures",
+      "Demonstrates compliance with environmental regulations",
+    ],
+  },
+  {
+    slug: "insurance-receivable-reconciliation",
+    title: "Insurance Receivable Reconciliation",
+    description:
+      "Reconcile insurance receivables (claims receivable from insurers) to supporting documentation and verify collection.",
+    category: "Reconciliation",
+    tags: ["Insurance", "Reconciliation"],
+    steps: [
+      {
+        title: "List pending insurance claims",
+        description:
+          "Create a schedule of all submitted insurance claims and claims in process.",
+      },
+      {
+        title: "Verify claim details",
+        description:
+          "Confirm that documented claim amounts match insurance adjuster estimates.",
+      },
+      {
+        title: "Track collections",
+        description:
+          "Monitor insurance claim status and record payments received from insurers.",
+      },
+      {
+        title: "Review aging",
+        description:
+          "Analyze aging of outstanding receivables and assess allowance for uncollectible claims.",
+      },
+      {
+        title: "Reconcile balance",
+        description:
+          "Tie the claims receivable schedule to the GL account balance.",
+      },
+    ],
+    benefits: [
+      "Ensures insurance recovery claims are properly recorded",
+      "Accelerates collection of insurance proceeds",
+      "Provides audit support for claims receivable balance",
+      "Reduces exposure to uncollectible claims",
+    ],
+  },
+  {
+    slug: "warranty-obligation-tracking",
+    title: "Warranty Obligation Tracking",
+    description:
+      "Track warranty liabilities by product or program and reconcile estimated obligations to actual costs incurred.",
+    category: "Reconciliation",
+    tags: ["Warranty", "Reconciliation"],
+    steps: [
+      {
+        title: "Calculate warranty accrual",
+        description:
+          "Estimate warranty costs based on historical failure rates and cost per claim.",
+      },
+      {
+        title: "Tie to revenue",
+        description:
+          "Ensure warranty accrual percentages are reasonable relative to sales volume.",
+      },
+      {
+        title: "Track warranty claims",
+        description:
+          "Record actual warranty claims paid and update the accrual balance.",
+      },
+      {
+        title: "Analyze variances",
+        description:
+          "Compare actual warranty costs to estimates and adjust future accruals as needed.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify the warranty liability schedule ties to the balance sheet accrual account.",
+      },
+    ],
+    benefits: [
+      "Ensures warranty liabilities are reasonable and properly supported",
+      "Tracks actual warranty costs against estimates",
+      "Provides clear warranty expense tracking",
+      "Reduces audit questions on warranty accrual appropriateness",
+    ],
+  },
+  {
+    slug: "loan-covenant-compliance-schedule",
+    title: "Loan Covenant Compliance Schedule",
+    description:
+      "Calculate and monitor loan covenant compliance metrics such as debt-to-EBITDA, interest coverage, and working capital requirements.",
+    category: "Reconciliation",
+    tags: ["Debt", "Compliance"],
+    steps: [
+      {
+        title: "Extract loan terms",
+        description:
+          "Document the covenant requirements from each loan agreement including calculation methods.",
+      },
+      {
+        title: "Calculate covenant metrics",
+        description:
+          "Compute ratios such as leverage, interest coverage, and current ratio using financial statement data.",
+      },
+      {
+        title: "Compare to requirements",
+        description:
+          "Determine whether the entity is in compliance with each covenant as of the measurement date.",
+      },
+      {
+        title: "Document waivers if needed",
+        description:
+          "If non-compliance exists, document any obtained or pending waivers from lenders.",
+      },
+      {
+        title: "Prepare disclosure",
+        description:
+          "Include covenant compliance disclosure in financial statements or footnotes as required.",
+      },
+    ],
+    benefits: [
+      "Ensures loan covenant compliance is monitored and documented",
+      "Identifies covenant violations early for lender discussion",
+      "Provides clear calculation methodology for covenant metrics",
+      "Supports accurate debt disclosures in financial statements",
+    ],
+  },
+  // PHASE 4: Accounts Payable (10 more templates)
+  {
+    slug: "invoice-processing-checklist",
+    title: "Invoice Processing Checklist",
+    description:
+      "Standardize the invoice processing workflow to ensure all invoices are received, coded, and recorded consistently.",
+    category: "Accounts Payable",
+    tags: ["Payables", "Process"],
+    steps: [
+      {
+        title: "Receive and scan invoice",
+        description:
+          "Ensure all invoices are received in the AP inbox and scanned into the document management system.",
+      },
+      {
+        title: "Match to PO and receipt",
+        description:
+          "Verify that the invoice matches a valid purchase order and that goods/services have been received.",
+      },
+      {
+        title: "Verify invoice details",
+        description:
+          "Confirm vendor name, amount, account codes, and invoice terms are correct and reasonable.",
+      },
+      {
+        title: "Code to GL accounts",
+        description:
+          "Assign the invoice to appropriate expense or asset accounts based on the nature of goods/services.",
+      },
+      {
+        title: "Record in AP system",
+        description:
+          "Enter the invoice into the AP system with due date and processing status for payment tracking.",
+      },
+    ],
+    benefits: [
+      "Standardizes invoice processing and reduces processing time",
+      "Prevents duplicate invoice payments and posting errors",
+      "Ensures all invoices are properly coded to GL accounts",
+      "Enables efficient AP aging and payment planning",
+    ],
+  },
+  {
+    slug: "accrued-expense-rollforward",
+    title: "Accrued Expense Roll-forward",
+    description:
+      "Track the beginning balance, new accruals, payments, and ending balance of accrued expenses each period.",
+    category: "Accounts Payable",
+    tags: ["Accruals", "Payables"],
+    steps: [
+      {
+        title: "Pull beginning balance",
+        description:
+          "Start with the prior period ending accrued expense balance by GL account.",
+      },
+      {
+        title: "Record reversal",
+        description:
+          "Record the reversal of prior period accruals at the beginning of the new period.",
+      },
+      {
+        title: "Record new accruals",
+        description:
+          "Estimate and record accruals for the current period (utilities, professional fees, bonuses, etc.).",
+      },
+      {
+        title: "Record actual payments",
+        description:
+          "Track actual payments made against accrued liabilities and update the accrual balance.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify the ending accrual balance ties to the GL control account.",
+      },
+    ],
+    benefits: [
+      "Ensures accurate accrual of period expenses",
+      "Tracks accrual reversals to prevent double-counting",
+      "Provides clear visibility of accrual timing differences",
+      "Reduces audit findings on accrual accuracy",
+    ],
+  },
+  {
+    slug: "open-po-reconciliation",
+    title: "Open PO Reconciliation",
+    description:
+      "Reconcile open purchase orders to accrued expenses and follow up on aging items.",
+    category: "Accounts Payable",
+    tags: ["Purchase Orders", "Payables"],
+    steps: [
+      {
+        title: "Extract open POs",
+        description:
+          "Pull a list of all open (unreceived) purchase orders from the procurement system.",
+      },
+      {
+        title: "Analyze aging",
+        description:
+          "Identify POs that have been outstanding for extended periods without receipt.",
+      },
+      {
+        title: "Follow up on exceptions",
+        description:
+          "Contact vendors or procurement team to determine status of aged POs.",
+      },
+      {
+        title: "Reconcile to accruals",
+        description:
+          "Verify that expected receipts not yet invoiced are properly accrued in AP.",
+      },
+    ],
+    benefits: [
+      "Identifies stale or canceled POs that need cleanup",
+      "Ensures goods expected to be received are properly accrued",
+      "Improves vendor communication and order follow-up",
+      "Prevents duplicate orders for same requirements",
+    ],
+  },
+  {
+    slug: "vendor-master-data-review",
+    title: "Vendor Master Data Review",
+    description:
+      "Periodically review and validate vendor master file data to ensure accuracy and prevent fraud.",
+    category: "Accounts Payable",
+    tags: ["Vendor", "Compliance"],
+    steps: [
+      {
+        title: "Extract vendor list",
+        description:
+          "Pull a complete list of all vendors from the AP system including contact and payment information.",
+      },
+      {
+        title: "Identify duplicate vendors",
+        description:
+          "Search for duplicate vendor records that may have resulted from data entry errors.",
+      },
+      {
+        title: "Verify vendor details",
+        description:
+          "Confirm that vendor names, addresses, and payment methods are current and legitimate.",
+      },
+      {
+        title: "Review inactive vendors",
+        description:
+          "Identify vendors with no recent activity and evaluate whether they should be deactivated.",
+      },
+    ],
+    benefits: [
+      "Prevents vendor master fraud and payment to fraudulent vendors",
+      "Eliminates duplicate vendor records and consolidates payments",
+      "Ensures accurate vendor contact and payment information",
+      "Strengthens internal controls over vendor payments",
+    ],
+  },
+  {
+    slug: "ap-aging-followup-tracker",
+    title: "AP Aging Follow-up Tracker",
+    description:
+      "Track aging of unpaid invoices and follow up on items nearing or past the discount cutoff or due date.",
+    category: "Accounts Payable",
+    tags: ["Aging", "Payables"],
+    steps: [
+      {
+        title: "Generate AP aging report",
+        description:
+          "Extract aging of unpaid invoices from the AP system broken down by aging buckets.",
+      },
+      {
+        title: "Identify discounts available",
+        description:
+          "Determine which invoices qualify for early payment discounts based on terms and timing.",
+      },
+      {
+        title: "Flag for payment",
+        description:
+          "Mark invoices due soon and those with available discounts for payment processing.",
+      },
+      {
+        title: "Investigate overdue items",
+        description:
+          "Research invoices past due date to determine reason for delay and initiate follow-up.",
+      },
+      {
+        title: "Track and report",
+        description:
+          "Monitor progress on overdue items and provide management with aging trends.",
+      },
+    ],
+    benefits: [
+      "Improves vendor relationships through timely payment",
+      "Captures available early payment discounts for cost savings",
+      "Identifies and resolves payment issues promptly",
+      "Provides visibility into AP aging and cash flow requirements",
+    ],
+  },
+  {
+    slug: "expense-allocation-schedule",
+    title: "Expense Allocation Schedule",
+    description:
+      "Allocate shared expenses (rent, utilities, depreciation) across departments or locations based on usage or headcount.",
+    category: "Accounts Payable",
+    tags: ["Allocation", "Expense"],
+    steps: [
+      {
+        title: "Identify shared expenses",
+        description:
+          "List all company expenses that benefit multiple departments or locations.",
+      },
+      {
+        title: "Determine allocation basis",
+        description:
+          "Select appropriate allocation method (square footage, headcount, usage hours, revenue, etc.).",
+      },
+      {
+        title: "Calculate allocation amounts",
+        description:
+          "Apply the allocation basis to distribute shared expenses to responsible departments.",
+      },
+      {
+        title: "Prepare journal entries",
+        description:
+          "Record entries to move allocated expenses from common accounts to department cost centers.",
+      },
+      {
+        title: "Reconcile totals",
+        description:
+          "Verify that total allocated amounts equal the original shared expense.",
+      },
+    ],
+    benefits: [
+      "Provides accurate department expense reporting for cost center management",
+      "Improves accountability by allocating shared costs fairly",
+      "Enables analysis of true department profitability and performance",
+      "Supports pricing and budgeting decisions by department",
+    ],
+  },
+  {
+    slug: "purchase-order-approval-log",
+    title: "Purchase Order Approval Log",
+    description:
+      "Maintain documentation of all purchase order approvals to demonstrate compliance with authorization limits.",
+    category: "Accounts Payable",
+    tags: ["Purchase Orders", "Compliance"],
+    steps: [
+      {
+        title: "Define approval authorities",
+        description:
+          "Establish PO approval limits by role and document the delegation of authority.",
+      },
+      {
+        title: "Track PO submissions",
+        description:
+          "Log all submitted POs with date, amount, vendor, and requesting department.",
+      },
+      {
+        title: "Collect approval evidence",
+        description:
+          "Obtain electronic or physical signatures from appropriate authorizers for each PO.",
+      },
+      {
+        title: "Review compliance",
+        description:
+          "Verify that each PO received approval from someone with sufficient authority limits.",
+      },
+      {
+        title: "Archive documentation",
+        description:
+          "Maintain organized files of all POs and approval documentation for audit and reference.",
+      },
+    ],
+    benefits: [
+      "Ensures all POs are approved by authorized personnel",
+      "Prevents unauthorized spending and vendor fraud",
+      "Provides audit trail of PO authorization process",
+      "Strengthens internal controls over purchasing",
+    ],
+  },
+  {
+    slug: "monthly-bill-review-procedure",
+    title: "Monthly Bill Review Procedure",
+    description:
+      "Establish a standardized procedure for reviewing all bills received during the month before payment.",
+    category: "Accounts Payable",
+    tags: ["Billing", "Payables"],
+    steps: [
+      {
+        title: "Collect invoices for review",
+        description:
+          "Gather all invoices received during the period that are ready for payment review.",
+      },
+      {
+        title: "Verify business purpose",
+        description:
+          "Confirm that each invoice is for services or goods actually received and authorized.",
+      },
+      {
+        title: "Review charges and terms",
+        description:
+          "Evaluate invoice amounts and terms for reasonableness and comparison to contract terms.",
+      },
+      {
+        title: "Check for discrepancies",
+        description:
+          "Flag any duplicate invoices, pricing errors, or other discrepancies for resolution.",
+      },
+      {
+        title: "Approve and process",
+        description:
+          "Obtain management sign-off on the invoice batch and release for payment processing.",
+      },
+    ],
+    benefits: [
+      "Prevents payment of duplicate, erroneous, or fraudulent invoices",
+      "Provides management review and approval before payment",
+      "Identifies billing errors and enables negotiation of credits",
+      "Strengthens controls over cash outflow",
+    ],
+  },
+  {
+    slug: "three-way-match-verification",
+    title: "Three-Way Match Verification",
+    description:
+      "Verify that purchase order, receipt, and invoice match before approving payment (quantity, price, quality).",
+    category: "Accounts Payable",
+    tags: ["Matching", "Payables"],
+    steps: [
+      {
+        title: "Pull matching documents",
+        description:
+          "Gather the PO, receipt record, and invoice for the transaction being matched.",
+      },
+      {
+        title: "Verify quantities match",
+        description:
+          "Confirm that ordered quantity matches received quantity and invoiced quantity.",
+      },
+      {
+        title: "Verify prices match",
+        description:
+          "Confirm that PO unit price matches the invoiced unit price within acceptable variance.",
+      },
+      {
+        title: "Verify receipt",
+        description:
+          "Confirm that goods were actually received and accepted per the receipt documentation.",
+      },
+      {
+        title: "Flag exceptions",
+        description:
+          "Identify and document any exceptions for follow-up with procurement or vendor.",
+      },
+    ],
+    benefits: [
+      "Prevents overpayment and erroneous invoice amounts",
+      "Ensures only received goods are paid",
+      "Catches pricing errors before payment is made",
+      "Strengthens controls over purchase-to-pay process",
+    ],
+  },
+  {
+    slug: "vendor-invoice-dispute-log",
+    title: "Vendor Invoice Dispute Log",
+    description:
+      "Document and track the resolution of disputed invoices including payment holds and vendor communication.",
+    category: "Accounts Payable",
+    tags: ["Disputes", "Payables"],
+    steps: [
+      {
+        title: "Log disputed invoice",
+        description:
+          "Record the invoice details, dispute reason, and amount in dispute when an issue is identified.",
+      },
+      {
+        title: "Communicate with vendor",
+        description:
+          "Contact the vendor with details of the dispute and request documentation or explanation.",
+      },
+      {
+        title: "Place payment hold",
+        description:
+          "Flag the disputed invoice in AP system to prevent accidental payment while under dispute.",
+      },
+      {
+        title: "Document resolution",
+        description:
+          "Record the agreed resolution such as credit, partial payment, or adjustment.",
+      },
+      {
+        title: "Process resolution",
+        description:
+          "Record the journal entry or payment adjustment to resolve the dispute.",
+      },
+    ],
+    benefits: [
+      "Ensures disputed invoices are tracked and not lost",
+      "Improves vendor communication and issue resolution",
+      "Prevents erroneous payments on disputed amounts",
+      "Provides clear record of dispute and resolution",
+    ],
+  },
+  // PHASE 4: Accounts Receivable (8 more templates)
+  {
+    slug: "revenue-recognition-checklist",
+    title: "Revenue Recognition Checklist",
+    description:
+      "Ensure each revenue transaction meets criteria for recognition under ASC 606 (performance obligations, consideration, control transfer).",
+    category: "Accounts Receivable",
+    tags: ["Revenue", "Compliance"],
+    steps: [
+      {
+        title: "Identify contract",
+        description:
+          "Confirm that a valid contract exists with identified parties, terms, and consideration.",
+      },
+      {
+        title: "Identify performance obligations",
+        description:
+          "Determine what goods or services are promised and whether they are distinct.",
+      },
+      {
+        title: "Determine transaction price",
+        description:
+          "Identify the consideration received and adjust for variable consideration or time value of money.",
+      },
+      {
+        title: "Determine transfer point",
+        description:
+          "Determine when control of promised goods/services transfers to the customer.",
+      },
+      {
+        title: "Record revenue",
+        description:
+          "Record revenue when control transfers; allocate transaction price to performance obligations.",
+      },
+    ],
+    benefits: [
+      "Ensures revenue is recognized per ASC 606 requirements",
+      "Prevents premature or delayed revenue recognition",
+      "Provides audit support for revenue transactions",
+      "Reduces audit findings related to revenue",
+    ],
+  },
+  {
+    slug: "contract-review-workpaper",
+    title: "Contract Review Workpaper",
+    description:
+      "Document the contract review process for significant customer contracts to ensure all terms are identified and recorded.",
+    category: "Accounts Receivable",
+    tags: ["Contracts", "Revenue"],
+    steps: [
+      {
+        title: "Extract contract terms",
+        description:
+          "Pull all significant terms from the contract including goods/services, pricing, payment terms, and warranties.",
+      },
+      {
+        title: "Identify revenue impacts",
+        description:
+          "Document how the contract affects revenue recognition timing, amount, and performance obligations.",
+      },
+      {
+        title: "Document contingencies",
+        description:
+          "Note any contingent payment terms, performance bonuses, or termination clauses affecting revenue.",
+      },
+      {
+        title: "Obtain sign-off",
+        description:
+          "Have revenue and legal functions review and sign-off on the revenue accounting treatment.",
+      },
+    ],
+    benefits: [
+      "Ensures contracts are properly reviewed before revenue is recognized",
+      "Identifies contract terms that affect revenue timing or amount",
+      "Provides documentation of revenue recognition judgments",
+      "Reduces audit procedures and findings on contracts",
+    ],
+  },
+  {
+    slug: "performance-obligation-tracking",
+    title: "Performance Obligation Tracking",
+    description:
+      "Track performance obligations that have not yet been satisfied and will generate future revenue.",
+    category: "Accounts Receivable",
+    tags: ["Revenue", "Deferred"],
+    steps: [
+      {
+        title: "Identify open obligations",
+        description:
+          "List all contracts where goods have not been delivered or services not yet provided.",
+      },
+      {
+        title: "Document performance progress",
+        description:
+          "Record the percentage of completion or status of satisfaction for each obligation.",
+      },
+      {
+        title: "Calculate remaining revenue",
+        description:
+          "Determine the revenue that will be recognized as each obligation is satisfied.",
+      },
+      {
+        title: "Project satisfaction timing",
+        description:
+          "Estimate when each performance obligation will be satisfied and revenue recognized.",
+      },
+    ],
+    benefits: [
+      "Provides clear tracking of contract performance and remaining work",
+      "Enables accurate backlog and future revenue projections",
+      "Supports management revenue forecasting",
+      "Reduces risks of overlooked revenue recognition",
+    ],
+  },
+  {
+    slug: "deferred-revenue-schedule",
+    title: "Deferred Revenue Schedule",
+    description:
+      "Track deferred (unearned) revenue from customer payments received in advance of performance.",
+    category: "Accounts Receivable",
+    tags: ["Deferred", "Revenue"],
+    steps: [
+      {
+        title: "List contracts with deferred revenue",
+        description:
+          "Identify all customers who have paid in advance and create a schedule by customer.",
+      },
+      {
+        title: "Calculate recognition in period",
+        description:
+          "Determine the amount of deferred revenue that should be recognized as revenue in the period.",
+      },
+      {
+        title: "Adjust deferred revenue balance",
+        description:
+          "Record the journal entry to recognize revenue and reduce the deferred revenue liability.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify that the ending deferred revenue balance ties to the GL control account.",
+      },
+      {
+        title: "Disclose future recognition",
+        description:
+          "Document the timing and amount of deferred revenue expected to be recognized in future periods.",
+      },
+    ],
+    benefits: [
+      "Ensures deferred revenue is recognized as goods/services are delivered",
+      "Tracks customer advance payments and fulfillment status",
+      "Provides clear balance sheet liability for future performance",
+      "Supports revenue recognition disclosures in financial statements",
+    ],
+  },
+  {
+    slug: "allowance-doubtful-accounts",
+    title: "Allowance for Doubtful Accounts Calculation",
+    description:
+      "Calculate the allowance for credit losses based on aging, historical write-offs, and customer creditworthiness.",
+    category: "Accounts Receivable",
+    tags: ["Allowance", "AR"],
+    steps: [
+      {
+        title: "Analyze AR aging",
+        description:
+          "Review the age of receivables and identify accounts that are overdue or at risk.",
+      },
+      {
+        title: "Evaluate creditworthiness",
+        description:
+          "Assess each customer's credit history, payment trends, and financial condition.",
+      },
+      {
+        title: "Calculate provision",
+        description:
+          "Estimate uncollectible amounts based on aging analysis, historical loss rates, and judgments.",
+      },
+      {
+        title: "Record adjustment",
+        description:
+          "Adjust the allowance account to the calculated amount and record the provision expense.",
+      },
+      {
+        title: "Monitor collections",
+        description:
+          "Track actual write-offs against the allowance and adjust methodology as needed.",
+      },
+    ],
+    benefits: [
+      "Ensures AR is presented at net realizable value per GAAP",
+      "Prevents overstated receivables and earnings",
+      "Provides audit support for allowance estimates",
+      "Enables accurate assessment of collection risk",
+    ],
+  },
+  {
+    slug: "warranty-revenue-schedule",
+    title: "Warranty Revenue Schedule",
+    description:
+      "Track warranty services included with product sales and recognize revenue as warranty services are performed.",
+    category: "Accounts Receivable",
+    tags: ["Warranty", "Revenue"],
+    steps: [
+      {
+        title: "Identify warranties in contracts",
+        description:
+          "Determine whether warranty services are a separate performance obligation.",
+      },
+      {
+        title: "Allocate transaction price",
+        description:
+          "Allocate the sales price between the product and warranty service based on standalone selling prices.",
+      },
+      {
+        title: "Track warranty services",
+        description:
+          "Monitor warranty claims and services performed during the warranty period.",
+      },
+      {
+        title: "Recognize warranty revenue",
+        description:
+          "Recognize warranty revenue ratably over the warranty period as the obligation is satisfied.",
+      },
+    ],
+    benefits: [
+      "Ensures warranty obligations are properly recorded as separate performance obligations",
+      "Prevents overstating product revenue by mixing warranty revenue",
+      "Provides clear tracking of warranty period and revenue recognition timing",
+      "Supports revenue recognition disclosures",
+    ],
+  },
+  {
+    slug: "channel-incentive-accrual",
+    title: "Channel Incentive Accrual",
+    description:
+      "Accrue rebates, discounts, or incentives owed to distributors, resellers, or channel partners.",
+    category: "Accounts Receivable",
+    tags: ["Incentives", "Revenue"],
+    steps: [
+      {
+        title: "Identify incentive programs",
+        description:
+          "Document all active channel incentive or rebate programs offered to partners.",
+      },
+      {
+        title: "Calculate accrued amounts",
+        description:
+          "Calculate partner incentives earned based on sales volume and program terms.",
+      },
+      {
+        title: "Reduce revenue",
+        description:
+          "Record the incentive as a reduction to revenue (or cost of sales) rather than expense.",
+      },
+      {
+        title: "Track payments",
+        description:
+          "Monitor incentive payments made to partners and tie to accrual.",
+      },
+        {
+        title: "Disclose programs",
+        description:
+          "Document the nature and impact of channel incentive programs in revenue disclosures.",
+      },
+    ],
+    benefits: [
+      "Ensures channel incentives properly reduce reported revenue",
+      "Prevents overstating net revenue by treating incentives as expense",
+      "Provides tracking of incentive payments and partner relationships",
+      "Supports revenue presentation and disclosure requirements",
+    ],
+  },
+  {
+    slug: "customer-credit-limit-review",
+    title: "Customer Credit Limit Review",
+    description:
+      "Periodically review and adjust customer credit limits based on payment history and creditworthiness.",
+    category: "Accounts Receivable",
+    tags: ["Credit", "AR"],
+    steps: [
+      {
+        title: "Review payment history",
+        description:
+          "Analyze each customer's payment patterns, on-time payment rate, and any delinquencies.",
+      },
+      {
+        title: "Assess credit risk",
+        description:
+          "Evaluate current credit conditions and customer financial performance.",
+      },
+      {
+        title: "Adjust credit limits",
+        description:
+          "Increase limits for strong customers, reduce limits for payment issues or credit deterioration.",
+      },
+      {
+        title: "Communicate changes",
+        description:
+          "Notify customers of any credit limit changes and update the AR system.",
+      },
+      {
+        title: "Monitor compliance",
+        description:
+          "Ensure sales team respects updated credit limits to minimize credit risk.",
+      },
+    ],
+    benefits: [
+      "Manages credit risk by limiting exposure to high-risk customers",
+      "Encourages timely payment through credit limit reviews",
+      "Reduces bad debt write-offs and collection issues",
+      "Balances growth with prudent credit management",
+    ],
+  },
+  // PHASE 4: Cash & Treasury (9 templates)
+  {
+    slug: "daily-cash-position-report",
+    title: "Daily Cash Position Report",
+    description:
+      "Prepare a daily summary of cash balances across all accounts and locations for liquidity monitoring.",
+    category: "Cash & Treasury",
+    tags: ["Cash", "Daily"],
+    steps: [
+      {
+        title: "Collect account balances",
+        description:
+          "Gather cash balances from all bank accounts including checking, savings, and sweep accounts.",
+      },
+      {
+        title: "Include outstanding items",
+        description:
+          "Add outstanding checks, wire transfers in process, and pending deposits.",
+      },
+      {
+        title: "Calculate net position",
+        description:
+          "Summarize total available cash and identify any cash shortage or excess position.",
+      },
+      {
+        title: "Compare to forecast",
+        description:
+          "Analyze actual cash against daily forecast to identify variances.",
+      },
+      {
+        title: "Distribute report",
+        description:
+          "Share the daily cash position with treasury, finance leadership, and operations as needed.",
+      },
+    ],
+    benefits: [
+      "Provides daily visibility into cash availability for operational and strategic decisions",
+      "Enables proactive cash management and borrowing decisions",
+      "Identifies timing mismatches between payables and receivables",
+      "Supports accurate short-term liquidity forecasting",
+    ],
+  },
+  {
+    slug: "liquidity-forecast-model",
+    title: "Liquidity Forecast Model",
+    description:
+      "Build a rolling cash flow forecast model to project cash position over the next 13 weeks.",
+    category: "Cash & Treasury",
+    tags: ["Forecast", "Cash"],
+    steps: [
+      {
+        title: "Establish forecast periods",
+        description:
+          "Set up weekly or daily forecast periods for the next 13 weeks with starting cash balance.",
+      },
+      {
+        title: "Project operating inflows",
+        description:
+          "Forecast expected receipts from customers, insurance, and other operational sources.",
+      },
+      {
+        title: "Project operating outflows",
+        description:
+          "Forecast payroll, vendor payments, loan repayments, and other operating disbursements.",
+      },
+      {
+        title: "Include financing activities",
+        description:
+          "Model borrowings, debt payments, equity contributions, and dividend payments.",
+      },
+      {
+        title: "Calculate minimum cash balance",
+        description:
+          "Identify periods where borrowing may be needed and track borrowing capacity.",
+      },
+    ],
+    benefits: [
+      "Enables proactive liquidity management and financing planning",
+      "Identifies cash shortfalls or excess in advance for better decision-making",
+      "Supports working capital optimization and payment timing",
+      "Reduces emergency borrowing and associated costs",
+    ],
+  },
+  {
+    slug: "bank-account-reconciliation",
+    title: "Bank Account Reconciliation",
+    description:
+      "Reconcile all bank accounts to the general ledger and identify and resolve reconciling items.",
+    category: "Cash & Treasury",
+    tags: ["Bank", "Reconciliation"],
+    steps: [
+      {
+        title: "Obtain bank statement",
+        description:
+          "Collect the bank statement for each account for the period being reconciled.",
+      },
+      {
+        title: "Start with bank balance",
+        description:
+          "Note the ending cash balance per the bank statement as the starting point.",
+      },
+      {
+        title: "Add deposits in transit",
+        description:
+          "Add deposits recorded in the GL but not yet reflected in the bank statement.",
+      },
+      {
+        title: "Subtract outstanding checks",
+        description:
+          "Subtract checks written and recorded but not yet cleared by the bank.",
+      },
+      {
+        title: "Adjust for other items",
+        description:
+          "Adjust for bank errors, service charges, and other reconciling items.",
+      },
+    ],
+    benefits: [
+      "Ensures cash balance in the GL matches bank records",
+      "Identifies theft, fraud, or unauthorized transactions",
+      "Detects bank errors and processing issues",
+      "Provides audit support for cash accounts",
+    ],
+  },
+  {
+    slug: "wire-transfer-approval-log",
+    title: "Wire Transfer Approval Log",
+    description:
+      "Document and track all wire transfers with appropriate authorizations before payment is released.",
+    category: "Cash & Treasury",
+    tags: ["Wires", "Payments"],
+    steps: [
+      {
+        title: "Prepare wire request",
+        description:
+          "Submit wire transfer request with payee name, account, amount, and business purpose.",
+      },
+      {
+        title: "Verify payee details",
+        description:
+          "Confirm wire is to correct vendor/payee by cross-referencing master file or contract.",
+      },
+      {
+        title: "Obtain authorization",
+        description:
+          "Collect evidence of approval from appropriate level of management based on amount.",
+      },
+      {
+        title: "Process wire transfer",
+        description:
+          "Execute the wire and record the payment in the cash and AP systems.",
+      },
+      {
+        title: "Document and archive",
+        description:
+          "File the wire transfer request with supporting approval and confirmation in the approval log.",
+      },
+    ],
+    benefits: [
+      "Prevents unauthorized wire transfers and fraud",
+      "Creates clear authorization trail for significant payments",
+      "Reduces wire transfer errors and duplicate payments",
+      "Strengthens internal controls over cash disbursement",
+    ],
+  },
+  {
+    slug: "cash-flow-variance-analysis",
+    title: "Cash Flow Variance Analysis",
+    description:
+      "Compare actual cash flows to forecast and analyze significant variances to improve forecasting.",
+    category: "Cash & Treasury",
+    tags: ["Variance", "Cash"],
+    steps: [
+      {
+        title: "Compile actual cash flows",
+        description:
+          "Extract actual cash inflows and outflows for the period from GL or bank records.",
+      },
+      {
+        title: "Compare to forecast",
+        description:
+          "Calculate variance between forecasted and actual cash flows by category.",
+      },
+      {
+        title: "Analyze significant variances",
+        description:
+          "Investigate material variances (e.g., 10%+ difference) to identify root causes.",
+      },
+      {
+        title: "Document explanations",
+        description:
+          "Record explanations for variances (e.g., timing differences, operational changes).",
+      },
+      {
+        title: "Improve forecast",
+        description:
+          "Adjust forecasting methodology or assumptions based on variance analysis.",
+      },
+    ],
+    benefits: [
+      "Improves accuracy of future cash forecasts",
+      "Identifies systematic forecasting errors for correction",
+      "Enables better cash management through more accurate planning",
+      "Provides visibility into operational and strategic changes affecting cash",
+    ],
+  },
+  {
+    slug: "money-market-fund-tracking",
+    title: "Money Market Fund Tracking",
+    description:
+      "Maintain records of money market investments including purchases, maturities, and returns.",
+    category: "Cash & Treasury",
+    tags: ["Investments", "Cash"],
+    steps: [
+      {
+        title: "Record investment purchases",
+        description:
+          "Document each money market fund purchase with date, issuer, amount, and maturity.",
+      },
+      {
+        title: "Calculate maturity value",
+        description:
+          "Determine the interest earned and maturity value of each investment.",
+      },
+      {
+        title: "Track realized returns",
+        description:
+          "Record interest received and gains/losses realized upon maturity.",
+      },
+      {
+        title: "Assess fair value",
+        description:
+          "Evaluate whether money market investments should be adjusted for fair value changes.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify the investment balance ties to the short-term investment account.",
+      },
+    ],
+    benefits: [
+      "Provides clear tracking of short-term investment activity and returns",
+      "Ensures interest income is properly recorded and accounted for",
+      "Supports optimization of cash yield on short-term investments",
+      "Provides audit support for investment balances",
+    ],
+  },
+  {
+    slug: "debt-service-payment-schedule",
+    title: "Debt Service Payment Schedule",
+    description:
+      "Maintain a schedule of principal and interest payments due on all debt obligations.",
+    category: "Cash & Treasury",
+    tags: ["Debt", "Payments"],
+    steps: [
+      {
+        title: "List all debt obligations",
+        description:
+          "Create a schedule of all loans, bonds, notes, and other debt with key terms.",
+      },
+      {
+        title: "Calculate payment schedule",
+        description:
+          "Determine principal and interest payment amounts and dates for each debt.",
+      },
+      {
+        title: "Track upcoming payments",
+        description:
+          "Highlight upcoming payments due within the next 90 days for cash planning.",
+      },
+      {
+        title: "Record payments",
+        description:
+          "Record actual payments made and verify amounts match the payment schedule.",
+      },
+      {
+        title: "Monitor compliance",
+        description:
+          "Ensure all debt service payments are made on time to maintain compliance.",
+      },
+    ],
+    benefits: [
+      "Ensures debt service payments are planned and made on time",
+      "Prevents covenant violations due to missed payments",
+      "Provides clear visibility into debt repayment obligations",
+      "Supports cash forecasting and liquidity management",
+    ],
+  },
+  {
+    slug: "credit-facility-utilization-report",
+    title: "Credit Facility Utilization Report",
+    description:
+      "Track borrowing against credit facilities including current utilization, available capacity, and covenant status.",
+    category: "Cash & Treasury",
+    tags: ["Credit", "Borrowing"],
+    steps: [
+      {
+        title: "Document credit facilities",
+        description:
+          "List all credit facilities with lenders, available amounts, terms, and covenant requirements.",
+      },
+      {
+        title: "Track borrowing",
+        description:
+          "Record amounts borrowed against each facility and any outstanding letters of credit.",
+      },
+      {
+        title: "Calculate available capacity",
+        description:
+          "Determine remaining borrowing available under each facility.",
+      },
+      {
+        title: "Monitor covenants",
+        description:
+          "Calculate compliance with financial covenants and ensure status is maintained.",
+      },
+      {
+        title: "Report and plan",
+        description:
+          "Share facility utilization with lenders and plan refinancing or new facilities if needed.",
+      },
+    ],
+    benefits: [
+      "Provides clear visibility into available borrowing capacity",
+      "Prevents over-utilization of credit facilities",
+      "Monitors covenant compliance to prevent default",
+      "Supports strategic borrowing and refinancing decisions",
+    ],
+  },
+  {
+    slug: "foreign-exchange-exposure-schedule",
+    title: "Foreign Exchange Exposure Schedule",
+    description:
+      "Track foreign currency exposures (receivables, payables, net investment) and hedge ratios.",
+    category: "Cash & Treasury",
+    tags: ["FX", "Exposure"],
+    steps: [
+      {
+        title: "Identify FX exposures",
+        description:
+          "List all foreign currency assets, liabilities, and net investment amounts by currency.",
+      },
+      {
+        title: "Document hedges",
+        description:
+          "Note which exposures are hedged and the hedge instrument, notional amount, and strike rate.",
+      },
+      {
+        title: "Calculate net exposure",
+        description:
+          "Determine the net unhedged exposure by currency and evaluate risk.",
+      },
+      {
+        title: "Monitor exchange rates",
+        description:
+          "Track current and forward exchange rates and estimate revaluation impact.",
+      },
+      {
+        title: "Evaluate hedging strategy",
+        description:
+          "Assess whether current hedge ratios remain appropriate or adjustments are needed.",
+      },
+    ],
+    benefits: [
+      "Provides visibility into foreign exchange risk exposure",
+      "Enables strategic hedging to minimize earnings volatility",
+      "Supports management of currency-related cash flow uncertainty",
+      "Provides audit documentation for FX positions and hedges",
+    ],
+  },
+  // PHASE 4: Expense Management (9 templates)
+  {
+    slug: "receipt-audit-workpaper",
+    title: "Receipt Audit Workpaper",
+    description:
+      "Audit a sample of receipt submissions for completeness, appropriateness, and proper documentation.",
+    category: "Expense Management",
+    tags: ["Expense", "Audit"],
+    steps: [
+      {
+        title: "Select sample",
+        description:
+          "Randomly select a sample of expense receipts for testing, stratified by amount.",
+      },
+      {
+        title: "Verify receipt details",
+        description:
+          "Confirm receipt amount, vendor, date, and items purchased match the expense report.",
+      },
+      {
+        title: "Test appropriateness",
+        description:
+          "Evaluate whether the expense is appropriate, reasonable, and business-related.",
+      },
+      {
+        title: "Verify approval",
+        description:
+          "Confirm that the expense report has been approved by the appropriate manager.",
+      },
+      {
+        title: "Document findings",
+        description:
+          "Record any exceptions, questioned items, or policy violations for follow-up.",
+      },
+    ],
+    benefits: [
+      "Detects fraudulent or inappropriate expense submissions",
+      "Ensures compliance with expense policy",
+      "Reduces improper reimbursements and waste",
+      "Provides audit documentation of expense testing",
+    ],
+  },
+  {
+    slug: "travel-entertainment-policy-compliance",
+    title: "Travel & Entertainment Policy Compliance",
+    description:
+      "Test compliance with travel and entertainment policies including pre-approval and receipt requirements.",
+    category: "Expense Management",
+    tags: ["T&E", "Compliance"],
+    steps: [
+      {
+        title: "Document policy requirements",
+        description:
+          "Summarize travel and entertainment policies including pre-approval limits and receipt requirements.",
+      },
+      {
+        title: "Select test sample",
+        description:
+          "Sample travel and entertainment expenses for the period to test compliance.",
+      },
+      {
+        title: "Verify pre-approval",
+        description:
+          "Confirm that travel was pre-approved per policy before the trip occurred.",
+      },
+      {
+        title: "Validate business purpose",
+        description:
+          "Ensure the travel/entertainment has clear business purpose and appropriate documentation.",
+      },
+      {
+        title: "Identify violations",
+        description:
+          "Document any policy violations and determine required follow-up or training.",
+      },
+    ],
+    benefits: [
+      "Ensures travel and entertainment spending complies with policy",
+      "Prevents abuse of travel and entertainment budgets",
+      "Identifies employees needing policy training or reminders",
+      "Reduces inappropriate spending in high-risk category",
+    ],
+  },
+  {
+    slug: "meal-entertainment-justification",
+    title: "Meal and Entertainment Justification",
+    description:
+      "Document business purpose and attendees for meal and entertainment expenses for tax deductibility.",
+    category: "Expense Management",
+    tags: ["T&E", "Tax"],
+    steps: [
+      {
+        title: "Require documentation",
+        description:
+          "Ensure meal/entertainment expenses have receipt and documented business purpose.",
+      },
+      {
+        title: "Record attendees",
+        description:
+          "Document the names, titles, and affiliations of attendees at each meal/entertainment event.",
+      },
+      {
+        title: "Document business discussion",
+        description:
+          "Record the nature of business discussed or relationship being developed.",
+      },
+      {
+        title: "Track entertainment type",
+        description:
+          "Note the venue and type of entertainment to assess deductibility (e.g., client dinner vs. personal).",
+      },
+      {
+        title: "Maintain documentation",
+        description:
+          "Archive all receipts and documentation for tax audit support.",
+      },
+    ],
+    benefits: [
+      "Supports deductibility of meal and entertainment expenses for tax purposes",
+      "Prevents disallowed meal deductions due to poor documentation",
+      "Provides evidence of business purpose for auditors",
+      "Protects company from IRS challenges on deductibility",
+    ],
+  },
+  {
+    slug: "employee-reimbursement-tracker",
+    title: "Employee Reimbursement Tracker",
+    description:
+      "Maintain a log of employee advances, reimbursements, and outstanding balances by employee.",
+    category: "Expense Management",
+    tags: ["Reimbursement", "Expense"],
+    steps: [
+      {
+        title: "Record advances given",
+        description:
+          "Log each employee advance with employee name, amount, date, and purpose.",
+      },
+      {
+        title: "Track expense reports",
+        description:
+          "Record expenses submitted and approved for each employee and reconcile to advances.",
+      },
+      {
+        title: "Calculate owed amounts",
+        description:
+          "Determine whether employee owes money back or company owes reimbursement.",
+      },
+      {
+        title: "Follow up on overdue",
+        description:
+          "Identify employees with outstanding reimbursement requests or overspending.",
+      },
+      {
+        title: "Reconcile balance",
+        description:
+          "Verify that the employee receivable/payable balance ties to GL accounts.",
+      },
+    ],
+    benefits: [
+      "Ensures employees are reimbursed or reimburse company timely",
+      "Prevents outstanding balances from becoming stale or uncollectible",
+      "Provides visibility into advance and reimbursement status",
+      "Reduces accounting errors in employee reimbursement processing",
+    ],
+  },
+  {
+    slug: "expense-category-allocation",
+    title: "Expense Category Allocation",
+    description:
+      "Allocate mixed expenses (e.g., meals, supplies, travel) to appropriate GL accounts based on business purpose.",
+    category: "Expense Management",
+    tags: ["Allocation", "Expense"],
+    steps: [
+      {
+        title: "Review mixed expenses",
+        description:
+          "Identify expenses that benefit multiple departments or should be split across accounts.",
+      },
+      {
+        title: "Determine allocation basis",
+        description:
+          "Select appropriate basis (percentage, usage, headcount) for allocating the expense.",
+      },
+      {
+        title: "Calculate allocated amounts",
+        description:
+          "Apply the allocation basis to split the expense among the appropriate GL accounts.",
+      },
+      {
+        title: "Prepare journal entry",
+        description:
+          "Record the entry to move the expense from the mixed account to proper cost center accounts.",
+      },
+      {
+        title: "Document allocation",
+        description:
+          "Keep documentation of the allocation methodology and amounts allocated.",
+      },
+    ],
+    benefits: [
+      "Ensures expenses are charged to the appropriate cost centers and departments",
+      "Improves department expense reporting accuracy",
+      "Enables better cost analysis and departmental profitability",
+      "Supports accurate budgeting and variance analysis",
+    ],
+  },
+  {
+    slug: "corporate-credit-card-reconciliation",
+    title: "Corporate Credit Card Reconciliation",
+    description:
+      "Reconcile corporate credit card statements to GL accounts and match to employee expense reports.",
+    category: "Expense Management",
+    tags: ["Credit Cards", "Expense"],
+    steps: [
+      {
+        title: "Obtain card statements",
+        description:
+          "Collect monthly statements for all corporate credit cards issued.",
+      },
+      {
+        title: "Verify transactions",
+        description:
+          "Review each transaction and confirm it is a valid business expense.",
+      },
+      {
+        title: "Match to reports",
+        description:
+          "Reconcile card charges to employee expense reports and substantiation.",
+      },
+      {
+        title: "Code to GL",
+        description:
+          "Ensure all charges are properly coded to the appropriate GL accounts.",
+      },
+      {
+        title: "Record payment",
+        description:
+          "Record the card payment from the operating account once verified.",
+      },
+    ],
+    benefits: [
+      "Detects fraudulent or personal charges on corporate cards",
+      "Ensures all card charges are properly substantiated and coded",
+      "Provides clear record of corporate card spending by employee",
+      "Strengthens controls over corporate credit card use",
+    ],
+  },
+  {
+    slug: "subscription-saas-audit",
+    title: "Subscription and SaaS Audit",
+    description:
+      "Periodically audit all active software subscriptions and SaaS licenses to eliminate duplicates and unused tools.",
+    category: "Expense Management",
+    tags: ["Subscriptions", "Cost Reduction"],
+    steps: [
+      {
+        title: "Compile subscription list",
+        description:
+          "Create a comprehensive list of all software subscriptions and SaaS licenses with costs.",
+      },
+      {
+        title: "Verify usage",
+        description:
+          "Contact department heads or access system logs to confirm whether subscriptions are actively used.",
+      },
+      {
+        title: "Identify duplicates",
+        description:
+          "Identify redundant licenses or subscriptions that could be consolidated.",
+      },
+      {
+        title: "Evaluate contract terms",
+        description:
+          "Review remaining contract terms and negotiate cancellations or reductions where possible.",
+      },
+      {
+        title: "Report findings",
+        description:
+          "Summarize findings and potential cost savings from subscription optimization.",
+      },
+    ],
+    benefits: [
+      "Identifies and eliminates unused subscriptions and licenses for cost savings",
+      "Consolidates redundant tools and reduces vendor count",
+      "Improves software asset management and compliance",
+      "Delivers measurable cost reduction and operational efficiency",
+    ],
+  },
+  {
+    slug: "capex-vs-opex-classification",
+    title: "Capex vs Opex Classification",
+    description:
+      "Evaluate expenditures to determine whether they should be capitalized as assets or expensed as operating costs.",
+    category: "Expense Management",
+    tags: ["Capitalization", "Expense"],
+    steps: [
+      {
+        title: "Establish capitalization policy",
+        description:
+          "Document the company's policy for capitalization including dollar thresholds and asset life requirements.",
+      },
+      {
+        title: "Review large expenditures",
+        description:
+          "Examine significant expenditures to determine whether they meet capitalization criteria.",
+      },
+      {
+        title: "Evaluate asset nature",
+        description:
+          "Assess whether the expenditure creates or enhances a long-lived asset versus a period cost.",
+      },
+      {
+        title: "Document decisions",
+        description:
+          "Record the capitalization decision and supporting rationale for each expenditure.",
+      },
+      {
+        title: "Record appropriately",
+        description:
+          "Capitalize to the asset account or expense to the GL account per the determination.",
+      },
+    ],
+    benefits: [
+      "Ensures consistent application of capitalization policy",
+      "Prevents improper capitalization or expensing affecting reported earnings",
+      "Provides audit support for capital asset decisions",
+      "Reduces audit findings related to capitalization",
+    ],
+  },
+  {
+    slug: "consulting-fee-tracking",
+    title: "Consulting Fee Tracking",
+    description:
+      "Maintain a log of consulting engagements including budget, actual costs, deliverables, and ROI.",
+    category: "Expense Management",
+    tags: ["Consulting", "Expense"],
+    steps: [
+      {
+        title: "Document engagement terms",
+        description:
+          "Record the consulting firm, scope, budget, timeline, and expected deliverables.",
+      },
+      {
+        title: "Track actual costs",
+        description:
+          "Record invoices received and amounts paid to compare against budget.",
+      },
+      {
+        title: "Monitor deliverables",
+        description:
+          "Track whether consulting firm is meeting committed deliverables and timeline.",
+      },
+      {
+        title: "Assess value",
+        description:
+          "Evaluate whether the engagement is delivering expected value and ROI.",
+      },
+      {
+        title: "Document outcomes",
+        description:
+          "Record the outcomes and recommendations from consulting engagement for future reference.",
+      },
+    ],
+    benefits: [
+      "Controls consulting spending and ensures alignment with budget",
+      "Tracks consulting deliverables for accountability",
+      "Enables evaluation of consulting ROI and future vendor decisions",
+      "Provides documentation of consulting recommendations for follow-up",
+    ],
+  },
+  // PHASE 4: Audit & Compliance (10 templates)
+  {
+    slug: "internal-control-checklist",
+    title: "Internal Control Checklist",
+    description:
+      "Evaluate key internal controls over accounting processes including segregation of duties, authorization, and reconciliation.",
+    category: "Audit & Compliance",
+    tags: ["Controls", "Compliance"],
+    steps: [
+      {
+        title: "Document control activities",
+        description:
+          "List all key controls operating over significant accounting processes (revenue, payroll, payables, etc.).",
+      },
+      {
+        title: "Evaluate design",
+        description:
+          "Assess whether control design is adequate to prevent or detect material errors.",
+      },
+      {
+        title: "Test effectiveness",
+        description:
+          "Test a sample of control operation to verify controls are functioning as designed.",
+      },
+      {
+        title: "Identify deficiencies",
+        description:
+          "Document any control gaps or ineffective controls requiring remediation.",
+      },
+      {
+        title: "Report findings",
+        description:
+          "Summarize control assessment with recommendations for significant deficiencies.",
+      },
+    ],
+    benefits: [
+      "Identifies control weaknesses for remediation before audit findings",
+      "Demonstrates management commitment to effective internal controls",
+      "Reduces audit scope and supports management letter of control effectiveness",
+      "Prevents fraud and material errors through strong controls",
+    ],
+  },
+  {
+    slug: "data-integrity-verification-procedure",
+    title: "Data Integrity Verification Procedure",
+    description:
+      "Establish and test procedures to verify the integrity of financial and operational data including reconciliation and validation.",
+    category: "Audit & Compliance",
+    tags: ["Data", "Compliance"],
+    steps: [
+      {
+        title: "Identify critical data",
+        description:
+          "Document data fields and systems that are critical to financial reporting and operations.",
+      },
+      {
+        title: "Define validation rules",
+        description:
+          "Establish rules for validating data completeness, accuracy, and consistency.",
+      },
+      {
+        title: "Test data quality",
+        description:
+          "Run validation reports to identify missing, duplicate, or invalid data.",
+      },
+      {
+        title: "Remediate exceptions",
+        description:
+          "Correct invalid data and implement processes to prevent future data quality issues.",
+      },
+      {
+        title: "Document procedures",
+        description:
+          "Record the data validation procedures and test results for audit documentation.",
+      },
+    ],
+    benefits: [
+      "Ensures reliability of data used in financial reporting and analysis",
+      "Identifies and corrects data quality issues before they cause errors",
+      "Supports audit procedures for data verification",
+      "Strengthens internal controls over IT systems and data",
+    ],
+  },
+  {
+    slug: "compliance-calendar-template",
+    title: "Compliance Calendar Template",
+    description:
+      "Maintain a calendar of regulatory filing, reporting, and compliance deadlines throughout the year.",
+    category: "Audit & Compliance",
+    tags: ["Compliance", "Calendar"],
+    steps: [
+      {
+        title: "Document requirements",
+        description:
+          "List all external and internal compliance requirements with applicable deadlines.",
+      },
+      {
+        title: "Assign responsibilities",
+        description:
+          "Assign a responsible person for each compliance requirement.",
+      },
+      {
+        title: "Set reminder dates",
+        description:
+          "Set calendar reminders for deadline minus 30, 14, and 7 days to ensure timely completion.",
+      },
+      {
+        title: "Track completion",
+        description:
+          "Update calendar as filings and reports are completed to track status.",
+      },
+      {
+        title: "Review annually",
+        description:
+          "Annually review and update the compliance calendar for new or changed requirements.",
+      },
+    ],
+    benefits: [
+      "Prevents missed regulatory filing or compliance deadlines",
+      "Assigns accountability for compliance requirements",
+      "Provides early warning system for upcoming deadlines",
+      "Demonstrates organized approach to compliance management",
+    ],
+  },
+  {
+    slug: "regulatory-filing-tracker",
+    title: "Regulatory Filing Tracker",
+    description:
+      "Track all regulatory filings including SEC, tax, labor, and industry-specific filings with status and due dates.",
+    category: "Audit & Compliance",
+    tags: ["Filings", "Compliance"],
+    steps: [
+      {
+        title: "Identify filings required",
+        description:
+          "Document all regulatory filings applicable to the business (SEC, IRS, DOL, industry regulators).",
+      },
+      {
+        title: "Record filing details",
+        description:
+          "For each filing, record the agency, due date, responsible party, and submission method.",
+      },
+      {
+        title: "Track progress",
+        description:
+          "Update status as filings are prepared, reviewed, and submitted.",
+      },
+      {
+        title: "Maintain evidence",
+        description:
+          "Retain confirmation of filing submission including date, time, and filing reference.",
+      },
+      {
+        title: "Monitor for updates",
+        description:
+          "Track any regulatory feedback, deficiencies identified, or amendments required.",
+      },
+    ],
+    benefits: [
+      "Ensures all regulatory filings are timely and complete",
+      "Provides clear evidence of regulatory compliance",
+      "Prevents penalties for late or missing filings",
+      "Demonstrates organized regulatory compliance management",
+    ],
+  },
+  {
+    slug: "internal-audit-findings-log",
+    title: "Internal Audit Findings Log",
+    description:
+      "Document and track internal audit findings including root cause, remediation plan, and follow-up testing.",
+    category: "Audit & Compliance",
+    tags: ["Audit", "Findings"],
+    steps: [
+      {
+        title: "Log findings",
+        description:
+          "Document each audit finding with description, severity, and account/process affected.",
+      },
+      {
+        title: "Assign remediation",
+        description:
+          "Assign a responsible party for remediation and set target completion date.",
+      },
+      {
+        title: "Track remediation",
+        description:
+          "Monitor progress on remediation activities and update status.",
+      },
+      {
+        title: "Test remediation",
+        description:
+          "Once complete, test the remediation to verify the issue is resolved.",
+      },
+      {
+        title: "Close findings",
+        description:
+          "Close the finding once remediation is verified and tested.",
+      },
+    ],
+    benefits: [
+      "Ensures audit findings are tracked and resolved timely",
+      "Assigns accountability for remediation",
+      "Prevents recurring audit findings",
+      "Demonstrates management's commitment to addressing control issues",
+    ],
+  },
+  {
+    slug: "management-assertion-workpaper",
+    title: "Management Assertion Workpaper",
+    description:
+      "Document management's assertions regarding financial statement presentation, completeness, and compliance.",
+    category: "Audit & Compliance",
+    tags: ["Assertions", "Audit"],
+    steps: [
+      {
+        title: "Identify assertion categories",
+        description:
+          "List key management assertions by category (existence, completeness, valuation, presentation).",
+      },
+      {
+        title: "Document assertion support",
+        description:
+          "Gather evidence supporting management's assertions for significant accounts.",
+      },
+      {
+        title: "Prepare assertion memo",
+        description:
+          "Summarize the assertion, supporting evidence, and conclusions for each significant balance.",
+      },
+      {
+        title: "Obtain management sign-off",
+        description:
+          "Have appropriate management representatives review and confirm the assertions.",
+      },
+      {
+        title: "Provide to auditors",
+        description:
+          "Share assertion workpapers with external auditors to support audit procedures.",
+      },
+    ],
+    benefits: [
+      "Demonstrates management's review and ownership of financial statements",
+      "Provides auditors with clear management assertions to test",
+      "Supports audit efficiency and reduces scope of auditor procedures",
+      "Creates clear record of management's assertions about financial statements",
+    ],
+  },
+  {
+    slug: "audit-committee-meeting-minutes-template",
+    title: "Audit Committee Meeting Minutes Template",
+    description:
+      "Document audit committee meetings including discussion topics, decisions, and follow-up items.",
+    category: "Audit & Compliance",
+    tags: ["Audit Committee", "Governance"],
+    steps: [
+      {
+        title: "Prepare agenda",
+        description:
+          "Create agenda for audit committee meeting including financial reporting, audit, and compliance topics.",
+      },
+      {
+        title: "Document discussion",
+        description:
+          "Record key discussion points and questions raised by committee members.",
+      },
+      {
+        title: "Record decisions",
+        description:
+          "Document all decisions made and approvals granted by the audit committee.",
+      },
+      {
+        title: "Assign action items",
+        description:
+          "Identify follow-up items with assigned responsible parties and due dates.",
+      },
+      {
+        title: "Distribute minutes",
+        description:
+          "Prepare and distribute minutes to committee members and retain in files.",
+      },
+    ],
+    benefits: [
+      "Provides clear record of audit committee oversight and governance",
+      "Documents committee discussion and decision-making process",
+      "Ensures follow-up on action items and findings",
+      "Supports regulatory compliance and corporate governance requirements",
+    ],
+  },
+  {
+    slug: "year-end-closing-checklist",
+    title: "Year-End Closing Checklist",
+    description:
+      "Comprehensive checklist for all year-end close procedures and financial statement preparation steps.",
+    category: "Audit & Compliance",
+    tags: ["Close", "Year-End"],
+    steps: [
+      {
+        title: "Prepare pre-close procedures",
+        description:
+          "Complete reconciliations, review GL, record accruals, and resolve prior period items.",
+      },
+      {
+        title: "Record adjustments",
+        description:
+          "Record journal entries for depreciation, amortization, deferred taxes, and other adjustments.",
+      },
+      {
+        title: "Prepare schedules",
+        description:
+          "Prepare all supporting schedules for significant accounts and disclosures.",
+      },
+      {
+        title: "Prepare financial statements",
+        description:
+          "Prepare draft financial statements and note disclosures for review.",
+      },
+      {
+        title: "Final review and sign-off",
+        description:
+          "Obtain management review and sign-off on final financial statements and schedules.",
+      },
+    ],
+    benefits: [
+      "Ensures all year-end procedures are completed in organized manner",
+      "Prevents omission of critical close steps or disclosures",
+      "Streamlines the financial statement preparation process",
+      "Provides clear checklist for follow-up and quality assurance",
+    ],
+  },
+  {
+    slug: "document-retention-schedule",
+    title: "Document Retention Schedule",
+    description:
+      "Establish and maintain a schedule for document retention requirements by document type and retention period.",
+    category: "Audit & Compliance",
+    tags: ["Records", "Compliance"],
+    steps: [
+      {
+        title: "Document types",
+        description:
+          "List all document types maintained by finance and accounting including GL, invoices, reconciliations.",
+      },
+      {
+        title: "Determine retention period",
+        description:
+          "Research and document the legal minimum retention period for each document type.",
+      },
+      {
+        title: "Establish destruction process",
+        description:
+          "Define the process for secure destruction of documents after retention period expires.",
+      },
+      {
+        title: "Communicate to staff",
+        description:
+          "Ensure accounting staff understand retention requirements and destruction process.",
+      },
+      {
+        title: "Execute destruction",
+        description:
+          "Periodically destroy documents per schedule while retaining evidence of destruction.",
+      },
+    ],
+    benefits: [
+      "Ensures documents are retained per legal and regulatory requirements",
+      "Reduces storage costs through timely destruction of unnecessary records",
+      "Demonstrates compliance with document retention regulations",
+      "Protects sensitive financial records from unauthorized access",
+    ],
+  },
+  {
+    slug: "material-weakness-assessment-form",
+    title: "Material Weakness Assessment Form",
+    description:
+      "Assess whether identified control deficiencies individually or in aggregate constitute a material weakness.",
+    category: "Audit & Compliance",
+    tags: ["Controls", "Assessment"],
+    steps: [
+      {
+        title: "Identify deficiencies",
+        description:
+          "List all internal control deficiencies identified during testing.",
+      },
+      {
+        title: "Evaluate significance",
+        description:
+          "Assess whether each deficiency could result in a material misstatement.",
+      },
+      {
+        title: "Consider aggregation",
+        description:
+          "Determine whether multiple deficiencies together could result in material misstatement.",
+      },
+      {
+        title: "Document assessment",
+        description:
+          "Record the assessment conclusion and supporting rationale.",
+      },
+      {
+        title: "Determine reporting",
+        description:
+          "Determine whether the material weakness must be reported to audit committee or external auditors.",
+      },
+    ],
+    benefits: [
+      "Identifies control weaknesses requiring disclosure or remediation",
+      "Supports management's assessment of control effectiveness",
+      "Provides clear documentation of control deficiency assessment",
+      "Enables timely communication with audit committee on control issues",
+    ],
+  },
 ];
 
 export function getTemplateBySlug(slug: string): Template | undefined {
