@@ -1116,6 +1116,949 @@ export const templates: Template[] = [
       "Ensures AP balance accurately reflects your actual obligations",
     ],
   },
+  {
+    slug: "financial-statement-notes",
+    title: "Financial Statement Notes to Accompany Financials",
+    description:
+      "Comprehensive notes to financial statements explaining accounting policies, significant balances, and items requiring disclosure. Meet auditing and regulatory requirements.",
+    category: "Financial Reporting",
+    tags: ["Notes", "Disclosure", "Audit-Ready"],
+    steps: [
+      {
+        title: "Document accounting policies",
+        description:
+          "Write clear descriptions of significant accounting policies: revenue recognition, depreciation methods, inventory valuation, foreign exchange treatment, etc.",
+      },
+      {
+        title: "Explain significant GL accounts",
+        description:
+          "For material balance sheet and income statement items, provide narrative explanation, breakdown of components, and reconciliation to GL.",
+      },
+      {
+        title: "Disclose required items",
+        description:
+          "Include notes on debt terms and covenants, lease obligations, contingencies, equity components, earnings per share calculation, and segment information.",
+      },
+      {
+        title: "Add management discussion",
+        description:
+          "Explain significant changes period-over-period, unusual items, and key business drivers affecting financial results and position.",
+      },
+      {
+        title: "Format for compliance",
+        description:
+          "Organize notes in standard order matching GAAP or IFRS requirements. Cross-reference to financial statements and supporting schedules.",
+      },
+    ],
+    benefits: [
+      "Ensures complete disclosure for regulatory and audit requirements",
+      "Provides readers clear understanding of accounting judgments and estimates",
+      "Reduces audit findings and adjustments related to disclosure",
+      "Demonstrates transparency and quality financial reporting",
+    ],
+  },
+  {
+    slug: "gaap-reconciliation-schedule",
+    title: "GAAP Reconciliation Schedule",
+    description:
+      "Reconcile non-GAAP measures to GAAP financials. Document adjustments for stock-based compensation, acquisition costs, and other significant items.",
+    category: "Financial Reporting",
+    tags: ["GAAP", "Reconciliation", "Analysis"],
+    steps: [
+      {
+        title: "Define non-GAAP metrics",
+        description:
+          "Identify which non-GAAP measures you report (adjusted EBITDA, adjusted net income, organic revenue growth, etc.) and their business purpose.",
+      },
+      {
+        title: "Build reconciliation detail",
+        description:
+          "Create schedule showing GAAP results, adjustment line items with dollar amounts, and resulting non-GAAP measure. Show both current period and year-to-date.",
+      },
+      {
+        title: "Document adjustment rationale",
+        description:
+          "For each adjustment, explain why it's excluded from non-GAAP measure (non-recurring, acquisition-related, stock-based compensation, etc.).",
+      },
+      {
+        title: "Validate calculations",
+        description:
+          "Verify math: GAAP result + adjustments = non-GAAP result. Cross-check against GL and supporting schedules.",
+      },
+      {
+        title: "Prepare disclosure note",
+        description:
+          "Write note for financial statements explaining non-GAAP measures, why company believes they're useful, and reconciliation to GAAP results.",
+      },
+    ],
+    benefits: [
+      "Provides transparent reconciliation between GAAP and non-GAAP results",
+      "Helps investors understand adjustment items and true operating performance",
+      "Demonstrates consistency in non-GAAP calculation period to period",
+      "Supports SEC compliance if reporting publicly",
+    ],
+  },
+  {
+    slug: "management-discussion-template",
+    title: "Management Discussion & Analysis Template",
+    description:
+      "Structured template for management to discuss and analyze financial results, changes, trends, and key metrics. Supports investor communication.",
+    category: "Financial Reporting",
+    tags: ["MD&A", "Analysis", "Discussion"],
+    steps: [
+      {
+        title: "Analyze revenue trends",
+        description:
+          "Discuss total revenue growth or decline. Break down by business segment, geography, product line. Explain key drivers and compare to expectations.",
+      },
+      {
+        title: "Explain margin changes",
+        description:
+          "Analyze gross margin, operating margin, and net margin trends. Discuss cost structure changes, pricing actions, mix effects, and operating leverage.",
+      },
+      {
+        title: "Review balance sheet changes",
+        description:
+          "Discuss significant changes in working capital, capital expenditures, debt levels, and cash position. Explain liquidity and financing needs.",
+      },
+      {
+        title: "Address risks and uncertainties",
+        description:
+          "Identify key business risks, market conditions, regulatory changes, or other factors that could significantly impact future performance.",
+      },
+      {
+        title: "Outline forward guidance",
+        description:
+          "Provide management perspective on near-term outlook, growth initiatives, and expectations for key metrics and financial position.",
+      },
+    ],
+    benefits: [
+      "Provides investors and stakeholders clear insight into management's perspective on business",
+      "Explains major changes and unusual items in financial statements",
+      "Demonstrates management accountability for results",
+      "Supports communication with board, lenders, and investors",
+    ],
+  },
+  {
+    slug: "segment-reporting-workpaper",
+    title: "Segment Reporting Workpaper",
+    description:
+      "Document operating segments for reporting purposes. Track revenue, profit, assets, and other metrics by reportable segment.",
+    category: "Financial Reporting",
+    tags: ["Segments", "Workpaper", "Reporting"],
+    steps: [
+      {
+        title: "Identify operating segments",
+        description:
+          "Determine reporting structure based on how management reviews performance: by geography, product line, customer type, or business unit.",
+      },
+      {
+        title: "Allocate revenues and expenses",
+        description:
+          "Assign revenues, costs, and expenses to each segment based on internal GL structure or detailed allocation methodology. Document allocation methodology.",
+      },
+      {
+        title: "Calculate segment profit",
+        description:
+          "Compute operating income or EBITDA by segment. Include allocated corporate costs or show pre-allocation for segment comparison.",
+      },
+      {
+        title: "Track segment assets",
+        description:
+          "Identify assets by segment (cash, receivables, inventory, fixed assets). Note any shared assets and allocation method.",
+      },
+      {
+        title: "Reconcile to consolidated",
+        description:
+          "Verify segment revenues, profit, and assets tie to consolidated financial statements. Explain any eliminations or adjustments.",
+      },
+    ],
+    benefits: [
+      "Provides transparent view of profitability by business area",
+      "Helps management identify high- and low-performing segments",
+      "Supports strategic decision-making on resource allocation",
+      "Meets SEC reporting requirements for public companies",
+    ],
+  },
+  {
+    slug: "key-metrics-dashboard",
+    title: "Key Metrics Dashboard Template",
+    description:
+      "One-page visual summary of critical financial and operational metrics. Track trends, targets, and performance against plan.",
+    category: "Financial Reporting",
+    tags: ["Metrics", "Dashboard", "Reporting"],
+    steps: [
+      {
+        title: "Define key metrics",
+        description:
+          "Identify 8-12 critical metrics that drive business: revenue growth, margins, cash flow, customer metrics, operational efficiency ratios, etc.",
+      },
+      {
+        title: "Set targets and thresholds",
+        description:
+          "Establish target ranges or thresholds for each metric (e.g., gross margin 45-50%, days sales outstanding < 45 days).",
+      },
+      {
+        title: "Build monthly tracking",
+        description:
+          "Create simple table or visual showing current month, year-to-date, target, and prior year for easy comparison. Use color coding (red/yellow/green).",
+      },
+      {
+        title: "Add trend visualization",
+        description:
+          "Include simple charts or sparklines showing 6-12 month trend for key metrics. Highlight trends improving vs. deteriorating.",
+      },
+      {
+        title: "Include commentary",
+        description:
+          "Add brief notes explaining significant variances, action items, or items requiring attention from leadership.",
+      },
+    ],
+    benefits: [
+      "Provides at-a-glance view of business health and performance",
+      "Facilitates quick identification of problem areas needing attention",
+      "Enables consistent tracking and communication of critical metrics",
+      "Supports board reporting and investor communication",
+    ],
+  },
+  {
+    slug: "financial-ratio-analysis",
+    title: "Financial Ratio Analysis",
+    description:
+      "Calculate and analyze key financial ratios. Track profitability, liquidity, solvency, and efficiency ratios period-over-period.",
+    category: "Financial Reporting",
+    tags: ["Ratios", "Analysis", "Benchmarking"],
+    steps: [
+      {
+        title: "Calculate profitability ratios",
+        description:
+          "Compute gross profit margin, operating margin, net profit margin, return on assets (ROA), and return on equity (ROE). Compare to industry benchmarks.",
+      },
+      {
+        title: "Calculate liquidity ratios",
+        description:
+          "Calculate current ratio, quick ratio, working capital, and cash ratio. Assess ability to meet short-term obligations.",
+      },
+      {
+        title: "Calculate solvency ratios",
+        description:
+          "Compute debt-to-equity, debt-to-assets, interest coverage, and debt service coverage ratios. Assess financial leverage and default risk.",
+      },
+      {
+        title: "Calculate efficiency ratios",
+        description:
+          "Compute asset turnover, inventory turnover, receivables turnover, payables period, and cash conversion cycle.",
+      },
+      {
+        title: "Analyze trends and variances",
+        description:
+          "Compare ratios to prior periods, industry benchmarks, and competitors. Identify improving or deteriorating trends and investigate causes.",
+      },
+    ],
+    benefits: [
+      "Provides quantitative view of financial health and operating efficiency",
+      "Enables comparison to industry benchmarks and competitors",
+      "Identifies trends that may indicate emerging problems",
+      "Supports debt covenant compliance and credit discussions",
+    ],
+  },
+  {
+    slug: "cash-flow-statement-reconciliation",
+    title: "Cash Flow Statement Reconciliation",
+    description:
+      "Reconcile cash flow statement to GL ending cash balance. Tie operating, investing, and financing activities to supporting detail.",
+    category: "Financial Reporting",
+    tags: ["Cash Flow", "Reconciliation", "Close"],
+    steps: [
+      {
+        title: "Pull GL cash balances",
+        description:
+          "Extract beginning cash, ending cash, and all cash-related GL accounts from trial balance.",
+      },
+      {
+        title: "Build operating activities section",
+        description:
+          "Start with net income and adjust for: depreciation, amortization, deferred taxes, changes in working capital accounts.",
+      },
+      {
+        title: "Build investing activities section",
+        description:
+          "Detail capital expenditures, asset disposals, acquisitions, and other non-operating investments made during the period.",
+      },
+      {
+        title: "Build financing activities section",
+        description:
+          "Document debt borrowed and repaid, equity issued or repurchased, and dividends paid.",
+      },
+      {
+        title: "Reconcile and tie to GL",
+        description:
+          "Verify: Beginning cash + operating + investing + financing = ending cash. Tie ending cash to GL balance.",
+      },
+    ],
+    benefits: [
+      "Explains how business generated or used cash during period",
+      "Identifies quality of earnings and sustainability of results",
+      "Shows liquidity and capital allocation decisions",
+      "Critical for understanding true financial health beyond accrual results",
+    ],
+  },
+  {
+    slug: "operating-vs-nonoperating-analysis",
+    title: "Operating vs Non-Operating Analysis",
+    description:
+      "Separate operating results from non-operating items. Identify impact of one-time, unusual, or non-recurring items on reported earnings.",
+    category: "Financial Reporting",
+    tags: ["Analysis", "Operating", "Adjustments"],
+    steps: [
+      {
+        title: "Define operating activities",
+        description:
+          "Identify which items are core operating results: sales, cost of goods sold, operating expenses directly supporting revenue generation.",
+      },
+      {
+        title: "Identify non-operating items",
+        description:
+          "List non-operating items: interest expense, investment income, gains/losses on asset sales, one-time charges, acquisition costs, restructuring.",
+      },
+      {
+        title: "Calculate operating income",
+        description:
+          "Compute operating income before financing and investment decisions. Compare to reported net income.",
+      },
+      {
+        title: "Quantify impact of non-operating items",
+        description:
+          "Calculate total impact of non-operating items on net income. Express as percentage of operating income and absolute amount.",
+      },
+      {
+        title: "Analyze trends and sustainability",
+        description:
+          "Assess whether non-operating items are recurring or one-time. Discuss sustainability of operating income independent of one-time items.",
+      },
+    ],
+    benefits: [
+      "Shows true operating performance independent of financing and investment decisions",
+      "Identifies quality and sustainability of earnings",
+      "Highlights one-time items that don't recur",
+      "Enables better comparison of performance to prior periods and competitors",
+    ],
+  },
+  {
+    slug: "revenue-recognition-workpaper",
+    title: "Revenue Recognition Workpaper",
+    description:
+      "Document revenue recognition policy and support for significant revenue transactions. Ensure compliance with ASC 606.",
+    category: "Financial Reporting",
+    tags: ["Revenue", "Recognition", "Audit-Ready"],
+    steps: [
+      {
+        title: "Document revenue policy",
+        description:
+          "Write clear policy for how revenue is recognized: at shipment, at delivery, upon payment, upon performance obligation satisfaction, etc.",
+      },
+      {
+        title: "Identify performance obligations",
+        description:
+          "For contracts, identify what customer receives (product, service, right to use asset) and when performance obligation is satisfied.",
+      },
+      {
+        title: "Document transaction price",
+        description:
+          "Show calculation of revenue recognized: list price, less discounts/allowances, plus shipping if required. Document timing of recognition.",
+      },
+      {
+        title: "Support significant transactions",
+        description:
+          "For large or unusual revenue items, attach customer contracts, delivery documentation, or other support for recognition.",
+      },
+      {
+        title: "Reconcile to GL",
+        description:
+          "Verify revenue recorded matches sales GL accounts. Reconcile to accounts receivable and customer payment history.",
+      },
+    ],
+    benefits: [
+      "Demonstrates compliance with ASC 606 revenue recognition standard",
+      "Provides clear support for revenue recorded in financial statements",
+      "Reduces risk of revenue accounting errors or misstatements",
+      "Simplifies audit review of revenue transactions",
+    ],
+  },
+  {
+    slug: "cost-of-goods-sold-analysis",
+    title: "Cost of Goods Sold Analysis",
+    description:
+      "Analyze components of COGS. Track material, labor, and overhead costs period-over-period to identify efficiency and cost trends.",
+    category: "Financial Reporting",
+    tags: ["COGS", "Analysis", "Variance"],
+    steps: [
+      {
+        title: "Build COGS detail",
+        description:
+          "Break down COGS into components: raw materials, direct labor, manufacturing overhead, freight, quality costs, scrap/waste.",
+      },
+      {
+        title: "Track unit economics",
+        description:
+          "Calculate cost per unit for key products or services. Show total cost, material cost, labor cost, and overhead allocation per unit.",
+      },
+      {
+        title: "Analyze variances",
+        description:
+          "Compare actual COGS to budget or prior period. Investigate material price variances, labor rate/efficiency variances, overhead variance.",
+      },
+      {
+        title: "Examine margin trends",
+        description:
+          "Calculate gross profit and gross margin percentage. Identify products or services with improving vs. deteriorating margins.",
+      },
+      {
+        title: "Identify improvement opportunities",
+        description:
+          "Note areas of cost inefficiency, waste, or deterioration. Recommend operational improvements or pricing adjustments.",
+      },
+    ],
+    benefits: [
+      "Provides visibility into manufacturing or service delivery costs",
+      "Enables identification of cost reduction opportunities",
+      "Tracks unit economics and profitability by product",
+      "Supports pricing decisions and product line management",
+    ],
+  },
+  {
+    slug: "sga-expense-analysis",
+    title: "SG&A Expense Analysis",
+    description:
+      "Analyze selling, general and administrative expenses. Track major cost categories and identify spending trends and control issues.",
+    category: "Financial Reporting",
+    tags: ["SG&A", "Expenses", "Analysis"],
+    steps: [
+      {
+        title: "Break down SG&A categories",
+        description:
+          "Classify SG&A into major buckets: sales/marketing, administrative, corporate overhead, technology, and other.",
+      },
+      {
+        title: "Track per major GL account",
+        description:
+          "For top 10-15 SG&A accounts, document current month, year-to-date, budget, and prior year. Calculate percent of revenue.",
+      },
+      {
+        title: "Analyze spending trends",
+        description:
+          "Identify which cost categories are increasing, decreasing, or flat. Note whether changes are driven by volume, head count, or rate.",
+      },
+      {
+        title: "Calculate efficiency metrics",
+        description:
+          "Compute SG&A as percentage of revenue. Track sales per employee, marketing spend as percentage of revenue, other efficiency metrics.",
+      },
+      {
+        title: "Evaluate controllability",
+        description:
+          "Assess which SG&A costs are fixed vs. variable, controllable vs. uncontrollable. Identify areas management can impact.",
+      },
+    ],
+    benefits: [
+      "Provides visibility into operating expense structure and trends",
+      "Identifies areas of potential cost control or elimination",
+      "Tracks efficiency metrics important to profitability",
+      "Supports operating margin improvement initiatives",
+    ],
+  },
+  {
+    slug: "debt-schedule-covenant-compliance",
+    title: "Debt Schedule and Covenant Compliance",
+    description:
+      "Track all debt obligations and calculate covenant compliance. Demonstrate borrowing capacity and debt service ability.",
+    category: "Financial Reporting",
+    tags: ["Debt", "Covenants", "Compliance"],
+    steps: [
+      {
+        title: "List all debt instruments",
+        description:
+          "Document each loan, note, bond, or other debt: lender name, original amount, interest rate, maturity date, terms and conditions.",
+      },
+      {
+        title: "Calculate principal and interest",
+        description:
+          "Show current principal balance, annual interest rate, interest expense, and scheduled principal payments for next 3-5 years.",
+      },
+      {
+        title: "Calculate covenant metrics",
+        description:
+          "For each covenant, calculate the metric: debt-to-EBITDA, interest coverage, minimum working capital, current ratio, etc.",
+      },
+      {
+        title: "Assess compliance",
+        description:
+          "Compare calculated metrics to covenant thresholds. Document compliance status and headroom to covenant breaches.",
+      },
+      {
+        title: "Note restrictions and waivers",
+        description:
+          "Document any financial restrictions, material adverse change clauses, or conditions in loan agreements. Note any waivers or amendments.",
+      },
+    ],
+    benefits: [
+      "Ensures compliance with debt covenants and avoids default",
+      "Provides visibility into debt service obligations and capacity",
+      "Supports lender reporting and covenant waiver negotiations",
+      "Identifies need for refinancing or additional borrowing",
+    ],
+  },
+  {
+    slug: "contingencies-commitments-schedule",
+    title: "Contingencies and Commitments Schedule",
+    description:
+      "Document contingent liabilities, legal settlements, pending litigation, guarantees, and other commitments requiring disclosure.",
+    category: "Financial Reporting",
+    tags: ["Contingencies", "Disclosures", "Audit-Ready"],
+    steps: [
+      {
+        title: "Identify legal matters",
+        description:
+          "List all pending or threatened litigation, claims, or disputes. For each, document nature of claim, probable outcome, and estimated loss.",
+      },
+      {
+        title: "Identify other contingencies",
+        description:
+          "Document environmental liabilities, guarantees of third-party debt, performance bonds, warranty obligations, or other contingent items.",
+      },
+      {
+        title: "Assess likelihood and amount",
+        description:
+          "For each item, assess probability of occurrence (probable, reasonably possible, remote) and estimate dollar amount or range.",
+      },
+      {
+        title: "Document accrual decision",
+        description:
+          "Per ASC 450, determine if accrual is required (probable and measurable), disclosed (reasonably possible), or not required (remote).",
+      },
+      {
+        title: "Prepare disclosure note",
+        description:
+          "Write financial statement note describing each contingency and management's assessment of potential impact.",
+      },
+    ],
+    benefits: [
+      "Ensures proper accounting and disclosure of potential obligations",
+      "Prevents surprises from undisclosed liabilities",
+      "Demonstrates transparency to users of financial statements",
+      "Meets auditing standards and regulatory requirements",
+    ],
+  },
+  {
+    slug: "quarterly-budget-vs-actual",
+    title: "Quarterly Budget vs Actual Analysis",
+    description:
+      "Analyze quarterly performance against budget. Identify variances and explain key drivers of differences between planned and actual results.",
+    category: "FP&A",
+    tags: ["Budget", "Variance", "Quarterly"],
+    steps: [
+      {
+        title: "Extract budget and actual data",
+        description:
+          "Pull Q budget for revenue, COGS, operating expenses, capital expenditures, and key metrics. Compare to actual results.",
+      },
+      {
+        title: "Calculate variances",
+        description:
+          "Calculate dollar and percentage variance for revenue, gross profit, operating income, and net income. Flag variances > 10% or material amounts.",
+      },
+      {
+        title: "Analyze revenue variances",
+        description:
+          "Break down revenue variance into: price/mix variance (selling price changes, product mix shifts) and volume variance (unit sales changes).",
+      },
+      {
+        title: "Analyze operating expense variances",
+        description:
+          "For significant variance, determine if due to volume changes, headcount/compensation changes, discretionary spending variances, or one-time items.",
+      },
+      {
+        title: "Prepare management summary",
+        description:
+          "Write summary of top 5-10 variances with explanations. Discuss impact on full-year forecast and actions to address negative variances.",
+      },
+    ],
+    benefits: [
+      "Demonstrates accountability for quarterly performance vs. plan",
+      "Identifies variances early for management course correction",
+      "Supports board reporting and investor communication",
+      "Enables more accurate full-year forecasting",
+    ],
+  },
+  {
+    slug: "headcount-compensation-forecast",
+    title: "Headcount and Compensation Forecast",
+    description:
+      "Forecast future headcount and compensation by department and level. Project payroll expense and track personnel costs.",
+    category: "FP&A",
+    tags: ["Headcount", "Forecast", "Compensation"],
+    steps: [
+      {
+        title: "Build current headcount baseline",
+        description:
+          "Document current headcount by department, level, and location. Include title, salary, and benefits for each employee.",
+      },
+      {
+        title: "Plan headcount changes",
+        description:
+          "For each department, plan additions, replacements, and terminations for next 12-24 months. Document planned start dates.",
+      },
+      {
+        title: "Forecast compensation changes",
+        description:
+          "Estimate merit increases, promotion movements, and market-based compensation adjustments. Assume merit increase and inflation rates.",
+      },
+      {
+        title: "Calculate total payroll expense",
+        description:
+          "Project monthly payroll costs including salary, payroll taxes (7.65%), and benefits (health, retirement, etc.). Show current and loaded cost per employee.",
+      },
+      {
+        title: "Analyze cost trends",
+        description:
+          "Review headcount-to-revenue ratio, payroll as percentage of revenue, and cost per employee. Identify areas of headcount efficiency.",
+      },
+    ],
+    benefits: [
+      "Projects largest operating expense category accurately",
+      "Supports planning for headcount needs and hiring timeline",
+      "Identifies compensation and benefits cost trends",
+      "Enables department cost center budgeting and accountability",
+    ],
+  },
+  {
+    slug: "capex-budget-tracking",
+    title: "Capital Expenditure Budget and Tracking",
+    description:
+      "Plan and track capital investments by project. Monitor spending vs. budget and payback assumptions for each project.",
+    category: "FP&A",
+    tags: ["CapEx", "Budget", "Investments"],
+    steps: [
+      {
+        title: "Document capital projects",
+        description:
+          "List all significant capital projects: cost, department, business justification, expected payback period, and approval date.",
+      },
+      {
+        title: "Project annual capex",
+        description:
+          "Sum budget for all planned projects. Break down by quarter and by department. Compare to prior year spending.",
+      },
+      {
+        title: "Track spending to date",
+        description:
+          "For each project, document amount spent to date, committed spend, and remaining budget. Track schedule vs. timeline.",
+      },
+      {
+        title: "Monitor project assumptions",
+        description:
+          "Track key assumptions for each project: expected return, payback period, cost savings, or revenue increases. Validate actual results.",
+      },
+      {
+        title: "Report capex activity",
+        description:
+          "Prepare monthly capex report showing budget vs. actual by project. Note any projects at risk of overrun or delay.",
+      },
+    ],
+    benefits: [
+      "Controls capital spending and investment decisions",
+      "Tracks ROI assumptions and validates actual project returns",
+      "Prevents unauthorized or excessive capital expenditures",
+      "Supports management decision-making on future capital allocations",
+    ],
+  },
+  {
+    slug: "working-capital-forecast",
+    title: "Working Capital Forecast",
+    description:
+      "Forecast changes in working capital (receivables, inventory, payables). Plan for cash needs or surpluses driven by operating growth.",
+    category: "FP&A",
+    tags: ["Working Capital", "Forecast", "Cash"],
+    steps: [
+      {
+        title: "Build working capital model",
+        description:
+          "Create schedule showing projected accounts receivable, inventory, and accounts payable for next 12 months based on revenue and expense projections.",
+      },
+      {
+        title: "Project receivables",
+        description:
+          "Calculate projected AR based on sales growth and days sales outstanding. Model seasonal impacts on cash collection timing.",
+      },
+      {
+        title: "Project inventory",
+        description:
+          "Calculate projected inventory based on cost of goods sold and inventory turnover assumptions. Model lead time impacts.",
+      },
+      {
+        title: "Project payables",
+        description:
+          "Calculate projected AP based on COGS and operating expense growth, using days payable outstanding assumptions.",
+      },
+      {
+        title: "Calculate cash impact",
+        description:
+          "Calculate net working capital changes period-over-period. Project whether operating growth requires additional financing or generates free cash.",
+      },
+    ],
+    benefits: [
+      "Projects cash needs driven by business growth",
+      "Identifies whether growth can be self-financed or requires external funding",
+      "Supports planning for credit facilities or capital raises",
+      "Enables management to optimize cash conversion cycle",
+    ],
+  },
+  {
+    slug: "scenario-analysis-sensitivity",
+    title: "Scenario Analysis and Sensitivity Testing",
+    description:
+      "Model impact of different business scenarios on financial results. Test sensitivity to key variables like revenue growth, margins, and costs.",
+    category: "FP&A",
+    tags: ["Scenario", "Sensitivity", "Analysis"],
+    steps: [
+      {
+        title: "Build base case model",
+        description:
+          "Create financial projection using realistic assumptions: revenue growth, margin targets, expense ratios, tax rate, etc.",
+      },
+      {
+        title: "Develop alternative scenarios",
+        description:
+          "Build downside, upside, and alternative scenarios: recession case, market share loss, faster growth, new product launch, M&A, etc.",
+      },
+      {
+        title: "Identify key variables",
+        description:
+          "Determine which variables have largest impact on results: revenue growth, pricing, COGS, operating margins, capex, working capital, discount rate.",
+      },
+      {
+        title: "Test sensitivity",
+        description:
+          "For each key variable, test impact of +/- 10-20% change on operating income, cash flow, and other critical metrics.",
+      },
+      {
+        title: "Present scenario results",
+        description:
+          "Show financial statements and key metrics for base, upside, and downside scenarios. Highlight sensitivity to specific variables.",
+      },
+    ],
+    benefits: [
+      "Provides range of potential outcomes vs. single point forecast",
+      "Identifies key business drivers and risks",
+      "Prepares management for different business scenarios",
+      "Supports strategic decision-making and contingency planning",
+    ],
+  },
+  {
+    slug: "long-term-financial-plan",
+    title: "Long-Term Financial Plan (3-5 Year)",
+    description:
+      "Project financial performance for 3-5 years. Plan for growth investments, financing needs, and capital allocation.",
+    category: "FP&A",
+    tags: ["Planning", "Long-term", "Strategy"],
+    steps: [
+      {
+        title: "Establish planning assumptions",
+        description:
+          "Define strategic assumptions: revenue growth rates, operating margin targets, tax rate, capex as percent of revenue, dividend/buyback plans.",
+      },
+      {
+        title: "Project income statement",
+        description:
+          "Build 3-5 year P&L: revenue, COGS, operating expenses, operating income, interest, taxes, net income. Show EBITDA and free cash flow.",
+      },
+      {
+        title: "Project balance sheet",
+        description:
+          "Forecast assets (receivables, inventory, fixed assets) and liabilities (payables, debt) needed to support revenue growth.",
+      },
+      {
+        title: "Project cash flow",
+        description:
+          "Calculate operating cash flow, capex, financing needs, and free cash flow. Determine if plan is self-funding or requires capital raise.",
+      },
+      {
+        title: "Assess financial feasibility",
+        description:
+          "Review debt ratios, interest coverage, liquidity, and ROIC. Adjust assumptions if plan is not financially sustainable or attractive.",
+      },
+    ],
+    benefits: [
+      "Aligns financial projections with long-term strategic plan",
+      "Projects capital and financing needs for growth",
+      "Validates financial viability of strategic initiatives",
+      "Supports lender, investor, and board discussions",
+    ],
+  },
+  {
+    slug: "cash-flow-projection-model",
+    title: "Cash Flow Projection Model",
+    description:
+      "Build detailed cash flow projection for the next 12-24 months. Forecast operating, investing, and financing cash flows monthly.",
+    category: "FP&A",
+    tags: ["Cash Flow", "Forecast", "Liquidity"],
+    steps: [
+      {
+        title: "Project operating cash",
+        description:
+          "Starting with projected net income, adjust for depreciation, changes in working capital. Model monthly customer collections and vendor payments.",
+      },
+      {
+        title: "Project investing cash",
+        description:
+          "Forecast monthly capital expenditures, asset disposals, and other investing activities based on capex plan and project schedule.",
+      },
+      {
+        title: "Project financing cash",
+        description:
+          "Model debt draws and repayments, equity issuances or buybacks, and dividend payments based on financing plan.",
+      },
+      {
+        title: "Calculate monthly cash position",
+        description:
+          "Calculate: Beginning cash + operating - investing - financing = ending cash. Track minimum cash required and borrowing capacity.",
+      },
+      {
+        title: "Identify liquidity needs",
+        description:
+          "Assess cash position in each month. Identify months requiring additional borrowing or periods of excess cash. Plan accordingly.",
+      },
+    ],
+    benefits: [
+      "Provides detailed view of cash needs and timing",
+      "Identifies periods requiring short-term financing or excess cash",
+      "Supports treasury cash management and debt draw planning",
+      "Enables proactive management of liquidity risks",
+    ],
+  },
+  {
+    slug: "unit-economics-analysis",
+    title: "Unit Economics Analysis",
+    description:
+      "Analyze profitability of core business unit (customer, product, transaction). Calculate unit contribution margins and payback periods.",
+    category: "FP&A",
+    tags: ["Unit Economics", "Profitability", "Analysis"],
+    steps: [
+      {
+        title: "Define economic unit",
+        description:
+          "Identify your core unit: customer account, product sold, transaction, subscription, or customer cohort. Define time period (annual, lifetime).",
+      },
+      {
+        title: "Calculate unit revenue",
+        description:
+          "Determine average revenue per unit: annual contract value, average transaction value, customer lifetime revenue, subscription lifetime revenue.",
+      },
+      {
+        title: "Calculate unit costs",
+        description:
+          "Identify variable costs per unit: cost of goods, delivery cost, payment processing, support costs, customer acquisition cost (CAC), etc.",
+      },
+      {
+        title: "Calculate unit margin",
+        description:
+          "Compute: (Unit revenue - unit variable costs) / unit revenue = unit contribution margin. Calculate payback period for CAC.",
+      },
+      {
+        title: "Analyze by segment",
+        description:
+          "Calculate unit economics by customer segment, product type, geography, or sales channel. Identify most and least profitable units.",
+      },
+    ],
+    benefits: [
+      "Provides clear view of profitability of core business activity",
+      "Identifies which customer segments, products, or channels are profitable",
+      "Supports pricing, marketing spend, and product strategy decisions",
+      "Enables scalability analysis and growth planning",
+    ],
+  },
+  {
+    slug: "customer-credit-analysis",
+    title: "Customer Credit Analysis Template",
+    description:
+      "Evaluate creditworthiness of new or existing customers. Assess ability to pay and establish appropriate credit terms and limits.",
+    category: "Accounts Receivable",
+    tags: ["Credit", "Analysis", "Risk"],
+    steps: [
+      {
+        title: "Gather customer information",
+        description:
+          "Collect company information: industry, size, years in business, public vs. private. Obtain financial statements if available.",
+      },
+      {
+        title: "Analyze financial statements",
+        description:
+          "Review customer's balance sheet, income statement, and cash flow. Calculate liquidity ratios, leverage ratios, and profitability metrics.",
+      },
+      {
+        title: "Check credit history",
+        description:
+          "Obtain credit report from agency (Dun & Bradstreet, trade credit). Review payment history, bankruptcies, liens, or legal judgments.",
+      },
+      {
+        title: "Assess payment capacity",
+        description:
+          "Evaluate customer's cash flow adequacy to pay proposed orders. Consider existing debt obligations and seasonal cash flow patterns.",
+      },
+      {
+        title: "Recommend credit terms",
+        description:
+          "Based on analysis, recommend credit limit, payment terms (net 30/60/90 days), and any security requirements (personal guarantee, collateral).",
+      },
+    ],
+    benefits: [
+      "Minimizes credit risk and bad debt losses",
+      "Enables appropriate credit limits based on customer creditworthiness",
+      "Supports collection and dispute resolution",
+      "Reduces working capital needed to fund receivables",
+    ],
+  },
+  {
+    slug: "collections-follow-up-tracker",
+    title: "Collections Follow-Up Tracker",
+    description:
+      "Track overdue customer invoices and follow-up activities. Log contacts, promises to pay, and collection status for each outstanding invoice.",
+    category: "Accounts Receivable",
+    tags: ["Collections", "AR", "Follow-up"],
+    steps: [
+      {
+        title: "Identify overdue invoices",
+        description:
+          "Pull AR aging report. Flag invoices past due 30+ days. Prioritize by age, amount, and customer creditworthiness.",
+      },
+      {
+        title: "Log customer contact",
+        description:
+          "Record each collection contact: date, person contacted, method (phone/email/letter), message left, and promised payment date.",
+      },
+      {
+        title: "Document reason for non-payment",
+        description:
+          "Note reason customer hasn't paid: dispute/quality issue, cash flow issue, administrative error, statement mismatch, missing invoice.",
+      },
+      {
+        title: "Escalate as needed",
+        description:
+          "Move invoices through collection stages: 1st reminder, 2nd notice, phone call, escalation to customer management, legal action if necessary.",
+      },
+      {
+        title: "Track resolution",
+        description:
+          "Record payment received, partial payment, or write-off decision. Close invoice from collections list once resolved.",
+      },
+    ],
+    benefits: [
+      "Improves collection rate and reduces bad debt",
+      "Creates audit trail of collection efforts",
+      "Identifies customers with chronic payment issues",
+      "Supports legal action if collection becomes necessary",
+    ],
+  },
 ];
 
 export function getTemplateBySlug(slug: string): Template | undefined {
