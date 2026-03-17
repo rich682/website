@@ -189,7 +189,7 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            The AI collaboration tool
+            The collaboration platform
             <span className="block text-[#6366F1]">for accounting teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
@@ -273,7 +273,7 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Your month end is scattered across too many tools
+              Accounting teams are not the bottleneck
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto leading-relaxed">
               Every month, your team coordinates across spreadsheets, email,
@@ -281,6 +281,59 @@ export default function TestPage() {
               for accounting. Things slip through the cracks.
             </p>
           </div>
+
+          {/* Stakeholders row */}
+          <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            {[
+              {
+                icon: (
+                  <svg className="w-6 h-6 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                ),
+                label: "Employees",
+                detail: "Late with submissions and approvals",
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6 text-[#8B5CF6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                ),
+                label: "Clients",
+                detail: "Slow to send documents you need",
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6 text-[#EC4899]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                  </svg>
+                ),
+                label: "Vendors",
+                detail: "Invoices scattered across inboxes",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-4 sm:p-5 text-center hover:border-[#D1D5DB] transition-colors"
+              >
+                <div className="flex justify-center mb-2.5">{item.icon}</div>
+                <p className="font-semibold text-[#111] text-sm">
+                  {item.label}
+                </p>
+                <p className="text-xs text-[#888] mt-1">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Divider with label */}
+          <div className="flex items-center gap-4 my-6">
+            <div className="flex-1 border-t border-dashed border-[#D1D5DB]" />
+            <span className="text-xs font-semibold uppercase tracking-wide text-[#999] whitespace-nowrap">Your team in the middle</span>
+            <div className="flex-1 border-t border-dashed border-[#D1D5DB]" />
+          </div>
+
+          {/* Data sources row */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4">
             {[
               {
@@ -294,15 +347,6 @@ export default function TestPage() {
               },
               {
                 icon: (
-                  <svg className="w-6 h-6 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                  </svg>
-                ),
-                label: "Email",
-                detail: "Chasing documents and approvals",
-              },
-              {
-                icon: (
                   <svg className="w-6 h-6 text-[#F59E0B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75m16.5 3.75v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75" />
                   </svg>
@@ -312,30 +356,12 @@ export default function TestPage() {
               },
               {
                 icon: (
-                  <svg className="w-6 h-6 text-[#EF4444]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                  <svg className="w-6 h-6 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
                 ),
-                label: "Invoices",
-                detail: "Scattered across inboxes",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6 text-[#8B5CF6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                  </svg>
-                ),
-                label: "Bills",
-                detail: "Approvals stuck in email chains",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6 text-[#F97316]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-                  </svg>
-                ),
-                label: "Expenses",
-                detail: "Receipts chased at month-end",
+                label: "Email Inbox",
+                detail: "Chasing documents and approvals",
               },
             ].map((tool) => (
               <div
@@ -350,6 +376,7 @@ export default function TestPage() {
               </div>
             ))}
           </div>
+
           <p className="text-center mt-10 text-[#555] max-w-xl mx-auto">
             None of these tools understand your close, your reconciliations, or
             your deadlines.{" "}
@@ -359,6 +386,11 @@ export default function TestPage() {
       </section>
 
       {/* ============ CORE FEATURES ============ */}
+      <div className="text-center py-16 lg:py-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
+          Vergo connects all the dots in one modern platform
+        </h2>
+      </div>
       <div className="divide-y divide-[#E5E7EB]">
         {coreFeatures.map((feature, idx) => (
           <section key={feature.label} className="py-16 lg:py-24">

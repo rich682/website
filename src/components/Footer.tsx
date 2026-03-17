@@ -52,6 +52,19 @@ export default function Footer() {
 
             <div>
               <h4 className="text-xs font-medium uppercase tracking-widest mb-4 text-[#999]">
+                Resources
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/templates" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
+                    Templates
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-medium uppercase tracking-widest mb-4 text-[#999]">
                 Legal
               </h4>
               <ul className="space-y-3">
