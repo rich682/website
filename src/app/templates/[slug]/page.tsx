@@ -16,9 +16,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const template = getTemplateBySlug(slug);
   if (!template) return { title: "Template not found | Vergo" };
 
+  const titleWithTemplate = /template/i.test(template.title)
+    ? template.title
+    : `${template.title} Template`;
+  const pageTitle = `Free ${titleWithTemplate} | Vergo`;
+  const pageDescription = `Download this free ${titleWithTemplate} for accounting teams. ${template.description}`;
+
   return {
-    title: `${template.title} | Vergo Templates`,
-    description: template.description,
+    title: pageTitle,
+    description: pageDescription,
+    keywords: [
+      `free ${titleWithTemplate.toLowerCase()}`,
+      `${titleWithTemplate.toLowerCase()} download`,
+      `free accounting template`,
+      `free ${template.category.toLowerCase()} template`,
+      ...template.tags.map((t) => t.toLowerCase()),
+    ],
+    openGraph: {
+      title: pageTitle,
+      description: pageDescription,
+      type: "website",
+    },
   };
 }
 

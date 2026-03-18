@@ -3,9 +3,23 @@ import type { Metadata } from "next";
 import { templates } from "@/data/templates";
 
 export const metadata: Metadata = {
-  title: "Templates | Vergo",
+  title: "Free Accounting Templates | Vergo",
   description:
-    "Ready-made accounting templates for close management, workpapers, and more. Download and customize for your team.",
+    "117 free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team — no sign-up required.",
+  keywords: [
+    "free accounting templates",
+    "free month-end close templates",
+    "free reconciliation templates",
+    "free workpaper templates",
+    "accounting close checklist",
+    "free finance templates download",
+  ],
+  openGraph: {
+    title: "Free Accounting Templates | Vergo",
+    description:
+      "117 free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team.",
+    type: "website",
+  },
 };
 
 const PAGE_SIZE = 12;
