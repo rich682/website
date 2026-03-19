@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { templates, getTemplateBySlug } from "@/data/templates";
+import UseTemplateButton from "@/components/UseTemplateButton";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `free ${template.category.toLowerCase()} template`,
       ...template.tags.map((t) => t.toLowerCase()),
     ],
+    alternates: {
+      canonical: `https://www.tryvergo.com/templates/${slug}`,
+    },
     openGraph: {
       title: pageTitle,
       description: pageDescription,
@@ -45,7 +49,16 @@ export default async function TemplatePage({ params }: Props) {
   const template = getTemplateBySlug(slug);
   if (!template) notFound();
 
-  const related = templates.filter((t) => t.slug !== slug).slice(0, 3);
+  const related = templates
+    .filter((t) => t.slug !== slug)
+    .map((t) => ({
+      ...t,
+      _score:
+        (t.category === template.category ? 2 : 0) +
+        t.tags.filter((tag) => template.tags.includes(tag)).length,
+    }))
+    .sort((a, b) => b._score - a._score)
+    .slice(0, 3);
 
   return (
     <main
@@ -98,12 +111,7 @@ export default async function TemplatePage({ params }: Props) {
             {template.description}
           </p>
           <div className="mt-8">
-            <a
-              href="https://app.tryvergo.com/signup"
-              className="inline-flex items-center justify-center rounded-full bg-[#6366F1] px-7 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#4F46E5] transition-colors duration-300"
-            >
-              Use this template
-            </a>
+            <UseTemplateButton slug={template.slug} title={template.title} />
           </div>
         </div>
       </section>
@@ -197,6 +205,25 @@ export default async function TemplatePage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* ============ JSON-LD ============ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: template.steps.map((step) => ({
+              "@type": "Question",
+              name: step.title,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: step.description,
+              },
+            })),
+          }),
+        }}
+      />
 
       {/* ============ CTA ============ */}
       <section className="py-24 bg-white">

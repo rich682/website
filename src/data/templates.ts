@@ -4743,6 +4743,618 @@ export const templates: Template[] = [
       "Enables timely communication with audit committee on control issues",
     ],
   },
+  {
+    slug: "expense-report-template",
+    title: "Expense Report Template",
+    description:
+      "A structured expense report template for employees to document business expenses by category, attach receipts, and obtain manager approval. Includes automatic totaling and an approval sign-off section.",
+    category: "Expense Management",
+    tags: ["expense report", "reimbursement", "travel expense", "receipt tracking", "employee expenses", "expense management"],
+    steps: [
+      {
+        title: "Enter employee and period information",
+        description: "Fill in the employee name, department, manager, and the expense period (start and end date) in the header section.",
+      },
+      {
+        title: "Log each expense line item",
+        description: "For each expense, enter the date, description, category (Travel, Meals, Software, etc.), amount, and whether a receipt is attached.",
+      },
+      {
+        title: "Verify the automatic total",
+        description: "The Amount column totals automatically. Confirm the total matches your supporting receipts before submitting.",
+      },
+      {
+        title: "Attach receipts",
+        description: "Attach scanned or photographed receipts for each line item. Mark the Receipt column Yes/No to indicate completion.",
+      },
+      {
+        title: "Submit for manager approval",
+        description: "Route the completed report to your manager. The approval section at the bottom captures the manager's name, date, and approval status.",
+      },
+    ],
+    benefits: [
+      "Reduces reimbursement processing time with a consistent, pre-structured format",
+      "Category dropdowns ensure expenses are coded correctly the first time",
+      "Automatic totaling eliminates manual calculation errors",
+      "Approval section creates a clear audit trail for every expense claim",
+    ],
+  },
+  {
+    slug: "income-statement-template",
+    title: "Income Statement Template",
+    description:
+      "A professional income statement template with sections for revenue, cost of goods sold, gross profit, operating expenses, operating income, and net income. Includes current vs. prior period columns and automatic variance calculations.",
+    category: "Financial Reporting",
+    tags: ["income statement", "profit and loss", "P&L", "financial statement", "revenue", "net income", "operating income"],
+    steps: [
+      {
+        title: "Enter your reporting period",
+        description: "Update the column headers with the current and prior period labels (e.g., Q1 2025 vs. Q1 2024 or January 2025 vs. January 2024).",
+      },
+      {
+        title: "Input revenue figures",
+        description: "Enter product revenue, service revenue, and other revenue for both periods. The template calculates Total Revenue automatically.",
+      },
+      {
+        title: "Enter cost of goods sold",
+        description: "Input COGS components for each period. Gross Profit calculates automatically as Revenue minus COGS.",
+      },
+      {
+        title: "Fill in operating expenses",
+        description: "Enter each operating expense line (salaries, rent, marketing, etc.). Operating Income calculates automatically.",
+      },
+      {
+        title: "Review net income and variance",
+        description: "The Variance column highlights period-over-period changes. Review significant variances and add commentary as needed.",
+      },
+    ],
+    benefits: [
+      "GAAP-aligned structure covering all standard income statement line items",
+      "Automatic variance column eliminates manual period-over-period calculations",
+      "Currency formatting applied throughout for professional presentation",
+      "Easily adaptable to monthly, quarterly, or annual reporting periods",
+    ],
+  },
+  {
+    slug: "financial-statement-template",
+    title: "Financial Statement Template",
+    description:
+      "A comprehensive financial statement template package covering the income statement, balance sheet, and supporting schedules. Designed for accountants preparing monthly or quarterly financial packages for management or board review.",
+    category: "Financial Reporting",
+    tags: ["financial statement", "financial reporting", "income statement", "balance sheet", "management reporting", "board reporting"],
+    steps: [
+      {
+        title: "Update the reporting period header",
+        description: "Set the reporting entity name and period in the header section so all sheets reference the correct timeframe.",
+      },
+      {
+        title: "Complete the income statement tab",
+        description: "Enter revenue, COGS, and expense figures. Subtotals and net income calculate automatically.",
+      },
+      {
+        title: "Complete the balance sheet tab",
+        description: "Input asset, liability, and equity balances. The balance check formula confirms Assets = Liabilities + Equity.",
+      },
+      {
+        title: "Review the supporting schedules",
+        description: "Use the additional tabs for key supporting details such as debt schedules, equity rollforward, or departmental breakdowns.",
+      },
+      {
+        title: "Distribute for review",
+        description: "Share the completed package with management or the board. All formulas are protected to prevent accidental overwrites.",
+      },
+    ],
+    benefits: [
+      "Complete financial package in a single file — income statement, balance sheet, and schedules",
+      "Automatic cross-tab formulas ensure consistency across statements",
+      "Professional presentation suitable for board and investor review",
+      "Saves hours of manual formatting every reporting cycle",
+    ],
+  },
+  {
+    slug: "general-ledger-template",
+    title: "General Ledger Template",
+    description:
+      "A detailed general ledger template for recording all financial transactions by account. Includes columns for date, account number, description, reference, debit, credit, and running balance calculated automatically via formula.",
+    category: "Workpapers",
+    tags: ["general ledger", "GL", "journal entries", "account ledger", "debit credit", "running balance", "bookkeeping"],
+    steps: [
+      {
+        title: "Set up your chart of accounts",
+        description: "Enter your account numbers and names in the Account No. and Account Name columns to match your chart of accounts.",
+      },
+      {
+        title: "Record transactions chronologically",
+        description: "Enter each transaction with the date, description, reference number, and debit or credit amount in the appropriate column.",
+      },
+      {
+        title: "Verify running balances",
+        description: "The Running Balance column calculates automatically as each row is entered. Verify balances match your ERP or source system.",
+      },
+      {
+        title: "Reconcile to subsidiary ledgers",
+        description: "For accounts with subledgers (AR, AP, inventory), confirm the GL balance matches the total of the subledger detail.",
+      },
+      {
+        title: "Archive at period end",
+        description: "Save a copy of the completed ledger as part of your period-end workpaper package for audit trail purposes.",
+      },
+    ],
+    benefits: [
+      "Running balance formula eliminates manual adding and reduces errors",
+      "Consistent format makes reconciliation to ERP exports straightforward",
+      "Reference column links entries back to source documents for audit support",
+      "Works for any account type — assets, liabilities, revenue, or expenses",
+    ],
+  },
+  {
+    slug: "trial-balance-template",
+    title: "Trial Balance Template",
+    description:
+      "A clean trial balance template for listing all general ledger accounts with their debit and credit balances. Includes automatic totals, a balance check formula that confirms debits equal credits, and conditional formatting to flag any difference.",
+    category: "Workpapers",
+    tags: ["trial balance", "GL accounts", "debit credit", "account balances", "pre-close", "period end", "bookkeeping"],
+    steps: [
+      {
+        title: "Enter the reporting date",
+        description: "Fill in the 'As of' date in the header to identify the period for this trial balance.",
+      },
+      {
+        title: "List all general ledger accounts",
+        description: "Enter each GL account number and name in the Account No. and Account Name columns.",
+      },
+      {
+        title: "Enter debit and credit balances",
+        description: "Input the balance for each account in either the Debit or Credit column based on its normal balance type.",
+      },
+      {
+        title: "Verify the balance check",
+        description: "The Totals row sums both columns and the Balance Check row calculates the difference. It should equal zero if all entries are correct.",
+      },
+      {
+        title: "Investigate any difference",
+        description: "If the balance check is non-zero, trace back through recent journal entries to find the posting error or missing entry.",
+      },
+    ],
+    benefits: [
+      "Automatic totals and balance check formula eliminate manual verification steps",
+      "Clean layout makes it easy to identify accounts with unusual balances",
+      "Serves as the starting point for financial statement preparation",
+      "Provides clear audit evidence that the books are in balance at period end",
+    ],
+  },
+  {
+    slug: "balance-sheet-template",
+    title: "Balance Sheet Template",
+    description:
+      "A professionally formatted balance sheet template with sections for current assets, non-current assets, current liabilities, long-term liabilities, and equity. Subtotals calculate automatically and a balance check confirms the accounting equation holds.",
+    category: "Financial Reporting",
+    tags: ["balance sheet", "assets", "liabilities", "equity", "financial statement", "statement of financial position"],
+    steps: [
+      {
+        title: "Enter the reporting date and entity name",
+        description: "Update the header with the company name and the 'as of' date for the balance sheet.",
+      },
+      {
+        title: "Input asset balances",
+        description: "Enter current asset balances (cash, AR, inventory, prepaid) and non-current asset balances (PP&E, intangibles). Subtotals calculate automatically.",
+      },
+      {
+        title: "Input liability balances",
+        description: "Enter current liabilities (AP, accruals, short-term debt) and non-current liabilities (long-term debt, deferred taxes).",
+      },
+      {
+        title: "Enter equity balances",
+        description: "Fill in common stock, additional paid-in capital, retained earnings, and any other equity components.",
+      },
+      {
+        title: "Verify the balance check",
+        description: "The Balance Check row confirms that Total Assets equals Total Liabilities + Equity. Investigate any difference before finalizing.",
+      },
+    ],
+    benefits: [
+      "Automatic subtotals for every section eliminate manual calculation errors",
+      "Balance check formula instantly flags any out-of-balance condition",
+      "Standard GAAP structure accepted for management, board, and bank reporting",
+      "Prior period column enables quick comparative analysis",
+    ],
+  },
+  {
+    slug: "accounts-payable-checklist",
+    title: "Accounts Payable Checklist",
+    description:
+      "A comprehensive accounts payable checklist covering invoice processing, vendor reconciliation, payment approvals, and period-end close tasks. Helps AP teams ensure no steps are missed and provides clear accountability with owner and status columns.",
+    category: "Accounts Payable",
+    tags: ["accounts payable", "AP checklist", "vendor payments", "invoice processing", "AP close", "payment approval"],
+    steps: [
+      {
+        title: "Assign owners and due dates",
+        description: "Populate the Owner and Due Date columns for each task before the period begins so accountability is clear from day one.",
+      },
+      {
+        title: "Process all invoices received",
+        description: "Work through all open invoices, coding each to the correct GL account, cost center, and period. Mark each invoice task Complete when done.",
+      },
+      {
+        title: "Reconcile vendor statements",
+        description: "Compare vendor statements to your AP subledger for key suppliers. Investigate and resolve any discrepancies.",
+      },
+      {
+        title: "Run the payment cycle",
+        description: "Process approved payments per your payment calendar. Confirm ACH and check runs are authorized and documented.",
+      },
+      {
+        title: "Complete AP close tasks",
+        description: "Accrue for invoices received but not yet processed, reconcile the AP subledger to the GL, and obtain sign-off before locking the period.",
+      },
+    ],
+    benefits: [
+      "Prevents missed invoices and late payments that trigger vendor disputes",
+      "Status dropdown gives managers real-time visibility into AP close progress",
+      "Accrual step ensures expenses are recognized in the correct period",
+      "Serves as audit evidence that AP processes were followed consistently",
+    ],
+  },
+  {
+    slug: "accounts-receivable-checklist",
+    title: "Accounts Receivable Checklist",
+    description:
+      "An accounts receivable checklist covering invoicing, collections follow-up, cash application, and period-end reconciliation. Keeps AR teams on track with a structured task list, clear ownership, and status tracking.",
+    category: "Accounts Receivable",
+    tags: ["accounts receivable", "AR checklist", "collections", "invoicing", "cash application", "AR close", "aging"],
+    steps: [
+      {
+        title: "Generate and send customer invoices",
+        description: "Confirm all billable work for the period has been invoiced. Send invoices to customers and log in the AR system.",
+      },
+      {
+        title: "Apply cash receipts",
+        description: "Match incoming payments to open invoices. Flag any unapplied cash for investigation and resolution.",
+      },
+      {
+        title: "Follow up on overdue accounts",
+        description: "Run the AR aging report. Contact customers with balances overdue by 30, 60, and 90+ days per your collections policy.",
+      },
+      {
+        title: "Review and update the allowance for doubtful accounts",
+        description: "Based on the current aging, assess whether the allowance balance is adequate. Post an adjusting entry if needed.",
+      },
+      {
+        title: "Reconcile AR subledger to GL",
+        description: "Confirm the total of the AR subledger matches the GL control account. Resolve any differences before closing.",
+      },
+    ],
+    benefits: [
+      "Ensures every billable item is invoiced before the period closes",
+      "Structured collections follow-up reduces DSO and bad debt expense",
+      "Subledger reconciliation step catches posting errors before they compound",
+      "Clear ownership makes it easy to escalate overdue tasks to management",
+    ],
+  },
+  {
+    slug: "accounts-receivable-month-end-close-checklist",
+    title: "Accounts Receivable Month-End Close Checklist",
+    description:
+      "A month-end close checklist focused specifically on the accounts receivable cycle. Covers invoicing cutoff, cash receipts cutoff, collections aging, allowance review, subledger reconciliation, and AR sign-off.",
+    category: "Close Management",
+    tags: ["accounts receivable", "AR month end", "close checklist", "AR close", "revenue cutoff", "allowance for doubtful accounts", "AR reconciliation"],
+    steps: [
+      {
+        title: "Confirm invoicing cutoff",
+        description: "Verify all invoices for goods shipped or services delivered before month-end have been generated and recorded in the correct period.",
+      },
+      {
+        title: "Apply all cash received through month-end",
+        description: "Post all customer payments received on or before the last day of the month. Flag any lockbox items still in transit.",
+      },
+      {
+        title: "Run the AR aging report",
+        description: "Generate the final AR aging for the period. Verify totals agree to the AR GL balance before any allowance adjustments.",
+      },
+      {
+        title: "Review and post allowance for doubtful accounts",
+        description: "Assess the adequacy of the allowance based on the aged receivables. Post an adjusting journal entry if the allowance requires a true-up.",
+      },
+      {
+        title: "Reconcile AR subledger to GL and obtain sign-off",
+        description: "Confirm the subledger total ties to the GL control account. Obtain controller or CFO sign-off before locking the period.",
+      },
+    ],
+    benefits: [
+      "Invoicing cutoff step ensures revenue is recognized in the correct period",
+      "Allowance review aligns with GAAP requirements for bad debt estimation",
+      "Subledger-to-GL reconciliation prevents AR overstatement or understatement",
+      "Sign-off process creates clear accountability for the AR close",
+    ],
+  },
+  {
+    slug: "accounts-payable-month-end-close-checklist",
+    title: "Accounts Payable Month-End Close Checklist",
+    description:
+      "A month-end close checklist for the accounts payable function. Covers invoice cutoff, accruals for uninvoiced receipts, vendor statement reconciliation, AP subledger reconciliation, and period-end sign-off.",
+    category: "Close Management",
+    tags: ["accounts payable", "AP month end", "close checklist", "AP close", "invoice cutoff", "accrued liabilities", "AP reconciliation"],
+    steps: [
+      {
+        title: "Enforce invoice cutoff",
+        description: "Confirm that all invoices received on or before the last day of the month are entered and coded to the correct period.",
+      },
+      {
+        title: "Accrue for uninvoiced receipts",
+        description: "Review the open PO report for goods received but not yet invoiced. Post accrual entries to record the liability in the correct period.",
+      },
+      {
+        title: "Reconcile key vendor statements",
+        description: "Compare statements from high-volume vendors to your AP subledger. Investigate and resolve any discrepancies.",
+      },
+      {
+        title: "Reconcile AP subledger to GL",
+        description: "Confirm the total of the AP subledger matches the accounts payable GL control account. Resolve differences before period lock.",
+      },
+      {
+        title: "Obtain sign-off and lock the period",
+        description: "Route the completed AP close checklist to the controller for review and approval. Lock the period in your ERP after sign-off.",
+      },
+    ],
+    benefits: [
+      "Accrual step ensures liabilities are recognized in the correct accounting period",
+      "Vendor reconciliation catches billing disputes before they age",
+      "Subledger-to-GL reconciliation is a key internal control for AP accuracy",
+      "Documented sign-off satisfies audit requirements for period-end close",
+    ],
+  },
+  {
+    slug: "monthly-accounting-checklist",
+    title: "Monthly Accounting Checklist",
+    description:
+      "A complete monthly accounting checklist covering all key close activities from journal entries and reconciliations to financial reporting and sign-off. Suitable for small accounting teams managing the full month-end process.",
+    category: "Close Management",
+    tags: ["monthly accounting", "accounting checklist", "month end", "close checklist", "accounting close", "financial close", "bookkeeping"],
+    steps: [
+      {
+        title: "Post standard journal entries",
+        description: "Record recurring entries including depreciation, amortization, prepaid expense amortization, and any other standard monthly accruals.",
+      },
+      {
+        title: "Process and reconcile bank accounts",
+        description: "Download bank statements and reconcile each account to the GL. Identify and resolve any unreconciled items.",
+      },
+      {
+        title: "Reconcile key balance sheet accounts",
+        description: "Complete reconciliations for accounts receivable, accounts payable, prepaid expenses, fixed assets, and accrued liabilities.",
+      },
+      {
+        title: "Prepare and review financial statements",
+        description: "Generate the income statement and balance sheet. Review for unusual balances, significant variances, and completeness.",
+      },
+      {
+        title: "Obtain management sign-off",
+        description: "Present the financial package to management or the CFO for review and approval. Document sign-off before locking the period.",
+      },
+    ],
+    benefits: [
+      "Single checklist covers the full monthly close from open to sign-off",
+      "Prevents tasks from being skipped during busy or high-pressure close periods",
+      "Status tracking gives management real-time visibility into close progress",
+      "Works for teams of any size — from solo bookkeepers to full accounting departments",
+    ],
+  },
+  {
+    slug: "financial-close-checklist",
+    title: "Financial Close Checklist",
+    description:
+      "A structured financial close checklist for accounting teams to manage the period-end close process. Covers journal entries, account reconciliations, financial statement preparation, variance analysis, and management reporting sign-off.",
+    category: "Close Management",
+    tags: ["financial close", "close checklist", "period end close", "accounting close", "month end", "journal entries", "reconciliations"],
+    steps: [
+      {
+        title: "Complete all journal entries",
+        description: "Post standard, recurring, and adjusting journal entries. Ensure all entries are reviewed and approved before moving forward.",
+      },
+      {
+        title: "Complete all account reconciliations",
+        description: "Reconcile every balance sheet account per the reconciliation schedule. Obtain preparer and reviewer sign-off for each.",
+      },
+      {
+        title: "Prepare financial statements",
+        description: "Generate the income statement, balance sheet, and cash flow statement from the reconciled trial balance.",
+      },
+      {
+        title: "Perform variance analysis",
+        description: "Compare actual results to budget and prior period. Prepare written commentary explaining key variances for management.",
+      },
+      {
+        title: "Obtain final sign-off and lock the period",
+        description: "Route the financial package to the CFO or controller for final review and approval. Lock the accounting period after sign-off.",
+      },
+    ],
+    benefits: [
+      "Structured workflow reduces close cycle time by eliminating ad-hoc task management",
+      "Variance analysis step ensures management receives meaningful commentary, not just numbers",
+      "Documented reconciliation sign-offs satisfy internal control requirements",
+      "Consistent process across periods makes external audits faster and less disruptive",
+    ],
+  },
+  {
+    slug: "ar-reconciliation-template",
+    title: "AR Reconciliation Template",
+    description:
+      "An accounts receivable reconciliation template for confirming that the AR subledger agrees to the general ledger control account. Includes sections for beginning balance, activity during the period, ending balance, and reconciling item detail.",
+    category: "Reconciliations",
+    tags: ["AR reconciliation", "accounts receivable", "subledger reconciliation", "GL reconciliation", "month end", "AR close"],
+    steps: [
+      {
+        title: "Pull the AR subledger total",
+        description: "Export the AR subledger aging report as of the reconciliation date. Confirm the total agrees to the sum of all open customer balances.",
+      },
+      {
+        title: "Pull the GL control account balance",
+        description: "Obtain the ending balance of the accounts receivable GL control account for the same period.",
+      },
+      {
+        title: "Calculate the difference",
+        description: "Subtract the GL balance from the subledger total. Any difference requires identification and resolution.",
+      },
+      {
+        title: "Identify and document reconciling items",
+        description: "List each reconciling item with the dollar amount and explanation. Common items include timing differences and unposted cash receipts.",
+      },
+      {
+        title: "Obtain sign-off",
+        description: "Route the completed reconciliation to a reviewer. Both preparer and reviewer sign off before the workpaper is filed.",
+      },
+    ],
+    benefits: [
+      "Confirms accuracy of the AR balance presented on the balance sheet",
+      "Identifies posting errors or timing differences before the period is locked",
+      "Serves as documented evidence of the subledger-to-GL reconciliation control",
+      "Reduces external audit time by providing clear, organized workpaper documentation",
+    ],
+  },
+  {
+    slug: "cash-reconciliation-template",
+    title: "Cash Reconciliation Template",
+    description:
+      "A cash account reconciliation template for reconciling the GL cash balance to bank statements. Covers outstanding checks, deposits in transit, bank charges, and other reconciling items to arrive at the adjusted cash balance.",
+    category: "Reconciliations",
+    tags: ["cash reconciliation", "bank reconciliation", "cash account", "outstanding checks", "deposits in transit", "GL reconciliation"],
+    steps: [
+      {
+        title: "Enter the GL cash balance",
+        description: "Record the ending cash balance from the general ledger as of the reconciliation date.",
+      },
+      {
+        title: "Enter the bank statement balance",
+        description: "Record the ending balance from the bank statement for the same date.",
+      },
+      {
+        title: "List outstanding checks",
+        description: "Enter all checks issued but not yet cleared the bank as of the statement date. These reduce the bank balance.",
+      },
+      {
+        title: "List deposits in transit",
+        description: "Enter any deposits recorded in the GL but not yet appearing on the bank statement. These increase the bank balance.",
+      },
+      {
+        title: "Reconcile and resolve differences",
+        description: "The adjusted GL and adjusted bank balances should agree. Any remaining difference indicates a posting error or missing entry to investigate.",
+      },
+    ],
+    benefits: [
+      "Catches fraudulent or erroneous transactions before they go undetected",
+      "Outstanding check and deposit in transit lists keep the reconciliation organized",
+      "Adjusted balance formulas eliminate arithmetic errors",
+      "Monthly reconciliation is a fundamental internal control over cash",
+    ],
+  },
+  {
+    slug: "general-journal-template",
+    title: "General Journal Template",
+    description:
+      "A general journal template for recording all types of journal entries in chronological order. Includes columns for date, journal entry number, account, description, debit, and credit with running debit/credit totals to verify entries balance.",
+    category: "Workpapers",
+    tags: ["general journal", "journal entries", "debit credit", "GL posting", "adjusting entries", "accounting records"],
+    steps: [
+      {
+        title: "Set up the journal period",
+        description: "Enter the accounting period at the top of the journal. All entries in the journal should fall within this period.",
+      },
+      {
+        title: "Number each journal entry",
+        description: "Assign a sequential journal entry number to each entry. This makes referencing and tracing entries to the GL easier.",
+      },
+      {
+        title: "Enter debit and credit lines",
+        description: "For each entry, record the account name, description, and either the debit or credit amount. Each entry must balance.",
+      },
+      {
+        title: "Verify entry balances",
+        description: "Confirm each journal entry's debits equal its credits before posting. The template highlights unbalanced entries automatically.",
+      },
+      {
+        title: "Post entries to the general ledger",
+        description: "After review and approval, post all balanced entries to the GL. Mark each entry as posted and retain the journal as a workpaper.",
+      },
+    ],
+    benefits: [
+      "Sequential entry numbering creates a clear audit trail for all postings",
+      "Debit/credit balance check prevents unbalanced entries from being posted",
+      "Chronological format matches how GL reports are organized for easy cross-reference",
+      "Serves as the primary source document for all period-end journal entries",
+    ],
+  },
+  {
+    slug: "accounting-workflow-template",
+    title: "Accounting Workflow Template",
+    description:
+      "A structured accounting workflow template for documenting and managing recurring accounting processes. Defines task sequences, owners, dependencies, and timing for consistent execution of close, reporting, and compliance workflows.",
+    category: "Close Management",
+    tags: ["accounting workflow", "close workflow", "process documentation", "accounting process", "task management", "close management"],
+    steps: [
+      {
+        title: "Identify the workflow to document",
+        description: "Select the accounting process to document — month-end close, accounts payable, payroll, or another recurring workflow.",
+      },
+      {
+        title: "List all tasks in sequence",
+        description: "Break the workflow into individual tasks in the order they must be completed. Include any tasks with dependencies on previous steps.",
+      },
+      {
+        title: "Assign owners and timing",
+        description: "For each task, assign a responsible owner and a target completion timing (e.g., Day 1, Day 2, or specific business day of the month).",
+      },
+      {
+        title: "Identify dependencies and blockers",
+        description: "Note which tasks cannot start until a prior task is complete. Document any external dependencies such as bank statements or payroll reports.",
+      },
+      {
+        title: "Review and refine with the team",
+        description: "Walk through the documented workflow with the team. Capture feedback on missing steps, incorrect timing, or ownership gaps, then finalize.",
+      },
+    ],
+    benefits: [
+      "Eliminates reliance on tribal knowledge — processes are documented and repeatable",
+      "Clear ownership and timing reduce delays and missed deadlines",
+      "Dependency mapping helps identify the critical path for close completion",
+      "Onboarding new team members is faster with clear process documentation",
+    ],
+  },
+  {
+    slug: "cfo-monthly-report-template",
+    title: "CFO Monthly Report Template",
+    description:
+      "A monthly financial report template designed for CFO distribution to the board and executive team. Covers key financial highlights, income statement summary, balance sheet snapshot, cash position, KPIs, and forward-looking commentary.",
+    category: "Financial Reporting",
+    tags: ["CFO report", "monthly report", "board reporting", "executive reporting", "financial highlights", "KPIs", "management reporting"],
+    steps: [
+      {
+        title: "Populate the financial highlights section",
+        description: "Summarize revenue, gross profit, operating income, and net income for the month and year-to-date vs. budget and prior year.",
+      },
+      {
+        title: "Update the income statement summary",
+        description: "Transfer the key P&L line items from the month-end close. Include both current month and YTD actuals alongside budget and prior year columns.",
+      },
+      {
+        title: "Update the balance sheet snapshot",
+        description: "Include current balances for key balance sheet items: cash, AR, AP, debt, and equity. Flag any material changes from the prior period.",
+      },
+      {
+        title: "Report on cash and liquidity",
+        description: "Show ending cash balance, cash burn or generation for the month, and any significant cash movements such as debt payments or capital calls.",
+      },
+      {
+        title: "Add management commentary",
+        description: "Write brief commentary on the key variances, business drivers, risks, and outlook for the coming period to give numbers full context.",
+      },
+    ],
+    benefits: [
+      "Gives the board and executive team a complete financial picture in one document",
+      "Budget vs. actual comparison enables meaningful variance discussion",
+      "Commentary section ensures numbers are understood in the context of business performance",
+      "Consistent format every month reduces preparation time and improves credibility",
+    ],
+  },
 ];
 
 export function getTemplateBySlug(slug: string): Template | undefined {

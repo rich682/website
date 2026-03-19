@@ -4,8 +4,7 @@ import { templates } from "@/data/templates";
 
 export const metadata: Metadata = {
   title: "Free Accounting Templates | Vergo",
-  description:
-    "117 free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team — no sign-up required.",
+  description: `${templates.length}+ free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team — no sign-up required.`,
   keywords: [
     "free accounting templates",
     "free month-end close templates",
@@ -16,8 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Free Accounting Templates | Vergo",
-    description:
-      "117 free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team.",
+    description: `${templates.length}+ free accounting templates for close management, workpapers, reconciliations, and more. Download and customize for your team.`,
     type: "website",
   },
 };

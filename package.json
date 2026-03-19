@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-templates": "tsx scripts/generate-templates.mts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.26.2",
     "next": "16.1.2",
@@ -22,7 +24,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.2",
+    "exceljs": "^4.4.0",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
