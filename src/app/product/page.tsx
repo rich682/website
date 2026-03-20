@@ -9,7 +9,7 @@ import CloseMockup from "@/components/animations/CloseMockup";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product | Vergo",
+  title: "Month End Close Software — How It Works | Vergo",
   description:
     "The workflow platform that connects your accounting tools, automates repetitive tasks, and gives you complete visibility into your close.",
 };

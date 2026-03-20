@@ -72,8 +72,10 @@ export default function ComparePage() {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Stop stitching together tools that weren&apos;t built for accounting.
-            Vergo brings everything your team needs into one platform.
+            Stop stitching together tools that weren&apos;t built for the close.
+            Vergo is the only dedicated month end close platform that also
+            includes AP automation, expense management, and AI agents — all in
+            one place.
           </p>
         </div>
       </section>

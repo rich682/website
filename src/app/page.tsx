@@ -10,9 +10,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vergo | The Workflow Platform for Accounting Teams",
+  title: "Vergo | Month End Close Software for Accounting Teams",
   description:
-    "Coordinate your close, automate reconciliations, and stop managing month-end across spreadsheets, email, and Teams.",
+    "Vergo is month end close software that replaces your spreadsheet tracker, automates reconciliations, and gives your team real-time visibility into every task. Built for accounting teams.",
 };
 
 const coreFeatures = [
@@ -215,12 +215,13 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            The collaboration platform
-            <span className="block text-[#6366F1]">for accounting teams</span>
+            Month end close software
+            <span className="block text-[#6366F1]">built for accounting teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Coordinate your close, automate reconciliations, and stop managing
-            month-end across spreadsheets, email, and Teams.
+            Run a more organized close. Manage every task, automate
+            reconciliations, collect documents from stakeholders, and track
+            progress — all in one place.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
@@ -299,12 +300,14 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Accounting teams are not the bottleneck
+              Month end close shouldn&apos;t take this long
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto leading-relaxed">
-              Every month, your team coordinates across spreadsheets, email,
-              Slack, and maybe a project management tool that wasn&apos;t built
-              for accounting. Things slip through the cracks.
+              Every month, your team manages the close across spreadsheets,
+              email, Slack, and project management tools that weren&apos;t built
+              for accounting. Tasks fall through the cracks, reconciliations
+              take longer than they should, and you&apos;re always chasing the
+              same people.
             </p>
           </div>
 
@@ -596,7 +599,8 @@ export default function TestPage() {
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto">
               Monday.com, ClickUp, and Asana are great for project management.
-              But accounting workflows have different requirements.
+              But accounting teams need dedicated close software — not generic
+              task boards.
             </p>
           </div>
 
@@ -693,10 +697,11 @@ export default function TestPage() {
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Streamline your accounting processes today.
+            Run a more controlled month end close today.
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the accounting teams closing faster with less manual work.
+            Join the accounting teams that replaced spreadsheet-based close
+            management with Vergo.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a

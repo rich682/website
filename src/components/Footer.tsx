@@ -11,7 +11,7 @@ export default function Footer() {
               Vergo
             </Link>
             <p className="mt-3 text-sm max-w-xs leading-relaxed text-[#999]">
-              The collaboration platform for accounting teams.
+              Month end close software for accounting teams.
             </p>
           </div>
 
