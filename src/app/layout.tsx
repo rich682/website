@@ -41,6 +41,12 @@ export default function RootLayout({
             __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("9NMMZH482MNW");`,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-331832925" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-331832925');`,
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}>
         <Header />
