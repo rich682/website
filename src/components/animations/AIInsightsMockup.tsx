@@ -2,20 +2,20 @@ export default function AIInsightsMockup() {
   const insights = [
     {
       icon: "trend",
-      title: "Revenue trending up",
-      detail: "Revenue has increased 12% over the past 3 months, outpacing forecast by 4%.",
+      title: "Cost overrun detected on 3 active jobs",
+      detail: "Jobs 1042, 1087, and 1103 are trending 8-15% over budget on labor costs.",
       type: "positive",
     },
     {
       icon: "alert",
-      title: "Unusual spike in T&E",
-      detail: "Travel & Entertainment spend is 35% above the rolling 6-month average.",
+      title: "Subcontractor billing variance flagged",
+      detail: "Mason Electric billed $42K against a $28K committed cost — 50% over PO.",
       type: "warning",
     },
     {
       icon: "forecast",
-      title: "Cash flow projection",
-      detail: "Based on current trends, projected cash balance of $1.2M by end of Q2.",
+      title: "Cost-to-complete estimate updated",
+      detail: "AI-generated cost-to-complete across 12 active projects. 3 require margin adjustments.",
       type: "neutral",
     },
   ];
@@ -84,7 +84,7 @@ export default function AIInsightsMockup() {
       <div className="mt-4 pt-3 border-t border-border flex items-center gap-2">
         <div className="w-1.5 h-1.5 rounded-full bg-highlight animate-pulse" />
         <span className="text-[9px] sm:text-[10px] text-foreground-muted">
-          AI analysis updated daily
+          AI analysis runs every close cycle
         </span>
       </div>
     </div>

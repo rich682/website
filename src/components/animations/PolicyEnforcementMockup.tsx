@@ -1,8 +1,8 @@
 export default function PolicyEnforcementMockup() {
   const expenses = [
-    { name: "Client Dinner", amount: "$185", policy: "pass", cls: "1" },
-    { name: "Software License", amount: "$2,400", policy: "pass", cls: "2" },
-    { name: "Travel Upgrade", amount: "$890", policy: "flagged", cls: "3" },
+    { name: "Field Lunch", amount: "$185", policy: "pass", cls: "1" },
+    { name: "Equipment Rental", amount: "$2,400", policy: "pass", cls: "2" },
+    { name: "Fuel Charge", amount: "$890", policy: "flagged", cls: "3" },
   ];
 
   return (

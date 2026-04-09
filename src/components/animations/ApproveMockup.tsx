@@ -4,7 +4,7 @@ export default function ApproveMockup() {
       detail: "New form response",
       detailType: "form",
       timestamp: "2 mins ago",
-      taskName: "Bank Reconciliation",
+      taskName: "Job Cost Reconciliation",
       taskType: "Recon",
       boardMonth: "Mar 2025",
       status: "Pending",
@@ -14,8 +14,8 @@ export default function ApproveMockup() {
       detail: "New email reply",
       detailType: "email",
       timestamp: "1 hour ago",
-      taskName: "P&L Report",
-      taskType: "Reports",
+      taskName: "WIP Schedule",
+      taskType: "WIP",
       boardMonth: "Mar 2025",
       status: "Pending",
       cls: "2",
@@ -24,8 +24,8 @@ export default function ApproveMockup() {
       detail: "Agent work ready",
       detailType: "agent",
       timestamp: "3 hours ago",
-      taskName: "Accrual Entries",
-      taskType: "Analysis",
+      taskName: "Subcontractor Billing",
+      taskType: "Billing",
       boardMonth: "Feb 2025",
       status: "Reviewed",
       cls: "3",
@@ -34,8 +34,8 @@ export default function ApproveMockup() {
 
   const typeColors: Record<string, string> = {
     Recon: "bg-highlight/10 text-highlight",
-    Reports: "bg-success/10 text-success",
-    Analysis: "bg-warning/10 text-warning",
+    WIP: "bg-success/10 text-success",
+    Billing: "bg-warning/10 text-warning",
   };
 
   return (

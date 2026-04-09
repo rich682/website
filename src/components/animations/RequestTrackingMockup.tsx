@@ -1,9 +1,9 @@
 export default function RequestTrackingMockup() {
   const requests = [
     {
-      name: "P&L Statement",
-      recipient: "John",
-      type: "Client",
+      name: "Job Cost Update",
+      recipient: "Mike",
+      type: "PM",
       status: "Responded",
       attachment: true,
       cls: "1",
@@ -11,9 +11,9 @@ export default function RequestTrackingMockup() {
       icon: "👤"
     },
     {
-      name: "Aging Invoices",
+      name: "Lien Waiver",
       recipient: "Sarah",
-      type: "Vendor",
+      type: "Subcontractor",
       status: "Pending",
       attachment: false,
       cls: "2",
@@ -21,9 +21,9 @@ export default function RequestTrackingMockup() {
       icon: "🏢"
     },
     {
-      name: "Missing Receipts",
-      recipient: "Mike",
-      type: "Employee",
+      name: "Timesheet Approval",
+      recipient: "Dave",
+      type: "Field Staff",
       status: "Responded",
       attachment: true,
       cls: "3",

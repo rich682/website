@@ -1,8 +1,8 @@
 export default function ReceiptMatchingMockup() {
   const matches = [
-    { vendor: "Office Depot", amount: "$142.50", date: "Mar 28", cls: "1" },
-    { vendor: "AWS Services", amount: "$847.00", date: "Mar 30", cls: "2" },
-    { vendor: "Delta Airlines", amount: "$523.40", date: "Apr 1", cls: "3" },
+    { vendor: "Home Depot", amount: "$142.50", date: "Mar 28", cls: "1" },
+    { vendor: "Sunbelt Rentals", amount: "$847.00", date: "Mar 30", cls: "2" },
+    { vendor: "Grainger Supply", amount: "$523.40", date: "Apr 1", cls: "3" },
   ];
 
   return (

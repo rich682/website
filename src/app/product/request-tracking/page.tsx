@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
-import ApprovalWorkflowMockup from "@/components/animations/ApprovalWorkflowMockup";
+import ResponseTrackingMockup from "@/components/animations/ResponseTrackingMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
 
 export const metadata: Metadata = {
@@ -185,7 +185,7 @@ export default function RequestTrackingPage() {
                   }`}
                 >
                   {section.mockup === "tracking" && <RequestTrackingMockup />}
-                  {section.mockup === "workflow" && <ApprovalWorkflowMockup />}
+                  {section.mockup === "workflow" && <ResponseTrackingMockup />}
                   {section.mockup === "approve" && <ApproveMockup />}
                 </ScrollReveal>
               </div>

@@ -7,9 +7,9 @@ export default function ReportBuilderMockup() {
   ];
 
   const rows = [
-    { account: "Revenue", actual: "$142K", budget: "$135K", variance: "+5.2%", positive: true },
-    { account: "COGS", actual: "$61K", budget: "$58K", variance: "+5.1%", positive: false },
-    { account: "Operating Expenses", actual: "$34K", budget: "$38K", variance: "-10.5%", positive: true },
+    { account: "Contract Revenue", actual: "$142K", budget: "$135K", variance: "+5.2%", positive: true },
+    { account: "Job Costs", actual: "$61K", budget: "$58K", variance: "+5.1%", positive: false },
+    { account: "General Conditions", actual: "$34K", budget: "$38K", variance: "-10.5%", positive: true },
   ];
 
   return (
@@ -71,7 +71,7 @@ export default function ReportBuilderMockup() {
       {/* Footer */}
       <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
         <span className="text-[9px] sm:text-[10px] text-foreground-muted">
-          P&L Summary — Apr 2026
+          Job Cost Summary — Apr 2026
         </span>
         <span className="text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full bg-success/10 text-success font-medium">
           Generated

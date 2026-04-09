@@ -1,9 +1,9 @@
 export default function AgentSetupMockup() {
   const agents = [
-    { name: "Stakeholder Requests", cls: "1" },
-    { name: "Reconciliations", cls: "2" },
-    { name: "Reports", cls: "3" },
-    { name: "Data Analysis", cls: "4" },
+    { name: "PM & Sub Requests", cls: "1" },
+    { name: "Job Cost Reconciliation", cls: "2" },
+    { name: "WIP Schedules", cls: "3" },
+    { name: "Cost Code Analysis", cls: "4" },
   ];
 
   return (

@@ -1,8 +1,8 @@
 export default function DeadlinesMockup() {
   const milestones = [
-    { name: "Journal Entries", due: "Apr 2", status: "done", cls: "1" },
-    { name: "Reconciliations", due: "Apr 4", status: "done", cls: "2" },
-    { name: "Final Review", due: "Apr 5", status: "at-risk", cls: "3" },
+    { name: "Job Cost Entries", due: "Apr 2", status: "done", cls: "1" },
+    { name: "WIP Reconciliation", due: "Apr 4", status: "done", cls: "2" },
+    { name: "Controller Sign-off", due: "Apr 5", status: "at-risk", cls: "3" },
   ];
 
   return (

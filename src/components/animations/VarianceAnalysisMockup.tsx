@@ -1,8 +1,8 @@
 export default function VarianceAnalysisMockup() {
   const variances = [
-    { account: "Marketing Spend", current: "$28.4K", prior: "$22.1K", change: "+28.5%", flagged: true },
-    { account: "Payroll", current: "$94.2K", prior: "$93.8K", change: "+0.4%", flagged: false },
-    { account: "Software & Tools", current: "$12.7K", prior: "$8.9K", change: "+42.7%", flagged: true },
+    { account: "Labor — Project 1042", current: "$28.4K", prior: "$22.1K", change: "+28.5%", flagged: true },
+    { account: "Materials — Project 1087", current: "$94.2K", prior: "$93.8K", change: "+0.4%", flagged: false },
+    { account: "Equipment — Project 1103", current: "$12.7K", prior: "$8.9K", change: "+42.7%", flagged: true },
   ];
 
   return (

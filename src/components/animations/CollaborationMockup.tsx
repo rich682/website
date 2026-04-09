@@ -4,7 +4,7 @@ export default function CollaborationMockup() {
       initials: "SM",
       name: "Sarah M.",
       color: "#6366F1",
-      text: "Accruals tied out — ready for review",
+      text: "Job costs tied out to committed — ready for review",
       time: "2m ago",
       cls: "1",
     },
@@ -12,7 +12,7 @@ export default function CollaborationMockup() {
       initials: "JR",
       name: "James R.",
       color: "#F59E0B",
-      text: "Confirmed, numbers match the GL. Approved ✓",
+      text: "Confirmed, costs match subcontractor invoices. Approved ✓",
       time: "1m ago",
       cls: "2",
     },
@@ -20,7 +20,7 @@ export default function CollaborationMockup() {
       initials: "KL",
       name: "Kate L.",
       color: "#22C55E",
-      text: "Posting to final — closing this task",
+      text: "WIP updated for Project 1042 — closing this task",
       time: "Just now",
       cls: "3",
     },
@@ -47,7 +47,7 @@ export default function CollaborationMockup() {
             </svg>
           </div>
           <span className="text-[11px] sm:text-xs font-semibold text-foreground">
-            Accruals Review
+            Job Cost Reconciliation
           </span>
         </div>
         <span className="text-[8px] sm:text-[9px] px-2 py-0.5 rounded-full bg-[var(--highlight)]/10 text-[var(--highlight)] font-medium">

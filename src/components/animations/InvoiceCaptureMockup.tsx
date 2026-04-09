@@ -1,8 +1,8 @@
 export default function InvoiceCaptureMockup() {
   const invoices = [
-    { vendor: "Acme Corp", amount: "$4,250.00", method: "Email", cls: "1" },
-    { vendor: "CloudHost Inc", amount: "$1,875.00", method: "Upload", cls: "2" },
-    { vendor: "Office Pro", amount: "$632.50", method: "Email", cls: "3" },
+    { vendor: "Mason Electric", amount: "$4,250.00", method: "Email", cls: "1" },
+    { vendor: "Summit Concrete", amount: "$1,875.00", method: "Upload", cls: "2" },
+    { vendor: "Valley Mechanical", amount: "$632.50", method: "Email", cls: "3" },
   ];
 
   return (

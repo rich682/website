@@ -1,25 +1,25 @@
 export default function WorkflowSetupMockup() {
   const workflows = [
     {
-      name: "Monthly P&L Report",
+      name: "Job Cost Report",
       category: "Reports",
       status: "Active",
       schedule: "1st of month",
     },
     {
-      name: "Bank Reconciliation",
+      name: "WIP Schedule",
       category: "Reconciliation",
       status: "Active",
       schedule: "Daily",
     },
     {
-      name: "Budget vs Actual",
+      name: "Cost Code Variance",
       category: "Analysis",
       status: "Active",
       schedule: "Weekly",
     },
     {
-      name: "Intercompany Matching",
+      name: "Subcontractor Reconciliation",
       category: "Reconciliation",
       status: "Active",
       schedule: "Monthly",

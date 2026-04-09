@@ -1,11 +1,12 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import TasksMockup from "@/components/animations/TasksMockup";
-import ConnectMockup from "@/components/animations/ConnectMockup";
+import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
 import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
 import WorkflowSetupMockup from "@/components/animations/WorkflowSetupMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
+import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -54,7 +55,7 @@ const productSections = [
       "Vendor invoice and lien waiver collection",
       "Client billing and approval requests",
     ],
-    Mockup: ConnectMockup,
+    Mockup: RequestTrackingMockup,
     href: "/product/request-tracking",
   },
   {
@@ -98,7 +99,7 @@ const productSections = [
       "WIP schedule generation",
       "Report assembly and distribution",
     ],
-    Mockup: CloseMockup,
+    Mockup: AIAgentsMockup,
     href: "/ai-agents",
   },
   {
