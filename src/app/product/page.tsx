@@ -19,7 +19,7 @@ const productSections = [
   {
     number: "01",
     category: "Tasks",
-    title: "Create construction close tasks",
+    title: "Create month-end close tasks",
     description:
       "Build your close checklist for job cost reconciliation, WIP schedule reviews, and subcontractor billing. Assign owners, set deadlines, and track dependencies across projects.",
     features: [
