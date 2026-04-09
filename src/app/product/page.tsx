@@ -47,7 +47,7 @@ const productSections = [
   {
     number: "03",
     category: "Request",
-    title: "Send data requests automatically to the field, vendors & clients",
+    title: "Send data requests automatically to the field, subs, vendors & clients",
     description:
       "Automate outbound requests for job cost updates, lien waivers, timesheets, and compliance documents. Vergo sends requests on your schedule and tracks every response.",
     features: [
