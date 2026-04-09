@@ -8,78 +8,78 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AP Automation | Vergo",
   description:
-    "From invoice capture to syncing with your accounting software, automate your entire AP workflow with smart routing, approvals, and full audit trails.",
+    "Automate subcontractor invoice processing, lien waiver collection, retention tracking, and compliance documentation. Construction AP on autopilot.",
 };
 
 const features = [
   {
     label: "Invoice Capture",
-    title: "Capture invoices automatically",
+    title: "Capture subcontractor invoices automatically",
     description:
-      "Forward invoices by email or upload them directly. Vergo extracts vendor details, line items, and amounts automatically — no manual data entry required.",
+      "Forward subcontractor invoices by email or upload them directly. Vergo extracts vendor details, line items, job codes, and amounts automatically — no manual data entry required.",
     items: [
       {
         name: "Email and upload capture",
         detail:
-          "Forward invoices to a dedicated inbox or drag-and-drop files directly into Vergo.",
+          "Forward subcontractor invoices to a dedicated inbox or drag-and-drop files directly into Vergo.",
       },
       {
         name: "Automatic data extraction",
         detail:
-          "AI reads vendor names, amounts, dates, and line items from any invoice format.",
+          "AI reads subcontractor names, amounts, job codes, and line items from any invoice format.",
       },
       {
-        name: "Vendor matching and coding",
+        name: "Job cost coding and matching",
         detail:
-          "Invoices are automatically matched to existing vendors and coded to the right GL accounts.",
+          "Invoices are automatically matched to subcontractors and coded to the right job cost accounts.",
       },
     ],
     Mockup: InvoiceCaptureMockup,
   },
   {
     label: "Approval Workflows",
-    title: "Route approvals with full control",
+    title: "Route approvals and track retention",
     description:
-      "Set up multi-level approval chains based on amount thresholds, departments, or vendors. Approvers get notified instantly and can approve from anywhere.",
+      "Set up multi-level approval chains based on amount thresholds, job, or subcontractor. Track retention holdbacks automatically and collect lien waivers before releasing payment.",
     items: [
       {
         name: "Multi-level approval chains",
         detail:
-          "Define sequential or parallel approval steps based on your organization's requirements.",
+          "Define sequential or parallel approval steps based on job, subcontractor, or amount.",
       },
       {
-        name: "Threshold-based routing",
+        name: "Retention tracking",
         detail:
-          "Automatically route invoices to the right approvers based on amount, vendor, or department.",
+          "Automatically calculate and track retention holdbacks across all subcontractor payments.",
       },
       {
-        name: "Mobile-friendly approvals",
+        name: "Lien waiver collection",
         detail:
-          "Approvers can review and approve invoices from any device with a single tap.",
+          "Require lien waivers and compliance docs before payments are released to subcontractors.",
       },
     ],
     Mockup: ApprovalWorkflowMockup,
   },
   {
     label: "Accounting Sync",
-    title: "Sync to your accounting software",
+    title: "Post approved invoices directly to job costs in your ERP",
     description:
-      "Approved invoices flow directly into your ERP or general ledger. Journal entries are created automatically, and reconciliation happens in real time.",
+      "Approved subcontractor invoices post directly to job costs in your construction ERP. Job cost entries are created automatically with the right cost codes, and reconciliation happens in real time.",
     items: [
       {
-        name: "Direct ERP and GL sync",
+        name: "Direct job cost posting to your construction ERP",
         detail:
-          "Connect to your accounting software and push approved invoices with zero manual re-entry.",
+          "Approved invoices post directly to job costs in Sage, Viewpoint, Procore, or your construction accounting system.",
       },
       {
-        name: "Automatic journal entries",
+        name: "Automatic job cost entries",
         detail:
-          "Vergo creates correctly coded journal entries the moment an invoice is approved.",
+          "Vergo creates correctly coded job cost entries the moment a subcontractor invoice is approved — no re-keying required.",
       },
       {
         name: "Real-time reconciliation",
         detail:
-          "Match payments to invoices automatically and surface discrepancies before they become problems.",
+          "Match subcontractor payments to invoices automatically and surface discrepancies before they become problems.",
       },
     ],
     Mockup: ConnectMockup,
@@ -140,17 +140,18 @@ export default function APAutomationPage() {
             <span className="block text-[#6366F1]">on autopilot</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            From invoice capture to syncing with your accounting software,
-            automate your entire AP workflow with smart routing, approvals, and
-            full audit trails.
+            Subcontractor invoices flow from capture through approval and
+            directly into job cost posting in your ERP. Automate the entire
+            AP workflow with smart routing, retention tracking, and lien
+            waiver collection.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -244,12 +245,12 @@ export default function APAutomationPage() {
             See how Vergo handles invoices, approvals, and accounting sync in
             one connected workflow.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -257,7 +258,7 @@ export default function APAutomationPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -302,12 +303,12 @@ export default function APAutomationPage() {
             Automate your accounts payable workflow and close your books faster.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

@@ -105,6 +105,30 @@ export const integrations: Integration[] = [
     icon: "dynamics",
   },
   {
+    slug: "viewpoint-spectrum",
+    name: "Viewpoint Spectrum",
+    category: "Construction ERP",
+    description:
+      "Connect Viewpoint Spectrum to Vergo and automate job cost reconciliations, AP workflows, and month-end close tasks directly from your construction ERP.",
+    icon: "viewpoint-spectrum",
+  },
+  {
+    slug: "viewpoint-vista",
+    name: "Viewpoint Vista",
+    category: "Construction ERP",
+    description:
+      "Integrate Viewpoint Vista to sync job cost data, subcontractor records, and financial reports into Vergo for automated construction accounting workflows.",
+    icon: "viewpoint-vista",
+  },
+  {
+    slug: "foundation-software",
+    name: "Foundation Software",
+    category: "Construction ERP",
+    description:
+      "Connect Foundation Software to Vergo and streamline job costing, AP automation, and month-end close for your construction accounting team.",
+    icon: "foundation-software",
+  },
+  {
     slug: "excel-uploads",
     name: "Excel Uploads",
     category: "File Upload",

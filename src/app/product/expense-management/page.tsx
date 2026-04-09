@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Expense Management | Vergo",
   description:
-    "Link any card, match receipts automatically, and enforce spending policies in real time. No more chasing expense reports at month-end.",
+    "Track field expenses, per diem, equipment costs, and more. Link any card, match receipts automatically, and enforce spending policies built for construction teams.",
 };
 
 const features = [
@@ -16,7 +16,7 @@ const features = [
     label: "Card Connections",
     title: "Connect any credit card",
     description:
-      "Link cards from any provider and see transactions flow in automatically. No more waiting for monthly statements or manual CSV imports.",
+      "Link cards from any provider — corporate cards, fuel cards, equipment purchase cards — and see transactions flow in automatically. No more waiting for monthly statements or manual CSV imports.",
     items: [
       {
         name: "Any credit card provider",
@@ -69,7 +69,7 @@ const features = [
       {
         name: "Configurable spending policies",
         detail:
-          "Set rules by category, department, amount threshold, or vendor — as granular as you need.",
+          "Set rules by job, cost code, department, amount threshold, or vendor — as granular as you need.",
       },
       {
         name: "Real-time policy checks",
@@ -140,16 +140,17 @@ export default function ExpenseManagementPage() {
             <span className="block text-[#6366F1]">automate expense tracking</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Link any card, match receipts automatically, and enforce spending
-            policies in real time. No more chasing expense reports at month-end.
+            Track field expenses, per diem, and equipment costs. Link any card,
+            match receipts automatically, and enforce spending policies — no
+            more chasing expense reports at month-end.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -243,12 +244,12 @@ export default function ExpenseManagementPage() {
             See how Vergo connects your cards, matches receipts, and enforces
             policies automatically.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -256,7 +257,7 @@ export default function ExpenseManagementPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -299,15 +300,15 @@ export default function ExpenseManagementPage() {
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
             Connect your cards and let Vergo handle the rest. No more chasing
-            receipts or reviewing spreadsheets.
+            field receipts or reviewing spreadsheets at month-end.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

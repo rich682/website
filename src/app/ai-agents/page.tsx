@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI Agents | Vergo",
   description:
-    "Configure AI agents to handle the repetitive work across your close. Each agent handles a specific function and surfaces its work for your review before anything is finalized.",
+    "Configure AI agents to handle repetitive construction accounting tasks — job cost reconciliations, subcontractor follow-ups, and more. Each agent surfaces its work for your review before anything is finalized.",
 };
 
 const steps = [
@@ -30,7 +30,7 @@ const steps = [
     category: "Execute",
     title: "Agents execute the work",
     description:
-      "Once configured, agents run on your schedule — handling reconciliations, follow-ups, reports, and analysis. They work through your data methodically and surface their results.",
+      "Once configured, agents run on your schedule — handling job cost reconciliations, subcontractor follow-ups, reports, and variance analysis. They work through your data methodically and surface their results.",
     items: [
       "Runs on your schedule",
       "Processes data systematically",
@@ -57,12 +57,12 @@ const agentTypes = [
   {
     name: "Reconciliation Agent",
     description:
-      "Automatically match transactions across accounts, flag exceptions, and prepare reconciliation reports for your review.",
+      "Automatically match transactions across job cost accounts, flag exceptions, and prepare reconciliation reports for your review.",
   },
   {
     name: "Stakeholder Request Agent",
     description:
-      "Send and follow up on document requests, sign-offs, and data submissions from across the business.",
+      "Send and follow up on document requests, subcontractor sign-offs, and data submissions from across the business.",
   },
   {
     name: "Reporting Agent",
@@ -130,17 +130,18 @@ export default function AIAgentsPage() {
             <span className="block text-[#6366F1]">with agents</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Configure AI agents to handle the repetitive work across your close.
-            Each agent handles a specific function and surfaces its work for your
-            review before anything is finalized.
+            Configure AI agents to handle the repetitive work across your
+            construction close — from job cost reconciliations to subcontractor
+            follow-ups. Each agent surfaces its work for your review before
+            anything is finalized.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -232,12 +233,12 @@ export default function AIAgentsPage() {
             Start your free trial and get set up with your dedicated account
             manager.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -249,11 +250,11 @@ export default function AIAgentsPage() {
               Agent Types
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-              Agents built for accounting workflows
+              Agents built for construction accounting workflows
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto">
               Each agent is purpose-built to handle a specific function within
-              your close process.
+              your construction close process.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -276,7 +277,7 @@ export default function AIAgentsPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -318,15 +319,15 @@ export default function AIAgentsPage() {
             Put your agents to work
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the accounting teams closing faster with less manual work.
+            Join the construction accounting teams closing faster with less manual work.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

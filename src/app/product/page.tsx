@@ -9,22 +9,22 @@ import CloseMockup from "@/components/animations/CloseMockup";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Month End Close Software — How It Works | Vergo",
+  title: "Construction Accounting Software — How It Works | Vergo",
   description:
-    "The workflow platform that connects your accounting tools, automates repetitive tasks, and gives you complete visibility into your close.",
+    "The construction accounting platform that automates job costing, subcontractor management, and month-end close. Full visibility into every project.",
 };
 
 const productSections = [
   {
     number: "01",
     category: "Tasks",
-    title: "Create month-end tasks",
+    title: "Create construction close tasks",
     description:
-      "Build your close checklist from scratch or from templates. Assign owners, set deadlines, and track dependencies so nothing falls through the cracks.",
+      "Build your close checklist for job cost reconciliation, WIP schedule reviews, and subcontractor billing. Assign owners, set deadlines, and track dependencies across projects.",
     features: [
-      "Customizable close checklists",
+      "Job cost reconciliation checklists",
       "Task dependencies and deadlines",
-      "Recurring task templates",
+      "Recurring templates for construction close",
     ],
     Mockup: TasksMockup,
     href: "/product/close-management",
@@ -32,70 +32,85 @@ const productSections = [
   {
     number: "02",
     category: "Collaborate",
-    title: "Collaborate with your accounting team",
+    title: "Collaborate with your accounting team & project managers",
     description:
-      "Keep everyone aligned with shared workflows, approval chains, and real-time visibility. Request documents, collect sign-offs, and track progress — all in one place.",
+      "Keep everyone aligned with shared workflows and real-time visibility. Collect job cost data, lien waivers, and change orders from project managers and subcontractors — all in one place.",
     features: [
-      "Cross-team requests and sign-offs",
-      "Approval workflows",
-      "Real-time progress tracking",
+      "Requests to PMs, field staff, and subs",
+      "Lien waiver and compliance workflows",
+      "Real-time progress tracking by job",
     ],
     Mockup: ApproveMockup,
     href: undefined as string | undefined,
   },
   {
     number: "03",
-    category: "Connect",
-    title: "Connect your accounting software",
+    category: "Request",
+    title: "Send data requests automatically to the field, vendors & clients",
     description:
-      "Integrate your ERP, GL, and other accounting tools directly into Vergo. Create structured databases that give your agents the data they need to work.",
+      "Automate outbound requests for job cost updates, lien waivers, timesheets, and compliance documents. Vergo sends requests on your schedule and tracks every response.",
     features: [
-      "ERP and GL integrations",
-      "Custom database creation",
-      "Automated data syncing",
+      "Automated requests to PMs and field staff",
+      "Vendor invoice and lien waiver collection",
+      "Client billing and approval requests",
     ],
     Mockup: ConnectMockup,
-    href: undefined as string | undefined,
+    href: "/product/request-tracking",
   },
   {
     number: "04",
     category: "Setup",
-    title: "Setup reports, analysis, reconciliations and more",
+    title: "Setup job costing analysis, custom reports & more",
     description:
-      "Configure the workflows that power your close. Build custom reports, automate reconciliations, and set up variance analysis — so your team focuses on insights, not assembly.",
+      "Configure the workflows that power your construction close. Build job cost analysis, automate WIP schedule generation, and set up custom reports by project or cost code.",
     features: [
-      "Custom report builder",
-      "Automated reconciliations",
-      "Variance and trend analysis",
+      "Job cost analysis builder",
+      "Custom report templates",
+      "Automated WIP schedules",
     ],
     Mockup: WorkflowSetupMockup,
     href: "/product/reporting",
   },
   {
     number: "05",
-    category: "Agents",
-    title: "AI agents automate each task every month",
+    category: "Analyze",
+    title: "Use AI to analyze years worth of project data",
     description:
-      "Configure AI agents to handle the repetitive work across your close. Each agent handles a specific function and surfaces its work for your review.",
+      "Let AI surface patterns across your historical project data — cost overruns, margin trends, vendor performance, and billing variances. Turn years of job cost history into actionable insights.",
     features: [
-      "Stakeholder Requests",
-      "Reconciliations",
-      "Reports",
-      "Data Analysis",
+      "Historical job cost trend analysis",
+      "Vendor and subcontractor performance",
+      "Margin and billing variance detection",
+      "Cost code anomaly surfacing",
     ],
     Mockup: AgentSetupMockup,
     href: "/ai-agents",
   },
   {
     number: "06",
-    category: "Close",
-    title: "Close month with more insights, more control, and less stress",
+    category: "Agents",
+    title: "Setup AI Agents to automate repetitive spreadsheet work",
     description:
-      "With tasks managed, agents running, and insights surfaced, your team closes the books faster — with full visibility and confidence every period.",
+      "Configure AI agents to handle the repetitive work across your construction close — reconciliations, follow-ups, data pulls, and report generation. Each agent runs on your rules, and nothing gets finalized until you approve it.",
     features: [
-      "Faster close cycles",
-      "Complete close visibility",
-      "Full audit trail",
+      "Job cost reconciliation agents",
+      "Automated subcontractor follow-ups",
+      "WIP schedule generation",
+      "Report assembly and distribution",
+    ],
+    Mockup: CloseMockup,
+    href: "/ai-agents",
+  },
+  {
+    number: "07",
+    category: "Close",
+    title: "Close the month with job cost confidence",
+    description:
+      "With job costs reconciled, WIP schedules generated, and subcontractor billing verified, your team closes the books faster — with full visibility across every project.",
+    features: [
+      "Faster construction close cycles",
+      "Complete job cost visibility",
+      "Full audit trail by project",
     ],
     Mockup: CloseMockup,
     href: "/product/close-management",
@@ -149,20 +164,21 @@ export default function ProductPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Welcome to a{" "}
-            <span className="block text-[#6366F1]">stress-free month end</span>
+            Construction accounting{" "}
+            <span className="block text-[#6366F1]">without the chaos</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            The workflow platform that connects your accounting tools, automates
-            repetitive tasks, and gives you complete visibility into your close.
+            The construction accounting platform that automates job costing,
+            subcontractor management, and month-end close. Full visibility into
+            every project.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product/close-management"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -275,12 +291,12 @@ export default function ProductPage() {
             Start your free trial and get set up with your dedicated account
             manager.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -370,7 +386,7 @@ export default function ProductPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -412,15 +428,15 @@ export default function ProductPage() {
             Work on higher value tasks today
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the accounting teams closing faster with less manual work.
+            Join the construction accounting teams closing faster with less manual work.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

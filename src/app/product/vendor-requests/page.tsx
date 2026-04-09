@@ -7,75 +7,89 @@ import ApprovalWorkflowMockup from "@/components/animations/ApprovalWorkflowMock
 import ApproveMockup from "@/components/animations/ApproveMockup";
 
 export const metadata: Metadata = {
-  title: "Field & PM Requests | Vergo",
+  title: "Vendor Requests | Vergo",
   description:
-    "Collect job cost data, change orders, lien waivers, and certified payroll from project managers and field staff. Track every response in one place.",
+    "Track vendor invoices, lien waivers, insurance certificates, and compliance documents. Automate follow-ups and keep every vendor request organized.",
 };
 
 const features = [
   {
-    category: "Send Requests",
-    title: "Collect job cost data from PMs, field staff, and subcontractors",
+    category: "COLLECT",
+    title:
+      "Request invoices, lien waivers, and compliance docs from any vendor",
     description:
-      "Send requests to project managers, field staff, subcontractors, and vendors. Collect change orders, lien waivers, certified payroll, and job cost updates without chasing people across email, texts, or spreadsheets.",
+      "Send document requests to subcontractors and vendors in bulk. Collect the invoices, lien waivers, insurance certificates, W-9s, and certified payroll you need to verify billing, release payments, and close the books — all tracked in one place.",
     items: [
-      "Request lien waivers and compliance docs",
-      "Customize templates for construction workflows",
-      "Send to multiple PMs and subs at once",
+      {
+        label: "Bulk vendor requests",
+        detail:
+          "Send requests to dozens of vendors at once for invoices or compliance documents.",
+      },
+      {
+        label: "Lien waiver tracking",
+        detail:
+          "Track conditional and unconditional lien waivers by project and payment.",
+      },
+      {
+        label: "Insurance & compliance",
+        detail:
+          "Collect and monitor insurance certificates, W-9s, and other compliance documents.",
+      },
     ],
     mockup: "tracking",
   },
   {
-    category: "Track Responses",
-    title: "Know which PMs and subs have responded — and who hasn't",
+    category: "AUTOMATE",
+    title: "Automatic reminders so you never have to chase a vendor again",
     description:
-      "See real-time status on every request across all your jobs. Know exactly which project managers and subcontractors have submitted their data, who's still pending, and when responses are due.",
+      "Set up automated follow-up sequences for outstanding documents. Missing vendor docs are the number one reason construction accounting teams miss close deadlines — Vergo keeps reminding vendors on your schedule until they respond.",
     items: [
-      "Real-time response tracking by job",
-      "Automatic follow-up reminders to field staff",
-      "Response timeline visibility across projects",
+      {
+        label: "Scheduled reminders",
+        detail:
+          "Automatic email reminders on your timeline until documents are received.",
+      },
+      {
+        label: "Close-blocking visibility",
+        detail:
+          "See which vendors have responded, which documents are overdue, and which missing items are blocking your close.",
+      },
+      {
+        label: "Escalation rules",
+        detail:
+          "Automatically escalate overdue requests to project managers or operations.",
+      },
     ],
     mockup: "workflow",
   },
   {
-    category: "Manage Attachments",
-    title: "Keep lien waivers, change orders, and job docs in one place",
+    category: "ORGANIZE",
+    title:
+      "Every vendor document organized by project, with full audit trails",
     description:
-      "Collect all documents from PMs, field staff, and subcontractors in a secure, centralized location. No more hunting through email inboxes or chasing down paperwork across job sites.",
+      "All vendor documents are automatically filed by project and vendor. Review, approve, and maintain a complete audit trail — so when it's time to close, every document is accounted for.",
     items: [
-      "Centralized storage for lien waivers and compliance docs",
-      "Organize files by job, subcontractor, or request",
-      "Secure access and sharing across your team",
+      {
+        label: "Project-based filing",
+        detail:
+          "Documents auto-organize by project, vendor, and document type.",
+      },
+      {
+        label: "Approval workflows",
+        detail:
+          "Route vendor submissions through your review and approval process.",
+      },
+      {
+        label: "Audit trail",
+        detail:
+          "Complete history of every request, reminder, and submission for compliance.",
+      },
     ],
     mockup: "approve",
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Since the transition to Vergo, we have been able to cut back the time spent on reconciliations immensely. What was a full time job previously, takes about an hour to process daily!",
-    name: "Taylor Ricard",
-    role: "Controller",
-    company: "Moss Utilities",
-  },
-  {
-    quote:
-      "The integration with our ERP made the decision easy. With a few clicks in the Vergo app - our team are turning expenses in more timely, not to mention the ease of review and approval with the online platform.",
-    name: "Laurie Weisensel",
-    role: "CFO",
-    company: "DNT",
-  },
-  {
-    quote:
-      "Since the signing I cannot speak highly enough of the customer service we have received, the team are continuously improving the product and are always on hand to jump on a call.",
-    name: "Mark Goan",
-    role: "Accountant",
-    company: "JMB",
-  },
-];
-
-export default function RequestTrackingPage() {
+export default function VendorRequestsPage() {
   return (
     <main
       style={
@@ -98,16 +112,19 @@ export default function RequestTrackingPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4">
-            Field & PM Requests
+            VENDOR REQUESTS
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Stop chasing PMs and field staff for{" "}
-            <span className="block text-[#6366F1]">documents and approvals</span>
+            Stop chasing vendors for{" "}
+            <span className="block text-[#6366F1]">
+              invoices and compliance documents
+            </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Collect job cost data, change orders, lien waivers, and certified
-            payroll from project managers and field staff. Track every response
-            in one centralized place.
+            Missing lien waivers, insurance certificates, and W-9s block your
+            ability to verify subcontractor billing, release payments, and close
+            the books. Automate the collection so these documents never hold up
+            your month-end close.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -157,7 +174,7 @@ export default function RequestTrackingPage() {
                   </p>
                   <div className="space-y-4">
                     {section.items.map((item) => (
-                      <div key={item} className="flex items-start gap-3">
+                      <div key={item.label} className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg
                             className="w-3 h-3 text-[#6366F1]"
@@ -173,7 +190,15 @@ export default function RequestTrackingPage() {
                             />
                           </svg>
                         </div>
-                        <span className="text-sm text-[#111]">{item}</span>
+                        <div>
+                          <span className="text-sm font-semibold text-[#111]">
+                            {item.label}
+                          </span>
+                          <span className="text-sm text-[#555]">
+                            {" "}
+                            — {item.detail}
+                          </span>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -194,73 +219,14 @@ export default function RequestTrackingPage() {
         ))}
       </div>
 
-      {/* ============ MID-PAGE CTA ============ */}
-      <section className="py-12 lg:py-16 bg-[#EEF2FF] border-y border-[#E5E7EB]">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-            Stop chasing requests. Get full visibility.
-          </h2>
-          <p className="mt-3 text-[#555]">
-            Start your free trial and see how Vergo simplifies stakeholder
-            management.
-          </p>
-          <Link
-            href="/demo"
-            className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
-          >
-            Book a Demo
-          </Link>
-        </div>
-      </section>
-
-      {/* ============ TESTIMONIALS ============ */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-6"
-              >
-                <div className="flex items-center gap-0.5 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-4 h-4 text-[#F59E0B]"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-sm text-[#333] leading-relaxed mb-4">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div>
-                  <p className="font-semibold text-sm text-[#111]">{t.name}</p>
-                  <p className="text-xs text-[#888]">
-                    {t.role}, {t.company}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============ DARK FINAL CTA ============ */}
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Manage requests with confidence
+            Automate vendor document collection
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo helps you track and manage stakeholder requests
-            throughout your close.
+            Book a demo and see how Vergo eliminates the chase.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

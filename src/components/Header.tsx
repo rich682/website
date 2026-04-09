@@ -8,8 +8,9 @@ import { usePathname } from "next/navigation";
 const platformLinks = [
   { label: "Overview", href: "/product", description: "See the full platform" },
   { label: "Close Collaboration", href: "/product/close-management", description: "Streamline month-end close" },
-  { label: "Request Tracking", href: "/product/request-tracking", description: "Track stakeholder requests" },
-  { label: "Reporting & Analytics", href: "/product/reporting", description: "Reports, AI insights, and trend analysis" },
+  { label: "Field & PM Requests", href: "/product/request-tracking", description: "Collect job cost data and change orders from the field" },
+  { label: "Vendor Requests", href: "/product/vendor-requests", description: "Manage subcontractor invoices and lien waivers" },
+  { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
   { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
@@ -98,11 +99,11 @@ export default function Header() {
           <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Pricing
           </Link>
-          <Link href="/compare" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            Compare
-          </Link>
           <Link href="/company" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Company
+          </Link>
+          <Link href="/customers" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            Customers
           </Link>
         </div>
 
@@ -125,12 +126,12 @@ export default function Header() {
           <a href="https://app.tryvergo.com" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Log in
           </a>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -193,18 +194,18 @@ export default function Header() {
               Pricing
             </Link>
             <Link
-              href="/compare"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Compare
-            </Link>
-            <Link
               href="/company"
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
               onClick={() => setMobileMenuOpen(false)}
             >
               Company
+            </Link>
+            <Link
+              href="/customers"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Customers
             </Link>
             <hr className="border-[#E5E7EB]" />
             <a
@@ -213,13 +214,13 @@ export default function Header() {
             >
               Log in
             </a>
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium border transition-colors border-[#E5E7EB] bg-[#111] text-white hover:bg-[#333]"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
           </div>
         </div>
       )}

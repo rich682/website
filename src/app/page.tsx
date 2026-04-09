@@ -10,9 +10,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vergo | Month End Close Software for Accounting Teams",
+  title: "Vergo | AI Automation for Construction Accounting Teams",
   description:
-    "Vergo is month end close software that replaces your spreadsheet tracker, automates reconciliations, and gives your team real-time visibility into every task. Built for accounting teams.",
+    "Vergo is month end close software built for construction accounting teams. Automate job cost reconciliations, collect documents from project managers and field staff, and close the books faster.",
 };
 
 const coreFeatures = [
@@ -42,50 +42,100 @@ const coreFeatures = [
     Mockup: CoordinationMockup,
   },
   {
-    label: "Request Tracking",
-    title: "Send requests and track responses from all your stakeholders",
+    label: "Field & PM Requests",
+    title: "Collect job cost data from project managers and field staff",
     description:
-      "Easily send requests to employees, vendors, clients, and contractors. Track their responses and attachments in one centralized place.",
+      "Send requests to PMs, superintendents, and field teams for job cost updates, change orders, and certified payroll. Track every response in one place.",
     items: [
       {
-        name: "Send requests",
+        name: "Send requests to the field",
         detail:
-          "Request documents, approvals, or data from anyone outside your team.",
+          "Request job cost updates, timesheets, or approvals from project managers and field staff.",
       },
       {
         name: "Track responses",
         detail:
-          "Monitor status and see who has responded, who hasn't, and when.",
+          "See who has responded, who hasn't, and chase outstanding items automatically.",
       },
       {
         name: "Manage attachments",
         detail:
-          "Collect and organize all files and responses in one secure location.",
+          "Collect lien waivers, change orders, and compliance documents in one secure location.",
       },
     ],
-    href: "/product/close-management",
+    href: "/product/request-tracking",
     Mockup: RequestTrackingMockup,
   },
   {
-    label: "Reporting",
-    title: "Build custom reports, combining any data source together",
+    label: "Collection",
+    title: "Automate field expense collection and job cost allocation",
     description:
-      "Create custom financial reports, catch variances automatically, and see what's changed across periods — so your team focuses on analysis, not assembly.",
+      "Connect any corporate or fuel card, match receipts automatically, and allocate every expense to the right job and cost code. Field staff submit from their phone — your team reviews and approves in one place.",
     items: [
       {
-        name: "Custom report builder",
+        name: "Connect any credit card",
         detail:
-          "Build tailored reports and export to PDF or Excel in one click.",
+          "Link corporate cards, fuel cards, and equipment purchase cards for automatic transaction import.",
+      },
+      {
+        name: "Automatic receipt matching",
+        detail:
+          "Receipts are matched to transactions automatically — no more chasing field staff for paper receipts.",
+      },
+      {
+        name: "Job & cost code allocation",
+        detail:
+          "Every expense is allocated to the right job and cost code before it hits your books.",
+      },
+    ],
+    href: "/product/expense-management",
+    Mockup: CardConnectionsMockup,
+  },
+  {
+    label: "Approvals",
+    title: "Route invoices through approval workflows automatically",
+    description:
+      "From subcontractor invoice capture to multi-level approval routing to your general ledger — automate the entire AP workflow with full audit trails and compliance documentation.",
+    items: [
+      {
+        name: "Automatic invoice capture",
+        detail:
+          "Invoices are captured, coded to the right job, and routed for approval automatically.",
+      },
+      {
+        name: "Multi-level approval routing",
+        detail:
+          "Set approval rules by amount, vendor, or project — PMs approve field costs, controllers approve the rest.",
+      },
+      {
+        name: "Lien waiver collection",
+        detail:
+          "Automatically request and track lien waivers tied to each payment before checks go out.",
+      },
+    ],
+    href: "/product/ap-automation",
+    Mockup: InvoiceCaptureMockup,
+  },
+  {
+    label: "Reports & Job Costing",
+    title: "Job cost reports, WIP schedules, and variance analysis",
+    description:
+      "Build job cost reports, track over/under billing, and catch cost variances automatically — so your team focuses on analysis, not assembling data from multiple systems.",
+    items: [
+      {
+        name: "Job cost report builder",
+        detail:
+          "Build job cost reports by project, division, or cost code and export in one click.",
       },
       {
         name: "Automated variance analysis",
         detail:
-          "Compare actuals to budgets or prior periods with threshold-based flags.",
+          "Compare actuals to budgets or prior periods with threshold-based flags by job.",
       },
       {
-        name: "Trend surfacing",
+        name: "WIP & over/under billing",
         detail:
-          "See what's changed across periods without digging through spreadsheets.",
+          "Surface billing variances and work-in-progress status across all active projects.",
       },
     ],
     href: "/product/reporting",
@@ -118,33 +168,6 @@ const coreFeatures = [
   },
 ];
 
-const secondaryFeatures = [
-  {
-    title: "AP Automation",
-    description:
-      "From invoice capture to approval routing to your general ledger — automate the entire AP workflow with full audit trails.",
-    items: [
-      "Automatic invoice capture",
-      "Smart approval routing",
-      "Accounting software sync",
-    ],
-    href: "/product/ap-automation",
-    Mockup: InvoiceCaptureMockup,
-  },
-  {
-    title: "Expense Management",
-    description:
-      "Connect any credit card, match receipts automatically, and enforce spending policies in real time.",
-    items: [
-      "Connect any card",
-      "Automatic receipt matching",
-      "Policy enforcement",
-    ],
-    href: "/product/expense-management",
-    Mockup: CardConnectionsMockup,
-  },
-];
-
 const testimonials = [
   {
     quote:
@@ -171,24 +194,24 @@ const testimonials = [
 
 const comparisonRows = [
   {
-    need: "Recurring monthly workflows that reset every period",
+    need: "Recurring monthly workflows that reset every close cycle",
     generic: "One-off project boards you recreate manually each month",
   },
   {
-    need: "Cross-team data collection from outside accounting",
+    need: "Collect job cost data from PMs, field staff, and subcontractors",
     generic: "Task assignments that only work for people on your team",
   },
   {
-    need: "Status tracking tied to reconciliations and close tasks",
+    need: "Status tracking tied to job cost reconciliations and close tasks",
     generic: "Generic status columns that don't reflect close progress",
   },
   {
-    need: "Automation that understands GL accounts and thresholds",
-    generic: "Basic if-then rules with no accounting context",
+    need: "Automation that understands cost codes, GL accounts, and thresholds",
+    generic: "Basic if-then rules with no construction accounting context",
   },
   {
-    need: "Built-in approval routing and audit trails",
-    generic: "No concept of compliance or sign-off workflows",
+    need: "Built-in approval routing and audit trails for compliance",
+    generic: "No concept of lien waivers, certified payroll, or sign-off workflows",
   },
 ];
 
@@ -215,21 +238,21 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Month end close software
-            <span className="block text-[#6366F1]">built for accounting teams</span>
+            AI Automation
+            <span className="block text-[#6366F1]">for Construction Accounting Teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Run a more organized close. Manage every task, automate
-            reconciliations, collect documents from stakeholders, and track
-            progress — all in one place.
+            Stop waiting on the field to close your books. Automate job cost
+            reconciliations, collect data from PMs and subcontractors, and close
+            with confidence — all in one place.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -256,7 +279,7 @@ export default function TestPage() {
       {/* ============ SOCIAL PROOF BAR ============ */}
       <section className="py-6 border-y border-[#E5E7EB] bg-white">
         <p className="text-center text-xs font-medium uppercase tracking-widest text-[#999] mb-4">
-          Trusted by accounting teams at
+          Trusted by construction accounting teams at
         </p>
         <div className="max-w-5xl mx-auto px-6 overflow-hidden">
         <div className="ticker-wrap">
@@ -300,14 +323,13 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Month end close shouldn&apos;t take this long
+              Month end for construction is harder than any industry
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto leading-relaxed">
-              Every month, your team manages the close across spreadsheets,
-              email, Slack, and project management tools that weren&apos;t built
-              for accounting. Tasks fall through the cracks, reconciliations
-              take longer than they should, and you&apos;re always chasing the
-              same people.
+              Your accounting team faces off to more stakeholders than any other
+              industry. You&apos;re dependent on project managers and field staff
+              to get the job cost data you need to close the books — and they
+              don&apos;t understand the urgency of month end.
             </p>
           </div>
 
@@ -320,8 +342,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                 ),
-                label: "Employees",
-                detail: "Late with submissions and approvals",
+                label: "Project Managers",
+                detail: "Late with job cost updates and approvals",
               },
               {
                 icon: (
@@ -329,8 +351,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                   </svg>
                 ),
-                label: "Clients",
-                detail: "Slow to send documents you need",
+                label: "Field Staff",
+                detail: "Slow to submit timesheets and cost data",
               },
               {
                 icon: (
@@ -338,8 +360,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
                   </svg>
                 ),
-                label: "Vendors",
-                detail: "Invoices scattered across inboxes",
+                label: "Subcontractors",
+                detail: "Invoices and lien waivers scattered across inboxes",
               },
             ].map((item) => (
               <div
@@ -358,7 +380,7 @@ export default function TestPage() {
           {/* Divider with label */}
           <div className="flex items-center gap-4 my-6">
             <div className="flex-1 border-t border-dashed border-[#D1D5DB]" />
-            <span className="text-xs font-semibold uppercase tracking-wide text-[#999] whitespace-nowrap">Your team in the middle</span>
+            <span className="text-xs font-semibold uppercase tracking-wide text-[#999] whitespace-nowrap">Your accounting team in the middle</span>
             <div className="flex-1 border-t border-dashed border-[#D1D5DB]" />
           </div>
 
@@ -380,8 +402,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75m16.5 3.75v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75" />
                   </svg>
                 ),
-                label: "Accounting Software",
-                detail: "Data trapped in silos",
+                label: "Construction ERP",
+                detail: "Job cost data trapped in silos",
               },
               {
                 icon: (
@@ -390,7 +412,7 @@ export default function TestPage() {
                   </svg>
                 ),
                 label: "Email Inbox",
-                detail: "Chasing documents and approvals",
+                detail: "Chasing PMs and subs for documents",
               },
             ].map((tool) => (
               <div
@@ -407,8 +429,8 @@ export default function TestPage() {
           </div>
 
           <p className="text-center mt-10 text-[#555] max-w-xl mx-auto">
-            None of these tools understand your close, your reconciliations, or
-            your deadlines.{" "}
+            None of these tools understand your job costs, your close cycle, or
+            how dependent you are on the field.{" "}
             <span className="font-semibold text-[#111]">Vergo does.</span>
           </p>
         </div>
@@ -504,89 +526,18 @@ export default function TestPage() {
       <section className="py-12 lg:py-16 bg-[#EEF2FF] border-y border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-            See how Vergo works for your accounting team
+            See how Vergo works for construction accounting
           </h2>
           <p className="mt-3 text-[#555]">
-            Start your free trial and get set up with your dedicated account
-            manager.
+            Book a demo and see how Vergo helps construction accounting teams
+            close the books faster.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
-        </div>
-      </section>
-
-      {/* ============ SECONDARY FEATURES ============ */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            Also included
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {secondaryFeatures.map((feature) => (
-              <div
-                key={feature.title}
-                className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] overflow-hidden hover:border-[#D1D5DB] transition-colors"
-              >
-                <div className="aspect-[16/10] overflow-hidden border-b border-[#E5E7EB]">
-                  <feature.Mockup />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#111] mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-[#555] leading-relaxed mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-1.5 mb-4">
-                    {feature.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-center gap-2 text-sm text-[#333]"
-                      >
-                        <svg
-                          className="w-3.5 h-3.5 text-[#22C55E] flex-shrink-0"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2.5}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={feature.href}
-                    className="inline-flex items-center text-sm font-semibold text-[#6366F1] hover:text-[#4F46E5] transition-colors"
-                  >
-                    Learn more
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -595,12 +546,12 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Why generic tools break for accounting
+              Why generic tools break for construction accounting
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto">
               Monday.com, ClickUp, and Asana are great for project management.
-              But accounting teams need dedicated close software — not generic
-              task boards.
+              But construction accounting teams need dedicated close software that
+              understands job costing — not generic task boards.
             </p>
           </div>
 
@@ -640,16 +591,16 @@ export default function TestPage() {
 
           <div className="text-center mt-12">
             <p className="text-[#111] font-semibold mb-6 max-w-2xl mx-auto">
-              Vergo is built for how accounting teams actually work — recurring
-              close cycles, cross-functional coordination, and workflows that
+              Vergo is built for how construction accounting teams actually work — recurring
+              close cycles, cross-functional coordination with the field, and workflows that
               need an audit trail.
             </p>
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              See Vergo in action
-            </a>
+              Book a Demo
+            </Link>
           </div>
         </div>
       </section>
@@ -658,7 +609,7 @@ export default function TestPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -697,19 +648,19 @@ export default function TestPage() {
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Run a more controlled month end close today.
+            Close the books faster. Start today.
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the accounting teams that replaced spreadsheet-based close
-            management with Vergo.
+            Join the construction accounting teams that replaced spreadsheet-based
+            close management with Vergo.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

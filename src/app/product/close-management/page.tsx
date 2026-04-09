@@ -10,19 +10,19 @@ import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 export const metadata: Metadata = {
   title: "Close Collaboration | Vergo",
   description:
-    "Streamline your month-end close with task tracking, reconciliation workflows, and deadline management. Close faster with full visibility.",
+    "Streamline your construction month-end close with job cost reconciliation, WIP schedule reviews, billing analysis, and deadline management.",
 };
 
 const features = [
   {
     category: "Task Tracking",
-    title: "Build and manage your close checklist",
+    title: "Build and manage your construction close checklist",
     description:
-      "Create close checklists from scratch or templates. Assign owners, set deadlines, track dependencies, and monitor progress in real time so nothing falls through the cracks.",
+      "Create close checklists tailored to construction accounting. Assign owners to tasks like reconciling job costs, reviewing WIP schedules, and verifying subcontractor billing — then track progress in real time.",
     items: [
-      "Customizable close checklists",
-      "Task dependencies and deadlines",
-      "Recurring task templates",
+      "Reconcile job costs and review WIP schedules",
+      "Verify subcontractor billing and retention",
+      "Recurring templates for construction close cycles",
     ],
     mockup: "tasks",
   },
@@ -40,13 +40,13 @@ const features = [
   },
   {
     category: "Reconciliation",
-    title: "Reconcile accounts with confidence",
+    title: "Reconcile job costs and project accounts with confidence",
     description:
-      "Automate matching, flag exceptions, and maintain a complete audit trail. Your team reviews only what needs attention while agents handle the rest.",
+      "Automate matching across job cost accounts, flag exceptions on subcontractor billing, and maintain a complete audit trail. Your team reviews only what needs attention while agents handle the rest.",
     items: [
-      "Automated transaction matching",
-      "Exception flagging and resolution",
-      "Complete audit trail",
+      "Automated job cost matching",
+      "Subcontractor billing exception flagging",
+      "Complete audit trail by project",
     ],
     mockup: "close",
   },
@@ -118,17 +118,17 @@ export default function CloseManagementPage() {
             <span className="block text-[#6366F1]">more control</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Manage your entire month-end close in one place. Track tasks,
-            automate reconciliations, and hit every deadline with complete
-            visibility.
+            Manage your construction month-end close in one place. Track job
+            cost reconciliation, WIP schedule reviews, billing analysis, and
+            subcontractor close tasks with complete visibility.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -218,12 +218,12 @@ export default function CloseManagementPage() {
             Start your free trial and get set up with your dedicated account
             manager.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -231,7 +231,7 @@ export default function CloseManagementPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -277,12 +277,12 @@ export default function CloseManagementPage() {
             and visibility.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

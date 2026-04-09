@@ -1,73 +1,85 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pricing | Vergo",
   description:
-    "Simple, transparent pricing for accounting teams. Start with Essentials or unlock AI Agents and dedicated support with Pro.",
+    "Simple, transparent pricing for construction accounting teams. Month-end management, expense management, AP automation, or the full platform.",
 };
 
 const tiers = [
   {
-    name: "Free",
+    name: "Month-End Management",
     description:
-      "Get started with the basics for individual users.",
-    price: "$0",
-    priceDetail: null,
-    cta: "Get Started",
-    highlight: false,
-    popular: false,
-    includes: null,
-    features: ["1 User", "Month-End Checklist"],
-  },
-  {
-    name: "Essentials",
-    description:
-      "Manage your close and build reports with everything your team needs to stay organized.",
+      "Close collaboration, field & PM requests, job cost reporting, reconciliations, and AI analysis — everything your team needs to close the books.",
     price: "$20",
-    priceDetail: "/person/month",
-    cta: "Start Free Trial",
+    priceDetail: "/employee/month",
+    cta: "Book a Demo",
     highlight: false,
     popular: false,
     includes: null,
     features: [
       "Close Collaboration",
-      "Request Tracking",
-      "Auto-Create Tasks in Next Period",
-      "Reporting",
+      "Field & PM Requests",
+      "Vendor Requests",
+      "Reports & Job Costing",
       "Reconciliations",
-      "Databases",
-      "Analysis",
-      "Access to Expense Management",
-      "Access to AP Automation",
+      "AI Analysis",
+      "Auto-Create Tasks in Next Period",
     ],
   },
   {
-    name: "Pro",
+    name: "Expense Management",
     description:
-      "Unlock accounting integrations, AI agents, and a dedicated account manager.",
-    price: "$30",
-    priceDetail: "/person/month",
-    cta: "Start Free Trial",
+      "Connect any credit card, match receipts automatically, and enforce spending policies by job and cost code.",
+    price: "$5",
+    priceDetail: "/employee/month",
+    cta: "Book a Demo",
     highlight: false,
     popular: false,
-    includes: "Everything in Essentials, plus:",
+    includes: null,
     features: [
-      "Accounting Integrations",
-      "Access to AI Agents",
-      "Dedicated Account Manager",
+      "Connect Any Credit Card",
+      "Automatic Receipt Matching",
+      "Job & Cost Code Allocation",
+      "Policy Enforcement",
+      "Approval Routing",
     ],
   },
   {
-    name: "Agent Mode",
+    name: "AP Automation",
     description:
-      "Automate any task with AI agents on top of your Pro workflows.",
+      "Automate the entire AP workflow — from subcontractor invoice capture to approval routing to your general ledger.",
+    price: "$0.50",
+    priceDetail: "/invoice",
+    cta: "Book a Demo",
+    highlight: false,
+    popular: false,
+    includes: null,
+    features: [
+      "Automatic Invoice Capture",
+      "Smart Approval Routing",
+      "Subcontractor Invoice Management",
+      "Lien Waiver Collection",
+      "Construction ERP Sync",
+    ],
+  },
+  {
+    name: "Full Platform",
+    description:
+      "Everything in one package — month-end management, expenses, AP automation, AI agents, and a dedicated account manager.",
     price: "Custom pricing",
     priceDetail: null,
-    cta: "Start Free Trial",
+    cta: "Book a Demo",
     highlight: false,
     popular: false,
-    includes: "Everything in Pro, plus:",
-    features: ["Automate Any Task with AI Agents"],
+    includes: "Everything above, plus:",
+    features: [
+      "All Modules Included",
+      "AI Agents",
+      "Construction ERP Integrations",
+      "Dedicated Account Manager",
+    ],
   },
 ];
 
@@ -121,8 +133,9 @@ export default function PricingPage() {
             <span className="block text-[#6366F1]">simple pricing</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Start with the essentials or unlock AI agents and dedicated support.
-            Every plan includes full access to the platform.
+            Pick the modules your construction accounting team needs, or bundle
+            everything together with the Full Platform. Most teams start with
+            Month-End Management.
           </p>
         </div>
       </section>
@@ -172,12 +185,12 @@ export default function PricingPage() {
                 </div>
 
                 {/* CTA */}
-                <a
-                  href="https://app.tryvergo.com/signup"
+                <Link
+                  href="/demo"
                   className="w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors duration-300 mb-8 bg-[#111] text-white hover:bg-[#333]"
                 >
                   {tier.cta}
-                </a>
+                </Link>
 
                 {/* Divider */}
                 <div className="border-t border-[#E5E7EB] mb-6" />
@@ -206,19 +219,19 @@ export default function PricingPage() {
       <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111] mb-4 tracking-tight">
-            Start Free Trial{" "}
+            Book a Demo{" "}
             <span className="block text-[#6366F1]">Today</span>
           </h2>
           <p className="text-[#666] mb-8 leading-relaxed">
             Talk to our team and we&apos;ll help you find the best fit for your
-            accounting workflows.
+            construction accounting workflows.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-md bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Start Free Trial
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
     </main>

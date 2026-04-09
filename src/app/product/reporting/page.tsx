@@ -7,45 +7,45 @@ import VarianceAnalysisMockup from "@/components/animations/VarianceAnalysisMock
 import AIInsightsMockup from "@/components/animations/AIInsightsMockup";
 
 export const metadata: Metadata = {
-  title: "Reporting & Analytics | Vergo",
+  title: "Reports & Job Costing | Vergo",
   description:
-    "Build custom reports, analyze variances automatically, and surface AI-powered insights and trends — all from one platform.",
+    "Build job cost reports, WIP schedules, and over/under billing analysis. Surface construction-specific insights with AI-powered analytics.",
 };
 
 const features = [
   {
-    category: "Custom Reports",
-    title: "Build the exact reports you need",
+    category: "Job Cost Reports",
+    title: "Generate WIP schedules and cost-to-complete reports",
     description:
-      "Create financial reports tailored to your business. Choose your accounts, time periods, and comparison metrics — then export to PDF or Excel in one click. Save templates so your team never starts from scratch.",
+      "Build WIP schedules, cost-to-complete forecasts, and over/under billing analysis tailored to your projects. Choose your cost codes, time periods, and comparison metrics — then export to PDF or Excel in one click.",
     items: [
-      "Drag-and-drop report builder",
-      "Reusable report templates",
+      "WIP schedule generation with cost-to-complete forecasting",
+      "Over/under billing analysis by job and cost code",
       "One-click PDF and Excel export",
     ],
     mockup: "builder",
   },
   {
-    category: "Variance Analysis",
-    title: "Spot variances before they become problems",
+    category: "Job-Level Variance",
+    title: "Spot job-level variances before they become problems",
     description:
-      "Automatically compare actuals against budgets, forecasts, or prior periods. Set thresholds so significant variances are flagged instantly — and drill down to the transaction level to understand the root cause.",
+      "Automatically compare actuals against budgets at the job and cost code level. Set thresholds so significant variances are flagged instantly — and drill down to see which projects are over or under budget.",
     items: [
-      "Automated period-over-period comparisons",
+      "Job-level and cost code comparisons",
       "Threshold-based variance alerts",
-      "Drill-down to transaction detail",
+      "Drill-down to transaction and change order detail",
     ],
     mockup: "variance",
   },
   {
-    category: "AI Insights",
-    title: "Let AI surface what matters",
+    category: "Construction Insights",
+    title: "Let AI surface cost-to-complete estimates and job cost insights",
     description:
-      "Vergo's AI analyzes your financial data to detect anomalies, forecast trends, and generate plain-language summaries. Spend less time digging through numbers and more time acting on what the data is telling you.",
+      "Vergo's AI analyzes your job cost data to surface cost-to-complete estimates, detect cost overruns, and generate plain-language summaries. Spend less time digging through WIP schedules and more time acting on what the data is telling you.",
     items: [
-      "AI-powered anomaly detection",
-      "Trend forecasting and projections",
-      "Natural language summaries",
+      "AI-powered cost-to-complete estimates",
+      "Cost overrun and variance detection",
+      "Natural language job cost summaries",
     ],
     mockup: "insights",
   },
@@ -101,21 +101,22 @@ export default function ReportingPage() {
             Reporting & Analytics
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            AI-powered insights{" "}
-            <span className="block text-[#6366F1]">that drive smarter decisions</span>
+            WIP schedules, cost-to-complete, and{" "}
+            <span className="block text-[#6366F1]">job cost variance analysis</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Build custom reports, spot trends automatically, and let AI surface
-            the insights that matter. From variance analysis to forecasting —
-            everything your team needs to close with confidence.
+            Generate WIP schedules, run cost-to-complete forecasting, and
+            analyze job cost variances across every project. From over/under
+            billing analysis to cost code drill-downs — everything your
+            construction accounting team needs to close with confidence.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-[#E5E7EB] text-[#555] font-medium hover:border-[#999] hover:text-[#111] transition-colors text-sm"
@@ -204,12 +205,12 @@ export default function ReportingPage() {
             Start your free trial and get set up with your dedicated account
             manager.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center mt-6 px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
 
@@ -217,7 +218,7 @@ export default function ReportingPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What accounting teams are saying
+            What construction accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -263,12 +264,12 @@ export default function ReportingPage() {
             track trends, and make better decisions every close.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
             >
-              Get Started
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/product"
               className="inline-flex items-center px-7 py-3 rounded-lg border border-white/20 text-white/70 font-medium hover:border-white/40 hover:text-white transition-colors text-sm"

@@ -6,7 +6,7 @@ import IntegrationIcon from "@/components/IntegrationIcon";
 export const metadata: Metadata = {
   title: "Integrations | Vergo",
   description:
-    "Connect your accounting software to Vergo. Supported integrations include QuickBooks, Xero, NetSuite, Sage Intacct, and more.",
+    "Connect your construction ERP or accounting software to Vergo. Supported integrations include QuickBooks, Xero, NetSuite, Sage Intacct, Sage 300 CRE, and more.",
 };
 
 export default function TestIntegrationsPage() {
@@ -36,11 +36,12 @@ export default function TestIntegrationsPage() {
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
             Supported{" "}
-            <span className="block text-[#6366F1]">accounting platforms</span>
+            <span className="block text-[#6366F1]">accounting &amp; construction ERP platforms</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Connect your ERP, general ledger, or upload spreadsheets directly.
-            Vergo works with the tools your team already uses.
+            Connect your construction ERP, general ledger, or upload
+            spreadsheets directly. Vergo works with the tools your team already
+            uses.
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-6">
@@ -100,15 +101,15 @@ export default function TestIntegrationsPage() {
             <span className="text-[#6366F1]">platform</span>?
           </h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            We&apos;re adding new integrations regularly. Get in touch and
-            we&apos;ll prioritize yours.
+            We&apos;re adding new construction accounting integrations
+            regularly. Get in touch and we&apos;ll prioritize yours.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
     </main>

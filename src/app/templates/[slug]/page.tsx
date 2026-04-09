@@ -236,12 +236,12 @@ export default async function TemplatePage({ params }: Props) {
             collaboration, integrations, and AI built in.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://app.tryvergo.com/signup"
+            <Link
+              href="/demo"
               className="inline-flex items-center justify-center rounded-full bg-[#6366F1] px-7 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#4F46E5] transition-colors duration-300"
             >
-              Get started free
-            </a>
+              Book a Demo
+            </Link>
             <Link
               href="/demo"
               className="inline-flex items-center justify-center rounded-full border border-[#E5E7EB] bg-white px-7 py-3 text-sm font-semibold text-[#111] hover:border-[#D1D5DB] transition-colors duration-300"

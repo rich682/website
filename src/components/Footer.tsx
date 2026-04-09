@@ -11,7 +11,7 @@ export default function Footer() {
               Vergo
             </Link>
             <p className="mt-3 text-sm max-w-xs leading-relaxed text-[#999]">
-              Month end close software for accounting teams.
+              Month-end close and job cost management for construction accounting teams.
             </p>
           </div>
 
@@ -33,19 +33,19 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/compare" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
-                    Compare
-                  </Link>
-                </li>
-                <li>
                   <Link href="/company" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
                     Company
                   </Link>
                 </li>
                 <li>
-                  <a href="https://app.tryvergo.com/signup" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
-                    Get Started
-                  </a>
+                  <Link href="/demo" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
+                    Book a Demo
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/customers" className="text-sm transition-colors duration-300 text-[#666] hover:text-[#111]">
+                    Customers
+                  </Link>
                 </li>
               </ul>
             </div>

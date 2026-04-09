@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Compare | Vergo",
   description:
-    "See how Vergo compares to Excel, Monday, Asana, FloQast, and BlackLine for close management, AP automation, and expense management.",
+    "See how Vergo compares to Excel, Monday, Asana, FloQast, and BlackLine for construction close management, AP automation, and expense management.",
+  robots: { index: false, follow: false },
 };
 
 const competitors = ["Vergo", "Excel", "Monday", "Asana", "FloQast", "BlackLine"];
@@ -68,14 +69,14 @@ export default function ComparePage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             The only platform that offers{" "}
             <span className="block text-[#6366F1]">
-              everything accounting teams need to close
+              everything construction accounting teams need to close
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Stop stitching together tools that weren&apos;t built for the close.
+            Stop stitching together tools that weren&apos;t built for the construction close.
             Vergo is the only dedicated month end close platform that also
             includes AP automation, expense management, and AI agents — all in
-            one place.
+            one place, purpose-built for construction accounting.
           </p>
         </div>
       </section>
@@ -225,10 +226,10 @@ export default function ComparePage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              href="https://app.tryvergo.com/signup"
+              href="/demo"
               className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-semibold hover:bg-[#E8913A] transition-colors text-sm"
             >
-              Get Started
+              Book a Demo
             </Link>
             <Link
               href="/product"

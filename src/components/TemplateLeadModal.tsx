@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 type ModalState = "idle" | "submitting" | "success" | "error";
 
@@ -243,14 +244,12 @@ export default function TemplateLeadModal({
               </div>
               <p className="mt-4 text-xs text-[#999]">
                 Want automation, not just a spreadsheet?{" "}
-                <a
-                  href="https://app.tryvergo.com/signup"
+                <Link
+                  href="/demo"
                   className="text-[#6366F1] hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  Try Vergo free →
-                </a>
+                  Book a Demo →
+                </Link>
               </p>
             </div>
           ) : (

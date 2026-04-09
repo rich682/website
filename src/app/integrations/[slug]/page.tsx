@@ -108,12 +108,12 @@ export default async function IntegrationPage({
               <p className="text-lg text-[#555] leading-relaxed mb-10">
                 {integration.description}
               </p>
-              <a
-                href="https://app.tryvergo.com/signup"
+              <Link
+                href="/demo"
                 className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F27A2A] text-white font-semibold hover:bg-[#E06A1A] transition-colors text-sm"
               >
-                Get Started
-              </a>
+                Book a Demo
+              </Link>
             </div>
 
             {/* Feature card */}
@@ -205,12 +205,12 @@ export default async function IntegrationPage({
             See how Vergo works with {integration.name} to streamline your
             accounting workflows.
           </p>
-          <a
-            href="https://app.tryvergo.com/signup"
+          <Link
+            href="/demo"
             className="inline-flex items-center px-7 py-3 rounded-lg bg-[#F59E42] text-white font-medium hover:bg-[#E8913A] transition-colors duration-300"
           >
-            Get Started
-          </a>
+            Book a Demo
+          </Link>
         </div>
       </section>
     </main>
