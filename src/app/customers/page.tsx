@@ -112,9 +112,18 @@ export default function CustomersPage() {
                 key={c.name}
                 className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-5 hover:border-[#D1D5DB] transition-colors"
               >
+                {/* Logo placeholder */}
+                <div className="w-10 h-10 rounded-lg bg-[#E5E7EB] flex items-center justify-center mb-3">
+                  <span className="text-[10px] font-bold text-[#999] leading-none">
+                    {c.name.split(" ").map(w => w[0]).join("").slice(0, 2)}
+                  </span>
+                </div>
                 <p className="text-sm font-semibold text-[#111]">{c.name}</p>
                 <div className="mt-2 flex items-center gap-2">
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#EEF2FF] text-xs font-medium text-[#6366F1]">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#EEF2FF] text-xs font-medium text-[#6366F1]">
+                    <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
+                    </svg>
                     {c.employees}
                   </span>
                   <span className="text-xs text-[#888]">
@@ -123,6 +132,19 @@ export default function CustomersPage() {
                 </div>
               </div>
             ))}
+
+            {/* "+ lots more" card */}
+            <div className="rounded-xl border border-dashed border-[#D1D5DB] bg-white p-5 flex flex-col items-center justify-center text-center min-h-[120px]">
+              <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </div>
+              <p className="text-sm font-semibold text-[#111]">+ lots more</p>
+              <p className="text-xs text-[#888] mt-1">
+                New teams joining every week
+              </p>
+            </div>
           </div>
         </div>
       </section>
