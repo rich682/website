@@ -45,6 +45,7 @@ const tiers = [
       "Job & Cost Code Allocation",
       "Policy Enforcement",
       "Approval Routing",
+      "Construction ERP Sync",
     ],
   },
   {
@@ -150,41 +151,38 @@ export default function PricingPage() {
                 key={tier.name}
                 className="rounded-xl border border-[#E5E7EB] bg-white p-8 flex flex-col shadow-sm"
               >
-                {/* Fixed-height top block to align CTAs */}
-                <div className="min-h-[16rem] flex flex-col">
-                  {/* Tier name */}
-                  <h3 className="text-2xl font-semibold text-[#111] mb-3 tracking-tight min-h-[4rem] flex items-start">
-                    {tier.name}
-                  </h3>
+                {/* Tier name — fixed height for alignment */}
+                <h3 className="text-2xl font-semibold text-[#111] mb-3 tracking-tight h-[4rem] flex items-start">
+                  {tier.name}
+                </h3>
 
-                  {/* Description */}
-                  <p className="text-sm text-[#666] leading-relaxed mb-6 flex-1">
-                    {tier.description}
-                  </p>
+                {/* Description — fixed height for alignment */}
+                <p className="text-sm text-[#666] leading-relaxed mb-6 h-[5.5rem]">
+                  {tier.description}
+                </p>
 
-                  {/* Price */}
-                  <div className="mb-6 h-[2.5rem] flex items-end">
-                    <div className="flex items-baseline gap-1.5">
-                      {tier.priceDetail ? (
-                        <>
-                          <span className="text-[#999] text-sm">From</span>
-                          <span className="text-2xl font-normal text-[#111]">
-                            {tier.price}
-                          </span>
-                          <span className="text-sm text-[#999]">
-                            {tier.priceDetail}
-                          </span>
-                        </>
-                      ) : tier.price.startsWith("$") ? (
+                {/* Price — fixed height for alignment */}
+                <div className="mb-6 h-[2.5rem] flex items-end">
+                  <div className="flex items-baseline gap-1.5">
+                    {tier.priceDetail ? (
+                      <>
+                        <span className="text-[#999] text-sm">From</span>
                         <span className="text-2xl font-normal text-[#111]">
                           {tier.price}
                         </span>
-                      ) : (
-                        <span className="text-sm font-normal text-[#666] leading-relaxed">
-                          {tier.price}
+                        <span className="text-sm text-[#999]">
+                          {tier.priceDetail}
                         </span>
-                      )}
-                    </div>
+                      </>
+                    ) : tier.price.startsWith("$") ? (
+                      <span className="text-2xl font-normal text-[#111]">
+                        {tier.price}
+                      </span>
+                    ) : (
+                      <span className="text-sm font-normal text-[#666] leading-relaxed">
+                        {tier.price}
+                      </span>
+                    )}
                   </div>
                 </div>
 
