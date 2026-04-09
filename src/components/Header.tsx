@@ -18,45 +18,59 @@ const platformLinks = [
   { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
 ];
 
+const solutionsLinks = [
+  { label: "General Contractors", href: "/solutions/general-contractors", description: "Month-end close for GC accounting teams" },
+  { label: "Subcontractors", href: "/solutions/subcontractors", description: "Month-end close for sub accounting teams" },
+];
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [platformOpen, setPlatformOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const platformRef = useRef<HTMLDivElement>(null);
+  const solutionsRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  // Close dropdown on route change
+  // Close dropdowns on route change
   useEffect(() => {
     setPlatformOpen(false);
+    setSolutionsOpen(false);
     setMobileMenuOpen(false);
     setMobilePlatformOpen(false);
+    setMobileSolutionsOpen(false);
   }, [pathname]);
 
-  // Close dropdown on click outside
+  // Close dropdowns on click outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (platformRef.current && !platformRef.current.contains(e.target as Node)) {
         setPlatformOpen(false);
       }
+      if (solutionsRef.current && !solutionsRef.current.contains(e.target as Node)) {
+        setSolutionsOpen(false);
+      }
     }
-    if (platformOpen) {
+    if (platformOpen || solutionsOpen) {
       document.addEventListener("mousedown", handleClickOutside);
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [platformOpen]);
+  }, [platformOpen, solutionsOpen]);
 
-  // Close dropdown on Escape
+  // Close dropdowns on Escape
   useEffect(() => {
     function handleEscape(e: KeyboardEvent) {
       if (e.key === "Escape") {
         setPlatformOpen(false);
+        setSolutionsOpen(false);
       }
     }
-    if (platformOpen) {
+    if (platformOpen || solutionsOpen) {
       document.addEventListener("keydown", handleEscape);
       return () => document.removeEventListener("keydown", handleEscape);
     }
-  }, [platformOpen]);
+  }, [platformOpen, solutionsOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
@@ -64,9 +78,9 @@ export default function Header() {
         {/* Left Nav Links */}
         <div className="hidden md:flex items-center gap-6">
           {/* Platform Dropdown */}
-          <div ref={dropdownRef} className="relative">
+          <div ref={platformRef} className="relative">
             <button
-              onClick={() => setPlatformOpen(!platformOpen)}
+              onClick={() => { setPlatformOpen(!platformOpen); setSolutionsOpen(false); }}
               className="flex items-center gap-1 text-sm opacity-90 hover:opacity-60 transition-opacity"
             >
               Platform
@@ -84,6 +98,39 @@ export default function Header() {
             {platformOpen && (
               <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-[#E5E7EB] bg-white p-2 shadow-2xl">
                 {platformLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors hover:bg-[#F5F5F5]"
+                  >
+                    <span className="text-sm font-medium text-[#111]">{link.label}</span>
+                    <span className="text-xs text-[#888]">{link.description}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Solutions Dropdown */}
+          <div ref={solutionsRef} className="relative">
+            <button
+              onClick={() => { setSolutionsOpen(!solutionsOpen); setPlatformOpen(false); }}
+              className="flex items-center gap-1 text-sm opacity-90 hover:opacity-60 transition-opacity"
+            >
+              Solutions
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${solutionsOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {solutionsOpen && (
+              <div className="absolute top-full left-0 mt-4 w-[280px] rounded-xl border border-[#E5E7EB] bg-white p-2 shadow-2xl">
+                {solutionsLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -175,6 +222,36 @@ export default function Header() {
             {mobilePlatformOpen && (
               <div className="pl-4 pb-2 space-y-1">
                 {platformLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block text-sm opacity-70 hover:opacity-60 transition-opacity py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* Solutions accordion */}
+            <button
+              onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+              className="flex items-center justify-between w-full text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
+            >
+              Solutions
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${mobileSolutionsOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {mobileSolutionsOpen && (
+              <div className="pl-4 pb-2 space-y-1">
+                {solutionsLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
