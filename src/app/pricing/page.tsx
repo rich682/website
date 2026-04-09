@@ -131,8 +131,8 @@ export default function PricingPage() {
             Pricing
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            For any team size,{" "}
-            <span className="block text-[#6366F1]">simple pricing</span>
+            Pick individual modules or{" "}
+            <span className="block text-[#6366F1]">bundle the full platform</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Pick the modules your construction accounting team needs, or bundle
