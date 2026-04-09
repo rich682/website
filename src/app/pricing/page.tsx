@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 const tiers = [
   {
-    name: "Month-End Management",
+    name: "Month-End Automation",
     description:
       "Close collaboration, field & PM requests, job cost reporting, reconciliations, and AI analysis — everything your team needs to close the books.",
-    price: "$20",
-    priceDetail: "/employee/month",
+    price: "Custom pricing",
+    priceDetail: null,
     cta: "Book a Demo",
     highlight: false,
     popular: false,
@@ -135,7 +135,7 @@ export default function PricingPage() {
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Pick the modules your construction accounting team needs, or bundle
             everything together with the Full Platform. Most teams start with
-            Month-End Management.
+            Month-End Automation.
           </p>
         </div>
       </section>
@@ -155,7 +155,7 @@ export default function PricingPage() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#666] leading-relaxed mb-6 min-h-[4.5rem]">
+                <p className="text-sm text-[#666] leading-relaxed mb-6 min-h-[6rem]">
                   {tier.description}
                 </p>
 
