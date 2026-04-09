@@ -5,6 +5,8 @@ import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup
 import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
 import ApproveMockup from "@/components/animations/ApproveMockup";
 import WorkflowSetupMockup from "@/components/animations/WorkflowSetupMockup";
+import JobCostReportMockup from "@/components/animations/JobCostReportMockup";
+import AIAnalyzeMockup from "@/components/animations/AIAnalyzeMockup";
 import CloseMockup from "@/components/animations/CloseMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import type { Metadata } from "next";
@@ -60,16 +62,16 @@ const productSections = [
   },
   {
     number: "04",
-    category: "Setup",
+    category: "Reporting",
     title: "Setup job costing analysis, custom reports & more",
     description:
-      "Configure the workflows that power your construction close. Build job cost analysis, automate WIP schedule generation, and set up custom reports by project or cost code.",
+      "Build job cost reports by project or cost code, generate WIP schedules, and track margins across your portfolio. Every report is repeatable and rolls forward each month.",
     features: [
       "Job cost analysis builder",
       "Custom report templates",
       "Automated WIP schedules",
     ],
-    Mockup: WorkflowSetupMockup,
+    Mockup: JobCostReportMockup,
     href: "/product/reporting",
   },
   {
@@ -77,14 +79,14 @@ const productSections = [
     category: "Analyze",
     title: "Use AI to analyze years worth of project data",
     description:
-      "Let AI surface patterns across your historical project data — cost overruns, margin trends, vendor performance, and billing variances. Turn years of job cost history into actionable insights.",
+      "Ask questions about your project data in plain English. Vergo AI surfaces profit fade, cost overruns, vendor performance issues, and billing variances across your entire portfolio.",
     features: [
-      "Historical job cost trend analysis",
+      "Natural language project analysis",
+      "Profit fade and margin detection",
       "Vendor and subcontractor performance",
-      "Margin and billing variance detection",
       "Cost code anomaly surfacing",
     ],
-    Mockup: AgentSetupMockup,
+    Mockup: AIAnalyzeMockup,
     href: "/ai-agents",
   },
   {
