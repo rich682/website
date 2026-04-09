@@ -3,7 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import TasksMockup from "@/components/animations/TasksMockup";
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
 import AgentSetupMockup from "@/components/animations/AgentSetupMockup";
-import ApproveMockup from "@/components/animations/ApproveMockup";
+import CollaborativeReviewMockup from "@/components/animations/CollaborativeReviewMockup";
 import WorkflowSetupMockup from "@/components/animations/WorkflowSetupMockup";
 import JobCostReportMockup from "@/components/animations/JobCostReportMockup";
 import AIAnalyzeMockup from "@/components/animations/AIAnalyzeMockup";
@@ -43,7 +43,7 @@ const productSections = [
       "Lien waiver and compliance workflows",
       "Real-time progress tracking by job",
     ],
-    Mockup: ApproveMockup,
+    Mockup: CollaborativeReviewMockup,
     href: undefined as string | undefined,
   },
   {

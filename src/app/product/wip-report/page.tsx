@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import JobCostReportMockup from "@/components/animations/JobCostReportMockup";
+import WIPReportMockup from "@/components/animations/WIPReportMockup";
 import AIAnalyzeMockup from "@/components/animations/AIAnalyzeMockup";
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
-import ApproveMockup from "@/components/animations/ApproveMockup";
+import CollaborativeReviewMockup from "@/components/animations/CollaborativeReviewMockup";
 
 export const metadata: Metadata = {
   title: "WIP Report | Vergo",
@@ -198,10 +198,10 @@ export default function WipReportPage() {
                     idx % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
-                  {section.mockup === "jobcost" && <JobCostReportMockup />}
+                  {section.mockup === "jobcost" && <WIPReportMockup />}
                   {section.mockup === "analyze" && <AIAnalyzeMockup />}
                   {section.mockup === "request" && <RequestTrackingMockup />}
-                  {section.mockup === "approve" && <ApproveMockup />}
+                  {section.mockup === "approve" && <CollaborativeReviewMockup />}
                 </ScrollReveal>
               </div>
             </div>

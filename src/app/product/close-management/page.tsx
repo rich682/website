@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 import TasksMockup from "@/components/animations/TasksMockup";
 import CollaborationMockup from "@/components/animations/CollaborationMockup";
-import CloseMockup from "@/components/animations/CloseMockup";
+import ReconciliationMockup from "@/components/animations/ReconciliationMockup";
 import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 
 export const metadata: Metadata = {
@@ -199,7 +199,7 @@ export default function CloseManagementPage() {
                 >
                   {section.mockup === "tasks" && <TasksMockup />}
                   {section.mockup === "collaboration" && <CollaborationMockup />}
-                  {section.mockup === "close" && <CloseMockup />}
+                  {section.mockup === "close" && <ReconciliationMockup />}
                   {section.mockup === "deadlines" && <DeadlinesMockup />}
                 </ScrollReveal>
               </div>

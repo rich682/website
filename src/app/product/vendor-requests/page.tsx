@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
-import ApprovalWorkflowMockup from "@/components/animations/ApprovalWorkflowMockup";
-import ApproveMockup from "@/components/animations/ApproveMockup";
+import AutomatedFollowUpMockup from "@/components/animations/AutomatedFollowUpMockup";
+import DocumentStorageMockup from "@/components/animations/DocumentStorageMockup";
 
 export const metadata: Metadata = {
   title: "Vendor Requests | Vergo",
@@ -210,8 +210,8 @@ export default function VendorRequestsPage() {
                   }`}
                 >
                   {section.mockup === "tracking" && <RequestTrackingMockup />}
-                  {section.mockup === "workflow" && <ApprovalWorkflowMockup />}
-                  {section.mockup === "approve" && <ApproveMockup />}
+                  {section.mockup === "workflow" && <AutomatedFollowUpMockup />}
+                  {section.mockup === "approve" && <DocumentStorageMockup />}
                 </ScrollReveal>
               </div>
             </div>
