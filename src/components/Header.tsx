@@ -10,6 +10,7 @@ const platformLinks = [
   { label: "Close Collaboration", href: "/product/close-management", description: "Streamline month-end close" },
   { label: "Field & PM Requests", href: "/product/request-tracking", description: "Collect job cost data and change orders from the field" },
   { label: "Vendor Requests", href: "/product/vendor-requests", description: "Manage subcontractor invoices and lien waivers" },
+  { label: "Subcontractor Requests", href: "/product/subcontractor-requests", description: "Collect lien waivers, insurance certs, and compliance docs" },
   { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
   { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
   { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
