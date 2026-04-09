@@ -18,9 +18,9 @@ const features = [
     category: "Task Tracking",
     title: "Build and manage your construction close checklist",
     description:
-      "Create close checklists tailored to construction accounting. Assign owners to tasks like reconciling job costs, reviewing WIP schedules, and verifying subcontractor billing — then track progress in real time.",
+      "Create close checklists tailored to construction accounting. Assign owners to tasks like generating the WIP report, reconciling job costs, and verifying subcontractor billing — then track progress in real time.",
     items: [
-      "Reconcile job costs and review WIP schedules",
+      "Generate WIP report and reconcile job costs",
       "Verify subcontractor billing and retention",
       "Recurring templates for construction close cycles",
     ],
@@ -118,8 +118,8 @@ export default function CloseManagementPage() {
             <span className="block text-[#6366F1]">more control</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Manage your construction month-end close in one place. Track job
-            cost reconciliation, WIP schedule reviews, billing analysis, and
+            Manage your construction month-end close in one place. Track WIP
+            report generation, job cost reconciliation, billing analysis, and
             subcontractor close tasks with complete visibility.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">

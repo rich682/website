@@ -23,6 +23,7 @@ const tiers = [
       "Field & PM Requests",
       "Vendor Requests",
       "Reports & Job Costing",
+      "WIP Report",
       "Reconciliations",
       "AI Analysis",
       "Auto-Create Tasks in Next Period",

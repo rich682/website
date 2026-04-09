@@ -65,8 +65,9 @@ const productSections = [
     category: "Reporting",
     title: "Setup job costing analysis, custom reports & more",
     description:
-      "Build job cost reports by project or cost code, generate WIP schedules, and track margins across your portfolio. Every report is repeatable and rolls forward each month.",
+      "Generate WIP reports, build job cost analysis by project or cost code, and track margins across your portfolio. Every report is repeatable and rolls forward each month.",
     features: [
+      "WIP report generation",
       "Job cost analysis builder",
       "Custom report templates",
       "Automated WIP schedules",

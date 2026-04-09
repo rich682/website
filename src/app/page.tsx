@@ -118,9 +118,9 @@ const coreFeatures = [
   },
   {
     label: "Reports & Job Costing",
-    title: "Job cost reports, WIP schedules, variance analysis & more",
+    title: "WIP reports, job cost analysis, variance detection & more",
     description:
-      "Build job cost reports, track over/under billing, and catch cost variances automatically — so your team focuses on analysis, not assembling data from multiple systems.",
+      "Generate WIP reports, build job cost analysis by project or cost code, and catch cost variances automatically — so your team focuses on analysis, not assembling data from multiple systems.",
     items: [
       {
         name: "Job cost report builder",

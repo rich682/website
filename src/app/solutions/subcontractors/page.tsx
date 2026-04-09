@@ -65,10 +65,11 @@ const features = [
   },
   {
     category: "REPORTING",
-    title: "Generate job cost reports and track margins",
+    title: "Generate WIP reports and track margins",
     description:
-      "You need to know which projects are profitable and which are bleeding margin — before it's too late. Vergo builds job cost reports, tracks variances by cost code, and surfaces margin issues with AI.",
+      "You need your WIP report and job cost analysis to know which projects are profitable and which are bleeding margin — before it's too late. Vergo generates WIP reports, tracks variances by cost code, and surfaces margin issues with AI.",
     items: [
+      "WIP report generation",
       "Job cost reports by project and cost code",
       "Variance analysis across active projects",
       "AI-powered margin and profit fade detection",
