@@ -101,8 +101,8 @@ export default function RequestTrackingPage() {
             Field & PM Requests
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Stop chasing PMs and field staff for{" "}
-            <span className="block text-[#6366F1]">documents and approvals</span>
+            Automate requests to{" "}
+            <span className="block text-[#6366F1]">PMs and field staff</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Collect job cost data, change orders, lien waivers, and certified

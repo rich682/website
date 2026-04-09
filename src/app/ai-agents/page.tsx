@@ -126,8 +126,8 @@ export default function AIAgentsPage() {
             AI Agents
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Automate repetitive tasks{" "}
-            <span className="block text-[#6366F1]">with agents</span>
+            AI agents for{" "}
+            <span className="block text-[#6366F1]">construction accounting</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Configure AI agents to handle the repetitive work across your

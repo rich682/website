@@ -35,8 +35,8 @@ export default function TestIntegrationsPage() {
             Integrate once
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#111] leading-[1.1] max-w-4xl mx-auto tracking-tight">
-            Supported{" "}
-            <span className="block text-[#6366F1]">accounting &amp; construction ERP platforms</span>
+            Connect your{" "}
+            <span className="block text-[#6366F1]">construction ERP</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
             Connect your construction ERP, general ledger, or upload

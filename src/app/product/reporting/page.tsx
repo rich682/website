@@ -101,8 +101,8 @@ export default function ReportingPage() {
             Reporting & Analytics
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            WIP schedules, cost-to-complete, and{" "}
-            <span className="block text-[#6366F1]">job cost variance analysis</span>
+            Job cost reports and{" "}
+            <span className="block text-[#6366F1]">variance analysis</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Generate WIP schedules, run cost-to-complete forecasting, and

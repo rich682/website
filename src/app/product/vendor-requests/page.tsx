@@ -115,9 +115,9 @@ export default function VendorRequestsPage() {
             VENDOR REQUESTS
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Stop chasing vendors for{" "}
+            Automate vendor{" "}
             <span className="block text-[#6366F1]">
-              invoices and compliance documents
+              document collection
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">

@@ -38,8 +38,8 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] tracking-tight">
-              Designed for construction accounting teams who love{" "}
-              <span className="block text-[#6366F1]">efficiency and control</span>
+              Built for construction{" "}
+              <span className="block text-[#6366F1]">accounting teams</span>
             </h1>
             <p className="mt-8 text-lg text-[#666] leading-relaxed">
               Our founding team has experienced the pain of manual book closes,

@@ -136,8 +136,8 @@ export default function ExpenseManagementPage() {
             Expense Management
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Connect any credit card,{" "}
-            <span className="block text-[#6366F1]">automate expense tracking</span>
+            Automate field{" "}
+            <span className="block text-[#6366F1]">expense tracking</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Track field expenses, per diem, and equipment costs. Link any card,
