@@ -63,7 +63,7 @@ const coreFeatures = [
           "Collect lien waivers, change orders, and compliance documents in one secure location.",
       },
     ],
-    href: "/product/request-tracking",
+    href: "/product/stakeholder-requests",
     Mockup: RequestTrackingMockup,
   },
   {

@@ -5,19 +5,36 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const platformLinks = [
-  { label: "Overview", href: "/product", description: "See the full platform" },
-  { label: "Close Collaboration", href: "/product/close-management", description: "Streamline month-end close" },
-  { label: "Field & PM Requests", href: "/product/request-tracking", description: "Collect job cost data and change orders from the field" },
-  { label: "Vendor Requests", href: "/product/vendor-requests", description: "Manage subcontractor invoices and lien waivers" },
-  { label: "Subcontractor Requests", href: "/product/subcontractor-requests", description: "Collect lien waivers, insurance certs, and compliance docs" },
-  { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
-  { label: "WIP Report", href: "/product/wip-report", description: "Generate and manage your WIP report every month" },
-  { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
-  { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
-  { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
-  { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+const platformColumns = [
+  {
+    heading: "Close",
+    links: [
+      { label: "Overview", href: "/product", description: "See the full platform" },
+      { label: "Close Collaboration", href: "/product/close-management", description: "Streamline month-end close" },
+      { label: "Reconciliations", href: "/product/reconciliations", description: "Match GL to sub-ledgers automatically" },
+    ],
+  },
+  {
+    heading: "Data Collection",
+    links: [
+      { label: "Stakeholder Requests", href: "/product/stakeholder-requests", description: "Collect docs from PMs, subs, and vendors" },
+      { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
+      { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
+    ],
+  },
+  {
+    heading: "Intelligence",
+    links: [
+      { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
+      { label: "WIP Report", href: "/product/wip-report", description: "Generate and manage your WIP report every month" },
+      { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
+      { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+    ],
+  },
 ];
+
+// Flat list for mobile menu
+const platformLinks = platformColumns.flatMap((col) => col.links);
 
 const solutionsLinks = [
   { label: "General Contractors", href: "/solutions/general-contractors", description: "Month-end close for GC accounting teams" },
@@ -97,17 +114,26 @@ export default function Header() {
 
             {/* Dropdown Panel */}
             {platformOpen && (
-              <div className="absolute top-full left-0 mt-4 w-[320px] rounded-xl border border-[#E5E7EB] bg-white p-2 shadow-2xl">
-                {platformLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors hover:bg-[#F5F5F5]"
-                  >
-                    <span className="text-sm font-medium text-[#111]">{link.label}</span>
-                    <span className="text-xs text-[#888]">{link.description}</span>
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 mt-4 w-[680px] rounded-xl border border-[#E5E7EB] bg-white p-4 shadow-2xl">
+                <div className="grid grid-cols-3 gap-4">
+                  {platformColumns.map((col) => (
+                    <div key={col.heading}>
+                      <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#999] px-3 mb-1">
+                        {col.heading}
+                      </span>
+                      {col.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg transition-colors hover:bg-[#F5F5F5]"
+                        >
+                          <span className="text-sm font-medium text-[#111]">{link.label}</span>
+                          <span className="text-xs text-[#888]">{link.description}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>

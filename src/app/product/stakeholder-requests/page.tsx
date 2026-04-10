@@ -3,49 +3,103 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
-import ResponseTrackingMockup from "@/components/animations/ResponseTrackingMockup";
+import AutomatedFollowUpMockup from "@/components/animations/AutomatedFollowUpMockup";
 import DocumentStorageMockup from "@/components/animations/DocumentStorageMockup";
 
 export const metadata: Metadata = {
-  title: "Field & PM Requests | Vergo",
+  title: "Stakeholder Requests | Vergo",
   description:
-    "Collect job cost data, change orders, lien waivers, and certified payroll from project managers and field staff. Track every response in one place.",
+    "Automate document requests to PMs, field staff, subcontractors, and vendors. Collect lien waivers, change orders, invoices, and compliance docs in one place.",
 };
+
+const stakeholderTypes = [
+  {
+    title: "PMs & Field Staff",
+    description:
+      "Collect job cost updates, change orders, and certified payroll from project managers and field teams.",
+  },
+  {
+    title: "Subcontractors",
+    description:
+      "Request lien waivers, insurance certificates, W-9s, and compliance documents from every sub on a project.",
+  },
+  {
+    title: "Vendors",
+    description:
+      "Gather invoices, lien waivers, and compliance docs from vendors to verify billing and release payments.",
+  },
+];
 
 const features = [
   {
-    category: "Send Requests",
-    title: "Collect job cost data from PMs, field staff, and subcontractors",
+    category: "SEND",
+    title: "Send document requests to any stakeholder in one click",
     description:
-      "Send requests to project managers, field staff, subcontractors, and vendors. Collect change orders, lien waivers, certified payroll, and job cost updates without chasing people across email, texts, or spreadsheets.",
+      "Select your recipients — project managers, field staff, subcontractors, or vendors — choose the documents you need, and send requests in bulk. Each stakeholder gets a simple link to upload their documents directly.",
     items: [
-      "Request lien waivers and compliance docs",
-      "Customize templates for construction workflows",
-      "Send to multiple PMs and subs at once",
+      {
+        label: "Bulk requests",
+        detail:
+          "Send requests to dozens of stakeholders at once for lien waivers, invoices, COIs, and more.",
+      },
+      {
+        label: "Customizable templates",
+        detail:
+          "Create request templates tailored to each stakeholder type and construction workflow.",
+      },
+      {
+        label: "Simple upload portal",
+        detail:
+          "Stakeholders get a branded link to upload documents — no account needed.",
+      },
     ],
     mockup: "tracking",
   },
   {
-    category: "Track Responses",
-    title: "Know which PMs and subs have responded — and who hasn't",
+    category: "TRACK",
+    title: "See exactly who has responded — and who to chase",
     description:
-      "See real-time status on every request across all your jobs. Know exactly which project managers and subcontractors have submitted their data, who's still pending, and when responses are due.",
+      "Every request is tracked in real time. See which PMs, subs, and vendors have submitted their documents, which are overdue, and which missing items are blocking your close or payment run.",
     items: [
-      "Real-time response tracking by job",
-      "Automatic follow-up reminders to field staff",
-      "Response timeline visibility across projects",
+      {
+        label: "Real-time response tracking",
+        detail:
+          "Dashboard shows submitted, pending, and overdue documents across all stakeholders and projects.",
+      },
+      {
+        label: "Automated reminders",
+        detail:
+          "Stakeholders get automatic email reminders on your schedule until they respond — no manual follow-up.",
+      },
+      {
+        label: "Close-blocking visibility",
+        detail:
+          "Flag missing lien waivers, expired insurance, or overdue invoices before they hold up your close.",
+      },
     ],
     mockup: "workflow",
   },
   {
-    category: "Manage Attachments",
-    title: "Keep lien waivers, change orders, and job docs in one place",
+    category: "ORGANIZE",
+    title: "Every document filed by project and stakeholder, ready for audit",
     description:
-      "Collect all documents from PMs, field staff, and subcontractors in a secure, centralized location. No more hunting through email inboxes or chasing down paperwork across job sites.",
+      "Submitted documents are automatically organized by project, stakeholder, and document type. Maintain a complete compliance record with full audit trails — so when it's time to close, every document is accounted for.",
     items: [
-      "Centralized storage for lien waivers and compliance docs",
-      "Organize files by job, subcontractor, or request",
-      "Secure access and sharing across your team",
+      {
+        label: "Auto-filing",
+        detail:
+          "Documents land in the right folder automatically — no manual sorting or renaming.",
+      },
+      {
+        label: "Expiration monitoring",
+        detail:
+          "Get alerts when insurance certificates or compliance documents are approaching expiration.",
+      },
+      {
+        label: "Complete audit trail",
+        detail:
+          "Every request, reminder, submission, and approval is logged for compliance and audit readiness.",
+      },
     ],
     mockup: "approve",
   },
@@ -75,7 +129,7 @@ const testimonials = [
   },
 ];
 
-export default function RequestTrackingPage() {
+export default function StakeholderRequestsPage() {
   return (
     <main
       style={
@@ -98,16 +152,16 @@ export default function RequestTrackingPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-[#6366F1] mb-4">
-            Field & PM Requests
+            Stakeholder Requests
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             Automate requests to{" "}
-            <span className="block text-[#6366F1]">PMs and field staff</span>
+            <span className="block text-[#6366F1]">every stakeholder</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Collect job cost data, change orders, lien waivers, and certified
-            payroll from project managers and field staff. Track every response
-            in one centralized place.
+            Collect lien waivers, change orders, invoices, insurance certs, and
+            compliance docs from project managers, field staff, subcontractors,
+            and vendors — all tracked in one place.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -139,6 +193,30 @@ export default function RequestTrackingPage() {
         </div>
       </section>
 
+      {/* ============ STAKEHOLDER TYPES ============ */}
+      <section className="py-12 lg:py-16 border-t border-[#E5E7EB]">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-center text-2xl sm:text-3xl font-bold text-[#111] tracking-tight mb-10">
+            One tool for every stakeholder
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {stakeholderTypes.map((s) => (
+              <div
+                key={s.title}
+                className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-6"
+              >
+                <h3 className="text-base font-semibold text-[#111] mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-[#555] leading-relaxed">
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============ FEATURE SECTIONS ============ */}
       <div className="divide-y divide-[#E5E7EB]">
         {features.map((section, idx) => (
@@ -157,7 +235,7 @@ export default function RequestTrackingPage() {
                   </p>
                   <div className="space-y-4">
                     {section.items.map((item) => (
-                      <div key={item} className="flex items-start gap-3">
+                      <div key={item.label} className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg
                             className="w-3 h-3 text-[#6366F1]"
@@ -173,7 +251,15 @@ export default function RequestTrackingPage() {
                             />
                           </svg>
                         </div>
-                        <span className="text-sm text-[#111]">{item}</span>
+                        <div>
+                          <span className="text-sm font-semibold text-[#111]">
+                            {item.label}
+                          </span>
+                          <span className="text-sm text-[#555]">
+                            {" "}
+                            — {item.detail}
+                          </span>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -185,7 +271,7 @@ export default function RequestTrackingPage() {
                   }`}
                 >
                   {section.mockup === "tracking" && <RequestTrackingMockup />}
-                  {section.mockup === "workflow" && <ResponseTrackingMockup />}
+                  {section.mockup === "workflow" && <AutomatedFollowUpMockup />}
                   {section.mockup === "approve" && <DocumentStorageMockup />}
                 </ScrollReveal>
               </div>
@@ -198,11 +284,11 @@ export default function RequestTrackingPage() {
       <section className="py-12 lg:py-16 bg-[#EEF2FF] border-y border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-            Stop chasing requests. Get full visibility.
+            Stop chasing stakeholders. Get full visibility.
           </h2>
           <p className="mt-3 text-[#555]">
-            Start your free trial and see how Vergo simplifies stakeholder
-            management.
+            See how Vergo automates document collection from PMs, subs, and
+            vendors.
           </p>
           <Link
             href="/demo"
@@ -256,11 +342,11 @@ export default function RequestTrackingPage() {
       <section className="py-16 lg:py-24 bg-[#111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Manage requests with confidence
+            Manage every stakeholder request with confidence
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo helps you track and manage stakeholder requests
-            throughout your close.
+            See how Vergo helps you collect and track documents from PMs, subs,
+            and vendors throughout your close.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

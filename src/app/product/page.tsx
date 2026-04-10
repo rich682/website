@@ -58,7 +58,7 @@ const productSections = [
       "Client billing and approval requests",
     ],
     Mockup: RequestTrackingMockup,
-    href: "/product/request-tracking",
+    href: "/product/stakeholder-requests",
   },
   {
     number: "04",
