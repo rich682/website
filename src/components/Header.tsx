@@ -27,6 +27,11 @@ const platformColumns = [
     links: [
       { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
       { label: "WIP Report", href: "/product/wip-report", description: "Generate and manage your WIP report every month" },
+    ],
+  },
+  {
+    heading: "Automate",
+    links: [
       { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
       { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
     ],
@@ -114,8 +119,8 @@ export default function Header() {
 
             {/* Dropdown Panel */}
             {platformOpen && (
-              <div className="absolute top-full left-0 mt-4 w-[680px] rounded-xl border border-[#E5E7EB] bg-white p-4 shadow-2xl">
-                <div className="grid grid-cols-3 gap-4">
+              <div className="absolute top-full left-0 mt-4 w-[820px] rounded-xl border border-[#E5E7EB] bg-white p-4 shadow-2xl">
+                <div className="grid grid-cols-4 gap-4">
                   {platformColumns.map((col) => (
                     <div key={col.heading}>
                       <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#999] px-3 mb-1">
