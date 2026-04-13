@@ -238,8 +238,8 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            AI Automation for
-            <span className="block text-[#6366F1]">Construction Accounting Teams</span>
+            Month-end automation for
+            <span className="block text-[#6366F1]">construction accounting teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Stop waiting on the field to close your books. Automate job cost
