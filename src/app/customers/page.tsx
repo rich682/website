@@ -8,32 +8,32 @@ export const metadata: Metadata = {
 };
 
 const customers = [
-  { name: "ABM Mechanical", employees: "50+", trade: "Mechanical", region: "Midwest" },
-  { name: "Armormax Inc", employees: "20+", trade: "Specialty", region: "West" },
-  { name: "Beran Concrete", employees: "50+", trade: "Concrete", region: "Midwest" },
-  { name: "Briggs Electric", employees: "100+", trade: "Electrical", region: "Southeast" },
-  { name: "Connolly Brothers", employees: "50+", trade: "General Contracting", region: "Northeast" },
-  { name: "DNT", employees: "100+", trade: "General Contracting", region: "South Central" },
-  { name: "Finaly GC Corp", employees: "20+", trade: "General Contracting", region: "East" },
-  { name: "Gonzales Construction LLC", employees: "50+", trade: "General Contracting", region: "South Central" },
-  { name: "Group Contractors", employees: "200+", trade: "General Contracting", region: "Southeast" },
-  { name: "Hospitality Build", employees: "100+", trade: "General Contracting", region: "West" },
-  { name: "JGM USA", employees: "50+", trade: "Specialty", region: "Southeast" },
-  { name: "JMB", employees: "20+", trade: "General Contracting", region: "Appalachia" },
-  { name: "LVR", employees: "50+", trade: "General Contracting", region: "West" },
-  { name: "Marriot Construction", employees: "300+", trade: "General Contracting", region: "West" },
-  { name: "Moss Utilities", employees: "200+", trade: "Utilities", region: "South Central" },
-  { name: "National Hydro Excavation", employees: "50+", trade: "Civil", region: "Midwest" },
-  { name: "Olson Precast", employees: "100+", trade: "Concrete", region: "Midwest" },
-  { name: "Pacific Tech", employees: "50+", trade: "Specialty", region: "West" },
-  { name: "Paintech", employees: "20+", trade: "Specialty", region: "Southeast" },
-  { name: "PSC Construction", employees: "100+", trade: "General Contracting", region: "Northeast" },
-  { name: "RDR Utility", employees: "50+", trade: "Utilities", region: "South Central" },
-  { name: "Sullivan Builders", employees: "100+", trade: "General Contracting", region: "West" },
-  { name: "TMG", employees: "200+", trade: "General Contracting", region: "West" },
-  { name: "Unity", employees: "50+", trade: "General Contracting", region: "Midwest" },
-  { name: "Van Dyken Mechanical", employees: "100+", trade: "Mechanical", region: "West" },
-  { name: "Venus Construction", employees: "50+", trade: "General Contracting", region: "Southeast" },
+  { name: "ABM Mechanical", employees: "50+", trade: "Mechanical", region: "Northeast", website: "www.abmmechanical.com" },
+  { name: "Armormax Inc", employees: "50+", trade: "Industrial", region: "East", website: "www.armormaxinc.com" },
+  { name: "Beran Concrete", employees: "200+", trade: "Concrete", region: "Midwest", website: "www.beranconcrete.com" },
+  { name: "Briggs Electric", employees: "100+", trade: "Electrical", region: "West", website: "www.briggselectric.com" },
+  { name: "Connolly Brothers", employees: "50+", trade: "Management", region: "East", website: "www.connollybrothers.com" },
+  { name: "DNT", employees: "200+", trade: "Civil", region: "South Central", website: "www.dntconstruction.com" },
+  { name: "Finaly GC Corp.", employees: "50+", trade: "General Contractor", region: "East", website: "www.finalygc.com" },
+  { name: "Gonzales Construction LLC", employees: "20+", trade: "Utilities", region: "West", website: "www.glezconstruction.com" },
+  { name: "Group Contractors", employees: "300+", trade: "Civil", region: "South Central", website: "www.groupcontractors.com" },
+  { name: "Hospitality Build", employees: "100+", trade: "General Contractor", region: "West", website: "www.hospitalitybuild.com" },
+  { name: "JGM USA", employees: "50+", trade: "Specialty", region: "Southeast", website: "www.jgmusa.com" },
+  { name: "JMB", employees: "20+", trade: "General Contractor", region: "Appalachia", website: "www.jmbconstruction.com" },
+  { name: "LVR", employees: "50+", trade: "General Contractor", region: "West", website: "www.lvrconstruction.com" },
+  { name: "Marriot Construction", employees: "300+", trade: "General Contractor", region: "West", website: "www.marriotconstruction.com" },
+  { name: "Moss Utilities", employees: "200+", trade: "Utilities", region: "South Central", website: "www.mossutilities.com" },
+  { name: "National Hydro Excavation", employees: "50+", trade: "Civil", region: "Midwest", website: "www.nationalhydro.com" },
+  { name: "Olson Precast", employees: "100+", trade: "Concrete", region: "Midwest", website: "www.olsonprecast.com" },
+  { name: "Pacific Tech", employees: "50+", trade: "Specialty", region: "West", website: "www.pacifictechconstruction.com" },
+  { name: "Paintech", employees: "20+", trade: "Specialty", region: "Southeast", website: "www.paintech.com" },
+  { name: "PSC Construction", employees: "100+", trade: "General Contractor", region: "Northeast", website: "www.pscconstruction.com" },
+  { name: "RDR Utility", employees: "50+", trade: "Utilities", region: "South Central", website: "www.rdrutility.com" },
+  { name: "Sullivan Builders", employees: "100+", trade: "General Contractor", region: "West", website: "www.sullivanbuilders.com" },
+  { name: "TMG", employees: "200+", trade: "General Contractor", region: "West", website: "www.tmgconstruction.com" },
+  { name: "Unity", employees: "50+", trade: "General Contractor", region: "Midwest", website: "www.unityconstruction.com" },
+  { name: "Van Dyken Mechanical", employees: "100+", trade: "Mechanical", region: "West", website: "www.vandykenmechanical.com" },
+  { name: "Venus Construction", employees: "50+", trade: "General Contractor", region: "Southeast", website: "www.venusconstruction.com" },
 ];
 
 const testimonials = [
@@ -106,45 +106,40 @@ export default function CustomersPage() {
       {/* ============ CUSTOMER GRID ============ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#111] tracking-tight mb-10">
+            Featured Customers
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {customers.map((c) => (
               <div
                 key={c.name}
-                className="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-5 hover:border-[#D1D5DB] transition-colors"
+                className="rounded-2xl border border-[#E5E7EB] bg-white p-6 hover:border-[#D1D5DB] transition-colors flex flex-col"
               >
-                {/* Logo placeholder */}
-                <div className="w-10 h-10 rounded-lg bg-[#E5E7EB] flex items-center justify-center mb-3">
-                  <span className="text-[10px] font-bold text-[#999] leading-none">
-                    {c.name.split(" ").map(w => w[0]).join("").slice(0, 2)}
-                  </span>
-                </div>
-                <p className="text-sm font-semibold text-[#111]">{c.name}</p>
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#EEF2FF] text-xs font-medium text-[#6366F1]">
-                    <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <p className="text-lg font-semibold text-[#111] mb-4">{c.name}</p>
+                <div className="space-y-2.5 flex-1">
+                  <div className="flex items-center gap-2.5 text-sm text-[#555]">
+                    <svg className="w-4 h-4 text-[#999] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
                     </svg>
-                    {c.employees}
-                  </span>
-                  <span className="text-xs text-[#888]">
-                    {c.trade} &middot; {c.region}
-                  </span>
+                    {c.employees} employees
+                  </div>
+                  <div className="flex items-center gap-2.5 text-sm text-[#555]">
+                    <svg className="w-4 h-4 text-[#999] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                    </svg>
+                    {c.trade}
+                  </div>
+                  <div className="flex items-center gap-2.5 text-sm text-[#555]">
+                    <svg className="w-4 h-4 text-[#999] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    {c.region}
+                  </div>
                 </div>
+                <p className="text-sm text-[#999] mt-4 pt-2">{c.website}</p>
               </div>
             ))}
-
-            {/* "+ lots more" card */}
-            <div className="rounded-xl border border-dashed border-[#D1D5DB] bg-white p-5 flex flex-col items-center justify-center text-center min-h-[120px]">
-              <div className="w-10 h-10 rounded-full bg-[#EEF2FF] flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </div>
-              <p className="text-sm font-semibold text-[#111]">+ lots more</p>
-              <p className="text-xs text-[#888] mt-1">
-                New teams joining every week
-              </p>
-            </div>
           </div>
         </div>
       </section>
