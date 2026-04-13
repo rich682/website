@@ -9,78 +9,78 @@ import DocumentStorageMockup from "@/components/animations/DocumentStorageMockup
 export const metadata: Metadata = {
   title: "Reconciliations | Vergo",
   description:
-    "Automate job cost reconciliations. Match your GL to sub-ledgers, flag exceptions instantly, and close the books with audit-ready confidence.",
+    "AI-powered reconciliations for any data source. Match PDFs, spreadsheets, and databases against each other — in any combination. Flag exceptions instantly and close with confidence.",
 };
 
 const features = [
   {
-    category: "MATCH",
-    title: "Automatically match GL balances to sub-ledger detail",
+    category: "INGEST",
+    title: "Reconcile PDFs, spreadsheets, and databases — in any combination",
     description:
-      "Vergo pulls balances from your general ledger and sub-ledgers, then matches them line by line across every cost code. Matched items are cleared automatically — your team only reviews the exceptions.",
+      "Vergo's AI reads and extracts data from unstructured PDFs, Excel files, CSVs, and database exports. Match any source against any other — PDF vs PDF, Excel vs Database, PDF vs Excel. No manual data entry or reformatting required.",
     items: [
       {
-        label: "Automated matching",
+        label: "PDF extraction",
         detail:
-          "GL and sub-ledger balances are compared by cost code and project automatically each period.",
+          "AI reads invoices, statements, and reports in any PDF format — no templates or manual mapping needed.",
       },
       {
-        label: "Multi-source support",
+        label: "Multi-format support",
         detail:
-          "Reconcile across your ERP, job cost system, AP sub-ledger, and payroll in one view.",
+          "Ingest Excel spreadsheets, CSVs, database exports, and PDFs all in the same reconciliation.",
       },
       {
-        label: "Configurable rules",
+        label: "Any-vs-any matching",
         detail:
-          "Set matching tolerances, rounding rules, and exclusion filters to match your accounting policies.",
+          "Reconcile any data source against any other. PDF vs database, spreadsheet vs spreadsheet — any combination works.",
       },
     ],
     mockup: "reconciliation",
   },
   {
-    category: "RESOLVE",
-    title: "Flag exceptions instantly and resolve variances faster",
+    category: "MATCH",
+    title: "AI matches messy, unstructured data automatically",
     description:
-      "When balances don't match, Vergo flags the exception with the variance amount, cost code, and project. Your team can investigate, add notes, and resolve each exception — with a full trail of who did what.",
+      "Vergo's AI understands context and matches records even when formats differ completely between sources. Fuzzy matching handles naming differences, date formats, and rounding — so your team only reviews the exceptions, not every line.",
+    items: [
+      {
+        label: "Intelligent AI matching",
+        detail:
+          "AI interprets unstructured data and finds the right matches across sources, even when formats are completely different.",
+      },
+      {
+        label: "Fuzzy and contextual matching",
+        detail:
+          "Handles naming variations, date format differences, rounding discrepancies, and partial matches automatically.",
+      },
+      {
+        label: "Exception-only review",
+        detail:
+          "Matched items are cleared automatically — your team only spends time on genuine exceptions.",
+      },
+    ],
+    mockup: "tracking",
+  },
+  {
+    category: "RESOLVE",
+    title: "Flag exceptions and close with audit-ready records",
+    description:
+      "When records don't match, Vergo flags the exception with the variance amount and source detail. Investigate, add notes, and resolve each exception with a full audit trail. Roll forward your reconciliation setup each period so you never start from scratch.",
     items: [
       {
         label: "Exception dashboard",
         detail:
-          "See every unmatched item across all projects in one view, sorted by variance amount.",
-      },
-      {
-        label: "Variance investigation",
-        detail:
-          "Drill into the transaction detail behind any exception to find the root cause.",
+          "See every unmatched item across all reconciliations in one view, sorted by variance amount.",
       },
       {
         label: "Resolution workflow",
         detail:
           "Assign exceptions to team members, add notes, and track resolution status through close.",
       },
-    ],
-    mockup: "tracking",
-  },
-  {
-    category: "CLOSE",
-    title: "Close the books with audit-ready reconciliation records",
-    description:
-      "Every reconciliation is saved with a complete audit trail — matched items, resolved exceptions, notes, and sign-offs. Roll forward your reconciliation setup each month so you never start from scratch.",
-    items: [
       {
         label: "Audit-ready records",
         detail:
-          "Complete history of every match, exception, and resolution for auditor review.",
-      },
-      {
-        label: "Monthly roll-forward",
-        detail:
-          "Reconciliation templates carry forward each period — just refresh the data and review.",
-      },
-      {
-        label: "Sign-off workflow",
-        detail:
-          "Preparers and reviewers sign off on each reconciliation before close is finalized.",
+          "Complete history of every match, exception, resolution, and sign-off for auditor review.",
       },
     ],
     mockup: "documents",
@@ -137,13 +137,13 @@ export default function ReconciliationsPage() {
             Reconciliations
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Reconcile job costs{" "}
-            <span className="block text-[#6366F1]">in minutes, not days</span>
+            AI-powered reconciliations{" "}
+            <span className="block text-[#6366F1]">for any data source</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Automatically match your general ledger to sub-ledger detail across
-            every project. Flag exceptions instantly and close the books with
-            audit-ready confidence.
+            Match PDFs, spreadsheets, and databases against each other — in any
+            combination. AI handles the messy, unstructured data so your team
+            only reviews the exceptions.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -244,11 +244,11 @@ export default function ReconciliationsPage() {
       <section className="py-12 lg:py-16 bg-[#EEF2FF] border-y border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-            Stop reconciling in spreadsheets
+            Stop manually matching data across sources
           </h2>
           <p className="mt-3 text-[#555]">
-            See how Vergo automates job cost reconciliations across every
-            project.
+            See how Vergo&apos;s AI reconciles PDFs, spreadsheets, and databases
+            automatically.
           </p>
           <Link
             href="/demo"
@@ -305,8 +305,8 @@ export default function ReconciliationsPage() {
             Close with confidence every month
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo automates reconciliations so your team focuses on
-            exceptions, not data entry.
+            See how Vergo&apos;s AI reconciles any data source against any other —
+            so your team focuses on exceptions, not data entry.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

@@ -1,9 +1,9 @@
 export default function ReconciliationMockup() {
   const lineItems = [
-    { costCode: "Labor --- Framing", gl: "$42,800", sub: "$42,800", status: "Matched", variance: null },
-    { costCode: "Materials --- Concrete", gl: "$28,400", sub: "$28,400", status: "Matched", variance: null },
-    { costCode: "Equipment --- Crane", gl: "$15,200", sub: "$18,600", status: "Exception", variance: "$3,400" },
-    { costCode: "Subcontract --- Electrical", gl: "$67,500", sub: "$67,500", status: "Matched", variance: null },
+    { description: "INV-2847 — Concrete Supply", sourceA: "$42,800", sourceB: "$42,800", status: "Matched", variance: null },
+    { description: "PO-1193 — Steel Delivery", sourceA: "$28,400", sourceB: "$28,400", status: "Matched", variance: null },
+    { description: "INV-3021 — Crane Rental", sourceA: "$15,200", sourceB: "$18,600", status: "Exception", variance: "$3,400" },
+    { description: "INV-2956 — Electrical Sub", sourceA: "$67,500", sourceB: "$67,500", status: "Matched", variance: null },
   ];
 
   return (
@@ -11,18 +11,24 @@ export default function ReconciliationMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-4 sm:mb-5">
         <span className="text-[11px] sm:text-xs font-medium text-foreground">
-          Job Cost Reconciliation
+          PDF vs Database Reconciliation
         </span>
-        <span className="text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full bg-background-tertiary text-foreground-muted">
-          Project 1042
-        </span>
+        <div className="flex items-center gap-1.5">
+          <span className="text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded bg-[#EEF2FF] text-[#6366F1] font-medium">
+            PDF
+          </span>
+          <span className="text-[8px] sm:text-[9px] text-foreground-muted">vs</span>
+          <span className="text-[8px] sm:text-[9px] px-1.5 py-0.5 rounded bg-[#F0FDF4] text-[#22C55E] font-medium">
+            Database
+          </span>
+        </div>
       </div>
 
       {/* Column Headers */}
       <div className="grid grid-cols-5 gap-1 sm:gap-2 mb-2 px-2 sm:px-2.5">
-        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium col-span-1">Cost Code</span>
-        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium text-right">GL</span>
-        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium text-right">Sub Ledger</span>
+        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium col-span-1">Description</span>
+        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium text-right">PDF Amount</span>
+        <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium text-right">DB Amount</span>
         <span className="text-[7px] sm:text-[8px] text-foreground-muted font-medium text-right col-span-2">Status</span>
       </div>
 
@@ -30,17 +36,17 @@ export default function ReconciliationMockup() {
       <div className="space-y-2 sm:space-y-2.5 flex-1">
         {lineItems.map((item) => (
           <div
-            key={item.costCode}
+            key={item.description}
             className="grid grid-cols-5 gap-1 sm:gap-2 items-center p-2 sm:p-2.5 rounded-lg bg-background border border-border"
           >
             <span className="text-[8px] sm:text-[9px] text-foreground font-medium truncate col-span-1">
-              {item.costCode.replace("---", "\u2014")}
+              {item.description}
             </span>
             <span className="text-[9px] sm:text-[10px] text-foreground-muted text-right">
-              {item.gl}
+              {item.sourceA}
             </span>
             <span className="text-[9px] sm:text-[10px] text-foreground-muted text-right">
-              {item.sub}
+              {item.sourceB}
             </span>
             <div className="col-span-2 flex items-center justify-end gap-1">
               <span
