@@ -44,7 +44,7 @@ export default function RootLayout({
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-331832925" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-331832925');`,
+            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-331832925');gtag('config', 'G-GPE5PVP75V');`,
           }}
         />
       </head>
