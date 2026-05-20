@@ -14,7 +14,7 @@ export default function AIAgentsMockup() {
         <div className="p-1.5 rounded bg-background-secondary border border-border/50">
           <div className="flex items-center justify-between mb-1">
             <span className="text-[8px] sm:text-[9px] font-medium text-foreground">
-              Job Cost Reconciliation Agent
+              Reconciliation Agent
             </span>
             <span className="agent-config-badge text-[6px] sm:text-[7px] px-1.5 py-0.5 rounded-full bg-highlight/10 text-highlight font-medium">
               Configured
@@ -65,7 +65,7 @@ export default function AIAgentsMockup() {
         <div className="p-1.5 rounded bg-background-secondary border border-border/50 mb-1.5">
           <div className="flex items-center justify-between mb-0.5">
             <span className="text-[8px] sm:text-[9px] font-medium text-foreground">
-              Job Cost Reconciliation
+              Account Reconciliation
             </span>
             <span className="agent-review-badge text-[6px] sm:text-[7px] px-1.5 py-0.5 rounded-full font-medium">
               Awaiting Review

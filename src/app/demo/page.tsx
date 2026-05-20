@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 const trustBadges = [
   { text: "Complete audit trail for every transaction and approval" },
-  { text: "Integrates with Sage, Viewpoint, QuickBooks, and more" },
+  { text: "Integrates with QuickBooks, Xero, NetSuite, Sage, and more" },
   { text: "Repeatable close templates that roll forward every month" },
 ];
 
@@ -63,9 +63,9 @@ export default function TestDemoPage() {
               See Vergo <span className="block text-[#6366F1]">in action.</span>
             </h1>
             <p className="text-lg text-[#666] max-w-lg mb-10 leading-relaxed">
-              Book a 30-minute demo and see how Vergo can help your
-              construction accounting team close faster, automate follow-ups,
-              and free up time for higher-value work—all in one platform.
+              Book a 30-minute demo and see how Vergo can help your accounting
+              team close faster, automate follow-ups, and free up time for
+              higher-value work—all in one platform.
             </p>
 
             <div className="space-y-5">

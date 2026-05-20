@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing | Vergo",
   description:
-    "Simple, transparent pricing for construction accounting teams. Month-end management, expense management, AP automation, or the full platform.",
+    "Simple, transparent pricing for accounting teams. Month-end automation, expense management, AP automation, or the full platform.",
 };
 
 const tiers = [
   {
     name: "Month-End Automation",
     description:
-      "Close collaboration, field & PM requests, job cost reporting, reconciliations, and AI analysis — everything your team needs to close the books.",
+      "Close collaboration, stakeholder requests, reporting, reconciliations, and AI analysis — everything your team needs to close the books.",
     price: "Custom pricing",
     priceDetail: null,
     cta: "Book a Demo",
@@ -20,10 +20,10 @@ const tiers = [
     includes: null,
     features: [
       "Close Collaboration",
-      "Field & PM Requests",
+      "Stakeholder Requests",
       "Vendor Requests",
-      "Reports & Job Costing",
-      "WIP Report",
+      "Reports & Analytics",
+      "Variance Analysis",
       "Reconciliations",
       "AI Analysis",
       "Auto-Create Tasks in Next Period",
@@ -32,7 +32,7 @@ const tiers = [
   {
     name: "Expense Management",
     description:
-      "Connect any credit card, match receipts automatically, and enforce spending policies by job and cost code.",
+      "Connect any credit card, match receipts automatically, and enforce spending policies by GL account and cost center.",
     price: "$5",
     priceDetail: "/employee/month",
     cta: "Book a Demo",
@@ -42,16 +42,16 @@ const tiers = [
     features: [
       "Connect Any Credit Card",
       "Automatic Receipt Matching",
-      "Job & Cost Code Allocation",
+      "GL & Cost Code Allocation",
       "Policy Enforcement",
       "Approval Routing",
-      "Construction ERP Sync",
+      "ERP Sync",
     ],
   },
   {
     name: "AP Automation",
     description:
-      "Automate the entire AP workflow — from subcontractor invoice capture to approval routing to your general ledger.",
+      "Automate the entire AP workflow — from vendor invoice capture to approval routing to your general ledger.",
     price: "$0.50",
     priceDetail: "/invoice",
     cta: "Book a Demo",
@@ -61,15 +61,15 @@ const tiers = [
     features: [
       "Automatic Invoice Capture",
       "Smart Approval Routing",
-      "Subcontractor Invoice Management",
-      "Lien Waiver Collection",
-      "Construction ERP Sync",
+      "Vendor Invoice Management",
+      "Compliance Documentation",
+      "ERP Sync",
     ],
   },
   {
     name: "Full Platform",
     description:
-      "Everything in one package — month-end management, expenses, AP automation, AI agents, and a dedicated account manager.",
+      "Everything in one package — month-end automation, expenses, AP automation, AI agents, and a dedicated account manager.",
     price: "Custom pricing",
     priceDetail: null,
     cta: "Book a Demo",
@@ -79,7 +79,7 @@ const tiers = [
     features: [
       "All Modules Included",
       "AI Agents",
-      "Construction ERP Integrations",
+      "ERP Integrations",
       "Dedicated Account Manager",
     ],
   },
@@ -135,9 +135,9 @@ export default function PricingPage() {
             <span className="block text-[#6366F1]">bundle the full platform</span>
           </h1>
           <p className="mt-8 text-lg text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Pick the modules your construction accounting team needs, or bundle
-            everything together with the Full Platform. Most teams start with
-            Month-End Automation.
+            Pick the modules your accounting team needs, or bundle everything
+            together with the Full Platform. Most teams start with Month-End
+            Automation.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function PricingPage() {
           </h2>
           <p className="text-[#666] mb-8 leading-relaxed">
             Talk to our team and we&apos;ll help you find the best fit for your
-            construction accounting workflows.
+            accounting workflows.
           </p>
           <Link
             href="/demo"

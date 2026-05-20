@@ -4,36 +4,36 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Customers | Vergo",
   description:
-    "See how construction accounting teams use Vergo to automate month end close, job cost reconciliations, and stakeholder coordination.",
+    "See how accounting teams use Vergo to automate month-end close, reconciliations, and stakeholder coordination.",
 };
 
 const customers = [
-  { name: "ABM Mechanical", employees: "50+", trade: "Mechanical", region: "Northeast", website: "www.abmmechanical.com" },
-  { name: "Armormax Inc", employees: "50+", trade: "Industrial", region: "East", website: "www.armormaxinc.com" },
-  { name: "Beran Concrete", employees: "200+", trade: "Concrete", region: "Midwest", website: "www.beranconcrete.com" },
-  { name: "Briggs Electric", employees: "100+", trade: "Electrical", region: "West", website: "www.briggselectric.com" },
-  { name: "Connolly Brothers", employees: "50+", trade: "Management", region: "East", website: "www.connollybrothers.com" },
-  { name: "DNT", employees: "200+", trade: "Civil", region: "South Central", website: "www.dntconstruction.com" },
-  { name: "Finaly GC Corp.", employees: "50+", trade: "General Contractor", region: "East", website: "www.finalygc.com" },
-  { name: "Gonzales Construction LLC", employees: "20+", trade: "Utilities", region: "West", website: "www.glezconstruction.com" },
-  { name: "Group Contractors", employees: "300+", trade: "Civil", region: "South Central", website: "www.groupcontractors.com" },
-  { name: "Hospitality Build", employees: "100+", trade: "General Contractor", region: "West", website: "www.hospitalitybuild.com" },
-  { name: "JGM USA", employees: "50+", trade: "Specialty", region: "Southeast", website: "www.jgmusa.com" },
-  { name: "JMB", employees: "20+", trade: "General Contractor", region: "Appalachia", website: "www.jmbconstruction.com" },
-  { name: "LVR", employees: "50+", trade: "General Contractor", region: "West", website: "www.lvrconstruction.com" },
-  { name: "Marriot Construction", employees: "300+", trade: "General Contractor", region: "West", website: "www.marriotconstruction.com" },
-  { name: "Moss Utilities", employees: "200+", trade: "Utilities", region: "South Central", website: "www.mossutilities.com" },
-  { name: "National Hydro Excavation", employees: "50+", trade: "Civil", region: "Midwest", website: "www.nationalhydro.com" },
-  { name: "Olson Precast", employees: "100+", trade: "Concrete", region: "Midwest", website: "www.olsonprecast.com" },
-  { name: "Pacific Tech", employees: "50+", trade: "Specialty", region: "West", website: "www.pacifictechconstruction.com" },
-  { name: "Paintech", employees: "20+", trade: "Specialty", region: "Southeast", website: "www.paintech.com" },
-  { name: "PSC Construction", employees: "100+", trade: "General Contractor", region: "Northeast", website: "www.pscconstruction.com" },
-  { name: "RDR Utility", employees: "50+", trade: "Utilities", region: "South Central", website: "www.rdrutility.com" },
-  { name: "Sullivan Builders", employees: "100+", trade: "General Contractor", region: "West", website: "www.sullivanbuilders.com" },
-  { name: "TMG", employees: "200+", trade: "General Contractor", region: "West", website: "www.tmgconstruction.com" },
-  { name: "Unity", employees: "50+", trade: "General Contractor", region: "Midwest", website: "www.unityconstruction.com" },
-  { name: "Van Dyken Mechanical", employees: "100+", trade: "Mechanical", region: "West", website: "www.vandykenmechanical.com" },
-  { name: "Venus Construction", employees: "50+", trade: "General Contractor", region: "Southeast", website: "www.venusconstruction.com" },
+  { name: "ABM Mechanical", employees: "50+", region: "Northeast", website: "www.abmmechanical.com" },
+  { name: "Armormax Inc", employees: "50+", region: "East", website: "www.armormaxinc.com" },
+  { name: "Beran Concrete", employees: "200+", region: "Midwest", website: "www.beranconcrete.com" },
+  { name: "Briggs Electric", employees: "100+", region: "West", website: "www.briggselectric.com" },
+  { name: "Connolly Brothers", employees: "50+", region: "East", website: "www.connollybrothers.com" },
+  { name: "DNT", employees: "200+", region: "South Central", website: "www.dntconstruction.com" },
+  { name: "Finaly GC Corp.", employees: "50+", region: "East", website: "www.finalygc.com" },
+  { name: "Gonzales LLC", employees: "20+", region: "West", website: "www.glezconstruction.com" },
+  { name: "Group", employees: "300+", region: "South Central", website: "www.groupcontractors.com" },
+  { name: "Hospitality Build", employees: "100+", region: "West", website: "www.hospitalitybuild.com" },
+  { name: "JGM USA", employees: "50+", region: "Southeast", website: "www.jgmusa.com" },
+  { name: "JMB", employees: "20+", region: "Appalachia", website: "www.jmbconstruction.com" },
+  { name: "LVR", employees: "50+", region: "West", website: "www.lvrconstruction.com" },
+  { name: "Marriot", employees: "300+", region: "West", website: "www.marriotconstruction.com" },
+  { name: "Moss Utilities", employees: "200+", region: "South Central", website: "www.mossutilities.com" },
+  { name: "National Hydro", employees: "50+", region: "Midwest", website: "www.nationalhydro.com" },
+  { name: "Olson Precast", employees: "100+", region: "Midwest", website: "www.olsonprecast.com" },
+  { name: "Pacific Tech", employees: "50+", region: "West", website: "www.pacifictechconstruction.com" },
+  { name: "Paintech", employees: "20+", region: "Southeast", website: "www.paintech.com" },
+  { name: "PSC", employees: "100+", region: "Northeast", website: "www.pscconstruction.com" },
+  { name: "RDR Utility", employees: "50+", region: "South Central", website: "www.rdrutility.com" },
+  { name: "Sullivan", employees: "100+", region: "West", website: "www.sullivanbuilders.com" },
+  { name: "TMG", employees: "200+", region: "West", website: "www.tmgconstruction.com" },
+  { name: "Unity", employees: "50+", region: "Midwest", website: "www.unityconstruction.com" },
+  { name: "Van Dyken Mechanical", employees: "100+", region: "West", website: "www.vandykenmechanical.com" },
+  { name: "Venus", employees: "50+", region: "Southeast", website: "www.venusconstruction.com" },
 ];
 
 const testimonials = [
@@ -49,7 +49,7 @@ const testimonials = [
       "We've cut labor from 3+ staff members to just one employee spending 30 minutes.",
     name: "Cheyenne Rawlins",
     role: "Office Manager",
-    company: "Sullivan Builders",
+    company: "Sullivan",
   },
   {
     quote:
@@ -93,12 +93,11 @@ export default function CustomersPage() {
             OUR CUSTOMERS
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Trusted by construction accounting teams across the country
+            Trusted by accounting teams across the country
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            From general contractors to specialty trades, construction accounting
-            teams use Vergo to close the books faster and collect job cost data
-            from the field.
+            Accounting teams use Vergo to close the books faster, automate
+            reconciliations, and collect data from stakeholders.
           </p>
         </div>
       </section>
@@ -122,12 +121,6 @@ export default function CustomersPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
                     </svg>
                     {c.employees} employees
-                  </div>
-                  <div className="flex items-center gap-2.5 text-sm text-[#555]">
-                    <svg className="w-4 h-4 text-[#999] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-                    </svg>
-                    {c.trade}
                   </div>
                   <div className="flex items-center gap-2.5 text-sm text-[#555]">
                     <svg className="w-4 h-4 text-[#999] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -190,8 +183,7 @@ export default function CustomersPage() {
             Ready to close the books faster?
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo helps construction accounting teams automate month end
-            close.
+            See how Vergo helps accounting teams automate month-end close.
           </p>
           <div className="mt-8">
             <Link

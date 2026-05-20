@@ -29,9 +29,6 @@ const nameMap: Record<string, string> = {
   freeagent: "FreeAgent",
   moneybird: "Moneybird",
   dynamics: "Microsoft Dynamics 365",
-  "viewpoint-spectrum": "Viewpoint Spectrum",
-  "viewpoint-vista": "Viewpoint Vista",
-  "foundation-software": "Foundation Software",
   excel: "Microsoft Excel",
 };
 

@@ -24,7 +24,7 @@ export default function AIAnalyzeMockup() {
         <div className="flex justify-end">
           <div className="max-w-[85%] rounded-xl rounded-br-sm bg-highlight/10 px-3 py-2 sm:px-3.5 sm:py-2.5">
             <p className="text-[10px] sm:text-xs text-foreground leading-relaxed">
-              Which projects are trending towards profit fade?
+              Which accounts are trending out of budget?
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function AIAnalyzeMockup() {
         <div className="flex justify-start">
           <div className="max-w-[90%] rounded-xl rounded-bl-sm bg-background border border-border px-3 py-2.5 sm:px-3.5 sm:py-3">
             <p className="text-[10px] sm:text-xs text-foreground leading-relaxed mb-2.5">
-              I found 2 projects with declining margins over the last 3 months:
+              I found 2 accounts with declining performance over the last 3 months:
             </p>
 
             {/* Result cards */}
@@ -51,7 +51,7 @@ export default function AIAnalyzeMockup() {
             </div>
 
             <p className="text-[9px] sm:text-[10px] text-foreground-muted mt-2.5 leading-relaxed">
-              Both are driven by labor cost overruns. Project 1087 has $42K in unapproved change orders.
+              Both are driven by rising operating costs. Account 1087 has $42K in unapproved spend.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function AIAnalyzeMockup() {
       {/* Input bar */}
       <div className="mt-3 sm:mt-4 flex items-center gap-2 p-2 sm:p-2.5 rounded-lg bg-background border border-border">
         <span className="text-[9px] sm:text-[10px] text-foreground-muted flex-1">
-          Ask about your project data...
+          Ask about your financial data...
         </span>
         <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-highlight flex items-center justify-center flex-shrink-0">
           <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

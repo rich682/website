@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI Agents | Vergo",
   description:
-    "Configure AI agents to handle repetitive construction accounting tasks — job cost reconciliations, subcontractor follow-ups, and more. Each agent surfaces its work for your review before anything is finalized.",
+    "Configure AI agents to handle repetitive accounting tasks — reconciliations, vendor follow-ups, and more. Each agent surfaces its work for your review before anything is finalized.",
 };
 
 const steps = [
@@ -30,7 +30,7 @@ const steps = [
     category: "Execute",
     title: "Agents execute the work",
     description:
-      "Once configured, agents run on your schedule — handling job cost reconciliations, subcontractor follow-ups, reports, and variance analysis. They work through your data methodically and surface their results.",
+      "Once configured, agents run on your schedule — handling reconciliations, vendor follow-ups, reports, and variance analysis. They work through your data methodically and surface their results.",
     items: [
       "Runs on your schedule",
       "Processes data systematically",
@@ -57,12 +57,12 @@ const agentTypes = [
   {
     name: "Reconciliation Agent",
     description:
-      "Automatically match transactions across job cost accounts, flag exceptions, and prepare reconciliation reports for your review.",
+      "Automatically match transactions across GL accounts, flag exceptions, and prepare reconciliation reports for your review.",
   },
   {
     name: "Stakeholder Request Agent",
     description:
-      "Send and follow up on document requests, subcontractor sign-offs, and data submissions from across the business.",
+      "Send and follow up on document requests, vendor sign-offs, and data submissions from across the business.",
   },
   {
     name: "Reporting Agent",
@@ -127,13 +127,12 @@ export default function AIAgentsPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             AI agents for{" "}
-            <span className="block text-[#6366F1]">construction accounting</span>
+            <span className="block text-[#6366F1]">accounting teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
             Configure AI agents to handle the repetitive work across your
-            construction close — from job cost reconciliations to subcontractor
-            follow-ups. Each agent surfaces its work for your review before
-            anything is finalized.
+            close — from reconciliations to vendor follow-ups. Each agent
+            surfaces its work for your review before anything is finalized.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -250,11 +249,11 @@ export default function AIAgentsPage() {
               Agent Types
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-              Agents built for construction accounting workflows
+              Agents built for accounting workflows
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto">
               Each agent is purpose-built to handle a specific function within
-              your construction close process.
+              your close process.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -277,7 +276,7 @@ export default function AIAgentsPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -319,7 +318,7 @@ export default function AIAgentsPage() {
             Put your agents to work
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the construction accounting teams closing faster with less manual work.
+            Join the accounting teams closing faster with less manual work.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

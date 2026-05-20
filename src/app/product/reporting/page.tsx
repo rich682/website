@@ -7,45 +7,45 @@ import VarianceAnalysisMockup from "@/components/animations/VarianceAnalysisMock
 import AIInsightsMockup from "@/components/animations/AIInsightsMockup";
 
 export const metadata: Metadata = {
-  title: "Reports & Job Costing | Vergo",
+  title: "Reports & Analytics | Vergo",
   description:
-    "Build job cost reports, WIP schedules, and over/under billing analysis. Surface construction-specific insights with AI-powered analytics.",
+    "Build financial reports, variance analysis, and management dashboards. Surface insights with AI-powered analytics for accounting teams.",
 };
 
 const features = [
   {
-    category: "Job Cost Reports",
-    title: "Generate WIP schedules and cost-to-complete reports",
+    category: "Custom Reports",
+    title: "Build financial reports and management dashboards",
     description:
-      "Build WIP schedules, cost-to-complete forecasts, and over/under billing analysis tailored to your projects. Choose your cost codes, time periods, and comparison metrics — then export to PDF or Excel in one click.",
+      "Build custom reports, budget-vs-actuals analysis, and management dashboards tailored to your business. Choose your accounts, time periods, and comparison metrics — then export to PDF or Excel in one click.",
     items: [
-      "WIP schedule generation with cost-to-complete forecasting",
-      "Over/under billing analysis by job and cost code",
+      "Custom report builder with rollups and groupings",
+      "Budget-vs-actuals and variance analysis",
       "One-click PDF and Excel export",
     ],
     mockup: "builder",
   },
   {
-    category: "Job-Level Variance",
-    title: "Spot job-level variances before they become problems",
+    category: "Variance Analysis",
+    title: "Spot variances before they become problems",
     description:
-      "Automatically compare actuals against budgets at the job and cost code level. Set thresholds so significant variances are flagged instantly — and drill down to see which projects are over or under budget.",
+      "Automatically compare actuals against budgets at the account and department level. Set thresholds so significant variances are flagged instantly — and drill down to see what's driving the difference.",
     items: [
-      "Job-level and cost code comparisons",
+      "Account and department comparisons",
       "Threshold-based variance alerts",
-      "Drill-down to transaction and change order detail",
+      "Drill-down to transaction detail",
     ],
     mockup: "variance",
   },
   {
-    category: "Construction Insights",
-    title: "Let AI surface cost-to-complete estimates and job cost insights",
+    category: "AI Insights",
+    title: "Let AI surface anomalies and trends across your data",
     description:
-      "Vergo's AI analyzes your job cost data to surface cost-to-complete estimates, detect cost overruns, and generate plain-language summaries. Spend less time digging through WIP schedules and more time acting on what the data is telling you.",
+      "Vergo's AI analyzes your financial data to surface anomalies, detect variances, and generate plain-language summaries. Spend less time digging through reports and more time acting on what the data is telling you.",
     items: [
-      "AI-powered cost-to-complete estimates",
-      "Cost overrun and variance detection",
-      "Natural language job cost summaries",
+      "AI-powered anomaly detection",
+      "Variance and trend insights",
+      "Natural language financial summaries",
     ],
     mockup: "insights",
   },
@@ -101,14 +101,14 @@ export default function ReportingPage() {
             Reporting & Analytics
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Job cost reports and{" "}
+            Financial reports and{" "}
             <span className="block text-[#6366F1]">variance analysis</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Generate WIP schedules, run cost-to-complete forecasting, and
-            analyze job cost variances across every project. From over/under
-            billing analysis to cost code drill-downs — everything your
-            construction accounting team needs to close with confidence.
+            Build custom financial reports, run budget-vs-actuals analysis, and
+            track variances across departments and accounts. From management
+            dashboards to account-level drill-downs — everything your accounting
+            team needs to close with confidence.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -218,7 +218,7 @@ export default function ReportingPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (

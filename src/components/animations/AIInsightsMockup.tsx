@@ -2,20 +2,20 @@ export default function AIInsightsMockup() {
   const insights = [
     {
       icon: "trend",
-      title: "Cost overrun detected on 3 active jobs",
-      detail: "Jobs 1042, 1087, and 1103 are trending 8-15% over budget on labor costs.",
+      title: "Cost overrun detected on 3 accounts",
+      detail: "Accounts 1042, 1087, and 1103 are trending 8-15% over budget.",
       type: "positive",
     },
     {
       icon: "alert",
-      title: "Subcontractor billing variance flagged",
+      title: "Vendor billing variance flagged",
       detail: "Mason Electric billed $42K against a $28K committed cost — 50% over PO.",
       type: "warning",
     },
     {
       icon: "forecast",
-      title: "Cost-to-complete estimate updated",
-      detail: "AI-generated cost-to-complete across 12 active projects. 3 require margin adjustments.",
+      title: "Forecast updated for next quarter",
+      detail: "AI-generated forecast across 12 active cost centers. 3 require adjustments.",
       type: "neutral",
     },
   ];

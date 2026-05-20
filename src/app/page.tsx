@@ -2,7 +2,6 @@ import Link from "next/link";
 import CoordinationMockup from "@/components/animations/CoordinationMockup";
 import RequestTrackingMockup from "@/components/animations/RequestTrackingMockup";
 import ReportingMockup from "@/components/animations/ReportingMockup";
-import WhiteGloveMockup from "@/components/animations/WhiteGloveMockup";
 import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import InvoiceCaptureMockup from "@/components/animations/InvoiceCaptureMockup";
 import CardConnectionsMockup from "@/components/animations/CardConnectionsMockup";
@@ -10,9 +9,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vergo | AI Automation for Construction Accounting Teams",
+  title: "Vergo | AI Automation for Accounting Teams",
   description:
-    "Vergo is month end close software built for construction accounting teams. Automate job cost reconciliations, collect documents from project managers and field staff, and close the books faster.",
+    "Vergo is the AI automation platform for accounting teams. Automate reconciliations, collect documents from stakeholders, and close the books faster — all in one place.",
 };
 
 const coreFeatures = [
@@ -42,15 +41,15 @@ const coreFeatures = [
     Mockup: CoordinationMockup,
   },
   {
-    label: "Field & PM Requests",
-    title: "Collect job cost data from project managers and field staff",
+    label: "Stakeholder Requests",
+    title: "Collect data and documents from anyone, inside or outside your team",
     description:
-      "Send requests to PMs, superintendents, and field teams for job cost updates, change orders, and certified payroll. Track every response in one place.",
+      "Send requests to department heads, vendors, and external stakeholders for the data, approvals, and documents you need to close. Track every response in one place.",
     items: [
       {
-        name: "Send requests to the field",
+        name: "Send requests to anyone",
         detail:
-          "Request job cost updates, timesheets, or approvals from project managers and field staff.",
+          "Request updates, documents, or approvals from internal teams, vendors, and external stakeholders.",
       },
       {
         name: "Track responses",
@@ -60,82 +59,82 @@ const coreFeatures = [
       {
         name: "Manage attachments",
         detail:
-          "Collect lien waivers, change orders, and compliance documents in one secure location.",
+          "Collect invoices, compliance documents, and supporting files in one secure location.",
       },
     ],
     href: "/product/stakeholder-requests",
     Mockup: RequestTrackingMockup,
   },
   {
-    label: "Collection",
-    title: "Automate field expense collection and job cost allocation",
+    label: "Expense Management",
+    title: "Automate expense collection and cost allocation",
     description:
-      "Connect any corporate or fuel card, match receipts automatically, and allocate every expense to the right job and cost code. Field staff submit from their phone — your team reviews and approves in one place.",
+      "Connect any corporate or fuel card, match receipts automatically, and allocate every expense to the right GL account and cost center. Employees submit from their phone — your team reviews and approves in one place.",
     items: [
       {
         name: "Connect any credit card",
         detail:
-          "Link corporate cards, fuel cards, and equipment purchase cards for automatic transaction import.",
+          "Link corporate cards, fuel cards, and purchasing cards for automatic transaction import.",
       },
       {
         name: "Automatic receipt matching",
         detail:
-          "Receipts are matched to transactions automatically — no more chasing field staff for paper receipts.",
+          "Receipts are matched to transactions automatically — no more chasing employees for paper receipts.",
       },
       {
-        name: "Job & cost code allocation",
+        name: "GL & cost code allocation",
         detail:
-          "Every expense is allocated to the right job and cost code before it hits your books.",
+          "Every expense is allocated to the right account and cost center before it hits your books.",
       },
     ],
     href: "/product/expense-management",
     Mockup: CardConnectionsMockup,
   },
   {
-    label: "Approvals",
+    label: "AP Automation",
     title: "Route invoices through approval workflows automatically",
     description:
-      "From subcontractor invoice capture to multi-level approval routing to your general ledger — automate the entire AP workflow with full audit trails and compliance documentation.",
+      "From invoice capture to multi-level approval routing to your general ledger — automate the entire AP workflow with full audit trails and compliance documentation.",
     items: [
       {
         name: "Automatic invoice capture",
         detail:
-          "Invoices are captured, coded to the right job, and routed for approval automatically.",
+          "Invoices are captured, coded to the right account, and routed for approval automatically.",
       },
       {
         name: "Multi-level approval routing",
         detail:
-          "Set approval rules by amount, vendor, or project — PMs approve field costs, controllers approve the rest.",
+          "Set approval rules by amount, vendor, or department — approvers get notified, controllers approve the rest.",
       },
       {
-        name: "Lien waiver collection",
+        name: "Compliance documentation",
         detail:
-          "Automatically request and track lien waivers tied to each payment before checks go out.",
+          "Automatically request and track required documents tied to each payment before checks go out.",
       },
     ],
     href: "/product/ap-automation",
     Mockup: InvoiceCaptureMockup,
   },
   {
-    label: "Reports & Job Costing",
-    title: "WIP reports, job cost analysis, variance detection & more",
+    label: "Reports & Analytics",
+    title: "Financial reports, variance analysis, and management dashboards",
     description:
-      "Generate WIP reports, build job cost analysis by project or cost code, and catch cost variances automatically — so your team focuses on analysis, not assembling data from multiple systems.",
+      "Build custom reports, analyze variances by account or department, and catch anomalies automatically — so your team focuses on analysis, not assembling data from multiple systems.",
     items: [
       {
-        name: "Job cost report builder",
+        name: "Custom report builder",
         detail:
-          "Build job cost reports by project, division, or cost code and export in one click.",
+          "Build management reports by department, cost center, or account and export in one click.",
       },
       {
         name: "Automated variance analysis",
         detail:
-          "Compare actuals to budgets or prior periods with threshold-based flags by job.",
+          "Compare actuals to budgets or prior periods with threshold-based flags.",
       },
       {
-        name: "WIP & over/under billing",
+        name: "AI-powered insights",
         detail:
-          "Surface billing variances and work-in-progress status across all active projects.",
+          "Surface anomalies and trends across your data without manual review.",
       },
     ],
     href: "/product/reporting",
@@ -198,20 +197,20 @@ const comparisonRows = [
     generic: "One-off project boards you recreate manually each month",
   },
   {
-    need: "Collect job cost data from PMs, field staff, and subcontractors",
+    need: "Collect data and documents from inside and outside your team",
     generic: "Task assignments that only work for people on your team",
   },
   {
-    need: "Status tracking tied to job cost reconciliations and close tasks",
+    need: "Status tracking tied to reconciliations and close tasks",
     generic: "Generic status columns that don't reflect close progress",
   },
   {
-    need: "Automation that understands cost codes, GL accounts, and thresholds",
-    generic: "Basic if-then rules with no construction accounting context",
+    need: "Automation that understands GL accounts, cost codes, and thresholds",
+    generic: "Basic if-then rules with no accounting context",
   },
   {
     need: "Built-in approval routing and audit trails for compliance",
-    generic: "No concept of lien waivers, certified payroll, or sign-off workflows",
+    generic: "No concept of sign-off workflows or audit-ready records",
   },
 ];
 
@@ -238,13 +237,13 @@ export default function TestPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Month-end automation for
-            <span className="block text-[#6366F1]">construction accounting teams</span>
+            AI Automation for
+            <span className="block text-[#6366F1]">Accounting Teams</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Stop waiting on the field to close your books. Automate job cost
-            reconciliations, collect data from PMs and subcontractors, and close
-            with confidence — all in one place.
+            Close the books faster. Automate reconciliations, collect documents
+            from stakeholders and vendors, and run your entire month-end close
+            in one place.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -279,7 +278,7 @@ export default function TestPage() {
       {/* ============ SOCIAL PROOF BAR ============ */}
       <section className="py-6 border-y border-[#E5E7EB] bg-white">
         <p className="text-center text-xs font-medium uppercase tracking-widest text-[#999] mb-4">
-          Trusted by construction accounting teams at
+          Trusted by accounting teams at
         </p>
         <div className="max-w-5xl mx-auto px-6 overflow-hidden">
         <div className="ticker-wrap">
@@ -288,7 +287,7 @@ export default function TestPage() {
               "Blackline", "Bold LV", "BWC", "Dig it", "DNT", "enCompass",
               "FDL Star", "Heartland", "Hospitality Build", "ICS",
               "Industry Standard USA", "Jarrell", "Lindamood", "LVR",
-              "Marriot Construction", "Miller", "New Cast", "Northern Lights",
+              "Marriot", "Miller", "New Cast", "Northern Lights",
               "Pacific Tech", "Paintech", "Taurus", "TMG", "Two State", "Unity",
             ].map((company) => (
               <span
@@ -302,7 +301,7 @@ export default function TestPage() {
               "Blackline", "Bold LV", "BWC", "Dig it", "DNT", "enCompass",
               "FDL Star", "Heartland", "Hospitality Build", "ICS",
               "Industry Standard USA", "Jarrell", "Lindamood", "LVR",
-              "Marriot Construction", "Miller", "New Cast", "Northern Lights",
+              "Marriot", "Miller", "New Cast", "Northern Lights",
               "Pacific Tech", "Paintech", "Taurus", "TMG", "Two State", "Unity",
             ].map((company) => (
               <span
@@ -323,13 +322,12 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Month end for construction is harder than any industry
+              Month end pulls data from everywhere
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto leading-relaxed">
-              Your accounting team faces off to more stakeholders than any other
-              industry. You&apos;re dependent on project managers and field staff
-              to get the job cost data you need to close the books — and they
-              don&apos;t understand the urgency of month end.
+              Your accounting team depends on stakeholders across the business
+              and outside vendors to get the data you need to close the books —
+              and they don&apos;t share the urgency of month end.
             </p>
           </div>
 
@@ -342,8 +340,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                 ),
-                label: "Project Managers",
-                detail: "Late with job cost updates and approvals",
+                label: "Department Heads",
+                detail: "Late with budget updates and approvals",
               },
               {
                 icon: (
@@ -351,8 +349,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                   </svg>
                 ),
-                label: "Field Staff",
-                detail: "Slow to submit timesheets and cost data",
+                label: "Employees",
+                detail: "Slow to submit expenses and timesheets",
               },
               {
                 icon: (
@@ -360,8 +358,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
                   </svg>
                 ),
-                label: "Subcontractors",
-                detail: "Invoices and lien waivers scattered across inboxes",
+                label: "Vendors",
+                detail: "Invoices and documents scattered across inboxes",
               },
             ].map((item) => (
               <div
@@ -402,8 +400,8 @@ export default function TestPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75m16.5 3.75v3.75c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125v-3.75" />
                   </svg>
                 ),
-                label: "Construction ERP",
-                detail: "Job cost data trapped in silos",
+                label: "ERP / GL",
+                detail: "Financial data trapped in silos",
               },
               {
                 icon: (
@@ -412,7 +410,7 @@ export default function TestPage() {
                   </svg>
                 ),
                 label: "Email Inbox",
-                detail: "Chasing PMs and subs for documents",
+                detail: "Chasing stakeholders for documents",
               },
             ].map((tool) => (
               <div
@@ -429,8 +427,8 @@ export default function TestPage() {
           </div>
 
           <p className="text-center mt-10 text-[#555] max-w-xl mx-auto">
-            None of these tools understand your job costs, your close cycle, or
-            how dependent you are on the field.{" "}
+            None of these tools understand your close cycle or how dependent you
+            are on people outside your team.{" "}
             <span className="font-semibold text-[#111]">Vergo does.</span>
           </p>
         </div>
@@ -526,11 +524,11 @@ export default function TestPage() {
       <section className="py-12 lg:py-16 bg-[#EEF2FF] border-y border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight">
-            See how Vergo works for construction accounting
+            See how Vergo automates your close
           </h2>
           <p className="mt-3 text-[#555]">
-            Book a demo and see how Vergo helps construction accounting teams
-            close the books faster.
+            Book a demo and see how Vergo helps accounting teams close the books
+            faster.
           </p>
           <Link
             href="/demo"
@@ -546,12 +544,12 @@ export default function TestPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#111] tracking-tight">
-              Why generic tools break for construction accounting
+              Why generic tools break for accounting
             </h2>
             <p className="mt-4 text-[#555] max-w-2xl mx-auto">
               Monday.com, ClickUp, and Asana are great for project management.
-              But construction accounting teams need dedicated close software that
-              understands job costing — not generic task boards.
+              But accounting teams need dedicated close software that
+              understands recurring workflows — not generic task boards.
             </p>
           </div>
 
@@ -591,8 +589,8 @@ export default function TestPage() {
 
           <div className="text-center mt-12">
             <p className="text-[#111] font-semibold mb-6 max-w-2xl mx-auto">
-              Vergo is built for how construction accounting teams actually work — recurring
-              close cycles, cross-functional coordination with the field, and workflows that
+              Vergo is built for how accounting teams actually work — recurring
+              close cycles, cross-functional coordination, and workflows that
               need an audit trail.
             </p>
             <Link
@@ -609,7 +607,7 @@ export default function TestPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -651,8 +649,8 @@ export default function TestPage() {
             Close the books faster. Start today.
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the construction accounting teams that replaced spreadsheet-based
-            close management with Vergo.
+            Join the accounting teams that replaced spreadsheets and email
+            threads with Vergo.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

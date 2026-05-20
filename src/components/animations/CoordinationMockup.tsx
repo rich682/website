@@ -1,10 +1,10 @@
 export default function CoordinationMockup() {
   const tasks = [
-    { name: "Job Cost Reconciliation", cls: "1", owner: "SM", color: "#6366F1" },
-    { name: "Subcontractor Billing Review", cls: "2", owner: "JR", color: "#F59E0B" },
-    { name: "Change Order Processing", cls: "3", owner: "KL", color: "#22C55E" },
+    { name: "Account Reconciliation", cls: "1", owner: "SM", color: "#6366F1" },
+    { name: "Vendor Billing Review", cls: "2", owner: "JR", color: "#F59E0B" },
+    { name: "Expense Approval", cls: "3", owner: "KL", color: "#22C55E" },
     { name: "Bank Reconciliation", cls: "4", owner: "SM", color: "#6366F1" },
-    { name: "WIP Schedule Review", cls: "5", owner: "JR", color: "#F59E0B" },
+    { name: "Variance Review", cls: "5", owner: "JR", color: "#F59E0B" },
   ];
 
   return (

@@ -1,8 +1,8 @@
 export default function TasksMockup() {
   const tasks = [
-    { name: "Job Cost Reconciliation", owner: "JL", due: "Apr 3", cls: "1" },
-    { name: "Subcontractor Billing Review", owner: "SK", due: "Apr 4", cls: "2" },
-    { name: "WIP Schedule Review", owner: "MT", due: "Apr 5", cls: "3" },
+    { name: "Account Reconciliation", owner: "JL", due: "Apr 3", cls: "1" },
+    { name: "Vendor Billing Review", owner: "SK", due: "Apr 4", cls: "2" },
+    { name: "Variance Review", owner: "MT", due: "Apr 5", cls: "3" },
   ];
 
   return (

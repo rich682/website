@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Compare | Vergo",
   description:
-    "See how Vergo compares to Excel, Monday, Asana, FloQast, and BlackLine for construction close management, AP automation, and expense management.",
+    "See how Vergo compares to Excel, Monday, Asana, FloQast, and BlackLine for close management, AP automation, and expense management.",
   robots: { index: false, follow: false },
 };
 
@@ -69,14 +69,14 @@ export default function ComparePage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
             The only platform that offers{" "}
             <span className="block text-[#6366F1]">
-              everything construction accounting teams need to close
+              everything accounting teams need to close
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#666] max-w-2xl mx-auto leading-relaxed">
-            Stop stitching together tools that weren&apos;t built for the construction close.
-            Vergo is the only dedicated month end close platform that also
-            includes AP automation, expense management, and AI agents — all in
-            one place, purpose-built for construction accounting.
+            Stop stitching together tools that weren&apos;t built for the
+            month-end close. Vergo is the only dedicated close platform that
+            also includes AP automation, expense management, and AI agents —
+            all in one place, purpose-built for accounting teams.
           </p>
         </div>
       </section>

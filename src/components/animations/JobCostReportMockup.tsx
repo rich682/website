@@ -18,7 +18,7 @@ export default function JobCostReportMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-4 sm:mb-5">
         <span className="text-[11px] sm:text-xs font-medium text-foreground">
-          Job Cost Report
+          Cost Report
         </span>
         <div className="flex items-center gap-1.5">
           <span className="text-[8px] sm:text-[9px] px-2 py-0.5 rounded-full bg-highlight/10 text-highlight font-medium">
