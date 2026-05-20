@@ -9,24 +9,24 @@ import DocumentStorageMockup from "@/components/animations/DocumentStorageMockup
 export const metadata: Metadata = {
   title: "Stakeholder Requests | Vergo",
   description:
-    "Automate document requests to PMs, field staff, subcontractors, and vendors. Collect lien waivers, change orders, invoices, and compliance docs in one place.",
+    "Automate document requests to internal teams, vendors, and clients. Collect approvals, invoices, and compliance docs in one place.",
 };
 
 const stakeholderTypes = [
   {
-    title: "PMs & Field Staff",
+    title: "Internal Teams",
     description:
-      "Collect job cost updates, change orders, and certified payroll from project managers and field teams.",
-  },
-  {
-    title: "Subcontractors",
-    description:
-      "Request lien waivers, insurance certificates, W-9s, and compliance documents from every sub on a project.",
+      "Collect budget updates, approvals, and supporting documents from department heads and team members.",
   },
   {
     title: "Vendors",
     description:
-      "Gather invoices, lien waivers, and compliance docs from vendors to verify billing and release payments.",
+      "Request invoices, W-9s, insurance certificates, and compliance documents from every vendor.",
+  },
+  {
+    title: "Clients",
+    description:
+      "Gather billing approvals, supporting documents, and signed agreements from clients in one place.",
   },
 ];
 
@@ -35,17 +35,17 @@ const features = [
     category: "SEND",
     title: "Send document requests to any stakeholder in one click",
     description:
-      "Select your recipients — project managers, field staff, subcontractors, or vendors — choose the documents you need, and send requests in bulk. Each stakeholder gets a simple link to upload their documents directly.",
+      "Select your recipients — internal teams, vendors, or clients — choose the documents you need, and send requests in bulk. Each stakeholder gets a simple link to upload their documents directly.",
     items: [
       {
         label: "Bulk requests",
         detail:
-          "Send requests to dozens of stakeholders at once for lien waivers, invoices, COIs, and more.",
+          "Send requests to dozens of stakeholders at once for invoices, COIs, approvals, and more.",
       },
       {
         label: "Customizable templates",
         detail:
-          "Create request templates tailored to each stakeholder type and construction workflow.",
+          "Create request templates tailored to each stakeholder type and workflow.",
       },
       {
         label: "Simple upload portal",
@@ -59,7 +59,7 @@ const features = [
     category: "TRACK",
     title: "See exactly who has responded — and who to chase",
     description:
-      "Every request is tracked in real time. See which PMs, subs, and vendors have submitted their documents, which are overdue, and which missing items are blocking your close or payment run.",
+      "Every request is tracked in real time. See which stakeholders have submitted their documents, which are overdue, and which missing items are blocking your close or payment run.",
     items: [
       {
         label: "Real-time response tracking",
@@ -74,16 +74,16 @@ const features = [
       {
         label: "Close-blocking visibility",
         detail:
-          "Flag missing lien waivers, expired insurance, or overdue invoices before they hold up your close.",
+          "Flag missing documents, expired insurance, or overdue invoices before they hold up your close.",
       },
     ],
     mockup: "workflow",
   },
   {
     category: "ORGANIZE",
-    title: "Every document filed by project and stakeholder, ready for audit",
+    title: "Every document filed by stakeholder and type, ready for audit",
     description:
-      "Submitted documents are automatically organized by project, stakeholder, and document type. Maintain a complete compliance record with full audit trails — so when it's time to close, every document is accounted for.",
+      "Submitted documents are automatically organized by stakeholder and document type. Maintain a complete compliance record with full audit trails — so when it's time to close, every document is accounted for.",
     items: [
       {
         label: "Auto-filing",
@@ -159,9 +159,9 @@ export default function StakeholderRequestsPage() {
             <span className="block text-[#6366F1]">every stakeholder</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Collect lien waivers, change orders, invoices, insurance certs, and
-            compliance docs from project managers, field staff, subcontractors,
-            and vendors — all tracked in one place.
+            Collect approvals, invoices, insurance certs, and compliance docs
+            from internal teams, vendors, and clients — all tracked in one
+            place.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -287,7 +287,7 @@ export default function StakeholderRequestsPage() {
             Stop chasing stakeholders. Get full visibility.
           </h2>
           <p className="mt-3 text-[#555]">
-            See how Vergo automates document collection from PMs, subs, and
+            See how Vergo automates document collection from stakeholders and
             vendors.
           </p>
           <Link
@@ -303,7 +303,7 @@ export default function StakeholderRequestsPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -345,8 +345,8 @@ export default function StakeholderRequestsPage() {
             Manage every stakeholder request with confidence
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            See how Vergo helps you collect and track documents from PMs, subs,
-            and vendors throughout your close.
+            See how Vergo helps you collect and track documents from
+            stakeholders and vendors throughout your close.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

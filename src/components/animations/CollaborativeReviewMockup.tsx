@@ -2,8 +2,8 @@ export default function CollaborativeReviewMockup() {
   const comments = [
     {
       initials: "MT",
-      name: "Mike Torres, PM",
-      text: "Confirmed cost-to-complete on Project 1042. Labor estimate is accurate.",
+      name: "Mike Torres, Manager",
+      text: "Confirmed forecast on Project 1042. Labor estimate is accurate.",
       time: "2 hours ago",
       color: "bg-indigo-500/20 text-indigo-400",
       badge: null,
@@ -11,7 +11,7 @@ export default function CollaborativeReviewMockup() {
     {
       initials: "SC",
       name: "Sarah Chen, Controller",
-      text: "Flagged overbilling on Project 1087 — need to verify with sub.",
+      text: "Flagged variance on Project 1087 — need to verify with vendor.",
       time: "1 hour ago",
       color: "bg-emerald-500/20 text-emerald-400",
       badge: null,
@@ -31,7 +31,7 @@ export default function CollaborativeReviewMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-4 sm:mb-5">
         <span className="text-[11px] sm:text-xs font-medium text-foreground">
-          WIP Review
+          Close Review
         </span>
         <span className="text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full bg-background-tertiary text-foreground-muted">
           Draft

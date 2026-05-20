@@ -8,78 +8,78 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AP Automation | Vergo",
   description:
-    "Automate subcontractor invoice processing, lien waiver collection, retention tracking, and compliance documentation. Construction AP on autopilot.",
+    "Automate vendor invoice processing, approval routing, and compliance documentation. Accounts payable on autopilot for accounting teams.",
 };
 
 const features = [
   {
     label: "Invoice Capture",
-    title: "Capture subcontractor invoices automatically",
+    title: "Capture vendor invoices automatically",
     description:
-      "Forward subcontractor invoices by email or upload them directly. Vergo extracts vendor details, line items, job codes, and amounts automatically — no manual data entry required.",
+      "Forward vendor invoices by email or upload them directly. Vergo extracts vendor details, line items, GL codes, and amounts automatically — no manual data entry required.",
     items: [
       {
         name: "Email and upload capture",
         detail:
-          "Forward subcontractor invoices to a dedicated inbox or drag-and-drop files directly into Vergo.",
+          "Forward vendor invoices to a dedicated inbox or drag-and-drop files directly into Vergo.",
       },
       {
         name: "Automatic data extraction",
         detail:
-          "AI reads subcontractor names, amounts, job codes, and line items from any invoice format.",
+          "AI reads vendor names, amounts, account codes, and line items from any invoice format.",
       },
       {
-        name: "Job cost coding and matching",
+        name: "GL coding and matching",
         detail:
-          "Invoices are automatically matched to subcontractors and coded to the right job cost accounts.",
+          "Invoices are automatically matched to vendors and coded to the right GL accounts.",
       },
     ],
     Mockup: InvoiceCaptureMockup,
   },
   {
     label: "Approval Workflows",
-    title: "Route approvals and track retention",
+    title: "Route approvals across your team",
     description:
-      "Set up multi-level approval chains based on amount thresholds, job, or subcontractor. Track retention holdbacks automatically and collect lien waivers before releasing payment.",
+      "Set up multi-level approval chains based on amount thresholds, department, or vendor. Require compliance documents before releasing payment and track every step.",
     items: [
       {
         name: "Multi-level approval chains",
         detail:
-          "Define sequential or parallel approval steps based on job, subcontractor, or amount.",
+          "Define sequential or parallel approval steps based on department, vendor, or amount.",
       },
       {
-        name: "Retention tracking",
+        name: "Threshold-based routing",
         detail:
-          "Automatically calculate and track retention holdbacks across all subcontractor payments.",
+          "Automatically route invoices to the right approvers based on amount and category.",
       },
       {
-        name: "Lien waiver collection",
+        name: "Compliance documentation",
         detail:
-          "Require lien waivers and compliance docs before payments are released to subcontractors.",
+          "Require supporting documents and approvals before payments are released to vendors.",
       },
     ],
     Mockup: ApprovalWorkflowMockup,
   },
   {
     label: "Accounting Sync",
-    title: "Post approved invoices directly to job costs in your ERP",
+    title: "Post approved invoices directly to your ERP",
     description:
-      "Approved subcontractor invoices post directly to job costs in your construction ERP. Job cost entries are created automatically with the right cost codes, and reconciliation happens in real time.",
+      "Approved invoices post directly to your ERP. Entries are created automatically with the right account codes, and reconciliation happens in real time.",
     items: [
       {
-        name: "Direct job cost posting to your construction ERP",
+        name: "Direct posting to your ERP",
         detail:
-          "Approved invoices post directly to job costs in Sage, Viewpoint, Procore, or your construction accounting system.",
+          "Approved invoices post directly into QuickBooks, Sage, NetSuite, or your accounting system.",
       },
       {
-        name: "Automatic job cost entries",
+        name: "Automatic GL entries",
         detail:
-          "Vergo creates correctly coded job cost entries the moment a subcontractor invoice is approved — no re-keying required.",
+          "Vergo creates correctly coded entries the moment a vendor invoice is approved — no re-keying required.",
       },
       {
         name: "Real-time reconciliation",
         detail:
-          "Match subcontractor payments to invoices automatically and surface discrepancies before they become problems.",
+          "Match payments to invoices automatically and surface discrepancies before they become problems.",
       },
     ],
     Mockup: ConnectMockup,
@@ -140,10 +140,9 @@ export default function APAutomationPage() {
             <span className="block text-[#6366F1]">on autopilot</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Subcontractor invoices flow from capture through approval and
-            directly into job cost posting in your ERP. Automate the entire
-            AP workflow with smart routing, retention tracking, and lien
-            waiver collection.
+            Vendor invoices flow from capture through approval and directly
+            into your ERP. Automate the entire AP workflow with smart routing,
+            threshold-based approvals, and full audit trails.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -258,7 +257,7 @@ export default function APAutomationPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (

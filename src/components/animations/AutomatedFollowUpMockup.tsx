@@ -3,7 +3,7 @@ export default function AutomatedFollowUpMockup() {
     { label: "Initial Request Sent", date: "Mar 28", status: "done" },
     { label: "Reminder #1", date: "Apr 1", status: "done" },
     { label: "Reminder #2", date: "Apr 4", status: "done" },
-    { label: "Escalated to PM", date: "Apr 7", status: "current" },
+    { label: "Escalated to Manager", date: "Apr 7", status: "current" },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function AutomatedFollowUpMockup() {
           Mason Electric
         </span>
         <span className="text-[8px] sm:text-[9px] text-foreground-muted block">
-          Lien Waiver
+          Insurance Certificate
         </span>
       </div>
 

@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Expense Management | Vergo",
   description:
-    "Track field expenses, per diem, equipment costs, and more. Link any card, match receipts automatically, and enforce spending policies built for construction teams.",
+    "Track corporate card expenses, per diem, and reimbursements. Link any card, match receipts automatically, and enforce spending policies built for accounting teams.",
 };
 
 const features = [
@@ -257,7 +257,7 @@ export default function ExpenseManagementPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (

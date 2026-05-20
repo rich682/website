@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Company | Vergo",
   description:
-    "Meet the team behind Vergo. We're building the workflow platform for construction accounting teams who demand efficiency and control.",
+    "Meet the team behind Vergo. We're building the workflow platform for accounting teams who demand efficiency and control.",
 };
 
 const investors = [
@@ -38,13 +38,13 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.1] tracking-tight">
-              Built for construction{" "}
+              Built for{" "}
               <span className="block text-[#6366F1]">accounting teams</span>
             </h1>
             <p className="mt-8 text-lg text-[#666] leading-relaxed">
               Our founding team has experienced the pain of manual book closes,
-              disconnected tools, and endless follow-up emails in construction
-              accounting. We built Vergo to fix it.
+              disconnected tools, and endless follow-up emails. We built Vergo
+              to fix it.
             </p>
           </div>
         </div>
@@ -61,17 +61,17 @@ export default function CompanyPage() {
                 close
               </h2>
               <p className="text-[#666] leading-relaxed mb-6">
-                For too long, construction accounting teams have been stuck with
+                For too long, accounting teams have been stuck with
                 spreadsheets, emails, and legacy software that wasn&apos;t
                 designed for how they actually work. The book close is one of
-                the most critical processes in any construction business, yet it&apos;s still
+                the most critical processes in any business, yet it&apos;s still
                 powered by manual effort and fragmented tools.
               </p>
               <p className="text-[#666] leading-relaxed">
-                We built Vergo so construction accounting teams can focus on
-                job cost analysis and strategy instead of chasing documents and
-                reconciling spreadsheets. Our mission is to make every book
-                close more predictable and less painful.
+                We built Vergo so accounting teams can focus on analysis and
+                strategy instead of chasing documents and reconciling
+                spreadsheets. Our mission is to make every book close more
+                predictable and less painful.
               </p>
             </div>
 
@@ -633,9 +633,9 @@ export default function CompanyPage() {
       <section className="py-16 lg:py-24 border-t border-[#E5E7EB] bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111] leading-relaxed italic tracking-tight">
-            &ldquo;Construction accounting teams deserve a single platform to
-            coordinate the close, cut through the noise, and let automation
-            handle the repetitive work&rdquo;
+            &ldquo;Accounting teams deserve a single platform to coordinate the
+            close, cut through the noise, and let automation handle the
+            repetitive work&rdquo;
           </blockquote>
           <div className="mt-8 w-16 h-16 rounded-full bg-white border border-[#E5E7EB] mx-auto flex items-center justify-center overflow-hidden relative">
             <Image

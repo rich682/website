@@ -12,9 +12,9 @@ import AIAgentsMockup from "@/components/animations/AIAgentsMockup";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Construction Accounting Software — How It Works | Vergo",
+  title: "Accounting Automation Platform — How It Works | Vergo",
   description:
-    "The construction accounting platform that automates job costing, subcontractor management, and month-end close. Full visibility into every project.",
+    "The accounting automation platform that streamlines reconciliations, vendor management, and month-end close. Full visibility into every workflow.",
 };
 
 const productSections = [
@@ -23,11 +23,11 @@ const productSections = [
     category: "Tasks",
     title: "Create month-end close tasks",
     description:
-      "Build your close checklist for job cost reconciliation, WIP schedule reviews, and subcontractor billing. Assign owners, set deadlines, and track dependencies across projects.",
+      "Build your close checklist for reconciliations, account reviews, and reporting deadlines. Assign owners, set deadlines, and track dependencies across teams.",
     features: [
-      "Job cost reconciliation checklists",
+      "Reconciliation checklists",
       "Task dependencies and deadlines",
-      "Recurring templates for construction close",
+      "Recurring monthly templates",
     ],
     Mockup: TasksMockup,
     href: "/product/close-management",
@@ -35,13 +35,13 @@ const productSections = [
   {
     number: "02",
     category: "Collaborate",
-    title: "Collaborate with your accounting team & project managers",
+    title: "Collaborate with your accounting team & stakeholders",
     description:
-      "Keep everyone aligned with shared workflows and real-time visibility. Collect job cost data, lien waivers, and change orders from project managers and subcontractors — all in one place.",
+      "Keep everyone aligned with shared workflows and real-time visibility. Collect data, approvals, and supporting documents from teams across your business — all in one place.",
     features: [
-      "Requests to PMs, field staff, and subs",
-      "Lien waiver and compliance workflows",
-      "Real-time progress tracking by job",
+      "Requests to stakeholders and vendors",
+      "Compliance and approval workflows",
+      "Real-time progress tracking",
     ],
     Mockup: CollaborativeReviewMockup,
     href: undefined as string | undefined,
@@ -49,12 +49,12 @@ const productSections = [
   {
     number: "03",
     category: "Request",
-    title: "Send data requests automatically to the field, subs, vendors & clients",
+    title: "Send data requests automatically to stakeholders, vendors & clients",
     description:
-      "Automate outbound requests for job cost updates, lien waivers, timesheets, and compliance documents. Vergo sends requests on your schedule and tracks every response.",
+      "Automate outbound requests for updates, approvals, invoices, and compliance documents. Vergo sends requests on your schedule and tracks every response.",
     features: [
-      "Automated requests to PMs and field staff",
-      "Vendor invoice and lien waiver collection",
+      "Automated requests to stakeholders",
+      "Vendor invoice and document collection",
       "Client billing and approval requests",
     ],
     Mockup: RequestTrackingMockup,
@@ -63,14 +63,14 @@ const productSections = [
   {
     number: "04",
     category: "Reporting",
-    title: "Setup job costing analysis, custom reports & more",
+    title: "Build custom reports and management dashboards",
     description:
-      "Generate WIP reports, build job cost analysis by project or cost code, and track margins across your portfolio. Every report is repeatable and rolls forward each month.",
+      "Generate financial reports, build variance analysis by department or cost center, and track performance across the business. Every report is repeatable and rolls forward each month.",
     features: [
-      "WIP report generation",
-      "Job cost analysis builder",
-      "Custom report templates",
-      "Automated WIP schedules",
+      "Custom report builder",
+      "Variance and budget-vs-actuals analysis",
+      "Departmental and cost center reporting",
+      "Automated report distribution",
     ],
     Mockup: JobCostReportMockup,
     href: "/product/reporting",
@@ -78,14 +78,14 @@ const productSections = [
   {
     number: "05",
     category: "Analyze",
-    title: "Use AI to analyze years worth of project data",
+    title: "Use AI to analyze years worth of financial data",
     description:
-      "Ask questions about your project data in plain English. Vergo AI surfaces profit fade, cost overruns, vendor performance issues, and billing variances across your entire portfolio.",
+      "Ask questions about your financial data in plain English. Vergo AI surfaces variances, anomalies, vendor performance issues, and trends across your entire business.",
     features: [
-      "Natural language project analysis",
-      "Profit fade and margin detection",
-      "Vendor and subcontractor performance",
-      "Cost code anomaly surfacing",
+      "Natural language data analysis",
+      "Variance and anomaly detection",
+      "Vendor performance insights",
+      "Account-level anomaly surfacing",
     ],
     Mockup: AIAnalyzeMockup,
     href: "/ai-agents",
@@ -95,11 +95,11 @@ const productSections = [
     category: "Agents",
     title: "Setup AI Agents to automate repetitive spreadsheet work",
     description:
-      "Configure AI agents to handle the repetitive work across your construction close — reconciliations, follow-ups, data pulls, and report generation. Each agent runs on your rules, and nothing gets finalized until you approve it.",
+      "Configure AI agents to handle the repetitive work across your close — reconciliations, follow-ups, data pulls, and report generation. Each agent runs on your rules, and nothing gets finalized until you approve it.",
     features: [
-      "Job cost reconciliation agents",
-      "Automated subcontractor follow-ups",
-      "WIP schedule generation",
+      "Reconciliation agents",
+      "Automated vendor follow-ups",
+      "Report generation",
       "Report assembly and distribution",
     ],
     Mockup: AIAgentsMockup,
@@ -108,13 +108,13 @@ const productSections = [
   {
     number: "07",
     category: "Close",
-    title: "Close the month with job cost confidence",
+    title: "Close the month with confidence",
     description:
-      "With job costs reconciled, WIP schedules generated, and subcontractor billing verified, your team closes the books faster — with full visibility across every project.",
+      "With accounts reconciled, reports generated, and approvals verified, your team closes the books faster — with full visibility and a complete audit trail.",
     features: [
-      "Faster construction close cycles",
-      "Complete job cost visibility",
-      "Full audit trail by project",
+      "Faster close cycles",
+      "Complete reconciliation visibility",
+      "Full audit trail",
     ],
     Mockup: CloseMockup,
     href: "/product/close-management",
@@ -168,13 +168,13 @@ export default function ProductPage() {
       <section className="pt-32 pb-12 lg:pt-44 lg:pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111] leading-[1.15] tracking-tight">
-            Construction accounting{" "}
+            Accounting automation{" "}
             <span className="block text-[#6366F1]">without the chaos</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            The construction accounting platform that automates job costing,
-            subcontractor management, and month-end close. Full visibility into
-            every project.
+            The accounting automation platform that streamlines reconciliations,
+            vendor management, and month-end close. Full visibility into every
+            workflow.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -390,7 +390,7 @@ export default function ProductPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
@@ -432,7 +432,7 @@ export default function ProductPage() {
             Work on higher value tasks today
           </h2>
           <p className="mt-4 text-white/60 max-w-lg mx-auto">
-            Join the construction accounting teams closing faster with less manual work.
+            Join the accounting teams closing faster with less manual work.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

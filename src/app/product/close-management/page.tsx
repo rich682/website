@@ -10,19 +10,19 @@ import DeadlinesMockup from "@/components/animations/DeadlinesMockup";
 export const metadata: Metadata = {
   title: "Close Collaboration | Vergo",
   description:
-    "Streamline your construction month-end close with job cost reconciliation, WIP schedule reviews, billing analysis, and deadline management.",
+    "Streamline your month-end close with reconciliations, account reviews, variance analysis, and deadline management — all in one place.",
 };
 
 const features = [
   {
     category: "Task Tracking",
-    title: "Build and manage your construction close checklist",
+    title: "Build and manage your month-end close checklist",
     description:
-      "Create close checklists tailored to construction accounting. Assign owners to tasks like generating the WIP report, reconciling job costs, and verifying subcontractor billing — then track progress in real time.",
+      "Create close checklists tailored to your team. Assign owners to tasks like reconciling accounts, reviewing variances, and generating reports — then track progress in real time.",
     items: [
-      "Generate WIP report and reconcile job costs",
-      "Verify subcontractor billing and retention",
-      "Recurring templates for construction close cycles",
+      "Reconciliation and account review tasks",
+      "Variance review and approval workflows",
+      "Recurring monthly templates",
     ],
     mockup: "tasks",
   },
@@ -40,13 +40,13 @@ const features = [
   },
   {
     category: "Reconciliation",
-    title: "Reconcile job costs and project accounts with confidence",
+    title: "Reconcile accounts with confidence",
     description:
-      "Automate matching across job cost accounts, flag exceptions on subcontractor billing, and maintain a complete audit trail. Your team reviews only what needs attention while agents handle the rest.",
+      "Automate matching across GL accounts and sub-ledgers, flag exceptions on vendor and customer balances, and maintain a complete audit trail. Your team reviews only what needs attention while agents handle the rest.",
     items: [
-      "Automated job cost matching",
-      "Subcontractor billing exception flagging",
-      "Complete audit trail by project",
+      "Automated account matching",
+      "Exception flagging and resolution",
+      "Complete audit trail",
     ],
     mockup: "close",
   },
@@ -118,9 +118,9 @@ export default function CloseManagementPage() {
             <span className="block text-[#6366F1]">more control</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-[#555] max-w-2xl mx-auto leading-relaxed">
-            Manage your construction month-end close in one place. Track WIP
-            report generation, job cost reconciliation, billing analysis, and
-            subcontractor close tasks with complete visibility.
+            Manage your month-end close in one place. Track reconciliations,
+            account reviews, variance analysis, and close tasks across your
+            team with complete visibility.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
@@ -231,7 +231,7 @@ export default function CloseManagementPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#111] tracking-tight text-center mb-12">
-            What construction accounting teams are saying
+            What accounting teams are saying
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (

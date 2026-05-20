@@ -17,7 +17,7 @@ const platformColumns = [
   {
     heading: "Data Collection",
     links: [
-      { label: "Stakeholder Requests", href: "/product/stakeholder-requests", description: "Collect docs from PMs, subs, and vendors" },
+      { label: "Stakeholder Requests", href: "/product/stakeholder-requests", description: "Collect docs from stakeholders and vendors" },
       { label: "AP Automation", href: "/product/ap-automation", description: "Automate accounts payable" },
       { label: "Expense Management", href: "/product/expense-management", description: "Connect any credit card" },
     ],
@@ -25,15 +25,15 @@ const platformColumns = [
   {
     heading: "Intelligence",
     links: [
-      { label: "Reports & Job Costing", href: "/product/reporting", description: "WIP schedules, cost-to-complete, and variance analysis" },
-      { label: "WIP Report", href: "/product/wip-report", description: "Generate and manage your WIP report every month" },
+      { label: "Reports & Analytics", href: "/product/reporting", description: "Financial reports and variance analysis" },
+      { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
     ],
   },
   {
-    heading: "Automate",
+    heading: "Connect",
     links: [
-      { label: "AI Agents", href: "/ai-agents", description: "Automate with AI-powered agents" },
       { label: "Integrations", href: "/integrations", description: "Connect your accounting tools" },
+      { label: "Templates", href: "/templates", description: "Free accounting templates" },
     ],
   },
 ];
@@ -41,28 +41,18 @@ const platformColumns = [
 // Flat list for mobile menu
 const platformLinks = platformColumns.flatMap((col) => col.links);
 
-const solutionsLinks = [
-  { label: "General Contractors", href: "/solutions/general-contractors", description: "Month-end close for GC accounting teams" },
-  { label: "Subcontractors", href: "/solutions/subcontractors", description: "Month-end close for sub accounting teams" },
-];
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [platformOpen, setPlatformOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
-  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const platformRef = useRef<HTMLDivElement>(null);
-  const solutionsRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   // Close dropdowns on route change
   useEffect(() => {
     setPlatformOpen(false);
-    setSolutionsOpen(false);
     setMobileMenuOpen(false);
     setMobilePlatformOpen(false);
-    setMobileSolutionsOpen(false);
   }, [pathname]);
 
   // Close dropdowns on click outside
@@ -71,29 +61,25 @@ export default function Header() {
       if (platformRef.current && !platformRef.current.contains(e.target as Node)) {
         setPlatformOpen(false);
       }
-      if (solutionsRef.current && !solutionsRef.current.contains(e.target as Node)) {
-        setSolutionsOpen(false);
-      }
     }
-    if (platformOpen || solutionsOpen) {
+    if (platformOpen) {
       document.addEventListener("mousedown", handleClickOutside);
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [platformOpen, solutionsOpen]);
+  }, [platformOpen]);
 
   // Close dropdowns on Escape
   useEffect(() => {
     function handleEscape(e: KeyboardEvent) {
       if (e.key === "Escape") {
         setPlatformOpen(false);
-        setSolutionsOpen(false);
       }
     }
-    if (platformOpen || solutionsOpen) {
+    if (platformOpen) {
       document.addEventListener("keydown", handleEscape);
       return () => document.removeEventListener("keydown", handleEscape);
     }
-  }, [platformOpen, solutionsOpen]);
+  }, [platformOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
@@ -103,7 +89,7 @@ export default function Header() {
           {/* Platform Dropdown */}
           <div ref={platformRef} className="relative">
             <button
-              onClick={() => { setPlatformOpen(!platformOpen); setSolutionsOpen(false); }}
+              onClick={() => setPlatformOpen(!platformOpen)}
               className="flex items-center gap-1 text-sm opacity-90 hover:opacity-60 transition-opacity"
             >
               Platform
@@ -143,47 +129,14 @@ export default function Header() {
             )}
           </div>
 
-          {/* Solutions Dropdown */}
-          <div ref={solutionsRef} className="relative">
-            <button
-              onClick={() => { setSolutionsOpen(!solutionsOpen); setPlatformOpen(false); }}
-              className="flex items-center gap-1 text-sm opacity-90 hover:opacity-60 transition-opacity"
-            >
-              Solutions
-              <svg
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${solutionsOpen ? "rotate-180" : ""}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {solutionsOpen && (
-              <div className="absolute top-full left-0 mt-4 w-[280px] rounded-xl border border-[#E5E7EB] bg-white p-2 shadow-2xl">
-                {solutionsLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex flex-col gap-0.5 px-4 py-3 rounded-lg transition-colors hover:bg-[#F5F5F5]"
-                  >
-                    <span className="text-sm font-medium text-[#111]">{link.label}</span>
-                    <span className="text-xs text-[#888]">{link.description}</span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
+          <Link href="/integrations" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
+            Integrations
+          </Link>
           <Link href="/pricing" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Pricing
           </Link>
           <Link href="/company" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
             Company
-          </Link>
-          <Link href="/customers" className="text-sm opacity-90 hover:opacity-60 transition-opacity">
-            Customers
           </Link>
         </div>
 
@@ -266,36 +219,13 @@ export default function Header() {
               </div>
             )}
 
-            {/* Solutions accordion */}
-            <button
-              onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
-              className="flex items-center justify-between w-full text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
+            <Link
+              href="/integrations"
+              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              Solutions
-              <svg
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${mobileSolutionsOpen ? "rotate-180" : ""}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {mobileSolutionsOpen && (
-              <div className="pl-4 pb-2 space-y-1">
-                {solutionsLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block text-sm opacity-70 hover:opacity-60 transition-opacity py-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-
+              Integrations
+            </Link>
             <Link
               href="/pricing"
               className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
@@ -309,13 +239,6 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Company
-            </Link>
-            <Link
-              href="/customers"
-              className="block text-sm opacity-90 hover:opacity-60 transition-opacity py-3"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Customers
             </Link>
             <hr className="border-[#E5E7EB]" />
             <a
